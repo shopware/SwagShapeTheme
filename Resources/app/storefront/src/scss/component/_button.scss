@@ -1,0 +1,57 @@
+.btn-buy {
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+}
+
+.btn-primary {
+    --text-color: #fdfdfd;
+    --hover-bg-color: #f08b7a;
+    --disabled-bg-color: #f7d9d4;
+
+    color: var(--text-color);
+
+    @include hover {
+        background-color: var(--hover-bg-color);
+        border-color: var(--hover-bg-color);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: var(--text-color);
+        background-color: var(--disabled-bg-color);
+        border-color: var(--disabled-bg-color)
+    }
+}
+
+.btn-outline-dark {
+    @include button-outline-variant($gray-900);
+
+    @include hover {
+        color: $gray-700;
+        background-color: transparent;
+        border-color: $gray-700;
+    }
+}
+
+.btn-light {
+    --bg-color: #fff;
+
+    background-color: var(--bg-color);
+    color: $gray-900;
+    border-color: var(--bg-color);
+
+    @include hover {
+        color: $gray-900;
+        background-color: var(--bg-color);
+        border-color: var(--bg-color);
+    }
+}
+
+.btn-light,
+.btn-outline-dark {
+    &.disabled,
+    &:disabled {
+        color: $gray-300;
+        border-color: $gray-300;
+        background-color: transparent;
+    }
+}

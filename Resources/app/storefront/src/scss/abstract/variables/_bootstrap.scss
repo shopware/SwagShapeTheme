@@ -1,0 +1,57 @@
+// contains variable overrides for bootstrap variables located under
+// shopRoot/src/vendor/shopware/storefront/Resources/app/storefront/vendor/bootstrap/scss/_variables.scss
+
+// Color system
+$gray-100: #f9fafc !default;
+$gray-200: #eff2f7 !default;
+$gray-300: #dde2ed !default;
+$gray-400: #b2bcd2 !default;
+$gray-500: #9ea7bc !default;
+$gray-600: #768699 !default;
+$gray-700: #637182 !default;
+$gray-800: #344254 !default;
+$gray-900: #1f2e3d !default;
+
+// Typography
+$font-size-base: 0.875rem !default;
+$font-weight-normal: 500 !default;
+
+// Components
+//
+// Button
+$btn-border-radius: 20px !default;
+$btn-border-radius-lg: 24px !default;
+$btn-border-radius-sm: 18px !default;
+
+$btn-line-height-sm: 28px;
+$btn-line-height: 32px;
+$btn-line-height-lg: 40px;
+$btn-border-width: 2px !default;
+
+// Form Input
+$input-border-width: 2px !default;
+$input-border-radius: 20px !default;
+$input-border-color: $gray-300;
+$input-placeholder-color: $gray-500;
+$input-height: 40px;
+$input-height-lg: 48px;
+$input-border-radius-lg: $input-border-radius;
+
+// Custom Forms
+$form-feedback-valid-color: $gray-700;
+$custom-select-border-radius: 20px !default;
+$custom-select-indicator: url(/bundles/swagshapetheme/assets/icon/ic-chevron-down.svg) !default;
+
+$custom-control-indicator-border-color: $gray-400 !default;
+$custom-control-indicator-checked-bg: $sw-color-brand-primary;
+$custom-checkbox-indicator-border-radius: 4px !default;
+$custom-select-bg-size: 0.625rem !default;
+$custom-switch-indicator-size: 0.625rem !default;
+
+// Badges
+$badge-font-size: 10px !default;
+
+// List items
+$list-group-action-color: $gray-900 !default;
+$list-group-action-hover-color: $gray-900 !default;
+$list-group-action-active-color: $gray-900 !default;

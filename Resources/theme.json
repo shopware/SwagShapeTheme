@@ -1,22 +1,113 @@
 {
-  "name": "SwagShapeTheme",
-  "author": "Shopware AG",
-  "views": [
-    "@Storefront",
-    "@Plugins",
-    "@SwagShapeTheme"
-  ],
-  "style": [
-    "app/storefront/src/scss/overrides.scss",
-    "@Storefront",
-    "app/storefront/src/scss/base.scss"
-  ],
-  "script": [
-    "@Storefront",
-    "app/storefront/dist/storefront/js/swag-shape-theme.js"
-  ],
-  "asset": [
-    "@Storefront",
-    "app/storefront/src/assets"
-  ]
+    "name": "SwagShapeTheme",
+    "author": "Shopware AG",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@SwagShapeTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/swag-shape-theme.js"
+    ],
+    "asset": [
+        "@Storefront",
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "fields": {
+            "sw-color-brand-primary": {
+                "value": "#f17662"
+            },
+            "sw-color-brand-secondary": {
+                "value": "#f17662"
+            },
+            "sw-border-color": {
+                "value": "#bcc1c7"
+            },
+            "sw-color-success": {
+                "value": "#42954d"
+            },
+            "sw-color-info": {
+                "value": "#26b6cf"
+            },
+            "sw-color-warning": {
+                "value": "#ffbd5d"
+            },
+            "sw-color-danger": {
+                "value": "#9e3229"
+            },
+            "sw-font-family-base": {
+                "value": "'Raleway', sans-serif"
+            },
+            "sw-text-color": {
+                "value": "#1f2e3d"
+            },
+            "sw-font-family-headline": {
+                "value": "'Raleway', sans-serif"
+            },
+            "sw-headline-color": {
+                "value": "#1f2e3d"
+            },
+            "sw-color-price": {
+                "value": "#1f2e3d"
+            },
+            "sw-color-buy-button": {
+                "value": "#f17662"
+            },
+            "sw-color-buy-button-text": {
+                "value": "#ffffff"
+            },
+            "sw-logo-desktop": {
+                "type": "media",
+                "value": "public/assets/logo/shape-logo.svg"
+            },
+            "sw-logo-tablet": {
+                "type": "media",
+                "value": "public/assets/logo/shape-logo.svg"
+            },
+            "sw-logo-mobile": {
+                "type": "media",
+                "value": "public/assets/logo/shape-logo.svg"
+            },
+            "sw-footer-bg-color": {
+                "label": {
+                    "en-GB": "Background colour",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#f9fafc",
+                "editable": true,
+                "block": "footer",
+                "order": 100
+            },
+            "sw-footer-text-color": {
+                "label": {
+                    "en-GB": "Text colour",
+                    "de-DE": "Textfarbe"
+                },
+                "type": "color",
+                "value": "#1f2e3d",
+                "editable": true,
+                "block": "footer",
+                "order": 200
+            },
+            "sw-footer-logo": {
+                "label": {
+                    "en-GB": "Footer logo",
+                    "de-DE": "Footer Logo"
+                },
+                "type": "media",
+                "value": "public/assets/logo/shape-logo.svg",
+                "editable": true,
+                "block": "media",
+                "order": 300
+            }
+        }
+    }
 }
