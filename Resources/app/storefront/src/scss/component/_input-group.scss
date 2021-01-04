@@ -1,0 +1,8 @@
+.input-group {
+    > .form-control,
+    > .custom-select {
+        &:not(:first-child) {
+            @include border-left-radius($input-border-radius);
+        }
+    }
+}

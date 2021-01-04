@@ -1,0 +1,37 @@
+/*
+SwagShapeTheme theme styles
+==================================================
+Contains the imports to all theme styles.
+
+The file organization follows the 7-1 pattern architecture
+https://sass-guidelin.es/#the-7-1-pattern
+*/
+/*
+ * Variables, Mixins, Functions
+ * ---------------------------- */
+@import 'abstract/variables/custom';
+/*
+ * Vendors
+ * ------- */
+/*
+ * Base stuff
+ * ---------- */
+@import 'base/font';
+@import 'base/typography';
+
+/*
+ * Components
+ * ---------- */
+@import "component/button";
+@import "component/forms";
+@import "component/input-group";
+
+/*
+ * Layout-related sections
+ * ----------------------- */
+@import "layout/container";
+
+
+/*
+ * Page-specific styles
+ * -------------------- */

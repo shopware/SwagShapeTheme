@@ -1,0 +1,13 @@
+/*
+Container
+==============================================
+Additional styling for bootstrap container layout.
+
+https://getbootstrap.com/docs/4.3/layout/overview/
+*/
+
+.container {
+    --container-width: 1320px;
+
+    max-width: var(--container-width);
+}
