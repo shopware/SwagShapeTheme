@@ -1,0 +1,19 @@
+.product-badges {
+    .badge-success,
+    .badge-danger,
+    .badge-warning {
+        background-color: transparent;
+    }
+
+    .badge-danger {
+        color: $primary;
+    }
+
+    .badge-success {
+        color: $success;
+    }
+
+    .badge-warning {
+        color: $warning;
+    }
+}

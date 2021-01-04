@@ -12,9 +12,13 @@ $gray-700: #637182 !default;
 $gray-800: #344254 !default;
 $gray-900: #1f2e3d !default;
 
+$green: #42954d !default;
+
 // Typography
 $font-size-base: 0.875rem !default;
-$font-weight-normal: 500 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-bolder: 700 !default;
 
 // Components
 //
@@ -46,10 +50,14 @@ $custom-control-indicator-border-color: $gray-400 !default;
 $custom-control-indicator-checked-bg: $sw-color-brand-primary;
 $custom-checkbox-indicator-border-radius: 4px !default;
 $custom-select-bg-size: 0.625rem !default;
-$custom-switch-indicator-size: 0.625rem !default;
+//$custom-switch-indicator-size: 0.625rem !default;
 
 // Badges
 $badge-font-size: 10px !default;
+
+// Alerts
+$alert-padding-y: .75rem !default;
+$alert-padding-x: 1.25rem !default;
 
 // List items
 $list-group-action-color: $gray-900 !default;
