@@ -157,6 +157,36 @@
                 "value": "#f9eae7",
                 "editable": true,
                 "block": "404 Page"
+            },
+            "sw-maintenance-bg": {
+                "label": {
+                    "en-GB": "Maintenance Background",
+                    "de-DE": "Wartung Hintergrund"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/images/maintenance.png",
+                "editable": true,
+                "block": "Maintenance Page"
+            },
+            "sw-maintenance-bg-tablet": {
+                "label": {
+                    "en-GB": "Tablet Maintenance Background",
+                    "de-DE": "Tablet Wartung Hintergrund"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/images/maintenance-m.png",
+                "editable": true,
+                "block": "Maintenance Page"
+            },
+            "sw-maintenance-bg-color": {
+                "label": {
+                    "en-GB": "Background Colour",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#f9eae7",
+                "editable": true,
+                "block": "Maintenance Page"
             }
         }
     }

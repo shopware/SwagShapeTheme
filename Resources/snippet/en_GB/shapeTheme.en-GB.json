@@ -1,7 +1,9 @@
 {
     "general": {
         "404ErrorPageHeader": "It looks like you are lost.",
-        "404ErrorDescription": "The page you are looking for no longer exists"
+        "404ErrorDescription": "The page you are looking for no longer exists",
+        "maintenanceModeHeader": "We`ll be back soon.",
+        "maintenanceModeDescription": "The page you are looking for no longer exists."
     },
     "footer": {
         "newsletterHeadline": "Our newsletter. Subscribe now and don't miss anything anymore!",
