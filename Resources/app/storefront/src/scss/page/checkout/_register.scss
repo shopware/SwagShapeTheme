@@ -1,0 +1,162 @@
+$checkout-offset-sm: 20px;
+$checkout-offset: 163px;
+
+.is-act-checkoutregisterpage,
+.is-act-confirmpage,
+.is-act-cartpage {
+    .container-main,
+    .checkout {
+        @extend .pt-0;
+    }
+
+    .checkout-main {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .checkout {
+        position: relative;
+        padding-bottom: 50px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: $gray-100;
+            top: 0;
+            bottom: 0;
+            left: calc(#{$checkout-offset-sm} * -1);
+            right: calc(#{$checkout-offset-sm} * -1);
+        }
+    }
+
+    .checkout-aside {
+        background-color: $white;
+        box-shadow: $checkout-aside-shadow;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .checkout {
+            padding-bottom: 90px;
+
+            &:before {
+                left: calc(#{$checkout-offset} * -1);
+                right: calc(#{$checkout-offset} * -1);
+            }
+
+            .checkout-main {
+                @include make-col(7);
+
+                margin-top: 70px;
+            }
+
+            .checkout-aside {
+                @include make-col(4);
+            }
+        }
+    }
+}
+
+.is-act-checkoutregisterpage {
+    .login-collapse-toggle,
+    .login-submit button {
+        min-width: 92px;
+        text-transform: uppercase;
+        font-size: $font-size-base;
+    }
+
+    .address-main-header {
+        font-size: 28px;
+        line-height: 34px;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $gray-900;
+        margin-bottom: 40px;
+    }
+
+    .register-card .card-title,
+    .register-subheadline {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+    }
+
+    .register-login-collapse-toogle {
+        margin-bottom: 2rem;
+    }
+
+    .register-card .card-title {
+        padding-bottom: 0;
+        border-bottom: 0;
+        margin-bottom: 4px;
+    }
+
+    .register-shipping .card-title,
+    .card-register-intro {
+        margin-bottom: 20px;
+    }
+
+    .checkout-divider {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .login-submit button {
+        @extend .btn-lg;
+
+        width: 100%;
+    }
+
+    .register-submit {
+        text-align: left;
+
+        button {
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .login-submit button {
+            width: unset;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .checkout-main {
+            padding-top: 72px;
+        }
+
+        .register-submit button {
+            width: 50%;
+        }
+
+        .checkout-main {
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+.register-billing > .form-row:first-child {
+    .form-group.col-md-6 {
+        @include make-col(12)
+    }
+
+    .form-group.col-md-2 {
+        @include make-col(6)
+    }
+
+    .form-group.col-md-4 {
+        @include make-col(6)
+    }
+}
+
+.register-address {
+    margin-bottom: 2rem;
+}
+
+.privacy-notice {
+    margin-top: 23px;
+}
+
+.register-required-info {
+    font-size: $font-size-sm;
+}

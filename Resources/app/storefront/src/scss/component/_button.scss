@@ -22,6 +22,12 @@
     }
 }
 
+.btn-outline-primary {
+    @include hover {
+        color: $white;
+    }
+}
+
 .btn-outline-dark {
     @include button-outline-variant($gray-900);
 

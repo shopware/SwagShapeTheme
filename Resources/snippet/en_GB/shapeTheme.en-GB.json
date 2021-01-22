@@ -2,5 +2,11 @@
     "footer": {
         "newsletterHeadline": "Our newsletter. Subscribe now and don't miss anything anymore!",
         "newsletterInfo": "Subscribe to the newsletter now and get a x Euro voucher!"
+    },
+    "checkout":{
+        "welcome": "Welcome back!",
+        "addressRegisterCardTitle": "I am new here.",
+        "registerWelcome": "Welcome! Please register to continue:",
+        "addressLogin": "You already have an account."
     }
 }

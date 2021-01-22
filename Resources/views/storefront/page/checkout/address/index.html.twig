@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/page/checkout/address/index.html.twig' %}
+
+{% block page_checkout_address_login_toggle %}
+    <div class="register-login-collapse-toogle">
+        <h4 class="register-subheadline">{{ "checkout.welcome"|trans|sw_sanitize }}</h4>
+        <p class="mb-4">{{ "checkout.addressLogin"|trans|sw_sanitize }}</p>
+        <a href="#loginCollapse"
+           class="login-collapse-toggle"
+           data-toggle="collapse"
+           aria-expanded="false">
+            <strong>{{ "checkout.addressLoginToggle"|trans|sw_sanitize }}</strong>
+        </a>
+    </div>
+{% endblock %}
+
+{% block page_checkout_address_login %}
+    {{ parent() }}
+    <hr class="divider checkout-divider" />
+{% endblock %}

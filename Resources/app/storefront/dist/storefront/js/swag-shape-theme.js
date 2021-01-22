@@ -1,4 +1,1 @@
-(window.webpackJsonp = window.webpackJsonp || []).push([["swag-shape-theme"], {
-    "0USu": function (n, w) {
-    }
-}, [["0USu", "runtime"]]]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([["swag-shape-theme"],{"0USu":function(n,w){}},[["0USu","runtime"]]]);
