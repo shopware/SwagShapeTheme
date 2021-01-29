@@ -1,8 +1,18 @@
 .footer-minimal {
     font-weight: 500;
 
+    a {
+        color: $body-color;
+    }
+
+    p {
+        margin-bottom: 30px;
+        font-size: $font-size-sm;
+    }
+
     .footer-copyright {
         order: 1;
+        font-size: $font-size-sm;
     }
 
     .footer-copyright,
@@ -14,35 +24,63 @@
 
     .footer-service-menu-list {
         @extend .mb-0;
+
+        padding-bottom: 25px;
     }
 
     .footer-service-menu-item {
-        padding-bottom: 1rem;
+        display: block;
+        padding-bottom: 5px;
     }
 
     .footer-service-menu-link {
         @extend .py-0;
     }
 
-    .footer-vat {
-        margin-bottom: 20px;
-    }
-
     .footer-service-menu-item {
         &::after {
-            --size: 4px;
-
-            @include border-radius(100%);
-            width: var(--size);
-            height: var(--size);
-
-            border: none;
-            vertical-align: middle;
-            background-color: $gray-400;
+            content: none;
         }
     }
 
     @include media-breakpoint-up(md) {
+        p {
+            margin-bottom: 25px;
+        }
+
+        .footer-service-menu-list {
+            padding-bottom: 15px;
+        }
+
+        .footer-service-menu-item {
+            display: inline-block;
+
+            &::after {
+                --size: 4px;
+
+                @include border-radius(100%);
+                content: '';
+                width: var(--size);
+                height: var(--size);
+
+                border: none;
+                vertical-align: middle;
+                background-color: $gray-400;
+            }
+
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        p {
+            margin-bottom: 5px;
+        }
+
         .footer-copyright,
         .footer-service-menu-list {
             text-align: left;
@@ -52,10 +90,13 @@
             @include make-col(4);
 
             order: 0;
+            font-size: $font-size-base;
         }
 
         .footer-service-menu-list {
-            @include make-col(8)
+            @include make-col(8);
+
+            padding-bottom: 0;
         }
     }
 }
