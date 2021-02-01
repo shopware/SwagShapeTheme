@@ -1,4 +1,8 @@
 {
+    "general": {
+        "404ErrorPageHeader": "It looks like you are lost.",
+        "404ErrorDescription": "The page you are looking for no longer exists"
+    },
     "footer": {
         "newsletterHeadline": "Our newsletter. Subscribe now and don't miss anything anymore!",
         "newsletterInfo": "Subscribe to the newsletter now and get a x Euro voucher!"

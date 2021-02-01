@@ -6,6 +6,16 @@ Additional styling for bootstrap container layout.
 https://getbootstrap.com/docs/4.3/layout/overview/
 */
 
+@mixin container-gutter($offset, $max) {
+    --gutter: #{'min(calc((100vw - 100% - calc(#{$offset} / 2)) / 2), #{$max})'};
+
+    margin-left: calc((var(--gutter) * -1));
+    margin-right: calc((var(--gutter) * -1));
+
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
 .container {
     --container-width: 1320px;
 

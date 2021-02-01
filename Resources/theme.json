@@ -107,6 +107,56 @@
                 "editable": true,
                 "block": "media",
                 "order": 300
+            },
+            "sw-404-logo": {
+                "label": {
+                    "en-GB": "Logo",
+                    "de-DE": "Logo"
+                },
+                "type": "media",
+                "value": "public/assets/logo/404-logo.png",
+                "editable": true,
+                "block": "404 Page"
+            },
+            "sw-404-bg-desktop": {
+                "label": {
+                    "en-GB": "Desktop Background Image",
+                    "de-DE": "Desktop-Hintergrundbild"
+                },
+                "type": "media",
+                "value": "public/assets/images/404-bg-desktop.png",
+                "editable": true,
+                "block": "404 Page"
+            },
+            "sw-404-bg-tablet": {
+                "label": {
+                    "en-GB": "Tablet Background Image",
+                    "de-DE": "Tablet-Hintergrundbild"
+                },
+                "type": "media",
+                "value": "public/assets/images/404-bg-tablet.png",
+                "editable": true,
+                "block": "404 Page"
+            },
+            "sw-404-bg": {
+                "label": {
+                    "en-GB": "Mobile Background Image",
+                    "de-DE": "Mobiles Hintergrundbild"
+                },
+                "type": "media",
+                "value": "public/assets/images/404-bg.png",
+                "editable": true,
+                "block": "404 Page"
+            },
+            "sw-404-bg-color": {
+                "label": {
+                    "en-GB": "Background Colour",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#f9eae7",
+                "editable": true,
+                "block": "404 Page"
             }
         }
     }
