@@ -4,7 +4,7 @@
     {% set styles = [ size, color, rotation, flip, class ] %}
     {% if pack == 'shape' %}
         <span class="icon-shape icon-shape-{{ name }}{% for entry in styles %}{% if entry != "" %} icon-{{ entry }}{% endif %}{% endfor %}">
-            {{ source('@SwagShapeTheme/../public/assets/icon/'~ name ~'.svg', ignore_missing = true) }}
+            {{ source('@SwagShapeTheme/../app/storefront/src/assets/icon/'~ name ~'.svg', ignore_missing = true) }}
         </span>
     {% else %}
         {{ parent() }}
