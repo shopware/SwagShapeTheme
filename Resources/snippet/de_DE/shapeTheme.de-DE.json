@@ -1,4 +1,8 @@
 {
+    "general": {
+        "404ErrorPageHeader": "Es sieht so aus, als hätten Sie sich verfahren.",
+        "404ErrorDescription": "Die von Ihnen gesuchte Seite existiert nicht mehr"
+    },
     "footer": {
         "newsletterHeadline": "Unser Newsletter. Jetzt abonnieren und nichts mehr verpassen!",
         "newsletterInfo": "Melden Sie sich jetzt für den Newsletter an und erhalten Sie einen x Euro Gutschein!"
