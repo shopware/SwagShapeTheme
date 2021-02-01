@@ -1,4 +1,5 @@
-.footer-minimal {
+.footer-minimal,
+.footer-simple {
     font-weight: 500;
 
     a {
@@ -96,7 +97,28 @@
         .footer-service-menu-list {
             @include make-col(8);
 
+            display: block;
             padding-bottom: 0;
+        }
+    }
+}
+
+.footer-simple {
+    .footer {
+        &-service-menu-list {
+            padding-top: 60px;
+
+            @include media-breakpoint-up(md) {
+                padding-top: 34px;
+            }
+        }
+
+        &-copyright {
+            padding-bottom: 24px;
+
+            @include media-breakpoint-up(md) {
+                padding-bottom: 4px;
+            }
         }
     }
 }
