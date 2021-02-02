@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+
+{% block page_checkout_summary_header %}
+    {{ parent() }}
+
+    {% block page_checkout_cart_add_promotion %}
+        <div class="checkout-add-promotion">
+            {{ parent() }}
+        </div>
+    {% endblock %}
+{% endblock %}
+
+{% block page_checkout_aside_actions %}
+    {% block page_checkout_cart_action_proceed %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
