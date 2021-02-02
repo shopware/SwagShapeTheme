@@ -65,15 +65,15 @@
             },
             "sw-logo-desktop": {
                 "type": "media",
-                "value": "public/assets/logo/shape-logo.svg"
+                "value": "app/storefront/src/assets/logo/shape-logo.svg"
             },
             "sw-logo-tablet": {
                 "type": "media",
-                "value": "public/assets/logo/shape-logo.svg"
+                "value": "app/storefront/src/assets/logo/shape-logo.svg"
             },
             "sw-logo-mobile": {
                 "type": "media",
-                "value": "public/assets/logo/shape-logo.svg"
+                "value": "app/storefront/src/assets/logo/shape-logo.svg"
             },
             "sw-footer-bg-color": {
                 "label": {
@@ -103,7 +103,7 @@
                     "de-DE": "Footer Logo"
                 },
                 "type": "media",
-                "value": "public/assets/logo/shape-logo.svg",
+                "value": "app/storefront/src/assets/logo/shape-logo.svg",
                 "editable": true,
                 "block": "media",
                 "order": 300
@@ -114,7 +114,7 @@
                     "de-DE": "Logo"
                 },
                 "type": "media",
-                "value": "public/assets/logo/404-logo.png",
+                "value": "app/storefront/src/assets/logo/404-logo.png",
                 "editable": true,
                 "block": "404 Page"
             },
@@ -124,7 +124,7 @@
                     "de-DE": "Desktop-Hintergrundbild"
                 },
                 "type": "media",
-                "value": "public/assets/images/404-bg-desktop.png",
+                "value": "app/storefront/src/assets/images/404-bg-desktop.png",
                 "editable": true,
                 "block": "404 Page"
             },
@@ -134,7 +134,7 @@
                     "de-DE": "Tablet-Hintergrundbild"
                 },
                 "type": "media",
-                "value": "public/assets/images/404-bg-tablet.png",
+                "value": "app/storefront/src/assets/images/404-bg-tablet.png",
                 "editable": true,
                 "block": "404 Page"
             },
@@ -144,7 +144,7 @@
                     "de-DE": "Mobiles Hintergrundbild"
                 },
                 "type": "media",
-                "value": "public/assets/images/404-bg.png",
+                "value": "app/storefront/src/assets/images/404-bg.png",
                 "editable": true,
                 "block": "404 Page"
             },
