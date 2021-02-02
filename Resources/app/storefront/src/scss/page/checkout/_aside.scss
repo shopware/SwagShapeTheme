@@ -36,12 +36,13 @@
     .form-control {
         @extend .form-control-lg;
         @include border-left-radius($input-border-radius-lg);
+
+        margin-right: $input-group-append-width-lg / 2;
+        padding-right: calc(#{$input-padding-x} + #{$input-group-append-width-lg} / 2);
     }
 
     .input-group-append {
-        button {
-            @include border-right-radius($input-border-radius-lg);
-        }
+        min-width: $input-group-append-width-lg;
     }
 }
 
