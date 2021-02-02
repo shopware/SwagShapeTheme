@@ -1,0 +1,7 @@
+.header-search {
+    .input-group-append {
+        > button.header-search-btn {
+            @include border-left-radius(0)
+        }
+    }
+}

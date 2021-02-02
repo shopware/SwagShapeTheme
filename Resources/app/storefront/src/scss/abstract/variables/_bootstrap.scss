@@ -1,5 +1,6 @@
 // contains variable overrides for bootstrap variables located under
 // shopRoot/src/vendor/shopware/storefront/Resources/app/storefront/vendor/bootstrap/scss/_variables.scss
+$asset-path: '#{$sw-asset-theme-url}/bundles/swagshapetheme/assets' !default;
 
 // Color system
 $gray-100: #f9fafc !default;
@@ -17,6 +18,7 @@ $green: #42954d !default;
 // Typography
 $font-size-base: 0.875rem !default;
 $font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
 $font-weight-bold: 600 !default;
 $font-weight-bolder: 700 !default;
 
@@ -46,7 +48,8 @@ $input-height: 40px;
 // Custom Forms
 $form-feedback-valid-color: $gray-700;
 $custom-select-border-radius: 20px !default;
-$custom-select-indicator: url(/bundles/swagshapetheme/assets/icon/ic-chevron-down.svg) !default;
+$custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
+$custom-select-padding-x: 1rem;
 
 $custom-control-indicator-border-color: $gray-400 !default;
 $custom-control-indicator-checked-bg: $sw-color-brand-primary;

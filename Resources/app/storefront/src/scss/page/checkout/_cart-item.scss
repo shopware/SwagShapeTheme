@@ -1,4 +1,64 @@
 .cart-item {
     border-bottom: 2px solid $hr-border-color;
-    padding: 1rem 0;
+    padding: 34px 0;
+    position: relative;
+
+    .cart-item-row {
+        align-items: center;
+    }
+
+    .cart-item-total-price,
+    .cart-item-label {
+        font-size: 1rem;
+    }
+
+    .cart-item-tax-price {
+        font-size: 12px;
+        font-weight: $font-weight-medium;
+    }
+
+    .cart-item-ordernumber,
+    .cart-item-tax-price {
+        color: #9ea7bc;
+    }
+
+    .cart-item-remove {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+    }
+
+    .cart-item-remove-button {
+        @extend .p-0;
+
+        line-height: 1;
+        border: none;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+
+        &:focus {
+            background-color: transparent;
+        }
+
+        > .icon {
+            width: 1rem;
+            height: 1rem;
+
+            > svg {
+                top: 0;
+            }
+        }
+    }
+
+    .cart-item-characteristics {
+        font-size: 11px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .cart-item-total-price,
+        .cart-item-label {
+            font-size: 20px;
+        }
+    }
 }
