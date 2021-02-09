@@ -1,7 +1,9 @@
 {
     "general": {
         "404ErrorPageHeader": "Es sieht so aus, als hätten Sie sich verfahren.",
-        "404ErrorDescription": "Die von Ihnen gesuchte Seite existiert nicht mehr"
+        "404ErrorDescription": "Die von Ihnen gesuchte Seite existiert nicht mehr",
+        "maintenanceModeHeader": "Wir werden bald wiederkommen.",
+        "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr."
     },
     "footer": {
         "newsletterHeadline": "Unser Newsletter. Jetzt abonnieren und nichts mehr verpassen!",
