@@ -6,8 +6,12 @@
         "maintenanceModeDescription": "The page you are looking for no longer exists."
     },
     "footer": {
-        "newsletterHeadline": "Our newsletter. Subscribe now and don't miss anything anymore!",
-        "newsletterInfo": "Subscribe to the newsletter now and get a x Euro voucher!"
+        "newsletterHeadline": "Our newsletter.<br>Subscribe now and don't miss anything anymore!",
+        "newsletterInfo": "Subscribe to the newsletter now and get a x Euro voucher!",
+        "instagramLink": "Instagram",
+        "facebookLink": "Instagram",
+        "pinterestLink": "Pinterest",
+        "scrollTop": "To the top"
     },
     "checkout":{
         "welcome": "Welcome back!",
@@ -15,5 +19,9 @@
         "registerWelcome": "Welcome! Please register to continue:",
         "addressLogin": "You already have an account.",
         "cartyEmptyDesc": "Add some product to fill your cart."
+    },
+    "newsletter": {
+        "formSubmit": "Sign up",
+        "placeholderMail": "Your e-mail address"
     }
 }
