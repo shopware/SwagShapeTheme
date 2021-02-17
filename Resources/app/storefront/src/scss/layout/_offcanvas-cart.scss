@@ -1,3 +1,5 @@
+$offcanvas-cart-spacing: 24px;
+
 .offcanvas-cart {
     .cart-item {
         .cart-item-total-price,
@@ -17,5 +19,52 @@
 
     .cart-item-details {
         margin-bottom: 10px;
+    }
+
+    &-header {
+        font-size: 22px;
+        line-height: 33px;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $gray-900;
+    }
+
+    .offcanvas-cart-tax {
+        color: $gray-900;
+    }
+}
+
+.offcanvas-summary {
+    .summary-value {
+        font-size: 1rem;
+    }
+
+    .shipping-cost > strong {
+        font-weight: $font-weight-normal;
+    }
+}
+
+.offcanvas-cart-actions {
+    .js-offcanvas-cart-promotion {
+        padding: $offcanvas-cart-spacing 0;
+        margin-bottom: $offcanvas-cart-spacing;
+        border-top: 2px solid $hr-border-color;
+        border-bottom: 2px solid $hr-border-color;
+    }
+
+    .offcanvas-cart-promotion-form {
+        margin-bottom: 0;
+    }
+
+    > .btn-block {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bolder;
+    }
+
+    > .btn-link {
+        @extend .btn-outline-primary;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

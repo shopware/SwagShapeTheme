@@ -29,6 +29,8 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "component/product-box";
 @import "component/alert";
 @import "component/custom-forms";
+@import "component/offcanvas";
+@import "component/filter-panel";
 
 /*
  * Layout-related sections
@@ -38,6 +40,7 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "layout/header-minimal";
 @import "layout/footer";
 @import "layout/offcanvas-cart";
+@import "layout/top-bar";
 
 /*
  * Page-specific styles

@@ -1,0 +1,15 @@
+.offcanvas {
+    width: 100%;
+
+    .offcanvas-close {
+        text-transform: unset;
+    }
+
+    .offcanvas-content-container {
+        padding: 33px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        width: auto;
+    }
+}
