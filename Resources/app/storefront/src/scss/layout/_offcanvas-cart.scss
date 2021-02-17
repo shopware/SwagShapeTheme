@@ -1,0 +1,21 @@
+.offcanvas-cart {
+    .cart-item {
+        .cart-item-total-price,
+        .cart-item-price,
+        .cart-item-label {
+            font-size: 1rem;
+        }
+        
+        .cart-item-remove {
+            top: 0.5rem;
+        }
+
+        .cart-item-row {
+            align-items: flex-start;
+        }
+    }
+
+    .cart-item-details {
+        margin-bottom: 10px;
+    }
+}
