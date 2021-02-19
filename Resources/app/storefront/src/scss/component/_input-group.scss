@@ -34,4 +34,11 @@
     > .input-group-append {
         min-width: $input-group-append-width-lg;
     }
+
+    > .form-control,
+    > .custom-select {
+        &:not(:first-child) {
+            @include border-left-radius($input-border-radius-lg);
+        }
+    }
 }

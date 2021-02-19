@@ -1,5 +1,7 @@
+$cart-item-img-width: 112px;
+
 .cart-item {
-    border-bottom: 2px solid $hr-border-color;
+    border-bottom: $hr-border-width solid $hr-border-color;
     padding: 34px 0;
     position: relative;
 
@@ -13,7 +15,7 @@
     }
 
     .cart-item-tax-price {
-        font-size: 12px;
+        font-size: $font-size-sm;
         font-weight: $font-weight-medium;
     }
 
@@ -25,7 +27,11 @@
     .cart-item-remove {
         position: absolute;
         right: 0;
-        top: 1rem;
+        top: $spacer;
+    }
+
+    .cart-item-img-container {
+        width: $cart-item-img-width;
     }
 
     .cart-item-remove-button {
@@ -42,8 +48,8 @@
         }
 
         > .icon {
-            width: 1rem;
-            height: 1rem;
+            width: $spacer;
+            height: $spacer;
 
             > svg {
                 top: 0;
@@ -61,4 +67,8 @@
             font-size: 20px;
         }
     }
+}
+
+.cart-item-product + .form-row {
+    margin-top: $spacer-lg;
 }

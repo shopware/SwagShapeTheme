@@ -13,6 +13,7 @@
         "welcome": "Welcome back!",
         "addressRegisterCardTitle": "I am new here.",
         "registerWelcome": "Welcome! Please register to continue:",
-        "addressLogin": "You already have an account."
+        "addressLogin": "You already have an account.",
+        "cartyEmptyDesc": "Add some product to fill your cart."
     }
 }
