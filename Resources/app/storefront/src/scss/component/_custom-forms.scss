@@ -1,3 +1,10 @@
 .custom-switch {
     height: $custom-control-indicator-size;
 }
+
+.custom-select-lg {
+    @include border-radius($btn-border-radius-lg, 0);
+
+    padding-left: 24px;
+    padding-right: 24px;
+}

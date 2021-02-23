@@ -1,0 +1,16 @@
+@mixin checkout-headline {
+    font-size: 28px;
+    line-height: 34px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $gray-900;
+}
+
+.address-main-header,
+.cart-main-header,
+.confirm-main-header,
+.checkout-aside-product-header,
+.checkout-aside-summary-header {
+    @include checkout-headline;
+
+    margin-bottom: 30px;
+}
