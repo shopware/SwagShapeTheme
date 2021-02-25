@@ -16,6 +16,16 @@ https://getbootstrap.com/docs/4.3/layout/overview/
     padding-right: var(--gutter);
 }
 
+@mixin container-full-width () {
+    --gutter-width: calc((100vw - 100%) / 2);
+
+    margin-left: calc((var(--gutter-width) * -1));
+    margin-right: calc((var(--gutter-width) * -1));
+
+    padding-left: var(--gutter-width);
+    padding-right: var(--gutter-width);
+}
+
 .container {
     --container-width: 1320px;
 

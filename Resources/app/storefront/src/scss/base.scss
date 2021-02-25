@@ -10,6 +10,7 @@ https://sass-guidelin.es/#the-7-1-pattern
  * Variables, Mixins, Functions
  * ---------------------------- */
 @import 'abstract/variables/custom';
+@import 'abstract/mixins/bootstrap';
 /*
  * Vendors
  * ------- */
@@ -31,6 +32,7 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "component/custom-forms";
 @import "component/offcanvas";
 @import "component/filter-panel";
+@import "component/dropdown";
 
 /*
  * Layout-related sections

@@ -44,3 +44,7 @@ $spacer-30: ($spacer * 1.875) !default; // 30px
 $spacer-40: ($spacer * 2.5) !default; // 40px
 $spacer-50: ($spacer * 3.125) !default; // 50px
 $spacer-60: ($spacer * 3.75) !default; // 60px
+
+// icon
+$icon-caret-down: url('#{$asset-path}/icon/ic-caret-down.svg');
+$icon-caret-up: url('#{$asset-path}/icon/ic-caret-up.svg');
