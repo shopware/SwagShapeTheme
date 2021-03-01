@@ -6,8 +6,12 @@
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr."
     },
     "footer": {
-        "newsletterHeadline": "Unser Newsletter. Jetzt abonnieren und nichts mehr verpassen!",
-        "newsletterInfo": "Melden Sie sich jetzt für den Newsletter an und erhalten Sie einen x Euro Gutschein!"
+        "newsletterHeadline": "Unser Newsletter.<br>Jetzt abonnieren und nichts mehr verpassen!",
+        "newsletterInfo": "Melden Sie sich jetzt für den Newsletter an und erhalten Sie einen x Euro Gutschein!",
+        "instagramLink": "Instagram",
+        "facebookLink": "Instagram",
+        "pinterestLink": "Pinterest",
+        "scrollTop": "Nach oben"
     },
     "checkout": {
         "welcome": "Willkommen zurück!",
@@ -15,5 +19,9 @@
         "registerWelcome": "Herzlich willkommen! Bitte registrieren Sie sich, um fortzufahren:",
         "addressLogin": "Sie sind bereits Kunde.",
         "cartyEmptyDesc": "Fügen Sie ein Produkt hinzu, um Ihren Warenkorb zu füllen."
+    },
+    "newsletter": {
+        "formSubmit": "Anmelden",
+        "placeholderMail": "Ihre E-Mail Adresse"
     }
 }

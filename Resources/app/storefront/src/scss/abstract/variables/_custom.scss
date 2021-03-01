@@ -22,6 +22,10 @@ $picture-width: 390px;
 
 $input-group-append-width: 60px;
 $input-group-append-width-lg: 80px;
+$input-group-append-width-xl: 120px;
+
+// Primary color
+$newsletter-bg-color: #f4b7ad;
 
 //
 // Spacing
@@ -31,7 +35,12 @@ $spacer-sm: ($spacer * 0.5) !default; // 8px
 $spacer-md: $spacer !default; // 16px
 $spacer-lg: ($spacer * 1.5) !default; // 24px
 $spacer-xl: ($spacer * 3) !default; // 48px
+$spacer-xxl: ($spacer * 3.5) !default; // 56px
 
+$spacer-5: ($spacer * 0.3125) !default; // 5px
+$spacer-10: ($spacer * 0.625) !default; // 10px
 $spacer-20: ($spacer * 1.25) !default; // 20px
 $spacer-30: ($spacer * 1.875) !default; // 30px
 $spacer-40: ($spacer * 2.5) !default; // 40px
+$spacer-50: ($spacer * 3.125) !default; // 50px
+$spacer-60: ($spacer * 3.75) !default; // 60px

@@ -187,6 +187,36 @@
                 "value": "#f9eae7",
                 "editable": true,
                 "block": "Maintenance Page"
+            },
+            "sw-instagram-link": {
+                "label": {
+                    "en-GB": "Instagram Link",
+                    "de-DE": "Instagram Link"
+                },
+                "type": "textarea",
+                "value": "https://www.instagram.com/",
+                "editable": true,
+                "block": "footer"
+            },
+            "sw-facebook-link": {
+                "label": {
+                    "en-GB": "Facebook Link",
+                    "de-DE": "Facebook Link"
+                },
+                "type": "textarea",
+                "value": "https://www.facebook.com/",
+                "editable": true,
+                "block": "footer"
+            },
+            "sw-pinterest-link": {
+                "label": {
+                    "en-GB": "Pinterest Link",
+                    "de-DE": "Pinterest Link"
+                },
+                "type": "textarea",
+                "value": "https://www.pinterest.com/",
+                "editable": true,
+                "block": "footer"
             }
         }
     }

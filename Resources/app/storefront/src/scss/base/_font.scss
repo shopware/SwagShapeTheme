@@ -25,3 +25,10 @@
     font-style: normal;
     font-weight: 700;
 }
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{$asset-path}/font/raleway/Raleway-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 800;
+}
