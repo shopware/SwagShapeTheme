@@ -59,7 +59,8 @@
                 "value": "#1f2e3d"
             },
             "sw-color-buy-button": {
-                "value": "#f17662"
+                "value": "#f17662",
+                "editable": false
             },
             "sw-color-buy-button-text": {
                 "value": "#ffffff"
