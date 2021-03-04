@@ -3,15 +3,23 @@
 $asset-path: '#{$sw-asset-theme-url}/bundles/swagshapetheme/assets' !default;
 
 // Color system
-$gray-100: #f9fafc !default;
-$gray-200: #eff2f7 !default;
-$gray-300: #dde2ed !default;
+$gray-100: $sw-color-some-backgrounds !default;
+$gray-300: $sw-color-disabled-primary !default;
 $gray-400: #b2bcd2 !default;
-$gray-500: #9ea7bc !default;
-$gray-600: #768699 !default;
+$gray-500: $sw-color-footer !default;
+$gray-600: $sw-color-menu-flyout !default;
 $gray-700: #637182 !default;
-$gray-800: #344254 !default;
-$gray-900: #1f2e3d !default;
+$gray-800: $sw-color-primary-hover !default;
+$gray-900: $sw-color-brand-primary !default;
+
+// Colors
+$shape-gray-100: #f9fafc !default;
+$shape-gray-200: #eff2f7 !default;
+$shape-gray-300: $sw-border-color !default;
+$shape-gray-500: #9ea7bc !default;
+$shape-gray-600: #768699 !default;
+$shape-gray-800: #344254 !default;
+$shape-gray-900: #1f2e3d !default;
 
 $green: #42954d !default;
 
@@ -43,8 +51,8 @@ $input-border-radius: $btn-border-radius;
 $input-border-radius-lg: $btn-border-radius-lg;
 
 $input-height-lg: 48px;
-$input-border-color: $gray-300;
-$input-placeholder-color: $gray-500;
+$input-border-color: $shape-gray-300;
+$input-placeholder-color: $shape-gray-500;
 $input-height: 40px;
 $input-padding-x-lg: 24px;
 
@@ -68,12 +76,12 @@ $alert-padding-y: .75rem !default;
 $alert-padding-x: 1.25rem !default;
 
 // List items
-$list-group-action-color: $gray-900 !default;
-$list-group-action-hover-color: $gray-900 !default;
-$list-group-action-active-color: $gray-900 !default;
+$list-group-action-color: $shape-gray-900 !default;
+$list-group-action-hover-color: $shape-gray-900 !default;
+$list-group-action-active-color: $shape-gray-900 !default;
 
 //
 // Horizontal rules
 //
 $hr-border-width: 2px !default;
-$hr-border-color: $gray-300;
+$hr-border-color: $shape-gray-300;

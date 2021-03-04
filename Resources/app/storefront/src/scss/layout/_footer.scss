@@ -184,7 +184,7 @@
         margin-left: -$spacer-20;
         margin-right: -$spacer-20;
         padding: $spacer-xxl $spacer-20 $spacer-20;
-        background-color: $gray-100;
+        background-color: $shape-gray-100;
 
         .links {
             padding-left: $spacer-lg;
@@ -201,6 +201,10 @@
 
     &-social_links {
         text-align: right;
+
+        svg path {
+            fill: $sw-color-brand-primary;
+        }
     }
 
     &-column {
@@ -296,7 +300,7 @@
             &-headline {
                 font-weight: $font-weight-extrabold;
                 line-height: 36px;
-                color: $gray-500;
+                color: $shape-gray-500;
                 text-transform: uppercase;
                 padding: $spacer-10 0;
                 border-bottom: none;

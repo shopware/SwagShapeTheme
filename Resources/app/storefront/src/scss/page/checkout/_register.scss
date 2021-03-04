@@ -23,7 +23,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     .checkout {
         @include container-gutter($grid-gutter-width, 163px);
 
-        background-color: $gray-100;
+        background-color: $shape-gray-100;
         padding-bottom: 50px;
 
         .checkout-aside {

@@ -1,7 +1,13 @@
+.is-ctl-.is-act- {
+    .container > .container-main {
+        padding-bottom: 0;
+    }
+}
+
 .container-404 {
     @include container-gutter(0px, 175px);
 
-    background-color: $sw-404-bg-color;
+    background-color: $sw-color-some-backgrounds;
     padding: 50px 0 30px;
 
     .picture {
@@ -71,7 +77,7 @@
 .container-maintenance {
     @include container-gutter(0px, 175px);
 
-    background-color: $sw-maintenance-bg-color;
+    background-color: $sw-color-some-backgrounds;
     padding: 90px 0 125px;
 
     &__bg {
