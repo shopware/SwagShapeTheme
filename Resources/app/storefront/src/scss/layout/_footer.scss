@@ -61,7 +61,7 @@
         font-size: $font-size-sm;
 
         .footer-simple & {
-            padding-top: $spacer-lg;
+            padding-top: 80px;
         }
     }
 
@@ -79,7 +79,8 @@
             padding-bottom: $spacer-lg;
 
             .footer-simple & {
-                padding-top: $spacer-60;
+                padding-top: 0;
+                padding-bottom: 0;
             }
 
             .footer-main & {
@@ -110,7 +111,8 @@
             }
 
             @include media-breakpoint-down(sm) {
-                .footer-minimal & {
+                .footer-minimal &,
+                .footer-simple & {
                     display: block;
 
                     &::after {
@@ -127,6 +129,7 @@
 
     &-bottom {
         font-weight: $font-weight-medium;
+        padding: $spacer-20;
 
         a {
             color: $body-color;
@@ -245,18 +248,9 @@
             }
         }
 
-        &-service-menu {
-            &-list {
-                padding-bottom: $spacer-md;
-
-                .footer-simple & {
-                    padding-top: 34px;
-                }
-            }
-        }
-
         &-copyright {
             .footer-simple & {
+                padding-top: $spacer-60;
                 padding-bottom: $spacer-xs;
             }
         }
@@ -366,21 +360,16 @@
             }
         }
 
-        &-copyright,
-        &-service-menu-list {
-            text-align: left;
-        }
-
         &-copyright {
-            @include make-col(4);
-
-            order: 0;
+            text-align: left;
             font-size: $font-size-base;
+
+            .footer-simple & {
+                padding-top: $spacer-10;
+            }
         }
 
         &-service-menu-list {
-            @include make-col(8);
-
             display: block;
             padding-bottom: 0;
 
