@@ -5,6 +5,9 @@
         "maintenanceModeHeader": "Wir werden bald wiederkommen.",
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr."
     },
+    "header": {
+        "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro"
+    },
     "footer": {
         "newsletterHeadline": "Unser Newsletter.<br>Jetzt abonnieren und nichts mehr verpassen!",
         "newsletterInfo": "Melden Sie sich jetzt für den Newsletter an und erhalten Sie einen x Euro Gutschein!",

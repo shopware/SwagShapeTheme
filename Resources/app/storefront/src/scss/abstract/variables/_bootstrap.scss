@@ -85,3 +85,16 @@ $list-group-action-active-color: $shape-gray-900 !default;
 //
 $hr-border-width: 2px !default;
 $hr-border-color: $shape-gray-300;
+
+// Dropdowns
+$dropdown-color: $shape-gray-800;
+$dropdown-font-size: 12px;
+$dropdown-min-width: 100%;
+$dropdown-item-padding-y: 10px;
+$dropdown-item-padding-x: 10px;
+$dropdown-border-color: #fff !default;
+$dropdown-box-shadow: 0px 20px 160px 0px rgba(0, 0, 0, 0.12) !default;
+$dropdown-border-width: 0;
+
+$dropdown-link-color: $dropdown-color;
+$dropdown-link-active-bg: $shape-gray-200;
