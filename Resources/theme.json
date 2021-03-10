@@ -28,7 +28,7 @@
                 "value": "#f17662"
             },
             "sw-border-color": {
-                "value": "#bcc1c7"
+                "value": "#dde2ed"
             },
             "sw-color-success": {
                 "value": "#42954d"
@@ -74,17 +74,6 @@
             "sw-logo-mobile": {
                 "type": "media",
                 "value": "app/storefront/src/assets/logo/shape-logo.svg"
-            },
-            "sw-footer-bg-color": {
-                "label": {
-                    "en-GB": "Background colour",
-                    "de-DE": "Hintergrundfarbe"
-                },
-                "type": "color",
-                "value": "#f9fafc",
-                "editable": true,
-                "block": "footer",
-                "order": 100
             },
             "sw-footer-text-color": {
                 "label": {
@@ -148,16 +137,6 @@
                 "editable": true,
                 "block": "404 Page"
             },
-            "sw-404-bg-color": {
-                "label": {
-                    "en-GB": "Background Colour",
-                    "de-DE": "Hintergrundfarbe"
-                },
-                "type": "color",
-                "value": "#f9eae7",
-                "editable": true,
-                "block": "404 Page"
-            },
             "sw-maintenance-bg": {
                 "label": {
                     "en-GB": "Maintenance Background",
@@ -175,16 +154,6 @@
                 },
                 "type": "media",
                 "value": "app/storefront/src/assets/images/maintenance-m.png",
-                "editable": true,
-                "block": "Maintenance Page"
-            },
-            "sw-maintenance-bg-color": {
-                "label": {
-                    "en-GB": "Background Colour",
-                    "de-DE": "Hintergrundfarbe"
-                },
-                "type": "color",
-                "value": "#f9eae7",
                 "editable": true,
                 "block": "Maintenance Page"
             },
@@ -217,6 +186,56 @@
                 "value": "https://www.pinterest.com/",
                 "editable": true,
                 "block": "footer"
+            },
+            "sw-color-primary-hover": {
+                "label": {
+                    "en-GB": "Primary hover colour",
+                    "de-DE": "Primäre Schwebefarbe"
+                },
+                "type": "color",
+                "value": "#f08b7a",
+                "editable": true,
+                "block": "themeColors"
+            },
+            "sw-color-menu-flyout": {
+                "label": {
+                    "en-GB": "Menu flyout colour",
+                    "de-DE": "Farbe des Menü-Flyouts"
+                },
+                "type": "color",
+                "value": "#f2a194",
+                "editable": true,
+                "block": "themeColors"
+            },
+            "sw-color-footer": {
+                "label": {
+                    "en-GB": "Footer, disabled icons colour",
+                    "de-DE": "Farbe der Fußzeile, deaktivierte Icons"
+                },
+                "type": "color",
+                "value": "#f4b7ad",
+                "editable": true,
+                "block": "themeColors"
+            },
+            "sw-color-disabled-primary": {
+                "label": {
+                    "en-GB": "Disabled primary colour",
+                    "de-DE": "Deaktivierte Primärfarbe"
+                },
+                "type": "color",
+                "value": "#f7d9d4",
+                "editable": true,
+                "block": "themeColors"
+            },
+            "sw-color-some-backgrounds": {
+                "label": {
+                    "en-GB": "Some backgrounds colour",
+                    "de-DE": "Einige Hintergründe Farbe"
+                },
+                "type": "color",
+                "value": "#f9eae7",
+                "editable": true,
+                "block": "themeColors"
             }
         }
     }

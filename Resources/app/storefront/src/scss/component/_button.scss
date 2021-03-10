@@ -8,8 +8,8 @@
 
 .btn-primary {
     --text-color: #fdfdfd;
-    --hover-bg-color: #f08b7a;
-    --disabled-bg-color: #f7d9d4;
+    --hover-bg-color: $sw-color-primary-hover;
+    --disabled-bg-color: $sw-color-disabled-primary;
 
     color: var(--text-color);
 
@@ -33,7 +33,7 @@
 }
 
 .btn-outline-dark {
-    @include button-outline-variant($gray-900);
+    @include button-outline-variant($shape-gray-900);
 
     @include hover {
         color: $gray-700;
@@ -46,11 +46,11 @@
     --bg-color: #fff;
 
     background-color: var(--bg-color);
-    color: $gray-900;
+    color: $shape-gray-900;
     border-color: var(--bg-color);
 
     @include hover {
-        color: $gray-900;
+        color: $shape-gray-900;
         background-color: var(--bg-color);
         border-color: var(--bg-color);
     }
@@ -60,8 +60,8 @@
 .btn-outline-dark {
     &.disabled,
     &:disabled {
-        color: $gray-300;
-        border-color: $gray-300;
+        color: $shape-gray-300;
+        border-color: $shape-gray-300;
         background-color: transparent;
     }
 }
