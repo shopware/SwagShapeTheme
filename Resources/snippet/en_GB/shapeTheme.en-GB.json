@@ -23,12 +23,23 @@
         "addressLogin": "You already have an account.",
         "cartyEmptyDesc": "Add some product to fill your cart."
     },
-    "account": {
-        "overviewChangeBilling": "Change",
-        "overviewChangeShipping": "Change"
-    },
     "newsletter": {
         "formSubmit": "Sign up",
         "placeholderMail": "Your e-mail address"
+    },
+    "account": {
+        "overviewTitle": "Hello",
+        "overviewInfo": "This is the account overview! Find and edit basic information on selected payment methods and addresses.",
+        "overviewProfileHeader": "your profile",
+        "overviewChangeProfile": "Change",
+        "overviewPaymentHeader": "Payment Method",
+        "overviewChangePayment": "Change",
+        "newsletterTitle": "newsletter setting",
+        "overviewNewestOrderHeader": "Your last order",
+        "orderActionView": "View more",
+        "overviewChangeBilling": "Change",
+        "overviewChangeShipping": "Change",
+        "orderContextMenuChangePayment": "Change",
+        "greetings": "Your Account"
     }
 }

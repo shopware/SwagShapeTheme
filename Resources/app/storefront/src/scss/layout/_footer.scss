@@ -202,6 +202,15 @@
         padding-right: 0;
     }
 
+    &-social-media {
+        @extend .col-lg-2;
+    }
+
+    &-navigation {
+        @extend .col-lg-9;
+        @extend .offset-lg-1;
+    }
+
     &-social_links {
         text-align: right;
 
@@ -391,15 +400,6 @@
                 padding-left: 0;
                 padding-right: $spacer-30;
             }
-        }
-
-        &-social-media {
-            @extend .col-lg-2;
-        }
-
-        &-navigation {
-            @extend .col-lg-9;
-            @extend .offset-lg-1;
         }
 
         &-columms {
