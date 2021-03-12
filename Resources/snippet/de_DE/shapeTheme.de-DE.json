@@ -45,6 +45,19 @@
         "loginHeader": "Willkommen zurück!",
         "registerPersonalHeader": "Ich bin neu hier.",
         "loginPasswordRecover": "Haben Sie Ihr Passwort vergessen?",
-        "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten."
+        "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten.",
+        "overviewTitle": "Hallo",
+        "overviewInfo": "Dies ist die Kontoübersicht! Finden und bearbeiten Sie grundlegende Informationen zu ausgewählten Zahlungsarten und Adressen.",
+        "overviewProfileHeader": "Ihr Profil",
+        "overviewChangeProfile": "Change",
+        "overviewPaymentHeader": "Zahlungsmethode",
+        "overviewChangePayment": "Ändern",
+        "newsletterTitle": "Newsletter-Einstellung",
+        "overviewNewestOrderHeader": "Ihr letzter Auftrag",
+        "orderActionView": "Mehr sehen",
+        "overviewChangeBilling": "Ändern",
+        "orderContextMenuChangePayment": "Ändern",
+        "overviewChangeShipping": "Ändern",
+        "greetings": "Ihr Konto"
     }
 }
