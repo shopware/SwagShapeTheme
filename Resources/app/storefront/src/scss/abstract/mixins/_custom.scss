@@ -49,3 +49,13 @@
         }
     }
 }
+
+@mixin shape-card-title {
+    text-transform: uppercase;
+    font-size: $font-size-base;
+    line-height: 20px;
+    padding-bottom: $spacer-sm;
+    border-bottom-width: 2px;
+    border-color: $shape-gray-900;
+    margin-bottom: 1rem;
+}
