@@ -23,6 +23,10 @@
         "addressLogin": "You already have an account.",
         "cartyEmptyDesc": "Add some product to fill your cart."
     },
+    "account": {
+        "overviewChangeBilling": "Change",
+        "overviewChangeShipping": "Change"
+    },
     "newsletter": {
         "formSubmit": "Sign up",
         "placeholderMail": "Your e-mail address"

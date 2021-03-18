@@ -1,0 +1,7 @@
+@mixin checkout-headline {
+    font-size: 28px;
+    line-height: 34px;
+    padding-bottom: 1rem;
+    border-bottom: $hr-border-width solid $shape-gray-900;
+    font-weight: $font-weight-bold;
+}
