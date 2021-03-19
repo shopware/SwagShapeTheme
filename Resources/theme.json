@@ -25,7 +25,8 @@
                 "value": "#f17662"
             },
             "sw-color-brand-secondary": {
-                "value": "#f17662"
+                "value": "#f17662",
+                "editable": false
             },
             "sw-border-color": {
                 "value": "#dde2ed"
@@ -186,56 +187,6 @@
                 "value": "https://www.pinterest.com/",
                 "editable": true,
                 "block": "footer"
-            },
-            "sw-color-primary-hover": {
-                "label": {
-                    "en-GB": "Primary hover colour",
-                    "de-DE": "Primäre Schwebefarbe"
-                },
-                "type": "color",
-                "value": "#f08b7a",
-                "editable": true,
-                "block": "themeColors"
-            },
-            "sw-color-menu-flyout": {
-                "label": {
-                    "en-GB": "Menu flyout colour",
-                    "de-DE": "Farbe des Menü-Flyouts"
-                },
-                "type": "color",
-                "value": "#f2a194",
-                "editable": true,
-                "block": "themeColors"
-            },
-            "sw-color-footer": {
-                "label": {
-                    "en-GB": "Footer, disabled icons colour",
-                    "de-DE": "Farbe der Fußzeile, deaktivierte Icons"
-                },
-                "type": "color",
-                "value": "#f4b7ad",
-                "editable": true,
-                "block": "themeColors"
-            },
-            "sw-color-disabled-primary": {
-                "label": {
-                    "en-GB": "Disabled primary colour",
-                    "de-DE": "Deaktivierte Primärfarbe"
-                },
-                "type": "color",
-                "value": "#f7d9d4",
-                "editable": true,
-                "block": "themeColors"
-            },
-            "sw-color-some-backgrounds": {
-                "label": {
-                    "en-GB": "Some backgrounds colour",
-                    "de-DE": "Einige Hintergründe Farbe"
-                },
-                "type": "color",
-                "value": "#f9eae7",
-                "editable": true,
-                "block": "themeColors"
             }
         }
     }
