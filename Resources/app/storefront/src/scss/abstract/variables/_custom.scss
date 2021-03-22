@@ -1,7 +1,7 @@
 // contains new variables specific to the theme
 $disabled-btn-color: $shape-gray-500 !default;
 
-$footer-bg-color: $sw-color-footer !default;
+$footer-bg-color: $gray-500 !default;
 $footer-color: $sw-footer-text-color !default;
 $footer-border-color: $shape-gray-800 !default;
 $footer-bottom-color: $gray-700 !default;
@@ -25,7 +25,7 @@ $input-group-append-width-lg: 80px;
 $input-group-append-width-xl: 120px;
 
 // Newsletter
-$newsletter-bg-color: $sw-color-footer;
+$newsletter-bg-color: $gray-500;
 
 //
 // Spacing

@@ -8,8 +8,8 @@
 
 .btn-primary {
     --text-color: #fdfdfd;
-    --hover-bg-color: $sw-color-primary-hover;
-    --disabled-bg-color: $sw-color-disabled-primary;
+    --hover-bg-color: $gray-800;
+    --disabled-bg-color: $gray-300;
 
     color: var(--text-color);
 

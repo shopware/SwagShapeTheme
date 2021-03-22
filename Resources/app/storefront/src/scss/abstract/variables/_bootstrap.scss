@@ -3,25 +3,28 @@
 $asset-path: '#{$sw-asset-theme-url}/bundles/swagshapetheme/assets' !default;
 
 // Color system
-$gray-100: $sw-color-some-backgrounds !default;
-$gray-300: $sw-color-disabled-primary !default;
-$gray-400: #b2bcd2 !default;
-$gray-500: $sw-color-footer !default;
-$gray-600: $sw-color-menu-flyout !default;
+$gray-100: lighten($sw-color-brand-primary, 30%) !default;
+$gray-300: lighten($sw-color-brand-primary, 25%) !default;
+$gray-400: lighten($sw-color-brand-primary, 20%) !default;
+$gray-500: lighten($sw-color-brand-primary, 15%) !default;
+$gray-600: lighten($sw-color-brand-primary, 10%) !default;
 $gray-700: #637182 !default;
-$gray-800: $sw-color-primary-hover !default;
+$gray-800: lighten($sw-color-brand-primary, 5%) !default;
 $gray-900: $sw-color-brand-primary !default;
 
 // Colors
 $shape-gray-100: #f9fafc !default;
 $shape-gray-200: #eff2f7 !default;
 $shape-gray-300: $sw-border-color !default;
+$shape-gray-400: #b2bcd2 !default;
 $shape-gray-500: #9ea7bc !default;
 $shape-gray-600: #768699 !default;
 $shape-gray-800: #344254 !default;
 $shape-gray-900: #1f2e3d !default;
 
 $green: #42954d !default;
+
+$secondary: $sw-color-brand-primary !default;
 
 // Typography
 $font-size-base: 0.875rem !default;
@@ -62,7 +65,7 @@ $custom-select-border-radius: 20px !default;
 $custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
 $custom-select-padding-x: 1rem;
 
-$custom-control-indicator-border-color: $gray-400 !default;
+$custom-control-indicator-border-color: $shape-gray-400 !default;
 $custom-control-indicator-checked-bg: $sw-color-brand-primary;
 $custom-checkbox-indicator-border-radius: 4px !default;
 $custom-select-bg-size: 0.625rem !default;
@@ -98,3 +101,6 @@ $dropdown-border-width: 0;
 
 $dropdown-link-color: $dropdown-color;
 $dropdown-link-active-bg: $shape-gray-200;
+
+// btn-buy
+$buy-btn-bg: $sw-color-brand-primary !default;
