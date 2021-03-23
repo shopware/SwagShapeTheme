@@ -46,5 +46,8 @@
         "registerPersonalHeader": "Ich bin neu hier.",
         "loginPasswordRecover": "Haben Sie Ihr Passwort vergessen?",
         "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten."
+    },
+    "detail": {
+        "propertyTitle": "Material"
     }
 }
