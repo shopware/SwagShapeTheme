@@ -26,7 +26,8 @@
     }
 }
 
-.btn-outline-primary {
+.btn-outline-primary,
+.btn-outline-secondary {
     @include hover {
         color: $white;
     }
