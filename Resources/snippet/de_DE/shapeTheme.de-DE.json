@@ -4,7 +4,8 @@
         "404ErrorDescription": "Die von Ihnen gesuchte Seite existiert nicht mehr",
         "maintenanceModeHeader": "Wir werden bald wiederkommen.",
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr.",
-        "requiredFields": "*Pflichtfeld"
+        "requiredFields": "*Pflichtfeld",
+        "requiredFieldsProfile": "Die mit * gekennzeichneten Felder sind Pflichtfelder"
     },
     "header": {
         "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro"
@@ -46,18 +47,14 @@
         "registerPersonalHeader": "Ich bin neu hier.",
         "loginPasswordRecover": "Haben Sie Ihr Passwort vergessen?",
         "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten.",
-        "overviewTitle": "Hallo",
-        "overviewInfo": "Dies ist die Kontoübersicht! Finden und bearbeiten Sie grundlegende Informationen zu ausgewählten Zahlungsarten und Adressen.",
-        "overviewProfileHeader": "Ihr Profil",
-        "overviewChangeProfile": "Change",
-        "overviewPaymentHeader": "Zahlungsmethode",
-        "overviewChangePayment": "Ändern",
-        "newsletterTitle": "Newsletter-Einstellung",
-        "overviewNewestOrderHeader": "Ihr letzter Auftrag",
-        "orderActionView": "Mehr sehen",
-        "overviewChangeBilling": "Ändern",
-        "orderContextMenuChangePayment": "Ändern",
-        "overviewChangeShipping": "Ändern",
-        "greetings": "Ihr Konto"
+        "profileCurrentPass": "Password",
+        "profileChangeEmail": "Ändern",
+        "profileChangePassword": "Ändern",
+        "profilePasswordText": "**************************",
+        "profileAccountDeleting": "Kundenkonto",
+        "profileDeleteModalTitle": "Konto gelöscht",
+        "profileDeleteButton": "Okay",
+        "profileDeleteAlert": "Die Löschung Ihres Kundenkontos war erfolgreich.",
+        "profileDeleteConfirm": "Sie können nun in den Laden zurückkehren."
     }
 }

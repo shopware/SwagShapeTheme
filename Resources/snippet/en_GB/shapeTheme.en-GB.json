@@ -4,7 +4,8 @@
         "404ErrorDescription": "The page you are looking for no longer exists",
         "maintenanceModeHeader": "We`ll be back soon.",
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
-        "requiredFields": "*required field"
+        "requiredFields": "*required field",
+        "requiredFieldsProfile": "The fields marked with * are required"
     },
     "header": {
         "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros"
@@ -46,18 +47,14 @@
         "registerPersonalHeader": "I am new here.",
         "loginPasswordRecover": "Did you forget your password?",
         "personalPasswordDescription": "Your password must contain at least %minLength% characters.",
-        "overviewTitle": "Hello",
-        "overviewInfo": "This is the account overview! Find and edit basic information on selected payment methods and addresses.",
-        "overviewProfileHeader": "your profile",
-        "overviewChangeProfile": "Change",
-        "overviewPaymentHeader": "Payment Method",
-        "overviewChangePayment": "Change",
-        "newsletterTitle": "newsletter setting",
-        "overviewNewestOrderHeader": "Your last order",
-        "orderActionView": "View more",
-        "overviewChangeBilling": "Change",
-        "overviewChangeShipping": "Change",
-        "orderContextMenuChangePayment": "Change",
-        "greetings": "Your Account"
+        "profileCurrentPass": "Password",
+        "profileChangeEmail": "Change",
+        "profileChangePassword": "Change",
+        "profilePasswordText": "**************************",
+        "profileAccountDeleting": "Customer account",
+        "profileDeleteModalTitle": "Account deleted",
+        "profileDeleteButton": "Okay",
+        "profileDeleteAlert": "The deletion of your customer account was successful.",
+        "profileDeleteConfirm": "You can now return to the shop."
     }
 }
