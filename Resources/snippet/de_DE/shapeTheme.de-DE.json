@@ -45,7 +45,16 @@
         "loginHeader": "Willkommen zurück!",
         "registerPersonalHeader": "Ich bin neu hier.",
         "loginPasswordRecover": "Haben Sie Ihr Passwort vergessen?",
-        "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten."
+        "personalPasswordDescription": "Ihr Passwort muss mindestens %minLength% Zeichen enthalten.",
+        "profileCurrentPass": "Passwort",
+        "profileChangeEmail": "Ändern",
+        "profileChangePassword": "Ändern",
+        "profilePasswordText": "**************************",
+        "profileAccountDeleting": "Kundenkonto",
+        "profileDeleteModalTitle": "Konto gelöscht",
+        "profileDeleteButton": "Okay",
+        "profileDeleteAlert": "Die Löschung Ihres Kundenkontos war erfolgreich.",
+        "profileDeleteConfirm": "Sie können nun in den Shop zurückkehren."
     },
     "detail": {
         "propertyTitle": "Material"

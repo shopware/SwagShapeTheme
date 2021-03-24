@@ -48,6 +48,15 @@
         "loginHeader": "Welcome back!",
         "registerPersonalHeader": "I am new here.",
         "loginPasswordRecover": "Did you forget your password?",
-        "personalPasswordDescription": "Your password must contain at least %minLength% characters."
+        "personalPasswordDescription": "Your password must contain at least %minLength% characters.",
+        "profileCurrentPass": "Password",
+        "profileChangeEmail": "Change",
+        "profileChangePassword": "Change",
+        "profilePasswordText": "**************************",
+        "profileAccountDeleting": "Customer account",
+        "profileDeleteModalTitle": "Account deleted",
+        "profileDeleteButton": "Okay",
+        "profileDeleteAlert": "The deletion of your customer account was successful.",
+        "profileDeleteConfirm": "You can now return to the shop."
     }
 }
