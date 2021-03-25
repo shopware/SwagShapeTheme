@@ -4,7 +4,8 @@
         "404ErrorDescription": "The page you are looking for no longer exists",
         "maintenanceModeHeader": "We`ll be back soon.",
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
-        "requiredFields": "*required field"
+        "requiredFields": "*required field",
+        "offcanvasCloseMenu": "My Account"
     },
     "header": {
         "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros"
@@ -60,6 +61,7 @@
         "profileDeleteConfirm": "You can now return to the shop.",
         "addressListHeader": "Your Address",
         "addressesContentItemActionEdit": "Change",
-        "addressHeadline": "Change billing address"
+        "addressHeadline": "Change billing address",
+        "orRegisterLink": "Register"
     }
 }

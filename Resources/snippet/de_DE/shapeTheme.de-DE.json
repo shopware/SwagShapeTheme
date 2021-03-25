@@ -4,7 +4,8 @@
         "404ErrorDescription": "Die von Ihnen gesuchte Seite existiert nicht mehr",
         "maintenanceModeHeader": "Wir werden bald wiederkommen.",
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr.",
-        "requiredFields": "*Pflichtfeld"
+        "requiredFields": "*Pflichtfeld",
+        "offcanvasCloseMenu": "Mein Konto"
     },
     "header": {
         "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro"
@@ -35,7 +36,7 @@
         "overviewTitle": "Hallo",
         "overviewInfo": "Dies ist die Kontoübersicht! Finden und bearbeiten Sie grundlegende Informationen zu ausgewählten Zahlungsarten und Adressen.",
         "overviewProfileHeader": "Ihr Profil",
-        "overviewChangeProfile": "Change",
+        "overviewChangeProfile": "Ändern",
         "overviewPaymentHeader": "Zahlungsmethode",
         "overviewChangePayment": "Ändern",
         "newsletterTitle": "Newsletter-Einstellung",
@@ -60,6 +61,7 @@
         "profileDeleteConfirm": "Sie können nun in den Shop zurückkehren.",
         "addressListHeader": "Ihre Adresse",
         "addressesContentItemActionEdit": "Ändern",
-        "addressHeadline": "Rechnungsadresse ändern"
+        "addressHeadline": "Rechnungsadresse ändern",
+        "orRegisterLink": "Registrieren"
     }
 }

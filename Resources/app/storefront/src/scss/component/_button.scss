@@ -7,9 +7,7 @@
 }
 
 .btn-primary {
-    --text-color: #fdfdfd;
-
-    color: var(--text-color);
+    color: $shape-gray-light;
 
     @include hover {
         background-color: $gray-800;
@@ -18,7 +16,7 @@
 
     &.disabled,
     &:disabled {
-        color: var(--text-color);
+        color: $shape-gray-light;
         background-color: $gray-300;
         border-color: $gray-300
     }
