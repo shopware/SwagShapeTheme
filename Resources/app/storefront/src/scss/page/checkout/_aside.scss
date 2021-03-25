@@ -7,10 +7,6 @@
 }
 
 .checkout-aside-summary-total {
-    position: relative;
-}
-
-.checkout-aside-summary-total {
     padding-top: 20px;
     font-size: 20px;
 }
@@ -46,18 +42,9 @@
     }
 }
 
-.checkout-aside-summary-value.checkout-aside-summary-total:before,
-.checkout-aside-summary-label.checkout-aside-summary-total:before {
-    content: '';
-
-    position: absolute;
-    left: $grid-gutter-width / 2;
-    right: 0;
-    top: 0;
-
-    display: block;
-    height: 2px;
-    background-color: $hr-border-color;
+.checkout-aside-summary-value.checkout-aside-summary-total,
+.checkout-aside-summary-label.checkout-aside-summary-total {
+    border-width: $hr-border-width;
 }
 
 .checkout-aside-summary-value.checkout-aside-summary-total:before {

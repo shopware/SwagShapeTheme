@@ -1,0 +1,37 @@
+.is-act-confirmpage {
+    .confirm-main-header {
+        margin-bottom: $spacer-50;
+    }
+}
+
+.confirm-tos {
+    margin-bottom: 0;
+
+    .revocation-notice {
+        padding-bottom: 1rem;
+        border-bottom: $hr-border-width solid $border-color;
+    }
+
+    a {
+        color: $shape-gray-900;
+    }
+}
+
+:is(
+  .confirm-shipping .card-title,
+  .confirm-payment .card-title,
+  .confirm-card-title
+ ) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: $font-size-base;
+    border-bottom-width: $hr-border-width;
+}
+
+.confirm-product {
+    .cart-header-info {
+        @include checkout-headline;
+    }
+}

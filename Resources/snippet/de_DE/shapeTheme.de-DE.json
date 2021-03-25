@@ -23,6 +23,10 @@
         "addressLogin": "Sie sind bereits Kunde.",
         "cartyEmptyDesc": "Fügen Sie ein Produkt hinzu, um Ihren Warenkorb zu füllen."
     },
+    "account": {
+        "overviewChangeBilling": "Ändern",
+        "overviewChangeShipping": "Ändern"
+    },
     "newsletter": {
         "formSubmit": "Anmelden",
         "placeholderMail": "Ihre E-Mail Adresse"
