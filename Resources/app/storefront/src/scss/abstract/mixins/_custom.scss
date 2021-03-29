@@ -5,3 +5,47 @@
     border-bottom: $hr-border-width solid $shape-gray-900;
     font-weight: $font-weight-bold;
 }
+
+@mixin card-box {
+    padding: $spacer-lg;
+    margin-bottom: $spacer-20;
+    background-color: $white;
+
+    &:hover {
+        box-shadow: 0px 20px 160px 0px rgba(0, 0, 0, 0.12);
+    }
+}
+
+@mixin card-title {
+    padding-bottom: $spacer-sm;
+    margin-bottom: $spacer-md;
+    border-bottom: $hr-border-width solid $hr-border-color;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: $font-weight-bold;
+    font-size: $h6-font-size;
+    line-height: 16px;
+}
+
+@mixin button-change {
+    line-height: 16px;
+    color: $sw-color-brand-primary;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        &:hover, &:focus, &:active {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+}

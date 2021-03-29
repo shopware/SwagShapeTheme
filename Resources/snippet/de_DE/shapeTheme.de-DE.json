@@ -23,12 +23,23 @@
         "addressLogin": "Sie sind bereits Kunde.",
         "cartyEmptyDesc": "Fügen Sie ein Produkt hinzu, um Ihren Warenkorb zu füllen."
     },
-    "account": {
-        "overviewChangeBilling": "Ändern",
-        "overviewChangeShipping": "Ändern"
-    },
     "newsletter": {
         "formSubmit": "Anmelden",
         "placeholderMail": "Ihre E-Mail Adresse"
+    },
+    "account": {
+        "overviewTitle": "Hallo",
+        "overviewInfo": "Dies ist die Kontoübersicht! Finden und bearbeiten Sie grundlegende Informationen zu ausgewählten Zahlungsarten und Adressen.",
+        "overviewProfileHeader": "Ihr Profil",
+        "overviewChangeProfile": "Change",
+        "overviewPaymentHeader": "Zahlungsmethode",
+        "overviewChangePayment": "Ändern",
+        "newsletterTitle": "Newsletter-Einstellung",
+        "overviewNewestOrderHeader": "Ihr letzter Auftrag",
+        "orderActionView": "Mehr sehen",
+        "overviewChangeBilling": "Ändern",
+        "orderContextMenuChangePayment": "Ändern",
+        "overviewChangeShipping": "Ändern",
+        "greetings": "Ihr Konto"
     }
 }

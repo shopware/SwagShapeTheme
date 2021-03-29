@@ -34,6 +34,7 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "component/offcanvas";
 @import "component/filter-panel";
 @import "component/dropdown";
+@import "component/card";
 
 /*
  * Layout-related sections
@@ -56,3 +57,8 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "page/checkout/confirm";
 @import "page/checkout/cart";
 @import 'page/error/maintenance';
+@import 'page/account/overview';
+@import 'page/account/account';
+@import 'page/account/order';
+@import 'page/account/order-detail';
+@import 'page/account/aside';
