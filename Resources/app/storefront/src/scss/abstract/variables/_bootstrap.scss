@@ -59,6 +59,8 @@ $input-placeholder-color: $shape-gray-500;
 $input-height: 40px;
 $input-padding-x-lg: 24px;
 
+$input-btn-padding-x: 16px;
+
 // Custom Forms
 $form-feedback-valid-color: $gray-700;
 $custom-select-border-radius: 20px !default;
@@ -109,3 +111,13 @@ $dropdown-link-active-bg: $shape-gray-200;
 
 // btn-buy
 $buy-btn-bg: $sw-color-brand-primary !default;
+
+//Heading
+$headings-color: $shape-gray-900;
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: 1.4 !default;
+
+// Forms
+$form-grid-gutter-width: 24px;
+
+$form-text-margin-top: 10px !default;

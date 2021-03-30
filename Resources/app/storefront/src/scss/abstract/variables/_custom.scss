@@ -48,3 +48,5 @@ $spacer-60: ($spacer * 3.75) !default; // 60px
 // icon
 $icon-caret-down: url('#{$asset-path}/icon/ic-caret-down.svg');
 $icon-caret-up: url('#{$asset-path}/icon/ic-caret-up.svg');
+
+$hr-border: $hr-border-width solid $hr-border-color;
