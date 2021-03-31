@@ -18,23 +18,23 @@
             {{ formGroupMail }}
         </div>
 
-        {% if shopware.config.core.loginRegistration.requireEmailConfirmation %}
+        {% if config('core.loginRegistration.requireEmailConfirmation') %}
             <div class="form-group col-sm-6">
                 {{ formGroupMailConfirmation }}
             </div>
-        {% elseif not shopware.config.core.loginRegistration.requirePasswordConfirmation %}
+        {% elseif not config('core.loginRegistration.requirePasswordConfirmation') %}
             <div class="form-group col-sm-6">
                 {{ formGroupPassword }}
             </div>
         {% endif %}
 
-        {% if shopware.config.core.loginRegistration.requireEmailConfirmation or shopware.config.core.loginRegistration.requirePasswordConfirmation %}
+        {% if config('core.loginRegistration.requireEmailConfirmation') or config('core.loginRegistration.requirePasswordConfirmation') %}
             <div class="form-group col-sm-6">
                 {{ formGroupPassword }}
             </div>
         {% endif %}
 
-        {% if shopware.config.core.loginRegistration.requirePasswordConfirmation %}
+        {% if config('core.loginRegistration.requirePasswordConfirmation') %}
             <div class="form-group col-sm-6">
                 {{ formGroupPasswordConfirmation }}
             </div>

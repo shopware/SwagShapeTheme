@@ -6,7 +6,7 @@
 
 {% block component_address_personal_account_type %}
     <div class="form-row">
-        {% if shopware.config.core.loginRegistration.showAccountTypeSelection and not hideCustomerTypeSelect %}
+        {% if config('core.loginRegistration.showAccountTypeSelection') and not hideCustomerTypeSelect %}
             <div class="form-group col-sm-6 contact-type">
                 {% block component_address_personal_account_type_label %}
                     {{ parent() }}
@@ -44,7 +44,7 @@
 
 {% block component_address_personal_fields_birthday_label %}
     <label class="form-label" for="{{ prefix }}personalBirthday">
-        {{ "account.personalBirthdayLabel"|trans|sw_sanitize }}{{ shopware.config.core.loginRegistration.birthdayFieldRequired ? "general.required"|trans|sw_sanitize }}
+        {{ "account.personalBirthdayLabel"|trans|sw_sanitize }}{{ config('core.loginRegistration.birthdayFieldRequired') ? "general.required"|trans|sw_sanitize }}
     </label>
 {% endblock %}
 

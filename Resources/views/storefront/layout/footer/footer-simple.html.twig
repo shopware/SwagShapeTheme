@@ -12,18 +12,18 @@
 
                     {% block error_maintenance_footer_content %}
                         <ul class="footer-service-menu-list list-unstyled">
-                            {% if shopware.config.core.basicInformation.imprintPage is not null %}
+                            {% if config('core.basicInformation.imprintPage') is not null %}
                                 <li class="footer-service-menu-item">
-                                    <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: shopware.config.core.basicInformation.imprintPage }) }}"
+                                    <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: config('core.basicInformation.imprintPage') }) }}"
                                        title="{{ "general.imprintLink"|trans|sw_sanitize }}"
                                        class="pl-2 pr-2">
                                         {{ "general.imprintLink"|trans|sw_sanitize }}
                                     </a>
                                 </li>
                             {% endif %}
-                            {% if shopware.config.core.basicInformation.privacyPage is not null %}
+                            {% if config('core.basicInformation.privacyPage') is not null %}
                                 <li class="footer-service-menu-item">
-                                    <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: shopware.config.core.basicInformation.privacyPage }) }}"
+                                    <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: config('core.basicInformation.privacyPage') }) }}"
                                        title="{{ "general.privacyLink"|trans|sw_sanitize }}"
                                        class="pl-2 pr-2">
                                         {{ "general.privacyLink"|trans|sw_sanitize }}
