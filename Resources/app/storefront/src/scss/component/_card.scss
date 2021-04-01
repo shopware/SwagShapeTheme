@@ -10,3 +10,9 @@ https://getbootstrap.com/docs/4.3/components/card/
     margin-bottom: 0;
     padding: 0 $spacer-20;
 }
+
+.card-title {
+    border-width: $hr-border-width;
+    text-transform: uppercase;
+    font-size: $font-size-base;
+}

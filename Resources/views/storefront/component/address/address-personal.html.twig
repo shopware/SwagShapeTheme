@@ -49,7 +49,7 @@
 {% endblock %}
 
 {% block component_address_personal_fields_first_name %}
-    <div class="form-group col-12 col-md-6">
+    <div class="form-group {% if isAddressModal %}col-6 {% else %}col-12{% endif%}">
         {{ block('component_address_personal_fields_first_name_label') }}
 
         {{ block('component_address_personal_fields_first_name_input') }}
@@ -59,7 +59,7 @@
 {% endblock %}
 
 {% block component_address_personal_fields_last_name %}
-    <div class="form-group col-12 col-md-6">
+    <div class="form-group {% if isAddressModal %}col-6 {% else %}col-12{% endif %}">
         {{ block('component_address_personal_fields_last_name_label') }}
 
         {{ block('component_address_personal_fields_last_name_input') }}
