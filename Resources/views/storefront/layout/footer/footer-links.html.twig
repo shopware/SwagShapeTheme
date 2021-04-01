@@ -7,8 +7,8 @@
                        href="{{ path('frontend.home.page') }}"
                        title="{{ "header.logoLink"|trans|striptags }}">
                         {% block layout_header_footer_image %}
-                            {% if shopware.theme['sw-footer-logo'] %}
-                                <img src="{{ shopware.theme['sw-footer-logo'] |sw_encode_url }}"
+                            {% if theme_config('sw-footer-logo') %}
+                                <img src="{{ theme_config('sw-footer-logo') |sw_encode_url }}"
                                      alt="{{ "header.logoLink"|trans|striptags }}"
                                      class="img-fluid header-logo-main-img"/>
                             {% endif %}
@@ -19,17 +19,17 @@
             {% block layout_footer_soial_links %}
                 <div class="col-6 col-lg-12 footer-social_links">
                     <a class="links instagram"
-                       href="{{ shopware.theme['sw-instagram-link'] |sw_encode_url }}"
+                       href="{{ theme_config('sw-instagram-link') |sw_encode_url }}"
                        title="{{ "footer.instagramLink"|trans|striptags }}">
                         {% sw_icon 'ic-twitter' style {'pack' : 'shape'} %}
                     </a>
                     <a class="links facebook"
-                       href="{{ shopware.theme['sw-facebook-link'] |sw_encode_url }}"
+                       href="{{ theme_config('sw-facebook-link') |sw_encode_url }}"
                        title="{{ "footer.facebookLink"|trans|striptags }}">
                         {% sw_icon 'ic-facebook' style {'pack' : 'shape'} %}
                     </a>
                     <a class="links printer"
-                       href="{{ shopware.theme['sw-pinterest-link'] |sw_encode_url }}"
+                       href="{{ theme_config('sw-pinterest-link') |sw_encode_url }}"
                        title="{{ "footer.pinterestLink"|trans|striptags }}">
                         {% sw_icon 'ic-pinterest' style {'pack' : 'shape'} %}
                     </a>

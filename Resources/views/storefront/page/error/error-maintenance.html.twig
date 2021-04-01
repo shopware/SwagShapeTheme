@@ -5,13 +5,13 @@
         <div class="container-maintenance text-center">
             <div class="container-maintenance__bg">
                 <picture>
-                    {% if shopware.theme['sw-maintenance-bg'] and shopware.theme['sw-maintenance-bg'] != shopware.theme['sw-maintenance-bg_m'] %}
-                        <source srcset="{{ shopware.theme['sw-maintenance-bg'] |sw_encode_url }}"
-                                media="(max-width: {{ shopware.theme.breakpoint.md - 1 }}px)">
+                    {% if theme_config('sw-maintenance-bg') and theme_config('sw-maintenance-bg') != theme_config('sw-maintenance-bg_m') %}
+                        <source srcset="{{ theme_config('sw-maintenance-bg') |sw_encode_url }}"
+                                media="(max-width: {{ theme_config('breakpoint.md') - 1 }}px)">
                     {% endif %}
 
-                    {% if shopware.theme['sw-maintenance-bg-tablet'] %}
-                        <img src="{{ shopware.theme['sw-maintenance-bg-tablet'] |sw_encode_url }}"
+                    {% if theme_config('sw-maintenance-bg-tablet') %}
+                        <img src="{{ theme_config('sw-maintenance-bg-tablet') |sw_encode_url }}"
                              alt="{{ "general.maintenanceModeHeader"|trans|striptags }}"
                              class="rounded mx-auto d-block"/>
                     {% endif %}
