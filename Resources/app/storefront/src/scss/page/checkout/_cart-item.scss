@@ -9,6 +9,18 @@ $cart-item-img-width: 112px;
         align-items: center;
     }
 
+    .cart-item-unit-price-label {
+        display: inline;
+        color: $shape-gray-500;
+        font-weight: $font-weight-medium;
+        margin-right: $spacer-xs;
+    }
+
+    .cart-item-unit-price {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+    }
+
     .cart-item-total-price,
     .cart-item-label {
         font-size: 1rem;
@@ -19,9 +31,16 @@ $cart-item-img-width: 112px;
         font-weight: $font-weight-medium;
     }
 
+    .cart-item-unit-price,
     .cart-item-ordernumber,
     .cart-item-tax-price {
-        color: #9ea7bc;
+        color: $shape-gray-500;
+    }
+
+    .cart-item-quantity-label,
+    .cart-item-total-price-label,
+    .cart-item-tax-price-label {
+        display: none;
     }
 
     .cart-item-remove {

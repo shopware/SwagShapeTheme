@@ -7,7 +7,15 @@ $offcanvas-cart-spacing: 24px;
         .cart-item-label {
             font-size: 1rem;
         }
-        
+
+        .cart-quantity-price {
+            align-items: flex-start;
+        }
+
+        .cart-item-quantity {
+            order: 0;
+        }
+
         .cart-item-remove {
             top: 0.5rem;
         }

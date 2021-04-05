@@ -8,3 +8,9 @@
         {% sw_icon 'x' style { 'size': 'md', 'pack': 'solid' } %}
     </button>
 {% endblock %}
+
+{% block component_offcanvas_product_details %}
+    <div class="col-9 cart-item-details">
+        {{ block('component_offcanvas_product_details_inner') }}
+    </div>
+{% endblock %}
