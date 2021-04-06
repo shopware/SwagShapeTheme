@@ -28,6 +28,9 @@
         "formSubmit": "Sign up",
         "placeholderMail": "Your e-mail address"
     },
+    "detail": {
+        "propertyTitle": "Material"
+    },
     "account": {
         "overviewTitle": "Hello",
         "overviewInfo": "This is the account overview! Find and edit basic information on selected payment methods and addresses.",
