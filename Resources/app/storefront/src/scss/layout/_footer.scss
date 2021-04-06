@@ -57,10 +57,13 @@
     }
 
     &-copyright {
-        order: 1;
+        @extend .col-lg-2;
+
         font-size: $font-size-sm;
 
         .footer-simple & {
+            @extend .col-lg-4;
+
             padding-top: 80px;
         }
     }
@@ -72,24 +75,32 @@
         text-align: center;
     }
 
+    &-vat {
+        @extend .col-lg-8;
+
+        width: 100%;
+
+        .footer-main & {
+            padding-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: $spacer-lg;
+        }
+    }
+
     &-service-menu {
         &-list {
             @extend .mb-0;
 
-            padding-bottom: $spacer-lg;
-
-            .footer-simple & {
-                padding-top: 0;
-                padding-bottom: 0;
-            }
-
-            .footer-main & {
-                padding-bottom: 95px;
-            }
+            order: -1;
+            padding: 0 0 35px;
         }
 
         &-item {
             padding-bottom: $spacer-xs;
+            padding-right: 0;
+            font-weight: $font-weight-medium;
 
             &::after {
                 --size: 4px;
@@ -102,6 +113,8 @@
                 border: none;
                 vertical-align: middle;
                 background-color: $shape-gray-400;
+                display: inline-block;
+                margin: 0 $spacer-10;
             }
 
             &:last-child {
@@ -130,18 +143,14 @@
     &-bottom {
         font-weight: $font-weight-medium;
         padding: $spacer-20;
+        background-color: transparent;
 
         a {
             color: $body-color;
         }
 
         p {
-            margin-bottom: $spacer-30;
             font-size: $font-size-sm;
-
-            .footer-main & {
-                margin-bottom: $spacer-lg;
-            }
         }
 
         > .container {
@@ -163,22 +172,36 @@
     }
 
     &-logos {
-        @include clearfix;
-
-        padding: $spacer-10 0 0;
+        padding: 0;
 
         > .col-4 {
             @extend .mt-0;
             @extend .col-auto;
 
             margin-left: $spacer-10;
+            margin-bottom: $spacer-10;
             order: 100;
             line-height: 1;
-            padding: $spacer-10 0 0;
+            padding: 0;
 
             > span {
                 background-color: $white;
                 padding: $spacer-xs;
+            }
+        }
+
+        &:empty {
+            display: none;
+            padding: 0;
+        }
+
+        .paypal-mark {
+            padding: $spacer-5;
+            border: none;
+            margin: 0 15px $spacer-10 0;
+
+            &:last-child {
+                margin-right: $spacer-5;
             }
         }
     }
@@ -293,7 +316,7 @@
         }
 
         &-middle {
-            padding: $spacer-60 $spacer-60 $spacer-20;
+            padding: $spacer-60 $spacer-60 $spacer-lg;
         }
 
         &-column {
@@ -329,17 +352,31 @@
             }
         }
 
+        &-logos {
+            .paypal-mark {
+                margin-bottom: 0;
+                margin-top: $spacer-40;
+            }
+
+            > .col-4,
+            .footer-logo {
+                padding-top: $spacer-40;
+                margin-bottom: 0;
+            }
+        }
+
         &-columns {
             border-bottom: none;
             margin-left: -$spacer-10;
             margin-right: -$spacer-10;
+            padding-bottom: 0;
+        }
+
+        &-service-menu-list {
+            padding-bottom: $spacer-30;
         }
 
         &-main {
-            .footer-service-menu-list {
-                padding-bottom: $spacer-30;
-            }
-
             .footer-copyright {
                 text-align: left;
             }
@@ -347,20 +384,22 @@
             .footer-bottom {
                 padding: $spacer-20 $spacer-40 $spacer-30;
             }
+
+            .footer-vat {
+                padding-bottom: 0;
+            }
+        }
+
+        &-minimal {
+            .footer-vat p {
+                margin-bottom: $spacer-md;
+            }
         }
     }
 }
 
 @include media-breakpoint-up(lg) {
     .footer {
-        &-logos {
-            > .col-4,
-            .footer-logo {
-                padding-top: $spacer-20;
-                margin-bottom: 0;
-            }
-        }
-
         &-bottom {
             padding-bottom: $spacer-lg;
 
@@ -380,11 +419,15 @@
 
         &-service-menu-list {
             display: block;
-            padding-bottom: 0;
+            padding-bottom: $spacer-20;
 
-            .footer-main & {
+            .footer-simple & {
                 padding-bottom: 0;
             }
+        }
+
+        &-vat p {
+            margin-bottom: 0;
         }
 
         &-newsletter-form,
@@ -430,6 +473,14 @@
             --newsletter-container-width: 535px;
 
             max-width: var(--newsletter-container-width);
+        }
+
+        &-vat {
+            order: 1;
+        }
+
+        &-minimal .footer-vat p {
+            margin-bottom: 0;
         }
     }
 }
