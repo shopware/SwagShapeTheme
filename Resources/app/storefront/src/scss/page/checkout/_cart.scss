@@ -67,3 +67,23 @@ $checkout-empty-spacing: 150px !default;
         font-weight: $font-weight-bolder;
     }
 }
+
+.cart-item-info {
+    > .cart-item-row {
+        align-items: flex-start;
+    }
+
+    .cart-item-info-img {
+        @extend .px-0;
+    }
+}
+
+.cart-item-price-wrap {
+    order: 4;
+}
+
+.cart-item-unit-price,
+.cart-item-total-price,
+.cart-item-tax-price {
+    justify-content: flex-end;
+}
