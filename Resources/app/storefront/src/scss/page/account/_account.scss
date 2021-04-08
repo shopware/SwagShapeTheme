@@ -18,6 +18,8 @@
         font-size: $h4-font-size;
         font-weight: $font-weight-bold;
         line-height: 26px;
+        border-color: $sw-text-color;
+        margin-bottom: 36px;
     }
 
     .card-title {
@@ -37,7 +39,7 @@
 
 .account-content-main,
 .account-aside {
-    padding-top: $spacer-md;
+    padding-top: $spacer-lg;
 }
 
 .account-overview {
@@ -59,7 +61,8 @@
 }
 
 .account-welcome {
-    margin-bottom: $spacer-10;
+    padding-bottom: $spacer-10;
+    margin-bottom: 0;
     padding-top: 0;
 
     h1 {
@@ -71,15 +74,8 @@
         border-bottom: solid 2px $sw-text-color;
     }
 
-    p {
+    > p {
         line-height: 20px;
-    }
-}
-
-.account-overview-newest-order {
-    .card-title {
-        border-color: $sw-text-color;
-        margin-bottom: 36px;
     }
 }
 
@@ -103,17 +99,15 @@
     }
 }
 
-@include media-breakpoint-up(xs) {
-    .account-content-main,
-    .account-aside {
-        padding-top: $spacer-50;
-    }
-}
-
 @include media-breakpoint-up(md) {
     .account-content .account-content-main {
         padding-left: $spacer-60;
         padding-right: $spacer-60;
+    }
+
+    .account-content-main,
+    .account-aside {
+        padding-top: $spacer-50;
     }
 }
 

@@ -49,7 +49,7 @@
 {% endblock %}
 
 {% block component_address_personal_fields_first_name %}
-    <div class="form-group col-12">
+    <div class="form-group col-12 col-md-6">
         {{ block('component_address_personal_fields_first_name_label') }}
 
         {{ block('component_address_personal_fields_first_name_input') }}
@@ -59,11 +59,21 @@
 {% endblock %}
 
 {% block component_address_personal_fields_last_name %}
-    <div class="form-group col-12">
+    <div class="form-group col-12 col-md-6">
         {{ block('component_address_personal_fields_last_name_label') }}
 
         {{ block('component_address_personal_fields_last_name_input') }}
 
         {{ block('component_address_personal_fields_last_name_input_error') }}
     </div>
+{% endblock %}
+
+{% block component_address_personal_fields_title %}
+    {% if config('core.loginRegistration.showTitleField') %}
+        <div class="form-group col-12">
+            {{ block('component_address_personal_fields_title_label') }}
+
+            {{ block('component_address_personal_fields_title_input') }}
+        </div>
+    {% endif %}
 {% endblock %}
