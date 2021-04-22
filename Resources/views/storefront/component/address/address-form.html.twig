@@ -3,11 +3,69 @@
 {% block component_address_form_address_fields %}
     <div class="form-row contact-address">
         {% block component_address_form_street %}
-            {{ parent() }}
+            <div class="form-group col-12">
+                {% if formViolations.getViolations("/street") is not empty %}
+                    {% set violationPath = "/street" %}
+                {% elseif formViolations.getViolations("/#{prefix}/street") is not empty %}
+                    {% set violationPath = "/#{prefix}/street" %}
+                {% endif %}
+
+                {{ block('component_address_form_street_label') }}
+
+                {{ block('component_address_form_street_input') }}
+
+                {{ block('component_address_form_street_input_error') }}
+            </div>
         {% endblock %}
 
         {% block component_address_form_zipcode_city %}
-            {{ parent() }}
+            {% set zipcodeField %}
+                {% if formViolations.getViolations("/zipcode") is not empty %}
+                    {% set violationPath = "/zipcode" %}
+                {% elseif formViolations.getViolations("/#{prefix}/zipcode") is not empty %}
+                    {% set violationPath = "/#{prefix}/zipcode" %}
+                {% endif %}
+
+                {{ block('component_address_form_zipcode_label') }}
+
+                {{ block('component_address_form_zipcode_input') }}
+
+                {{ block('component_address_form_zipcode_error') }}
+            {% endset %}
+
+            {% set cityField %}
+                {% if formViolations.getViolations("/city") is not empty %}
+                    {% set violationPath = "/city" %}
+                {% elseif formViolations.getViolations("/#{prefix}/city") is not empty %}
+                    {% set violationPath = "/#{prefix}/city" %}
+                {% else %}
+                    {% set violationPath = null %}
+                {% endif %}
+
+                {{ block('component_address_form_city_label') }}
+
+                {{ block('component_address_form_city_input') }}
+
+                {{ block('component_address_form_city_error') }}
+            {% endset %}
+
+            {% if config('core.address.showZipcodeInFrontOfCity') %}
+                <div class="form-group col-6">
+                    {{ zipcodeField }}
+                </div>
+
+                <div class="form-group col-6">
+                    {{ cityField }}
+                </div>
+            {% else %}
+                <div class="form-group col-6">
+                    {{ cityField }}
+                </div>
+
+                <div class="form-group col-6">
+                    {{ zipcodeField }}
+                </div>
+            {% endif %}
         {% endblock %}
 
         {% block component_address_form_additional_field1 %}

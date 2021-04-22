@@ -52,7 +52,8 @@
     }
 }
 
-.account-overview-card {
+.account-overview-card,
+.address-card {
     &:not(.account-overview-newest-order) {
         .card {
             @include card-box;

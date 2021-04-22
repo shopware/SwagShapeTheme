@@ -28,6 +28,9 @@
         "formSubmit": "Anmelden",
         "placeholderMail": "Ihre E-Mail Adresse"
     },
+    "detail": {
+        "propertyTitle": "Material"
+    },
     "account": {
         "overviewTitle": "Hallo",
         "overviewInfo": "Dies ist die Kontoübersicht! Finden und bearbeiten Sie grundlegende Informationen zu ausgewählten Zahlungsarten und Adressen.",
@@ -54,9 +57,8 @@
         "profileDeleteModalTitle": "Konto gelöscht",
         "profileDeleteButton": "Okay",
         "profileDeleteAlert": "Die Löschung Ihres Kundenkontos war erfolgreich.",
-        "profileDeleteConfirm": "Sie können nun in den Shop zurückkehren."
-    },
-    "detail": {
-        "propertyTitle": "Material"
+        "profileDeleteConfirm": "Sie können nun in den Shop zurückkehren.",
+        "addressListHeader": "Ihre Adresse",
+        "addressesContentItemActionEdit": "Ändern"
     }
 }
