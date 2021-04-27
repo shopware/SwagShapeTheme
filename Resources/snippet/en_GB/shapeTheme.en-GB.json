@@ -57,6 +57,8 @@
         "profileDeleteModalTitle": "Account deleted",
         "profileDeleteButton": "Okay",
         "profileDeleteAlert": "The deletion of your customer account was successful.",
-        "profileDeleteConfirm": "You can now return to the shop."
+        "profileDeleteConfirm": "You can now return to the shop.",
+        "addressListHeader": "Your Address",
+        "addressesContentItemActionEdit": "Change"
     }
 }
