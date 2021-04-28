@@ -59,6 +59,7 @@
         "profileDeleteAlert": "Die Löschung Ihres Kundenkontos war erfolgreich.",
         "profileDeleteConfirm": "Sie können nun in den Shop zurückkehren.",
         "addressListHeader": "Ihre Adresse",
-        "addressesContentItemActionEdit": "Ändern"
+        "addressesContentItemActionEdit": "Ändern",
+        "addressHeadline": "Rechnungsadresse ändern"
     }
 }

@@ -116,12 +116,16 @@ $dropdown-link-active-bg: $shape-gray-200;
 // btn-buy
 $buy-btn-bg: $sw-color-brand-primary !default;
 
-//Heading
+// Heading
 $headings-color: $shape-gray-900;
 $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.4 !default;
 
 // Forms
 $form-grid-gutter-width: 24px;
-
 $form-text-margin-top: 10px !default;
+
+// Modal
+$modal-lg: 870px;
+$modal-content-border-radius: 4px;
+$modal-header-padding: 34px;

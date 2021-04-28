@@ -59,6 +59,7 @@
         "profileDeleteAlert": "The deletion of your customer account was successful.",
         "profileDeleteConfirm": "You can now return to the shop.",
         "addressListHeader": "Your Address",
-        "addressesContentItemActionEdit": "Change"
+        "addressesContentItemActionEdit": "Change",
+        "addressHeadline": "Change billing address"
     }
 }
