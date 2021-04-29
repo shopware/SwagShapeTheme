@@ -162,12 +162,23 @@
 
     &-logo {
         margin-right: 0;
-        padding: 0 $spacer-5;
 
         .footer-links & {
             margin-right: 0;
             margin-bottom: 0;
             padding: 0 $spacer-20;
+        }
+
+        &.is-payment:not([data-swag-paypal-marks="true"]) {
+            padding: $spacer-10 12px;
+            margin-right: $spacer-10;
+            background-color: $white;
+            border-radius: 3px;
+
+            .footer-logo-image {
+                max-width: unset;
+                max-height: 20px;
+            }
         }
     }
 
@@ -176,18 +187,13 @@
 
         > .col-4 {
             @extend .mt-0;
-            @extend .col-auto;
+            @extend .col-12;
 
-            margin-left: $spacer-10;
-            margin-bottom: $spacer-10;
+            max-width: 430px;
+            margin-right: 0;
+            line-height: 11px;
             order: 100;
-            line-height: 1;
-            padding: 0;
-
-            > span {
-                background-color: $white;
-                padding: $spacer-xs;
-            }
+            padding: $spacer-5 $spacer !important;
         }
 
         &:empty {
@@ -195,13 +201,21 @@
             padding: 0;
         }
 
-        .paypal-mark {
-            padding: $spacer-5;
-            border: none;
-            margin: 0 15px $spacer-10 0;
+        .paypal-marks {
+            display: flex;
+            align-items: stretch;
+        }
 
-            &:last-child {
-                margin-right: $spacer-5;
+        .paypal-mark {
+            display: flex;
+            padding: $spacer-10;
+            border: none;
+            margin: 0 $spacer-10 0 0;
+            border-radius: 3px;
+
+            img {
+                height: auto;
+                max-height: 20px;
             }
         }
     }
@@ -348,19 +362,6 @@
 
         &-logo {
             .footer-links & {
-                margin-bottom: 0;
-            }
-        }
-
-        &-logos {
-            .paypal-mark {
-                margin-bottom: 0;
-                margin-top: $spacer-40;
-            }
-
-            > .col-4,
-            .footer-logo {
-                padding-top: $spacer-40;
                 margin-bottom: 0;
             }
         }
