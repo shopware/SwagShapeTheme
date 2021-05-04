@@ -9,9 +9,20 @@
 
     {{ block('page_checkout_confirm_payment_shipping') }}
 
+    {% if config('core.cart.showCustomerComment') %}
+        <div class="checkout-additional-wrap">
+            {% block page_checkout_finish_customer_comment %}
+                {{ parent() }}
+            {% endblock %}
+        </div>
+    {% endif %}
+
     {{ block('page_checkout_confirm_product_table') }}
 
     {{ block('page_checkout_confirm_hidden_line_items_information') }}
+{% endblock %}
+
+{% block page_checkout_additional %}
 {% endblock %}
 
 {% block page_checkout_confirm_tos_header %}
@@ -21,6 +32,8 @@
     <div class="checkout-aside-summary">
         {{ block('page_checkout_confirm_tos') }}
     </div>
+
+
 
     {{ parent() }}
 {% endblock %}

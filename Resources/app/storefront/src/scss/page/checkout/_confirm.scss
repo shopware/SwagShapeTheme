@@ -2,6 +2,20 @@
     .confirm-main-header {
         margin-bottom: $spacer-50;
     }
+
+    .checkout-additional-wrap {
+        margin-bottom: $spacer-50;
+
+        .card-title {
+            padding-bottom: 8px;
+            margin-bottom: $spacer-20;
+        }
+
+        textarea {
+            border-radius: 8px;
+            line-height: 2.5;
+        }
+    }
 }
 
 .confirm-tos {
