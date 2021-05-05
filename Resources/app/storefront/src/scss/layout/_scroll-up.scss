@@ -9,6 +9,7 @@ Shows a scroll up button at the bottom right of the page.
     right: 50%;
     transform: translateX(50%);
     padding: 0;
+    left: auto;
 
     &.is-visible {
         transform: translateX(50%);

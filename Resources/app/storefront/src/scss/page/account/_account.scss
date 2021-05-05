@@ -1,6 +1,7 @@
 .account {
     &.account-content {
         background-color: $shape-gray-100;
+        min-height: inherit;
     }
 
     .card-body {

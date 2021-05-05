@@ -62,6 +62,9 @@
         "addressListHeader": "Ihre Adresse",
         "addressesContentItemActionEdit": "Ändern",
         "addressHeadline": "Rechnungsadresse ändern",
-        "orRegisterLink": "Registrieren"
+        "orRegisterLink": "Registrieren",
+        "orderItemColumnProductNumber": "Produkt-Nummer: ",
+        "orderItemColumnPrice": "Preis pro Einheit",
+        "orderItemDate": "Von:"
     }
 }

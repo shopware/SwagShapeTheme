@@ -62,6 +62,9 @@
         "addressListHeader": "Your Address",
         "addressesContentItemActionEdit": "Change",
         "addressHeadline": "Change billing address",
-        "orRegisterLink": "Register"
+        "orRegisterLink": "Register",
+        "orderItemColumnProductNumber": "Product number: ",
+        "orderItemColumnPrice": "Price per unit",
+        "orderItemDate": "From:"
     }
 }
