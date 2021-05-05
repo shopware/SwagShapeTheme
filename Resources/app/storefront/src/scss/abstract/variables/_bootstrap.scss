@@ -68,10 +68,13 @@ $custom-select-border-radius: 20px !default;
 $custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
 $custom-select-padding-x: 1rem;
 
-$custom-control-indicator-border-color: $shape-gray-400 !default;
+$custom-control-indicator-border-color: $sw-border-color !default;
 $custom-control-indicator-checked-bg: $sw-color-brand-primary;
-$custom-checkbox-indicator-border-radius: 4px !default;
+$custom-checkbox-indicator-border-radius: 2px !default;
 $custom-select-bg-size: 0.625rem !default;
+
+$custom-select-focus-box-shadow: none;
+
 //$custom-switch-indicator-size: 0.625rem !default;
 
 // Badges
