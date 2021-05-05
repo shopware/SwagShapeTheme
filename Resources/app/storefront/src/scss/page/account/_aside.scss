@@ -8,7 +8,9 @@
         background: transparent;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
         color: $sw-text-color;
         background: $list-group-bg;
         border-radius: $list-group-border-radius;
