@@ -89,7 +89,11 @@
 
 // New Address Form
 .address-form-actions {
-    margin-top: $spacer-40;
+    margin: $spacer-lg 0 0;
+}
+
+.address-required-info {
+    padding-left: 12px;
 }
 
 .account-address-form {
