@@ -79,10 +79,7 @@
         @extend .col-lg-8;
 
         width: 100%;
-
-        .footer-main & {
-            padding-bottom: 64px;
-        }
+        padding-bottom: 64px;
 
         p {
             margin-bottom: $spacer-lg;
@@ -382,13 +379,17 @@
                 text-align: left;
             }
 
-            .footer-bottom {
-                padding: $spacer-20 $spacer-40 $spacer-30;
-            }
-
             .footer-vat {
                 padding-bottom: 0;
             }
+        }
+
+        &-vat {
+            padding-bottom: 0;
+        }
+
+        &-bottom {
+            padding: $spacer-20 $spacer-40 $spacer-30;
         }
 
         &-minimal {
