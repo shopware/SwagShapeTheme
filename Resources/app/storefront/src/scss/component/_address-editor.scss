@@ -55,15 +55,30 @@
     .address-editor-card {
         @include card-box;
 
-        box-shadow: 0px 20px 160px 0px rgba(0, 0, 0, 0.12);
         height: 100%;
+    }
+
+    .address-billing-card {
+        box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .address-editor-card:hover {
+        box-shadow: none;
     }
 }
 
 .address-editor-card {
     .btn {
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
         color: $primary;
+    }
+}
+
+.address-editor-edit {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 0;
     }
 }
 
