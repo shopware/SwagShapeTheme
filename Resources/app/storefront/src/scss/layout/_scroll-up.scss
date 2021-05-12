@@ -27,7 +27,7 @@ Shows a scroll up button at the bottom right of the page.
 @include media-breakpoint-up(md) {
     .scroll-up-button {
         right: 60px;
-        bottom: 27px;
+        bottom: 20px;
 
         &.is-visible {
             transform: scale(1);
@@ -38,6 +38,5 @@ Shows a scroll up button at the bottom right of the page.
 @include media-breakpoint-up(xl) {
     .scroll-up-button {
         right: 155px;
-        bottom: 25px;
     }
 }
