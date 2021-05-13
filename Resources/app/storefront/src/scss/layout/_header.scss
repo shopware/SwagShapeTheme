@@ -5,3 +5,9 @@
         }
     }
 }
+
+.header-main {
+    .header-actions-btn {
+        @extend .pl-0;
+    }
+}

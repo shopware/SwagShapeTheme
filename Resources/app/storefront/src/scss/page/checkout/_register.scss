@@ -24,12 +24,15 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
         .checkout-aside,
         .checkout-main {
-          padding-top: $checkout-spacing-sm;
-          padding-bottom: $checkout-spacing-sm;
+            padding-top: $checkout-spacing-sm;
+            padding-bottom: $checkout-spacing-sm;
         }
 
         .checkout-main {
-          @extend .ml-0;
+            @extend .ml-0;
+            @extend .mb-0;
+
+            background-color: $shape-gray-100;
         }
 
         .checkout-aside {
@@ -39,8 +42,8 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
             background-color: $white;
             position: relative;
             -webkit-filter: drop-shadow($checkout-aside-drop);
-            padding-left: $checkout-aside-spacing;
-            padding-right: $checkout-aside-spacing;
+            padding-left: $grid-gutter-width / 2;
+            padding-right: $grid-gutter-width / 2;
 
             &:after {
                 content: "";
@@ -75,6 +78,8 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
                 max-width: 424px;
                 margin-left: auto;
                 box-shadow: $checkout-aside-shadow;
+                padding-left: $checkout-aside-spacing;
+                padding-right: $checkout-aside-spacing;
             }
         }
     }
