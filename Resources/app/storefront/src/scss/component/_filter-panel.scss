@@ -110,7 +110,7 @@
 
     &:hover {
         border-color: $gray-700;
-        box-shadow: 0px 10px 50px 0px rgba(54, 43, 41, 0.25);
+        box-shadow: 0px 10px 50px 0px rgba($box-shadow-color, 0.25);
     }
 }
 
@@ -131,7 +131,7 @@
         border-color: $gray-600;
         color: #ff9c90;
         background-color: transparent;
-        box-shadow: 0px 10px 50px 0px rgba(54, 43, 41, 0.25);
+        box-shadow: 0px 10px 50px 0px rgba($box-shadow-color, 0.25);
     }
 }
 
