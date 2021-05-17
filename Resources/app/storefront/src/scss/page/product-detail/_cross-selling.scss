@@ -1,0 +1,23 @@
+.product-detail-cross-selling {
+
+    @include media-breakpoint-down(xs) {
+        .tab-pane {
+            margin-top: 0;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: $hr-border-width solid $gray-300;
+
+            .cms-element-title {
+                margin-left: -$spacer-20;
+                margin-right: -$spacer-20;
+                padding-bottom: 12px;
+                line-height: 31px;
+            }
+
+        }
+    }
+
+    .card {
+        margin-top: 0;
+    }
+}
