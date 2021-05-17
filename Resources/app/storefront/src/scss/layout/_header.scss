@@ -2,6 +2,7 @@
     &-row {
         padding: $spacer-lg 0;
         position: relative;
+        overflow: hidden;
 
         @include media-breakpoint-down(md) {
             align-items: center;
@@ -87,17 +88,11 @@
     background-image: linear-gradient(to right, rgb(255, 255, 255, 0.2) 5%, $white 95%);
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
     .header-actions-btn {
         &.account-menu-btn,
         .header-cart-btn {
             padding: 0;
         }
-    }
-}
-
-.header-main {
-    .header-actions-btn {
-        @extend .pl-0;
     }
 }

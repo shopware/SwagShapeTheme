@@ -12,14 +12,14 @@
         flex-wrap: nowrap;
         max-width: 900px;
         white-space: nowrap;
-        
+        position: relative;
     }
 }
 
 @include media-breakpoint-up(md) {
     .main-navigation-link {
         padding: 0;
-        padding-right: 32px;
+        margin-right: 32px;
         padding-bottom: 10px;
         border-bottom: 2px solid transparent;
 
@@ -33,7 +33,6 @@
 
         &.active {
             color: $sw-text-color;
-            position: relative;
             margin-right: 32px;
             padding-right: 0px;
             border-bottom: 2px solid $primary;
