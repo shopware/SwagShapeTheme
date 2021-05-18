@@ -16,11 +16,17 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         @extend .pt-0;
     }
 
+    .checkout-container {
+        @extend .mb-0;
+
+        padding-bottom: 140px;
+        background-color: $shape-gray-100;
+    }
+
     .checkout {
         @include container-gutter($grid-gutter-width, 163px);
 
         background-color: $shape-gray-100;
-        padding-bottom: 50px;
 
         .checkout-aside,
         .checkout-main {
@@ -31,8 +37,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         .checkout-main {
             @extend .ml-0;
             @extend .mb-0;
-
-            background-color: $shape-gray-100;
         }
 
         .checkout-aside {
@@ -62,8 +66,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
     @include media-breakpoint-up(lg) {
         .checkout {
-            padding-bottom: 90px;
-
             .checkout-main,
             .checkout-aside {
                 @include make-col(7);
