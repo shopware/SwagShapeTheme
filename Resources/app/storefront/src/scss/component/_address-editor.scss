@@ -1,3 +1,5 @@
+$modal-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.12);
+
 .address-editor-list-wrapper,
 .address-editor-create-address-wrapper {
     margin-top: $spacer-30;
@@ -56,10 +58,14 @@
         @include card-box;
 
         height: 100%;
+
+        &:hover {
+            box-shadow: $modal-shadow;
+        }
     }
 
     .address-billing-card {
-        box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: $modal-shadow;
     }
 
     .address-editor-card:hover {
@@ -76,6 +82,7 @@
 
 .address-editor-edit {
     margin-bottom: 1rem;
+    cursor: pointer;
 
     @include media-breakpoint-up(md) {
         margin-bottom: 0;
