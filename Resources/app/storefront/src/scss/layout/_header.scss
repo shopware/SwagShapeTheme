@@ -1,7 +1,97 @@
-.header-search {
-    .input-group-append {
-        > button.header-search-btn {
-            @include border-left-radius(0)
+.header {
+    &-row {
+        padding: $spacer-lg 0;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            align-items: center;
+        }
+    }
+
+    &-logo-main {
+        .header-logo-main-img {
+            max-height: $input-height-lg;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex-shrink: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &-search {
+        .input-group-append {
+            > button.header-search-btn {
+                @include border-left-radius(0);
+            }
+        }
+
+        &-input {
+            &:focus {
+                +.input-group-append > button {
+                    color: $primary;
+                }
+            }
+        }
+
+        &-btn {
+            padding-top: 0;
+        }
+
+        &-col {
+            .collapse {
+                display: block;
+            }
+        }
+    }
+
+    &-cart-count {
+        position: absolute;
+        top: 5px;
+        font-size: $font-size-sm;
+        line-height: 1;
+    }
+
+    &-wishlist-badge {
+        font-size: $font-size-sm;
+        background-color: transparent;
+        color: $shape-gray-900;
+    }
+
+    &-actions {
+        @extend .d-flex;
+
+        &-btn {
+            &:hover {
+                color: $primary;
+
+                .header-wishlist-badge {
+                    color: $primary;
+                }
+            }
+        }
+
+        & > div {
+            background-color: $white;
+        }
+    }
+}
+
+.curtain-area {
+    @extend .d-none, .d-lg-inline-block;
+    width: $input-height-lg;
+    height: $input-height-lg;
+    background-image: linear-gradient(to right, rgb(255, 255, 255, 0.2) 5%, $white 95%);
+}
+
+@include media-breakpoint-up(md) {
+    .header-actions-btn {
+        &.account-menu-btn,
+        .header-cart-btn {
+            padding: 0;
         }
     }
 }
