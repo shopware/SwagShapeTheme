@@ -30,7 +30,8 @@
         "placeholderMail": "Ihre E-Mail Adresse"
     },
     "detail": {
-        "propertyTitle": "Material"
+        "propertyTitle": "Material",
+        "reviewTitle": "%count% Bewertungen"
     },
     "account": {
         "overviewTitle": "Hallo",
