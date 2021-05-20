@@ -1,0 +1,52 @@
+.product-block-prices-grid {
+    border-collapse: separate;
+    border-spacing: 0px $spacer-xs;
+
+    thead {
+        background-color: transparent;
+
+        tr {
+            background-color: transparent;
+        }
+
+        th {
+            font-size: $font-size-base;
+            font-weight: $font-weight-bolder;
+            text-transform: unset;
+        }
+    }
+
+    tr :is(th,td) {
+        &:first-child {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+
+    tr {
+        background-color: $white;
+
+        &:nth-of-type(even) {
+            background-color: $shape-gray-200;
+        }
+    }
+
+    td {
+        font-weight: $font-weight-bolder;
+    }
+
+    .product-block-prices-body {
+        .product-block-prices-row {
+            border: none;
+        }
+    }
+
+    .product-block-prices-cell {
+        padding: 4px 24px;
+    }
+}
