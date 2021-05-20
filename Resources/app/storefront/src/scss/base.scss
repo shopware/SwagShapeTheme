@@ -41,6 +41,8 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "component/address-editor";
 @import "component/payment-method";
 @import "component/scroll-navigation/scroll-navigation";
+@import "component/tab-menu";
+@import "component/cms-block";
 
 /*
  * Layout-related sections
@@ -79,3 +81,5 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'page/account/order-history/order-detail-list-item';
 @import 'page/account/payment';
 @import 'page/product-detail/product-detail';
+@import 'page/product-detail/tabs';
+@import 'page/product-detail/cross-selling';
