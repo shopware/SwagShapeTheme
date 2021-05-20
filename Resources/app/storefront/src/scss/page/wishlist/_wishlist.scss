@@ -1,0 +1,60 @@
+.wishlist {
+    &-page {
+        align-items: center;
+        background-color: $shape-gray-100;
+        display: flex;
+        min-height: inherit;
+        @include container-gutter($spacer-20, 175px);
+
+        @extend .row;
+
+        .cms-element-product-listing-wrapper {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+
+        > .row {
+            flex-grow: 1;
+        }
+
+        > .col-12 {
+            @extend .p-0;
+        }
+    }
+
+    &-headline {
+        font-size: $h1-font-size;
+        justify-content: flex-start;
+        height: 46px;
+        margin-top: 86px;
+        margin-bottom: $spacer-20;
+
+        @include media-breakpoint-up(md) {
+            font-size: 44px;
+            line-height: 40px;
+            margin-bottom: $spacer-30;
+        }
+    }
+
+    &-listing-col {
+        @extend .m-0;
+
+        @include media-breakpoint-down(lg) {
+            padding-top: $spacer-60;
+            padding-bottom: $spacer-60;
+        }
+
+        .wishlist-listing-description {
+            line-height: 21px;
+            margin: 0;
+            max-width: 382px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .wishlist-listing-header {
+        margin-top: 40px;
+        margin-bottom: 18px;
+    }
+}

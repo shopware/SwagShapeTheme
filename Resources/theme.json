@@ -188,6 +188,10 @@
                 "value": "https://www.pinterest.com/",
                 "editable": true,
                 "block": "footer"
+            },
+            "sw-wishlist-empty": {
+                "type": "media",
+                "value": "app/storefront/src/assets/images/wishlist_empty.svg"
             }
         }
     }

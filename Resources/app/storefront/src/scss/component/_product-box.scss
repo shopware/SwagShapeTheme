@@ -103,6 +103,8 @@ $box-image-size-img-desktop: 425px;
     }
 
     .product-labels-ratings {
+        min-height: 32px;
+
         @extend .d-flex, .align-items-center, .my-2;
     }
 
