@@ -12,27 +12,4 @@
     @include media-breakpoint-up(sm) {
         width: auto;
     }
-
-    .product-detail-offcanvas-close {
-        padding: 18px $spacer-20;
-        font-size: $font-size-lg;
-        color: $sw-text-color;
-        font-weight: $font-weight-semibold;
-    }
-}
-
-.product-detail-offcanvas-close {
-    border: none;
-
-    .icon-xs {
-        width: 14px;
-        height: 14px;
-        margin-right: 12px;
-
-        svg {
-            top: 0;
-            height: 14px;
-            margin-top: -2px;
-        }
-    }
 }
