@@ -1,6 +1,5 @@
 $modal-max-width: 872px;
 $modal-spacing: 84px;
-$modal-image-shadow: 0px 10px 60px 0px rgba($primary, 0.3);
 
 .quickview-modal {
 
@@ -42,8 +41,7 @@ $modal-image-shadow: 0px 10px 60px 0px rgba($primary, 0.3);
 
         &-image {
             > img {
-                box-shadow: $modal-image-shadow;
-                filter: saturate(0.5);
+                box-shadow: $dropdown-box-shadow;
                 object-fit: cover;
             }
         }

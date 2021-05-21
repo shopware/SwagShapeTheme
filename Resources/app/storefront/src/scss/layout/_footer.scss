@@ -266,11 +266,15 @@
             font-weight: $font-weight-medium;
             line-height: 26px;
             font-size: $font-size-base;
-            color: inherit;
+            color: $sw-text-color;
             align-items: center;
             text-transform: capitalize;
             padding: $spacer-10 0;
             border-bottom: $hr-border-width solid $hr-border-color;
+
+            a {
+                color: $sw-text-color;
+            }
         }
     }
 
@@ -341,6 +345,10 @@
                 text-transform: uppercase;
                 padding: $spacer-10 0;
                 border-bottom: none;
+
+                a {
+                    color: $shape-gray-500;
+                }
             }
 
             &:nth-child(3n) {

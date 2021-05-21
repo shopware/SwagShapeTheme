@@ -12,6 +12,8 @@ $gray-700: #637182 !default;
 $gray-800: lighten($sw-color-brand-primary, 5%) !default;
 $gray-900: $sw-color-brand-primary !default;
 
+$box-shadow-color: saturate($sw-color-brand-primary, 50%);
+
 // Colors
 $shape-gray-100: #f9fafc !default;
 $shape-gray-200: #eff2f7 !default;
@@ -110,7 +112,7 @@ $dropdown-min-width: 100%;
 $dropdown-item-padding-y: 10px;
 $dropdown-item-padding-x: 10px;
 $dropdown-border-color: #fff !default;
-$dropdown-box-shadow: 0px 20px 160px 0px rgba(0, 0, 0, 0.12) !default;
+$dropdown-box-shadow: 0px 20px 160px 0px rgba($box-shadow-color, 0.12) !default;
 $dropdown-border-width: 2px;
 $dropdown-border-color: $sw-text-color;
 
