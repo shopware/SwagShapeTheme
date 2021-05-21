@@ -12,18 +12,31 @@
     @include media-breakpoint-up(sm) {
         width: auto;
     }
+}
 
-    .product-detail-offcanvas-close {
+.is-ctl-product {
+    .offcanvas {
+        .offcanvas-content-container {
+            padding: $spacer-30 $grid-gutter-width / 2;
+        }
+    }
+
+    .offcanvas-close {
         padding: 18px $spacer-20;
         font-size: $font-size-lg;
         color: $sw-text-color;
         font-weight: $font-weight-semibold;
+        border: none;
+        background-color: $shape-gray-200;
     }
 }
 
-.product-detail-offcanvas-close {
-    border: none;
+.product-detail-description-title {
+    @include font-size($font-size-base);
+    line-height: 20px;
+}
 
+.product-detail-offcanvas-close {
     .icon-xs {
         width: 14px;
         height: 14px;

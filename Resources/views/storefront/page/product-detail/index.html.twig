@@ -1,5 +1,20 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
 
+{% block base_breadcrumb %}{% endblock %}
+
+{% block page_product_detail_content %}
+    <div class="product-detail-content">
+        {% sw_include '@Storefront/storefront/layout/breadcrumb.html.twig' with {
+            context: context,
+            category: page.product.seoCategory
+        } only %}
+
+        {% set mediaItems = page.product.media.media %}
+
+        {{ block('page_product_detail_main') }}
+    </div>
+{% endblock %}
+
 {% block page_product_detail_media %}
     <div class="col-lg-7 product-detail-media">
         {% if page.product.media %}

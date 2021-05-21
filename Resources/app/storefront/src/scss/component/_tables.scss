@@ -9,13 +9,18 @@ $table-radius: 24px;
 
 .table-striped {
     tbody tr:nth-of-type(#{$table-striped-order}) {
+        background-color: unset;
+
+        th,
+        td {
+            background-color: $table-accent-bg;
+        }
+
         :is(th, td):first-child {
-            border-top-left-radius: $table-radius;
-            border-bottom-left-radius: $table-radius;
+            @include border-left-radius($table-radius);
         }
         :is(th,td):last-child {
-            border-top-right-radius: $table-radius;
-            border-bottom-right-radius: $table-radius;
+            @include border-right-radius($table-radius);
         }
     }
 }
