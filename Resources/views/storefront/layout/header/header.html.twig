@@ -17,9 +17,11 @@
                     {% endblock %}
                 {% endblock %}
             </div>
+
             {% block layout_header_logo %}
                 {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
             {% endblock %}
+
             {% block base_navigation %}
                 {% block base_navigation_inner %}
                     {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}

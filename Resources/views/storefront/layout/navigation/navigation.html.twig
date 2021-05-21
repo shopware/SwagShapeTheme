@@ -7,26 +7,6 @@
 {% endblock %}
 
 {% block layout_main_navigation_menu_flyouts %}
-    {% for treeItem in page.header.navigation.tree %}
-        {% if treeItem.children|length > 0 %}
-            {% set haveGrandChildren = false %}
-            {% for category in treeItem.children %}
-                {% if category.children|length > 0 %}
-                    {% set haveGrandChildren = true %}
-                {% endif %}
-            {% endfor %}
-            {% block layout_main_navigation_menu_flyout %}
-                <div class="navigation-flyout"
-                     data-flyout-menu-id="{{ treeItem.category.id }}">
-                    <div class="{% if haveGrandChildren %} navigation {% else %} navigation-last-level {% endif %}">
-                        {% block layout_main_navigation_menu_flyout_include %}
-                            {% sw_include '@Storefront/storefront/layout/navigation/flyout.html.twig' with {navigationTree: treeItem, level: level+1, page: page} only %}
-                        {% endblock %}
-                    </div>
-                </div>
-            {% endblock %}
-        {% endif %}
-    {% endfor %}
 {% endblock %}
 
 {% block layout_main_navigation_menu_items %}
@@ -43,6 +23,13 @@
         {# @deprecated tag:v6.5.0 - Use "category.id" directly instead. #}
         {% set categorId = category.id %}
 
+        {% set haveGrandChildren = false %}
+        {% for category in treeItem.children %}
+            {% if category.children|length > 0 %}
+                {% set haveGrandChildren = true %}
+            {% endif %}
+        {% endfor %}
+
         {% block layout_main_navigation_menu_item %}
             {% if category.type == 'folder' %}
                 <div class="nav-link main-navigation-link"
@@ -53,17 +40,20 @@
                     <div class="main-navigation-link-text">
                         <span itemprop="name">{{ name }}</span>
                     </div>
+                    {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {navigationTree: treeItem.children, level: level+1, page: page, haveGrandChildren: haveGrandChildren } only %}
                 </div>
             {% else %}
-                <a class="nav-link main-navigation-link{% if category.id == page.header.navigation.active.id or category.id in activePath %} active{% endif %}"
+                <a class="nav-link main-navigation-link{% if category.id == page.header.navigation.active.id or category.id in activePath %} active{% endif %}
+                     {% if not haveGrandChildren %} position-relative {% endif %}"
                    href="{{ category_url(category) }}"
                    itemprop="url"
-                   {% if treeItem.children|length > 0 %}data-flyout-menu-trigger="{{ category.id }}"{% endif %}
+                    {% if treeItem.children|length > 0 %}data-flyout-menu-trigger="{{ category.id }}"{% endif %}
                     {% if category_linknewtab(category) %}target="_blank"{% endif %}
                    title="{{ name }}">
                     <div class="main-navigation-link-text">
                         <span itemprop="name">{{ name }}</span>
                     </div>
+                    {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {navigationTree: treeItem.children, level: level+1, page: page, haveGrandChildren: haveGrandChildren } only %}
                 </a>
             {% endif %}
         {% endblock %}
