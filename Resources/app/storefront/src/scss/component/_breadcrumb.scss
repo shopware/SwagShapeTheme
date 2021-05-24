@@ -1,0 +1,31 @@
+.breadcrumb {
+    padding: 44px 0 42px 0;
+    margin-bottom: 0;
+
+    .breadcrumb {
+        padding: 0;
+    }
+
+    .breadcrumb-item {
+        color: $shape-gray-900;
+        font-weight: $font-weight-bold;
+
+        .breadcrumb-link {
+            @extend .breadcrumb-item;
+
+            &:hover {
+                color: $sw-color-brand-primary;
+            }
+        }
+
+        .is-active {
+            color: $shape-gray-500;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .breadcrumb-placeholder {
+        line-height: 23px;
+        margin: 0 $spacer-md;
+    }
+}
