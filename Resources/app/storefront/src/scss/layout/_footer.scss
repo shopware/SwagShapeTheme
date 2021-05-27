@@ -84,6 +84,10 @@
         p {
             margin-bottom: $spacer-lg;
         }
+
+        a {
+            text-decoration: underline;
+        }
     }
 
     &-service-menu {
@@ -144,6 +148,10 @@
 
         a {
             color: $body-color;
+
+            &:hover {
+                color: $gray-800;
+            }
         }
 
         p {
