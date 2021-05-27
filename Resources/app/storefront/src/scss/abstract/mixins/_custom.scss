@@ -60,3 +60,41 @@
     border-color: $shape-gray-900;
     margin-bottom: 1rem;
 }
+
+@mixin delete {
+    border: none;
+    content: $icon-delete;
+}
+
+@mixin shape-filter-selector {
+    .filter-panel-item-toggle[aria-expanded="true"] {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-color: $shape-gray-900;
+        border-bottom: none;
+        color: $shape-gray-900;
+        font-weight: $font-weight-bold;
+
+        .icon-filter-panel-item-toggle, svg {
+            color: inherit;
+            transform: none;
+        }
+    }
+
+    .filter-panel-item-dropdown {
+        background-color: $white;
+        border-radius: $spacer-10;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: 2px solid $shape-gray-800;
+        border-top: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding-top: 0;
+        overflow: hidden;
+
+        .filter-multi-select-list-item {
+            padding: $spacer-10 $spacer-lg;
+        }
+    }
+}
