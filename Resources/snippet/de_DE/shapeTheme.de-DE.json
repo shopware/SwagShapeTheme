@@ -8,7 +8,8 @@
         "offcanvasCloseMenu": "Mein Konto"
     },
     "header": {
-        "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro"
+        "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro",
+        "searchPlaceholder": "Suche..."
     },
     "footer": {
         "newsletterHeadline": "Unser Newsletter.<br>Jetzt abonnieren und nichts mehr verpassen!",

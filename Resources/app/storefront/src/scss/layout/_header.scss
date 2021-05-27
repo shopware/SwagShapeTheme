@@ -25,12 +25,14 @@
 
     &-search {
         .input-group-append {
+            min-width: 0;
             > button.header-search-btn {
                 @include border-left-radius(0);
             }
         }
 
-        &-input {
+        .header-search-input {
+            padding-right: $spacer-md;
             &:focus {
                 +.input-group-append > button {
                     color: $primary;
@@ -38,8 +40,9 @@
             }
         }
 
-        &-btn {
-            padding-top: 0;
+        .btn.header-search-btn {
+            padding-left: $spacer-md;
+            padding-right: $spacer-md;
         }
 
         &-col {
@@ -94,5 +97,11 @@
         .header-cart-btn {
             padding: 0;
         }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .header-search {
+        max-width: 242px;
     }
 }
