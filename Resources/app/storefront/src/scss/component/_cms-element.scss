@@ -1,0 +1,13 @@
+/*
+CMS elements
+==============================================
+General styling for cms elements
+*/
+
+.cms-element-image-gallery {
+    &.has-vertical-alignment {
+        display: block;
+        height: 100%;
+    }
+}
+

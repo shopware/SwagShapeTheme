@@ -1,0 +1,116 @@
+/*
+Base slider
+==============================================
+Styling for base slider component.
+Contains minimal styling for a slider with arrow and/or dot navigation.
+based on: https://github.com/ganlanyuan/tiny-slider
+*/
+
+.base-slider {
+    &.gallery-slider {
+        position: relative;
+        box-shadow: 0 50px 100px 0 rgba($box-shadow-color, 0.6);
+        z-index: 1;
+        margin-bottom: 87px;
+    }
+
+    .tns-nav,
+    .base-slider-dots {
+        margin: 0;
+        bottom: -3px;
+
+        .base-slider-dot,
+        button {
+            background-color: transparent;
+            border: 0;
+            height: 3px;
+            padding: 0;
+            border-radius: 0;
+            margin: 0;
+
+            &:hover,
+            &.tns-nav-active {
+                background-color: $shape-gray-800;
+            }
+        }
+    }
+
+   &.has-nav-outside {
+       padding: 0;
+   }
+
+    &-dots {
+        width: 100%;
+        display: flex;
+    }
+
+    &-dot {
+        flex: 1;
+        height: 3px;
+    }
+}
+
+.base-slider-controls-prev,
+.base-slider-controls-next {
+    background: rgba($white, 0.41);
+    border-color: transparent;
+    border-radius: 0;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+
+    .icon {
+        width: 18px;
+        height: 18px;
+
+        svg use {
+            color: $shape-gray-900;
+        }
+    }
+
+    svg {
+        top: 0;
+    }
+
+    &:hover {
+        border-color: transparent;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.dots-text {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+@include media-breakpoint-down(sm) {
+    .base-slider {
+        .tns-nav,
+        .base-slider-dots {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .base-slider {
+        &.gallery-slider {
+            box-shadow: 0 80px 289px 0 rgba($box-shadow-color, 0.6);
+            margin-bottom: 100px;
+        }
+    }
+
+    .dots-text {
+        position: absolute;
+        bottom: 45px;
+        right: 70px;
+    }
+}
