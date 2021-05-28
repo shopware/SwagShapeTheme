@@ -50,3 +50,25 @@
         padding: 4px 24px;
     }
 }
+
+@include media-breakpoint-up(md) {
+    .cms-element-image-gallery {
+        padding: 0 $spacer-40;
+    }
+
+    .product-detail-media {
+        padding: 0 $spacer-60;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cms-block-gallery-buybox .col-lg-5,
+    .col-lg-5.product-detail-buy {
+        padding-left: 80px;
+    }
+
+    .cms-element-image-gallery,
+    .product-detail-media {
+        padding: 0;
+    }
+}
