@@ -8,7 +8,8 @@
         "offcanvasCloseMenu": "My Account"
     },
     "header": {
-        "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros"
+        "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros",
+        "searchPlaceholder": "Search..."
     },
     "footer": {
         "newsletterHeadline": "Our newsletter.<br>Subscribe now and don't miss anything anymore!",
