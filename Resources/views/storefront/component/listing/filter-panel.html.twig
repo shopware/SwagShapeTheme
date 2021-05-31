@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/component/listing/filter-panel.html.twig' %}
 
 {% block component_filter_panel_header %}
-    <div class="filter-panel-offcanvas-header">
+    <div class="filter-panel-offcanvas-header{% if sidebar %} is--sidebar{% endif %}">
         <h3 class="filter-panel-offcanvas-only">{{ "listing.filterTitleText"|trans }}</h3>
 
         <div class="filter-panel-offcanvas-only filter-panel-offcanvas-close js-offcanvas-close">

@@ -39,7 +39,9 @@ $spacer-xxl: ($spacer * 3.5) !default; // 56px
 
 $spacer-5: ($spacer * 0.3125) !default; // 5px
 $spacer-10: ($spacer * 0.625) !default; // 10px
+$spacer-12: ($spacer * 0.75) !default; // 12px
 $spacer-20: ($spacer * 1.25) !default; // 20px
+$spacer-26: ($spacer * 1.625) !default; // 26px
 $spacer-30: ($spacer * 1.875) !default; // 30px
 $spacer-40: ($spacer * 2.5) !default; // 40px
 $spacer-50: ($spacer * 3.125) !default; // 50px
@@ -50,5 +52,6 @@ $spacer-60: ($spacer * 3.75) !default; // 60px
 //$icon-caret-up: url('#{$asset-path}/icon/ic-caret-up.svg');
 $icon-caret-down: url('/bundles/swagshapetheme/assets/icon/ic-caret-down.svg');
 $icon-caret-up: url('/bundles/swagshapetheme/assets/icon/ic-caret-up.svg');
+$icon-delete: url('/bundles/swagshapetheme/assets/icon/ic-delete.svg');
 
 $hr-border: $hr-border-width solid $hr-border-color;
