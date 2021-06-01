@@ -10,6 +10,7 @@
         <author>shopware AG</author>
         <copyright>(c) by shopware AG</copyright>
         <version>1.0.0</version>
+        <icon>theme-icon.png</icon>
         <license>MIT</license>
     </meta>
 </manifest>
