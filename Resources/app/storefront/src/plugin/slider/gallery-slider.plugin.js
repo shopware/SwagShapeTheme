@@ -12,12 +12,11 @@ export default class ShapeGallerySliderPlugin extends GallerySliderPlugin {
 
         const currentIndex = this.getCurrentSliderIndex();
 
-        let currentDot = this._dots[currentIndex],
-            dotsTextEl = currentDot.closest(".base-slider").querySelector(".js-dots-text-current");
+        let currentDot = this._dots[currentIndex];
 
-        if (dotsTextEl)
+        if (currentDot)
         {
-            dotsTextEl.innerHTML = currentIndex + 1;
+            currentDot.closest(".base-slider").querySelector(".js-dots-text-current").innerHTML = currentIndex + 1;
         }
     }
 }
