@@ -67,5 +67,9 @@
         "orderItemColumnProductNumber": "Product number: ",
         "orderItemColumnPrice": "Price per unit",
         "orderItemDate": "From:"
+    },
+    "listing": {
+        "boxAddProductMobile": "Add to cart",
+        "boxProductDetails": "More details"
     }
 }
