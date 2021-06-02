@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-listing.html.twig' %}
+
+{% block element_product_listing %}
+    {% set searchResult = element.data.listing %}
+    {% set listingColumns = 'col-sm-6 col-lg-4' %}
+
+    {% if section and section.type == 'sidebar' %}
+        {% set listingColumns = 'col-6' %}
+    {% endif %}
+
+    {% block element_product_listing_wrapper %}
+        {{parent()}}
+    {% endblock %}
+{% endblock %}
