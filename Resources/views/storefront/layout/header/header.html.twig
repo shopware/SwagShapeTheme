@@ -2,8 +2,8 @@
 
 {% block layout_header_navigation %}
     <div class="row header-row">
-        <div class="col-4 col-lg-7 d-flex align-items-center align-items-lg-end">
-            <div class="nav-main-toggle d-none d-md-block d-lg-none">
+        <div class="col-4 col-lg-7 d-flex align-items-center">
+            <div class="nav-main-toggle d-none d-md-block d-xl-none">
                 {% block layout_header_navigation_toggle_tablet %}
                     {% block layout_header_navigation_toggle_tablet_button %}
                         <button class="btn nav-main-toggle-btn header-actions-btn pl-0 pr-4"
@@ -29,7 +29,7 @@
             {% endblock %}
         </div>
 
-        <div class="col ml-5">
+        <div class="col-8 col-lg-5">
             <div class="d-flex align-items-center justify-content-end no-gutters header-actions">
                 <span class="col-auto curtain-area"></span>
                 {% block layout_header_search %}
@@ -54,10 +54,10 @@
             </div>
         </div>
 
-        <div class="col-12 d-sm-flex d-md-none py-2">
+        <div class="col-12 d-sm-block d-md-none py-2">
             <div class="row align-items-center justify-content-between no-gutters">
                 {% block layout_header_navigation_toggle %}
-                    <div class="col-auto d-sm-none">
+                    <div class="col-auto d-md-none">
                         <div class="menu-button">
                             {% block layout_header_navigation_toggle_button %}
                                 <button class="btn nav-main-toggle-btn header-actions-btn p-0"
