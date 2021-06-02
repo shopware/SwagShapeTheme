@@ -11,6 +11,19 @@ specific styling for elements dependent on their parent block
     }
 }
 
+.cms-element-text {
+    h2 {
+        font-size: $h1-font-size;
+        line-height: 40px;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 12px;
+    }
+
+    hr {
+        border-color: $shape-gray-900;
+    }
+}
+
 @include media-breakpoint-down(xs) {
     .cms-block-product-description-reviews,
     .cms-block-cross-selling {

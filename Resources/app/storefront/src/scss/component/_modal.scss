@@ -33,3 +33,9 @@ $modal-inner-padding-lg: 100px;
         margin-bottom: $spacer-20;
     }
 }
+
+.modal-body {
+    .cms-section .boxed {
+        padding: 0;
+    }
+}
