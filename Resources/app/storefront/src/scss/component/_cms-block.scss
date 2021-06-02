@@ -6,6 +6,7 @@ specific styling for elements dependent on their parent block
 */
 
 .cms-block {
+    &.cms-block-product-description-reviews,
     &.cms-block-gallery-buybox {
         overflow: unset;
     }
