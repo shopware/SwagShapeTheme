@@ -11,3 +11,24 @@ General styling for cms elements
     }
 }
 
+.cms-element-product-slider {
+    .product-slider-controls-prev {
+        left: -20px;
+    }
+
+    .product-slider-controls-next {
+        right: -20px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .cms-element-product-slider {
+        .product-slider-controls-prev {
+            left: -35px;
+        }
+
+        .product-slider-controls-next {
+            right: -35px;
+        }
+    }
+}

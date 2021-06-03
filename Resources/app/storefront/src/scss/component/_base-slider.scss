@@ -75,7 +75,7 @@ based on: https://github.com/ganlanyuan/tiny-slider
         top: 0;
     }
 
-    &:hover {
+    &:not([disabled]):hover {
         border-color: transparent;
 
         .icon {
