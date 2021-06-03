@@ -9,8 +9,18 @@
         padding: 33px;
     }
 
+    &.is-bottom {
+        height: 100%;
+    }
+
     @include media-breakpoint-up(sm) {
         width: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+        &.is-bottom {
+            height: calc(100% - 218px);
+        }
     }
 }
 

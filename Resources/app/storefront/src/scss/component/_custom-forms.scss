@@ -57,6 +57,22 @@
     order: 2;
 }
 
+.custom-select {
+    &.sorting {
+        color: $shape-gray-500;
+        background-image: url('#{$asset-path}/icon/ic-select-down.svg');
+        margin-top: 0;
+
+        &:invalid {
+            color: $input-placeholder-color;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
 @include media-breakpoint-up(md) {
     .custom-checkbox.privacy-notice,
     .required-fields-content {

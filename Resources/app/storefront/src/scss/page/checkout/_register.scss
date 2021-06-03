@@ -45,7 +45,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
             margin-left: 0;
             background-color: $white;
             position: relative;
-            -webkit-filter: drop-shadow($checkout-aside-drop);
+            box-shadow: $checkout-aside-shadow;
             padding-left: $grid-gutter-width / 2;
             padding-right: $grid-gutter-width / 2;
 
@@ -79,7 +79,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
                 max-width: 424px;
                 margin-left: auto;
-                box-shadow: $checkout-aside-shadow;
                 padding-left: $checkout-aside-spacing;
                 padding-right: $checkout-aside-spacing;
             }

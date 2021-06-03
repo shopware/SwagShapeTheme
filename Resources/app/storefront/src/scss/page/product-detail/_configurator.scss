@@ -3,7 +3,7 @@ $product-configurator-media-width-lg: 50px;
 
 .product-detail-configurator {
     &-group {
-        margin-bottom: 22px;
+        margin-bottom: $spacer-12;
     }
 
     &-options {
@@ -13,6 +13,7 @@ $product-configurator-media-width-lg: 50px;
     &-option {
         display: block;
         margin-right: 14px;
+        margin-bottom: $spacer-10;
 
         &:last-child {
             margin-right: 0;
