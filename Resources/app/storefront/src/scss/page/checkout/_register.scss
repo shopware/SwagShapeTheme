@@ -107,6 +107,22 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
     .register-login-collapse-toogle {
         margin-bottom: 2rem;
+
+        > span.icon-avatar {
+            display: none;
+        }
+    }
+
+    .register-login-collapse-toogle + .row.mb-2 {
+        margin-bottom: $spacer-30 !important;
+    }
+
+    div[data-swag-paypal-express-button='true'] {
+        @include make-col(12);
+    }
+
+    div[data-swag-paypal-installment-banner="true"] {
+        margin-top: 0 !important;
     }
 
     .register-card .card-title {
@@ -141,9 +157,19 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         }
     }
 
+    @include media-breakpoint-down(sm) {
+        div[data-swag-paypal-installment-banner="true"] {
+            display: none;
+        }
+    }
+
     @include media-breakpoint-up(md) {
         .login-submit button {
             width: unset;
+        }
+
+        div[data-swag-paypal-express-button='true'] {
+            @include make-col(5);
         }
     }
 

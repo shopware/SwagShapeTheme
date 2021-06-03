@@ -157,9 +157,19 @@ $gutter: #{'min(calc((100vw - 100%) / 2), 163px)'};
         margin-top: $spacer-40;
     }
 
+    div[data-swag-paypal-express-button='true'],
+    div[data-swag-paypal-installment-banner="true"] {
+        @include make-col(12);
+    }
+
     @include media-breakpoint-up(md) {
         &-main {
             padding-bottom: 100px;
+        }
+
+        div[data-swag-paypal-express-button='true'],
+        div[data-swag-paypal-installment-banner="true"] {
+            @include make-col(8);
         }
     }
 
@@ -176,6 +186,11 @@ $gutter: #{'min(calc((100vw - 100%) / 2), 163px)'};
                     @include make-col(12);
                 }
             }
+
+            .buy-widget-container + .form-row {
+                margin-top: 10px !important;
+            }
+
         }
     }
 }

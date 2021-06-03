@@ -50,3 +50,11 @@
         @include checkout-headline;
     }
 }
+
+@include media-breakpoint-only(md) {
+    .is-act-confirmpage {
+        div[data-swag-paypal-smart-payment-buttons="true"] {
+            width: 50%;
+        }
+    }
+}
