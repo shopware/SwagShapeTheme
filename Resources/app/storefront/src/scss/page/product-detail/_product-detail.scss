@@ -192,6 +192,14 @@ $gutter: #{'min(calc((100vw - 100%) / 2), 163px)'};
             }
 
         }
+
+        #swag-amazon-pay-product-detail-wrapper {
+            margin-top: 1rem !important;
+
+            > .col-8 {
+                @include make-col(12);
+            }
+        }
     }
 }
 
