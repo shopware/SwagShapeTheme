@@ -1,0 +1,44 @@
+$icon-fill-color: #f9f9f9;
+
+.swag-cms-extensions-quickview-modal {
+    #swag-cms-extensions-quickview-carousel {
+        .carousel-control-prev,
+        .carousel-control-next {
+            .icon-white {
+                color: $icon-fill-color;
+            }
+        }
+    }
+
+    .product-wishlist {
+        text-align: center;
+    }
+
+    @include media-breakpoint-down(md) {
+        .gallery-slider-thumbnails-col.is-left {
+            display: none;
+        }
+
+        .modal-dialog {
+            max-width: 100%;
+        }
+
+        #swag-cms-extensions-quickview-carousel {
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: transparent;
+
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .modal-dialog {
+            max-width: 1082px;
+        }
+
+        .modal-content {
+            margin: 0;
+        }
+    }
+}
