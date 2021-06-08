@@ -21,8 +21,10 @@
 
     &-search {
         width: 288px;
+
         .input-group-append {
             min-width: 0;
+
             > button.header-search-btn {
                 @include border-left-radius(0);
             }
@@ -30,6 +32,7 @@
 
         .header-search-input {
             padding-right: $spacer-md;
+
             &:focus {
                 +.input-group-append > button {
                     color: $primary;

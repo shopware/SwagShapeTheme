@@ -27,15 +27,6 @@
         line-height: 28px;
         position: relative;
 
-        &:after {
-            content: attr(data-text);
-            position: absolute;
-            left: 24px;
-            font-weight: $font-weight-base;
-            color: transparent;
-            @include transition(color .15s ease-in-out);
-        }
-
         &:hover:not(:focus) {
             border-color: $shape-gray-900;
         }
@@ -68,13 +59,7 @@
 
     &.show {
         .filter-panel-item-toggle {
-            color: transparent;
-            box-shadow: none;
-            position: relative;
-
-            &:after {
-                color: $shape-gray-900;
-            }
+            color: inherit;
         }
 
         .icon-filter-panel-item-toggle svg {
@@ -200,7 +185,7 @@
 
     &:hover {
         border-color: $gray-700;
-        box-shadow: 0px 10px 50px 0px rgba(#362b29, 0.25);
+        box-shadow: 0px 10px 50px 0px rgba($shape-gray-900, 0.25);
     }
 
     &-preview {
@@ -242,9 +227,9 @@
 
     @include hover {
         border-color: $gray-600;
-        color: #f2a194;
+        color: $gray-600;
         background-color: transparent;
-        box-shadow: 0px 10px 50px 0px rgba(#362b29, 0.25);
+        box-shadow: 0px 10px 50px 0px rgba($shape-gray-900, 0.25);
     }
 }
 
