@@ -70,6 +70,26 @@
 
                 {{ block('page_checkout_item_remove') }}
             </div>
+
+            {% if isCustomizedProduct %}
+                <div class="row cart-item-row">
+                    <div class="col">
+                        <div class="row cart-item-row">
+                            <div class="customized-checkout-hidden-image">
+                                {{ block('page_checkout_item_info_image') }}
+                            </div>
+
+                            <div class="col">
+                                {% sw_include '@Storefront/storefront/component/checkout/_include/cart-configuration.html.twig' with {
+                                    'items': configurationItems,
+                                    'productId': mainLineItem.referencedId,
+                                    'isMainCart': true
+                                } %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     {% endif %}
 {% endblock %}
