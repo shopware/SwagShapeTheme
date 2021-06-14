@@ -174,3 +174,25 @@ $box-image-size-img-desktop: 425px;
         color: $warning;
     }
 }
+
+.product-variant-characteristics {
+    .product-variant-characteristics-text {
+        @include truncate-multiline(1.5em, 2, $shape-gray-100);
+
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+}
+
+.product-box:hover {
+    .product-variant-characteristics {
+        .product-variant-characteristics-text {
+            @include truncate-multiline(1.5em, 2, $white);
+
+            margin-right: 0;
+            padding-right: 0;
+            max-width: 100%;
+        }
+    }
+}

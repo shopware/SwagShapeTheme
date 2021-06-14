@@ -162,6 +162,10 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
             }
         }
     }
+
+    .product-slider-item {
+        padding-bottom: $spacer-50;
+    }
 }
 
 @include media-breakpoint-up(xl) {

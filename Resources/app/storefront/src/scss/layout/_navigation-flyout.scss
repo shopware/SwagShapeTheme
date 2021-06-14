@@ -22,6 +22,8 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         left: 0;
         position: absolute;
         z-index: -1;
+        padding-bottom: $spacer-10;
+        margin-top: $spacer-10;
 
         &.is-level-1 {
             text-transform: uppercase;
@@ -30,14 +32,16 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         &.is-level-2 {
             text-transform: none;
             border-top: 2px solid $sw-border-color;
+            margin-top: 0;
+            padding-top: $spacer-10;
         }
 
         .navigation-flyout-link {
             color: $black;
             font-weight: $font-weight-bold;
-            padding: 40px 0px;
+            padding: $spacer-30 0px;
             margin: 0;
-            margin-right: 40px;
+            margin-right: $spacer-40;
             position: relative;
 
             &:hover {

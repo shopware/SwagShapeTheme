@@ -42,6 +42,20 @@
         &:hover {
             color: $primary;
             cursor: pointer;
+
+            .main-navigation-link-text {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 50px;
+                    background: transparent;
+                    display: block;
+                    position: absolute;
+                    top: 14px;
+                }
+            }
         }
     }
 }

@@ -93,10 +93,6 @@
         @include border-radius(24px);
     }
 
-    &-tabs {
-        padding-bottom: $spacer-50;
-    }
-
     &-configurator-dropdown {
         display: flex;
         flex-direction: column;
