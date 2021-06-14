@@ -21,6 +21,32 @@ General styling for cms elements
     }
 }
 
+.cms-element-product-listing {
+    .cms-listing-row {
+        padding-bottom: 44px;
+    }
+
+    &-actions {
+        padding-bottom: $spacer-20;
+        border-bottom: $hr-border-width solid $hr-border-color;
+        margin-bottom: 0;
+    }
+}
+
+.cms-element-sidebar-filter {
+    padding-top: $spacer-20;
+    padding-bottom: $spacer-20;
+    border-top: $hr-border-width solid $hr-border-color;
+}
+
+@include media-breakpoint-down(md) {
+    .cms-element-product-listing-actions {
+        .sorting {
+            margin-top: 0;
+        }
+    }
+}
+
 @include media-breakpoint-up(md) {
     .cms-element-product-slider {
         .product-slider-controls-prev {
@@ -29,6 +55,27 @@ General styling for cms elements
 
         .product-slider-controls-next {
             right: -35px;
+        }
+    }
+
+    .cms-element-product-listing {
+        .cms-listing-row {
+            padding-bottom: 54px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cms-element-sidebar-filter {
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .cms-element-product-listing-actions {
+        border-bottom: none;
+
+        .sorting {
+            min-width: 280px;
         }
     }
 }

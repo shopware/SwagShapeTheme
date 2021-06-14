@@ -7,23 +7,23 @@ https://getbootstrap.com/docs/4.3/layout/overview/
 */
 
 @mixin container-gutter($offset, $max) {
-    --gutter: #{'min(calc((100vw - 100% - calc(#{$offset} / 2)) / 2), #{$max})'};
+    $gutter: #{'min(calc((100vw - 100% ) / 2 - 8px), #{$max})'};
 
-    margin-left: calc((var(--gutter) * -1));
-    margin-right: calc((var(--gutter) * -1));
+    margin-left: calc(#{$gutter} * -1);
+    margin-right: calc(#{$gutter} * -1);
 
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: $gutter;
+    padding-right: $gutter;
 }
 
 @mixin container-full-width () {
-    --gutter-width: calc((100vw - 100%) / 2);
+    $gutter-width: calc(((100vw - 100%) / 2) - 8px);
 
-    margin-left: calc((var(--gutter-width) * -1));
-    margin-right: calc((var(--gutter-width) * -1));
+    margin-left: calc(#{$gutter-width} * -1);
+    margin-right: calc(#{$gutter-width} * -1);
 
-    padding-left: var(--gutter-width);
-    padding-right: var(--gutter-width);
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
 }
 
 .container {

@@ -52,6 +52,9 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import "component/filter-property-select";
 @import "component/product-wishlist";
 @import "component/category-navigation";
+@import "component/filter-rating-select";
+@import "component/cms-sections";
+
 /*
  * Layout-related sections
  * ----------------------- */
@@ -94,3 +97,4 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'page/product-detail/cross-selling';
 @import 'page/product-detail/review';
 @import "page/wishlist/wishlist";
+@import 'page/listing/listing';

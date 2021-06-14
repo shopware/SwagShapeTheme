@@ -1,7 +1,7 @@
 .top-bar {
-    @include container-full-width();
-
     background-color: $shape-gray-200;
+    margin: 0 calc(#{$spacer-20} * -1);
+    padding: 0 $spacer-20;
 
     &-nav {
         padding: $spacer-sm 0;
@@ -83,6 +83,8 @@
 
 @include media-breakpoint-up(md) {
     .top-bar {
+        @include container-full-width();
+
         &-nav {
             padding: 0;
         }

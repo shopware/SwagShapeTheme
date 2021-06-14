@@ -18,7 +18,7 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         opacity: 0;
         display: flex;
         background: $white;
-        width: 100vw;
+        width: calc(100vw - 16px);
         left: 0;
         position: absolute;
         z-index: -1;

@@ -1,9 +1,12 @@
 .filter-panel {
+    margin-bottom: 0;
+
     &.is--sidebar {
         @include shape-filter-selector;
 
         .filter-panel-items-container {
             border-top-color: $shape-gray-900;
+            padding-bottom: $spacer-30;
         }
     }
 
@@ -77,6 +80,7 @@
         border: 2px solid $border-color;
         display: flex;
         align-items: center;
+        background-color: $white;
 
         &:hover {
             border-color: $shape-gray-900;
@@ -213,6 +217,7 @@
     padding-bottom: $spacer-md;
 
     &:empty {
+        display: none;
         padding: 0;
     }
 }
@@ -224,6 +229,7 @@
     min-width: 138px;
     line-height: 24px;
     font-weight: $font-weight-medium;
+    margin-bottom: $spacer-12;
 
     @include hover {
         border-color: $gray-600;
@@ -233,15 +239,38 @@
     }
 }
 
+.filter-panel-items-container {
+    @include shape-scrollbar;
+}
+
 @include media-breakpoint-up(lg) {
     .filter-panel-items-container {
         border-top: $hr-border;
+        border-bottom: $hr-border;
         padding-top: $spacer-26;
+        margin-bottom: 0;
+
+        .filter-panel.is--sidebar & {
+            border-bottom: none;
+        }
     }
 
-    .filter-panel-active-container:not(:empty) {
-        border-top: $hr-border;
-        padding-top: $spacer-20;
+    .filter-panel-active-container {
+        .filter-panel.is--sidebar & {
+            padding-top: 38px;
+            border-top: $hr-border;
+        }
+    }
+
+    .filter-active,
+    .btn.filter-reset-all {
+        margin-top: 26px;
+        margin-bottom: 0;
+
+        .filter-panel.is--sidebar & {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
     }
 }
 
@@ -273,7 +302,7 @@
 
     .filter-panel-active-container {
         order: -1;
-        padding: 28px 0;
+        padding: 28px 0 $spacer-md;
         border-top: $hr-border;
         border-bottom: $hr-border;
         width: 100%;
@@ -335,6 +364,10 @@
 
 .btn.filter-panel-wrapper-toggle {
     @extend .btn-primary;
+
+    padding: 0;
+    line-height: 38px;
+    border-radius: 20px;
 }
 
 @include media-breakpoint-up(sm) {
