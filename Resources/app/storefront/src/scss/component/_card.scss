@@ -16,3 +16,13 @@ https://getbootstrap.com/docs/4.3/components/card/
     text-transform: uppercase;
     font-size: $font-size-base;
 }
+
+.card-body-wishlist .product-wishlist-info {
+    .product-action .btn {
+        @extend .btn-primary;
+
+        .icon-shape-ic-plus path {
+            fill: $white;
+        }
+    }
+}

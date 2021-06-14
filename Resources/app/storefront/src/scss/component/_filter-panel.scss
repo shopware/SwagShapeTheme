@@ -236,9 +236,12 @@
 @include media-breakpoint-up(lg) {
     .filter-panel-items-container {
         border-top: $hr-border;
-        border-bottom: $hr-border;
         padding-top: $spacer-26;
-        margin-bottom: $spacer-20;
+    }
+
+    .filter-panel-active-container:not(:empty) {
+        border-top: $hr-border;
+        padding-top: $spacer-20;
     }
 }
 
