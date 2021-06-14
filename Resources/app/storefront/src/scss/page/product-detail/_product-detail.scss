@@ -32,6 +32,15 @@
 
     &-price {
         @include font-size(20);
+
+        &.with-list-price {
+            color: $shape-gray-900;
+        }
+    }
+
+    &-list-price-wrapper {
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
     }
 
     &-name,
