@@ -12,7 +12,7 @@ $gray-700: #637182 !default;
 $gray-800: lighten($sw-color-brand-primary, 5%) !default;
 $gray-900: $sw-color-brand-primary !default;
 
-$box-shadow-color: saturate($sw-color-brand-primary, 50%);
+$box-shadow-color: saturate($sw-color-brand-primary, 10%);
 
 // Colors
 $shape-gray-100: #f9fafc !default;
