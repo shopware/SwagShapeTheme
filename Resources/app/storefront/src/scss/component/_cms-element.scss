@@ -63,6 +63,12 @@ General styling for cms elements
             padding-bottom: 54px;
         }
     }
+
+    .is-act-search {
+        .cms-element-product-listing-actions {
+            padding-top: $spacer-20;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {

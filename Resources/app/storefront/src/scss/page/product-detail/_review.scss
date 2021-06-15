@@ -35,6 +35,16 @@
         margin-bottom: $spacer-20;
     }
 
+    &-item {
+        padding-bottom: $spacer-26;
+        border-width: 2px;
+        border-color: $hr-border-color;
+    }
+
+    &-item-title {
+        padding-left: $grid-gutter-width / 2;
+    }
+
     &-login {
         .login-password-recover {
             margin-top: 0;
@@ -169,6 +179,16 @@
 
         &-widget-wrapper {
             padding-left: 80px; // same padding as .product-detail-buy
+        }
+
+        &-item-title {
+            > p.h5 {
+                margin-bottom: 0;
+            }
+        }
+
+        &-item-content {
+            margin-top: 1rem;
         }
     }
 }
