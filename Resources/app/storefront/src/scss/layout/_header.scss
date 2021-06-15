@@ -3,6 +3,7 @@
         padding: $spacer-lg 0;
         position: relative;
         overflow: hidden;
+        justify-content: space-between;
 
         @include media-breakpoint-down(md) {
             align-items: center;
