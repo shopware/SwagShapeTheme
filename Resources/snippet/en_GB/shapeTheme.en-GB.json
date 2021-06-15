@@ -31,7 +31,8 @@
         "placeholderMail": "Your e-mail address"
     },
     "detail": {
-        "propertyTitle": "Material"
+        "propertyTitle": "Material",
+        "sale": "Sale"
     },
     "account": {
         "overviewTitle": "Hello",

@@ -121,6 +121,19 @@ $box-image-size-img-desktop: 425px;
 
     .product-price {
         font-size: 20px;
+        
+        .list-price-price {
+            font-size: 14px;
+            font-weight: $font-weight-bold;
+        }
+
+        &.with-list-price {
+            color: $sw-text-color;
+        }
+
+        .list-price-percentage {
+            @extend .d-none;
+        }
     }
 
     &.box-image {
@@ -146,6 +159,11 @@ $box-image-size-img-desktop: 425px;
             }
         }
     }
+
+    div[data-swag-paypal-express-button='true'],
+    div[data-swag-paypal-installment-banner="true"] {
+        @include make-col(12);
+    }
 }
 
 .product-badges {
@@ -159,7 +177,7 @@ $box-image-size-img-desktop: 425px;
         @extend .m-0;
         background-color: transparent;
         font-size: $font-size-lg;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-bolder;
     }
 
     .badge-danger {

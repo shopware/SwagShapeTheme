@@ -6,7 +6,6 @@ import ShapeListingPlugin from './plugin/listing/listing.plugin';
 const PluginManager = window.PluginManager;
 
 PluginManager.deregister('FlyoutMenu', '[data-flyout-menu]');
-PluginManager.deregister('SearchWidget', '[data-search-form]');
 PluginManager.register('ShapeNavigationMenu', NavigationMenuPlugin, '[data-navigation-menu]');
 PluginManager.register('ShapeFlyoutMenu', FlyoutMenuPlugin, '[data-navigation-link]');
 
