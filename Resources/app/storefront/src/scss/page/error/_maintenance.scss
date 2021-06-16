@@ -1,13 +1,10 @@
 .is-ctl-.is-act- {
-    .container > .container-main {
-        padding-bottom: 0;
+    .container-main {
+        background-color: $gray-100;
     }
 }
 
 .container-404 {
-    @include container-gutter(0px, 175px);
-
-    background-color: $gray-100;
     padding: 50px 0 30px;
 
     .picture {
@@ -68,16 +65,15 @@
             padding: 225px 0 120px;
         }
     }
+}
 
-    @include media-breakpoint-up(xl) {
-        @include container-gutter($grid-gutter-width, 175px);
+.is-ctl-maintenance {
+    .container-main {
+        background-color: $gray-100;
     }
 }
 
 .container-maintenance {
-    @include container-gutter(0px, 175px);
-
-    background-color: $gray-100;
     padding: 90px 0 125px;
 
     &__bg {
@@ -102,10 +98,6 @@
             font-size: $h1-font-size;
             margin-bottom: 25px;
         }
-    }
-
-    @include media-breakpoint-up(xl) {
-        @include container-gutter(40px, 175px);
     }
 }
 

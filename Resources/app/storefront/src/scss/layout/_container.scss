@@ -6,33 +6,26 @@ Additional styling for bootstrap container layout.
 https://getbootstrap.com/docs/4.3/layout/overview/
 */
 
-@mixin container-gutter($offset, $max) {
-    $gutter: #{'min(calc((100vw - 100% ) / 2 - 8px), #{$max})'};
-
-    margin-left: calc(#{$gutter} * -1);
-    margin-right: calc(#{$gutter} * -1);
-
-    padding-left: $gutter;
-    padding-right: $gutter;
-}
-
-@mixin container-full-width () {
-    $gutter-width: calc(((100vw - 100%) / 2) - 8px);
-
-    margin-left: calc(#{$gutter-width} * -1);
-    margin-right: calc(#{$gutter-width} * -1);
-
-    padding-left: $gutter-width;
-    padding-right: $gutter-width;
+@mixin container-gutter() {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
-    --container-width: 1320px;
-
-    max-width: var(--container-width);
+    max-width: 1360px;
 }
 
 .container-main {
-    padding-top: 0;
-    padding-bottom: 0;
+    max-width: 1668px;
+    margin: 0 auto;
+    padding: 0 $spacer-20;
+    background-color: $shape-gray-100;
+    min-height: unset;
+}
+
+@include media-breakpoint-up(xl) {
+    .container-main {
+        min-height: unset;
+    }
 }

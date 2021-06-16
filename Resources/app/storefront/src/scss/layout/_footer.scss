@@ -1,6 +1,10 @@
 .footer {
     &-main {
         border-top: none;
+
+        .container-main {
+            padding: 0;
+        }
     }
 
     &-newsletter {
@@ -144,7 +148,7 @@
     &-bottom {
         font-weight: $font-weight-medium;
         padding: $spacer-20;
-        background-color: transparent;
+        background-color: $white;
 
         a {
             color: $body-color;
@@ -159,6 +163,8 @@
         }
 
         > .container {
+            padding: 0 $spacer-20;
+
             .footer-main & {
                 padding: 0;
             }
@@ -226,8 +232,6 @@
     }
 
     &-middle {
-        margin-left: -$spacer-20;
-        margin-right: -$spacer-20;
         padding: $spacer-xxl $spacer-20 $spacer-20;
         background-color: $shape-gray-100;
 
@@ -313,7 +317,7 @@
         &-newsletter {
             &-form {
                 text-align: left;
-                padding: $spacer-60;
+                padding: $spacer-60 $spacer-20;
 
                 h1 {
                     margin-bottom: 0;
@@ -339,7 +343,7 @@
         }
 
         &-middle {
-            padding: $spacer-60 $spacer-60 $spacer-lg;
+            padding: $spacer-60 $spacer-20 $spacer-lg;
         }
 
         &-column {
@@ -405,7 +409,7 @@
         }
 
         &-bottom {
-            padding: $spacer-20 $spacer-40 $spacer-30;
+            padding: $spacer-20 0 $spacer-30;
         }
 
         &-minimal {
@@ -446,12 +450,6 @@
 
         &-vat p {
             margin-bottom: 0;
-        }
-
-        &-newsletter-form,
-        &-middle,
-        &-bottom {
-            .footer-main & { @include container-gutter($spacer-20, 175px); }
         }
 
         &-middle {

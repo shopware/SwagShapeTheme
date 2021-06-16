@@ -16,6 +16,10 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         @extend .pt-0;
     }
 
+    .checkout {
+        @include container-gutter();
+    }
+
     .checkout-container {
         @extend .mb-0;
 
@@ -24,10 +28,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     }
 
     .checkout {
-        @include container-gutter($grid-gutter-width, 163px);
-
-        background-color: $shape-gray-100;
-
         .checkout-aside,
         .checkout-main {
             padding-top: $checkout-spacing-sm;

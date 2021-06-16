@@ -1,54 +1,58 @@
 {% block layout_footer_newsletter_form %}
-    <div class="row footer-newsletter-form">
-        <div class="col-md-4 p-0 footer-newsletter-header">
-            {% block layout_footer_newsletter_header %}
-                <h1>{{ 'footer.newsletterHeadline'|trans|sw_sanitize }}</h1>
-            {% endblock %}
-        </div>
+    <div class="footer-newsletter-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 p-0 footer-newsletter-header">
+                    {% block layout_footer_newsletter_header %}
+                        <h1>{{ 'footer.newsletterHeadline'|trans|sw_sanitize }}</h1>
+                    {% endblock %}
+                </div>
 
-        <div class="col-md-7 p-0 offset-md-1 footer-newsletter-content">
-            {% block layout_footer_newsletter_form_header %}
-                <h5>{{ 'footer.newsletterInfo'|trans|sw_sanitize }}</h5>
-            {% endblock %}
-            {% block layout_footer_newsletter_form_element %}
-                <form action="{{ path('frontend.form.newsletter.register.handle') }}"
-                      method="post"
-                      data-form-csrf-handler="true"
-                      data-form-validation="true">
-                    {% block layout_footer_newsletter_form_content %}
-                        <div class="form-content">
-                            {% block layout_footer_newsletter_form_email %}
-                                <div class="input-group">
-                                    <input name="email"
-                                           type="email"
-                                           class="form-control"
-                                           placeholder="{{ 'newsletter.placeholderMail'|trans }}"
-                                           aria-label="{{ 'newsletter.placeholderMail'|trans }}"
-                                           aria-describedby="footerNewsletterBtnAddon">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary"
-                                                type="button"
-                                                title="{{ 'newsletter.formSubmit'|trans|striptags }}"
-                                                id="footerNewsletterBtnAddon">
-                                            {{ 'newsletter.formSubmit'|trans|striptags }}
-                                        </button>
-                                    </div>
+                <div class="col-md-7 p-0 offset-md-1 footer-newsletter-content">
+                    {% block layout_footer_newsletter_form_header %}
+                        <h5>{{ 'footer.newsletterInfo'|trans|sw_sanitize }}</h5>
+                    {% endblock %}
+                    {% block layout_footer_newsletter_form_element %}
+                        <form action="{{ path('frontend.form.newsletter.register.handle') }}"
+                              method="post"
+                              data-form-csrf-handler="true"
+                              data-form-validation="true">
+                            {% block layout_footer_newsletter_form_content %}
+                                <div class="form-content">
+                                    {% block layout_footer_newsletter_form_email %}
+                                        <div class="input-group">
+                                            <input name="email"
+                                                   type="email"
+                                                   class="form-control"
+                                                   placeholder="{{ 'newsletter.placeholderMail'|trans }}"
+                                                   aria-label="{{ 'newsletter.placeholderMail'|trans }}"
+                                                   aria-describedby="footerNewsletterBtnAddon">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary"
+                                                        type="button"
+                                                        title="{{ 'newsletter.formSubmit'|trans|striptags }}"
+                                                        id="footerNewsletterBtnAddon">
+                                                    {{ 'newsletter.formSubmit'|trans|striptags }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% endblock %}
                                 </div>
                             {% endblock %}
-                        </div>
-                    {% endblock %}
 
-                    {% block layout_footer_newsletter_form_hidden_fields %}
-                        <div class="form-hidden-fields">
-                            <input type="hidden"
-                                   value="{{ constant('Shopware\\Storefront\\Controller\\FormController::SUBSCRIBE') }}"
-                                   name="option">
-                            {{ sw_csrf('frontend.form.newsletter.register.handle') }}
-                            <input type="submit" class="submit--hidden d-none" />
-                        </div>
+                            {% block layout_footer_newsletter_form_hidden_fields %}
+                                <div class="form-hidden-fields">
+                                    <input type="hidden"
+                                           value="{{ constant('Shopware\\Storefront\\Controller\\FormController::SUBSCRIBE') }}"
+                                           name="option">
+                                    {{ sw_csrf('frontend.form.newsletter.register.handle') }}
+                                    <input type="submit" class="submit--hidden d-none" />
+                                </div>
+                            {% endblock %}
+                        </form>
                     {% endblock %}
-                </form>
-            {% endblock %}
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
