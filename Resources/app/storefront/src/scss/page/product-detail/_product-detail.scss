@@ -1,3 +1,5 @@
+$product-buybox-max-width: 570px;
+
 .is-ctl-product {
     .container-main {
         background-color: transparent;
@@ -40,12 +42,6 @@
         margin-bottom: 0;
     }
 
-    @include media-breakpoint-up(md) {
-        text-align: left;
-        max-width: 570px;
-        margin: 0 auto 1rem;
-    }
-
     .product-detail-price-discount {
         font-size: $font-size-lg;
         font-weight: $font-weight-bold;
@@ -61,6 +57,12 @@
     .list-price-badge,
     .list-price-percentage {
         @extend .d-none;
+    }
+
+    @include media-breakpoint-up(md) {
+        text-align: left;
+        max-width: $product-buybox-max-width;
+        margin: 0 auto 1rem;
     }
 }
 
@@ -202,11 +204,29 @@
         margin-top: $spacer-40;
     }
 
+    .product-wishlist {
+        @include make-col(8);
+
+        margin-left: auto;
+        text-align: center;
+    }
+
     @include media-breakpoint-up(md) {
         &-name-container {
             justify-content: flex-start;
         }
+    }
 
+    @include media-breakpoint-only(md) {
+        &-tabs {
+            padding-left: $grid-gutter-width / 2;
+            padding-right: $grid-gutter-width / 2;
+            max-width: $product-buybox-max-width;
+            margin: 0 auto 1rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
         &-main {
             padding-bottom: 100px;
         }
