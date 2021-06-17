@@ -27,26 +27,30 @@
 {% endblock %}
 
 {% block layout_footer_inner_container %}
-    <div class="container">
+    <div class="container-main">
         {% block layout_footer_newsletter_content %}
             {% sw_include '@Storefront/storefront/layout/footer/footer-newsletter.html.twig' %}
         {% endblock %}
 
         {% block layout_footer_middle %}
             <div class="footer-middle">
-                {% block layout_footer_navigation_hotline_icons %}
-                    {% sw_include '@Storefront/storefront/layout/footer/footer-links.html.twig' %}
-                {% endblock %}
+                <div class="container">
+                    <div class="row">
+                        {% block layout_footer_navigation_hotline_icons %}
+                            {% sw_include '@Storefront/storefront/layout/footer/footer-links.html.twig' %}
+                        {% endblock %}
 
-                {% block layout_footer_navigation %}
-                    <div class="footer-navigation">
-                        {{ parent() }}
+                        {% block layout_footer_navigation %}
+                            <div class="footer-navigation">
+                                {{ parent() }}
+                            </div>
+                        {% endblock %}
+
+                        {% block layout_footer_payment_shipping_logos %}
+                            {{ parent() }}
+                        {% endblock %}
                     </div>
-                {% endblock %}
-
-                {% block layout_footer_payment_shipping_logos %}
-                    {{ parent() }}
-                {% endblock %}
+                </div>
             </div>
         {% endblock %}
 

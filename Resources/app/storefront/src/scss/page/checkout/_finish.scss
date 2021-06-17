@@ -1,8 +1,30 @@
 .is-act-finishpage {
+    .container-main {
+        padding: 0;
+    }
+
+    .checkout-main {
+        &:first-child {
+            padding: 0;
+
+            @include media-breakpoint-up(lg) {
+                border-bottom: $hr-border-width solid $hr-border-color;
+            }
+        }
+
+        > .checkout-card > .card-body {
+            @include container-gutter();
+        }
+    }
+
     .checkout {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
 
         .checkout-container {
             display: block;
+            margin: 0;
         }
 
         .checkout-main {
@@ -11,9 +33,14 @@
             padding-top: 0;
             padding-bottom: 0;
 
-            > .checkout-card {
-                @include container-gutter($grid-gutter-width, 163px);
+            &:last-child {
+                @include container-gutter();
 
+                margin-left: auto !important;
+                padding: 0 $spacer-20;
+            }
+
+            > .checkout-card {
                 padding-top: $spacer-40;
                 text-align: center;
                 background-color: $gray-100;
@@ -40,9 +67,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding-left: $grid-gutter-width / 2;
-        padding-right: $grid-gutter-width / 2;
-
         .checkout-aside-summary {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -115,10 +139,12 @@
 }
 
 .finish-info-wrap {
-    @include container-gutter($grid-gutter-width, 163px);
+    @include container-gutter();
+
+    padding-left: $spacer-20;
+    padding-right: $spacer-20;
 
     @include media-breakpoint-up(lg) {
-        border-bottom: $hr-border-width solid $hr-border-color;
-        padding-bottom: $spacer-40;
+        padding: 0 0 $spacer-40;
     }
 }

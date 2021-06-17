@@ -1,5 +1,7 @@
 .product-wishlist {
     margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
+
     &-not-added {
         background-color: $shape-gray-200;
     }

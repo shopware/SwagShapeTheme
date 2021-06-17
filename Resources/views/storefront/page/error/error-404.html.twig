@@ -1,20 +1,22 @@
 {% sw_extends '@Storefront/storefront/page/error/error-404.html.twig' %}
 
-{% block not_found_error_content %}
-    <div class="container-404">
-        <div class="content">
-            <div class="picture">
-                <img src="{{ theme_config('sw-404-logo') |sw_encode_url }}"
-                     alt="{{ "general.404ErrorPageHeader"|trans|striptags }}"
-                     class="img-fluid w-100"/>
+{% block base_content %}
+    {% block not_found_error_content %}
+        <div class="container-404 container">
+            <div class="content">
+                <div class="picture">
+                    <img src="{{ theme_config('sw-404-logo') |sw_encode_url }}"
+                         alt="{{ "general.404ErrorPageHeader"|trans|striptags }}"
+                         class="img-fluid w-100"/>
+                </div>
+
+                <h1 class="text-center">{{ "general.404ErrorPageHeader"|trans|sw_sanitize }}</h1>
+                <p class="text-center w-60-l">{{ "general.404ErrorDescription"|trans|sw_sanitize }}</p>
+
+                {% block not_found_error_return %}
+                    {{ parent() }}
+                {% endblock %}
             </div>
-
-            <h1 class="text-center">{{ "general.404ErrorPageHeader"|trans|sw_sanitize }}</h1>
-            <p class="text-center w-60-l">{{ "general.404ErrorDescription"|trans|sw_sanitize }}</p>
-
-            {% block not_found_error_return %}
-                {{ parent() }}
-            {% endblock %}
         </div>
-    </div>
+    {% endblock %}
 {% endblock %}

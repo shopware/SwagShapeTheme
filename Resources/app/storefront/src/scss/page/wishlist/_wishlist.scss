@@ -1,17 +1,11 @@
 .wishlist {
     &-page {
         align-items: center;
-        background-color: $shape-gray-100;
         display: flex;
         min-height: inherit;
-        @include container-gutter($spacer-20, 175px);
 
+        @include container-gutter();
         @extend .row;
-
-        .cms-element-product-listing-wrapper {
-            margin-left: -25px;
-            margin-right: -25px;
-        }
 
         > .row {
             flex-grow: 1;

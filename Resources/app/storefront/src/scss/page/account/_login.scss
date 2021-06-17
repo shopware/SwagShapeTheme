@@ -1,13 +1,3 @@
-.is-act-loginpage,
-.is-act-recoveraccountform {
-    .container-main {
-        margin-left: -$spacer-20;
-        margin-right: -$spacer-20;
-        padding: $spacer-20 $spacer-20 34px;
-        background-color: $gray-100;
-    }
-}
-
 .account-register,
 .account-recover-password {
     background-color: $white;
@@ -27,6 +17,8 @@
 }
 
 .account-recover-password {
+    margin: 0;
+
     .col-md-8 {
         @include make-col(12);
     }
@@ -87,13 +79,29 @@
     }
 }
 
+.is-act-recoveraccountform,
+.is-act-accountregisterpage{
+    .content-main .container-main {
+        padding-top: $spacer-20;
+        padding-bottom: 34px;
+    }
+}
+
 @include media-breakpoint-up(md) {
+    .is-act-recoveraccountform,
+    .is-act-accountregisterpage{
+        .content-main .container-main {
+            padding-top: 80px;
+            padding-bottom: 132px;
+        }
+    }
+
     .account-register,
     .account-recover-password {
         --container-account-register-width: 648px;
 
         max-width: var(--container-account-register-width);
-        margin: $spacer-30 auto 140px;
+        margin: 0 auto;
 
         .card {
             padding-left: 88px;
@@ -108,15 +116,11 @@
 }
 
 @include media-breakpoint-up(lg) {
-    .is-act-loginpage,
-    .is-act-recoveraccountform {
-        .container-main { @include container-gutter(20px, 175px); }
-    }
-
-    .account-register,
-    .account-recover-password {
-        margin-top: $spacer-60;
-        margin-bottom: 160px;
+    .is-act-loginpage {
+        .container-main {
+            padding-top: $spacer-60;
+            padding-bottom: 160px;
+        }
     }
 
     .account-register {

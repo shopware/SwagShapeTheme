@@ -1,6 +1,5 @@
 .account {
     &.account-content {
-        background-color: $shape-gray-100;
         min-height: inherit;
     }
 
@@ -114,6 +113,12 @@
 }
 
 @include media-breakpoint-up(lg) {
+    .account {
+        &.account-content {
+            margin: 0;
+        }
+    }
+
     .account-content .account-content-main {
         padding-left: 0;
         padding-right: 0;
@@ -145,8 +150,6 @@
 
 @include media-breakpoint-up(xl) {
     .account-content {
-        @include container-gutter($spacer-20, 175px);
-
         .account-content-aside {
             padding: 0;
         }

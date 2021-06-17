@@ -2,3 +2,11 @@
 
 {% block base_navigation %}
 {% endblock %}
+
+{% block base_main_inner %}
+    {{ block('base_main_container') }}
+{% endblock %}
+
+{% block base_header_inner %}
+    {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+{% endblock %}
