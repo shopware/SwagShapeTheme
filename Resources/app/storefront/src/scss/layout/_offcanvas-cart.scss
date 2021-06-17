@@ -23,10 +23,42 @@ $offcanvas-cart-spacing: 24px;
         .cart-item-row {
             align-items: flex-start;
         }
+
+        &.cart-item-customized-products {
+            border-left: none;
+            @extend .pl-0;
+
+            .cart-item-img {
+                height: 75px;
+                width: 75px;
+                padding: $spacer-xs;
+                border: 1px solid $border-color;
+                border-radius: $border-radius-sm;
+            }
+
+            .cart-quantity-price {
+                >.cart-item-quantity {
+                    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+                }
+            }
+
+            .swag-customized-products-cart__configuration {
+                @extend .ml-1, .mt-0, .pb-2;
+                border-bottom: 2px solid $sw-border-color;
+
+                .swag-customized-products-cart__items {
+                    @extend .pl-0
+                }
+
+                .swag-customized-products-cart__item {
+                    @extend .pl-2, .mt-0;
+                }
+            }
+        }
     }
 
     .cart-item-details {
-        margin-bottom: 10px;
+        @extend .mb-0;
     }
 
     &-header {
