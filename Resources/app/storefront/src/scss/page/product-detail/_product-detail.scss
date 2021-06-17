@@ -32,6 +32,12 @@ $product-buybox-max-width: 570px;
     @include media-breakpoint-up(lg) {
         margin-bottom: 100px;
     }
+
+    .container {
+        .product-detail-main:only-child {
+            padding-top: 100px;
+        }
+    }
 }
 
 .product-detail-buy {
