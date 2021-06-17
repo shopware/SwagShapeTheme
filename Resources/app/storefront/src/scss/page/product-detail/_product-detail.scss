@@ -42,23 +42,6 @@ $product-buybox-max-width: 570px;
         margin-bottom: 0;
     }
 
-    .product-detail-price-discount {
-        font-size: $font-size-lg;
-        font-weight: $font-weight-bold;
-        color: $primary;
-        text-transform: uppercase;
-        font-weight: $font-weight-bolder;
-    }
-
-    .list-price-price {
-        line-height: 30px
-    }
-
-    .list-price-badge,
-    .list-price-percentage {
-        @extend .d-none;
-    }
-
     @include media-breakpoint-up(md) {
         text-align: left;
         max-width: $product-buybox-max-width;
@@ -366,5 +349,24 @@ div[data-swag-paypal-installment-banner="true"] {
     .cms-element-image-gallery,
     .product-detail-media {
         padding: $spacer-20;
+    }
+}
+
+.product-detail-buy,
+.swag-cms-extensions-quickview-modal {
+    .product-detail-price-discount {
+        font-size: $font-size-lg;
+        color: $primary;
+        text-transform: uppercase;
+        font-weight: $font-weight-bolder;
+    }
+    
+    .list-price-price {
+        line-height: 30px
+    }
+    
+    .list-price-badge,
+    .list-price-percentage {
+        @extend .d-none;
     }
 }
