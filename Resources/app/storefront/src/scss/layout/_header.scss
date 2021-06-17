@@ -33,17 +33,15 @@
 
         .header-search-input {
             padding-right: $spacer-md;
-
-            &:focus {
-                +.input-group-append > button {
-                    color: $primary;
-                }
-            }
         }
 
         .btn.header-search-btn {
             padding-left: $spacer-md;
             padding-right: $spacer-md;
+
+            :hover {
+                color: $primary;
+            }
         }
 
         &-col {

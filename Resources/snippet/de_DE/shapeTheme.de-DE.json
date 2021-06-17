@@ -9,7 +9,8 @@
     },
     "header": {
         "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro",
-        "searchPlaceholder": "Suche..."
+        "searchPlaceholder": "Suche...",
+        "searchAllResults": "Alle Ergebnisse anzeigen"
     },
     "footer": {
         "newsletterHeadline": "Unser Newsletter.<br>Jetzt abonnieren und nichts mehr verpassen!",
