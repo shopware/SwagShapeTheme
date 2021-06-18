@@ -32,10 +32,13 @@
 
     &-listing-col {
         @extend .m-0;
+        padding-top: 194px;
+        padding-bottom: 140px;
 
-        @include media-breakpoint-down(lg) {
-            padding-top: $spacer-60;
-            padding-bottom: $spacer-60;
+        .wishlist-listing-empty {
+            width: auto;
+            margin: 0 auto;
+            display: block;
         }
 
         .wishlist-listing-description {

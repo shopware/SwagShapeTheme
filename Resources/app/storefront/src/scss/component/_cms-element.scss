@@ -30,6 +30,10 @@ General styling for cms elements
         padding-bottom: $spacer-20;
         border-bottom: $hr-border-width solid $hr-border-color;
         margin-bottom: 0;
+
+        &:empty {
+            border-bottom: 0;
+        }
     }
 }
 
