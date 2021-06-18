@@ -15,5 +15,9 @@ PluginManager.register('ShapeCustomizedProductsToggle', CustomizedProductToggle,
 
 PluginManager.override('Listing', ShapeListingPlugin, '[data-listing]');
 PluginManager.override('GallerySlider', ShapeGallerySliderPlugin, '[data-gallery-slider]');
-PluginManager.override('SwagCustomizedProductsStepByStepWizard', CustomizedProductsStepByStepWizard, '*[data-swag-customized-product-step-by-step="true"]');
 PluginManager.override('DatePicker', ShapeDatePickerPlugin, '[data-date-picker]');
+
+if (PluginManager.getPluginList().SwagCustomizedProductsStepByStepWizard) {
+    PluginManager.override('SwagCustomizedProductsStepByStepWizard', CustomizedProductsStepByStepWizard, '*[data-swag-customized-product-step-by-step="true"]');
+}
+
