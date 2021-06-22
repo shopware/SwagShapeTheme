@@ -59,7 +59,7 @@ Custom styling for navigation flyout which opens on hover over the main navigati
                     content: "";
                     position: absolute;
                     height: 2px;
-                    bottom: 35px;
+                    bottom: $spacer-20;
                     margin: 0 auto;
                     left: 0;
                     right: 0;
