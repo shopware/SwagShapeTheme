@@ -1,0 +1,26 @@
+.basic-captcha-content {
+    &-image {
+        display: flex;
+        min-height: 65px;
+        width: auto;
+    }
+
+    &-refresh-icon {
+        height: $spacer-40;
+        width: $spacer-40;
+        margin-left: $spacer-10;
+        flex-shrink: 0;
+        .icon {
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+
+.captcha-google-re-captcha-v2 {
+    @extend .form-row;
+
+    .grecaptcha-v2-container {
+        @extend .col;
+    }
+}
