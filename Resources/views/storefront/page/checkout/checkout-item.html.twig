@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="col">
-                                {% sw_include '@Storefront/storefront/component/checkout/_include/cart-configuration.html.twig' with {
+                                {% sw_include '@Storefront/storefront/component/checkout/_include/cart-configuration.html.twig' ignore missing with {
                                     'items': configurationItems,
                                     'productId': mainLineItem.referencedId,
                                     'isMainCart': true
