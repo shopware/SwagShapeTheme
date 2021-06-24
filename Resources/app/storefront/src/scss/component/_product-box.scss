@@ -15,9 +15,11 @@ $box-image-size-img-desktop: 425px;
         position: relative;
 
         .product-action-bar {
+            @include transition(opacity .15s ease-in-out);
             @extend .d-flex, .w-100, .justify-content-center;
             position: absolute;
             bottom: 15px;
+            opacity: 0;
 
             .product-action {
                 @extend .mt-0;
@@ -100,6 +102,10 @@ $box-image-size-img-desktop: 425px;
     &:hover {
         background-color: $white;
         box-shadow: $dropdown-box-shadow;
+
+        .product-image-area .product-action-bar {
+            opacity: 1;
+        }
     }
 
     .product-labels-ratings {
@@ -121,7 +127,7 @@ $box-image-size-img-desktop: 425px;
 
     .product-price {
         font-size: 20px;
-        
+
         .list-price-price {
             font-size: 14px;
             font-weight: $font-weight-bold;
