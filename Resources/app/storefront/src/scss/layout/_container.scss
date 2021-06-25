@@ -21,11 +21,16 @@ https://getbootstrap.com/docs/4.3/layout/overview/
     margin: 0 auto;
     padding: 0 $spacer-20;
     background-color: $shape-gray-100;
-    min-height: unset;
+
+    footer & {
+        min-height: unset;
+    }
 }
 
 @include media-breakpoint-up(xl) {
     .container-main {
-        min-height: unset;
+        footer & {
+            min-height: unset;
+        }
     }
 }
