@@ -10,86 +10,58 @@
 {% endblock %}
 
 {% block page_checkout_item_container %}
-    {# Main Product handles everything - Normal LineItem procedure will be skipped for children #}
     {% if isCustomizedProduct %}
         {% set isNested = false %}
-        {% set configurationItems = [] %}
-
         {% for child in lineItem.children %}
             {% if child.type == 'product' %}
                 {% set label = child.label %}
-                {% set mainLineItem = child %}
+                {% set referencedId = child.referencedId %}
+                {% set productNumber = lineItem.payload|merge({ 'productNumber': child.payload.productNumber }) %}
 
                 {% if child.cover.url %}
                     {% set cover = child.cover %}
                 {% endif %}
-            {% else %}
-                {% set configurationItems = configurationItems|merge([child]) %}
+
+                {% do lineItem.setLabel(label) %}
+                {% do lineItem.setCover(cover) %}
+                {% do lineItem.setReferencedId(referencedId) %}
+                {% do lineItem.setPayload(productNumber) %}
             {% endif %}
         {% endfor %}
     {% endif %}
 
-    {% if not isChildOfCustomizedProduct %}
-        <div
-            class="cart-item cart-item-{{ lineItem.type }}{% if isDiscount %} is-discount{% endif %}{% if isNested %} is-nested{% endif %}{% if isChild %} is-child{% endif %}">
-            <div class="row cart-item-row">
-                {% block page_checkout_item_info %}
-                    <div class="col-12 col-md-6 cart-item-info">
-                        {{ block('page_checkout_item_info_inner') }}
-                    </div>
-                {% endblock %}
+    <div  class="cart-item cart-item-{{ lineItem.type }}{% if isDiscount %} is-discount{% endif %}{% if isNested %} is-nested{% endif %}{% if isChild %} is-child{% endif %}">
+        <div class="row cart-item-row">
+            {% block page_checkout_item_info %}
+                <div class="col-12 col-md-6 cart-item-info">
+                    {{ block('page_checkout_item_info_inner') }}
+                </div>
+            {% endblock %}
 
-                {% block page_checkout_item_quantity %}
-                    <div class="col-4 col-md-2 cart-item-quantity">
-                        {% block page_checkout_item_row %}
-                            <div class="row cart-item-quantity-row">
-                                {% block page_checkout_item_quantity_select %}
-                                    <div class="col-12">
-                                        {{ block('page_checkout_item_quantity_form') }}
-                                    </div>
-                                {% endblock %}
-                            </div>
-                        {% endblock %}
-                    </div>
-                {% endblock %}
-
-                {% block page_checkout_price %}
-                    <div class="col col-md-4 cart-item-price-wrap">
-                        {% block page_checkout_total_price %}
-                            <div class="cart-item-total-price">
-                                {{ block('page_checkout_item_total_price_wrapper') }}
-                            </div>
-                        {% endblock %}
-                        {% block page_checkout_unit_price %}
-                            <div class="cart-item-unit-price">
-                                {{ block('page_checkout_item_unit_price_wrapper') }}
-                            </div>
-                        {% endblock %}
-                    </div>
-                {% endblock %}
-
-                {{ block('page_checkout_item_remove') }}
-            </div>
-
-            {% if isCustomizedProduct %}
-                <div class="row cart-item-row">
-                    <div class="col">
-                        <div class="row cart-item-row">
-                            <div class="customized-checkout-hidden-image">
-                                {{ block('page_checkout_item_info_image') }}
-                            </div>
-
-                            <div class="col">
-                                {% sw_include '@Storefront/storefront/component/checkout/_include/cart-configuration.html.twig' ignore missing with {
-                                    'items': configurationItems,
-                                    'productId': mainLineItem.referencedId,
-                                    'isMainCart': true
-                                } %}
-                            </div>
-                        </div>
+            {% block page_checkout_item_quantity %}
+                <div class="col-4 col-md-2 cart-item-quantity">
+                    <div class="row cart-item-quantity-row">
+                        {{ block('page_checkout_item_quantity_select') }}
                     </div>
                 </div>
-            {% endif %}
+            {% endblock %}
+
+            {% block page_checkout_price %}
+                <div class="col col-md-4 cart-item-price-wrap">
+                    {% block page_checkout_total_price %}
+                        <div class="cart-item-total-price">
+                            {{ block('page_checkout_item_total_price_wrapper') }}
+                        </div>
+                    {% endblock %}
+                    {% block page_checkout_unit_price %}
+                        <div class="cart-item-unit-price">
+                            {{ block('page_checkout_item_unit_price_wrapper') }}
+                        </div>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+
+            {{ block('page_checkout_item_children_template') }}
         </div>
-    {% endif %}
+    </div>
 {% endblock %}

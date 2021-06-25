@@ -9,6 +9,14 @@ $cart-item-img-width: 112px;
         align-items: center;
     }
 
+    &-details {
+        min-width: 0;
+    }
+
+    .cart-item-details-container {
+        padding-left: $spacer;
+    }
+
     .cart-item-unit-price-label {
         display: inline;
         color: $shape-gray-500;
@@ -38,6 +46,7 @@ $cart-item-img-width: 112px;
     }
 
     .cart-item-quantity-label,
+    .cart-item-unit-price-label,
     .cart-item-total-price-label,
     .cart-item-tax-price-label {
         display: none;
