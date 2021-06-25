@@ -29,6 +29,9 @@ $green: #42954d !default;
 
 $secondary: $sw-color-brand-primary !default;
 
+// Body
+$body-bg: rgba($sw-background-color, 1) !default;
+
 // Typography
 $font-size-base: 0.875rem !default;
 $font-weight-normal: 400 !default;
