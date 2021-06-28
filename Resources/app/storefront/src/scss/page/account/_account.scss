@@ -29,6 +29,10 @@
             @include button-change;
         }
     }
+
+    &-item-children {
+        background-color: transparent;
+    }
 }
 
 .account-content {

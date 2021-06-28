@@ -7,6 +7,13 @@
         text-align: left;
     }
 
+    .swag-customized-product__price-display {
+        .price-display__item {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     .swag-customized-products__card {
         @extend .m-0;
         max-width: 450px;
@@ -86,7 +93,7 @@
                             flex-grow: 1;
                             text-align: center;
                         }
-    
+
                         .swag-customized-products-option-type-select-checkboxes-label__surcharge-info {
                             flex-grow: 0;
                         }

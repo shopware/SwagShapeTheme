@@ -4,6 +4,21 @@
     .swag-customized-products-cart__configuration {
         padding: $spacer-sm;
     }
+
+    .order-detail-item-customized-products {
+        .account-item-children {
+            padding: $spacer-sm $spacer-12;
+        }
+        .account-item-collapse {
+            align-items: center;
+        }
+    }
+
+    &-list-item:last-child {
+        .order-item-detail-list-item-divider {
+            border-top: none;
+        }
+    }
 }
 
 .order-detail-content {
