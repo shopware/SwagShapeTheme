@@ -17,6 +17,10 @@
             border-color: $gray-300;
             background-color: transparent;
         }
+
+        &:hover {
+            background-color: transparent;
+        }
     }
 
     .nav-item {
