@@ -1,5 +1,5 @@
 import NavigationMenuPlugin from './plugin/main-menu/navigation-menu.plugin';
-import FlyoutMenuPlugin from './plugin/main-menu/flyout-menu.plugin';
+import ShapeFlyoutMenuPlugin from './plugin/main-menu/flyout-menu.plugin';
 import ShapeGallerySliderPlugin from './plugin/slider/gallery-slider.plugin';
 import ShapeListingPlugin from './plugin/listing/listing.plugin';
 import ShapeDatePickerPlugin from "./plugin/date-picker/date-picker.plugin";
@@ -8,9 +8,8 @@ import CustomizedProductToggle from "./plugin/customized-product/customized-prod
 
 const PluginManager = window.PluginManager;
 
-PluginManager.deregister('FlyoutMenu', '[data-flyout-menu]');
 PluginManager.register('ShapeNavigationMenu', NavigationMenuPlugin, '[data-navigation-menu]');
-PluginManager.register('ShapeFlyoutMenu', FlyoutMenuPlugin, '[data-navigation-link]');
+PluginManager.register('ShapeFlyoutMenu', ShapeFlyoutMenuPlugin, '[data-navigation-link]');
 PluginManager.register('ShapeCustomizedProductsToggle', CustomizedProductToggle, '*[data-customized-products-toggle="true"]');
 
 PluginManager.override('Listing', ShapeListingPlugin, '[data-listing]');

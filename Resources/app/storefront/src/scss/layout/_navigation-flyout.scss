@@ -14,6 +14,7 @@ Custom styling for navigation flyout which opens on hover over the main navigati
     cursor: pointer;
 
     .main-navigation-flyout {
+        @include transition(opacity .15s ease-in-out);
         top: 100%;
         opacity: 0;
         display: flex;
@@ -22,7 +23,6 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         left: 0;
         position: absolute;
         z-index: -1;
-        padding-bottom: $spacer-10;
         margin-top: $spacer-10;
 
         &.is-level-1 {
@@ -42,7 +42,6 @@ Custom styling for navigation flyout which opens on hover over the main navigati
             padding: $spacer-30 0px;
             margin: 0;
             margin-right: $spacer-40;
-            position: relative;
 
             &:hover {
                 color: $primary;
@@ -122,8 +121,8 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         }
     }
 
-    &:hover {
-        > .main-navigation-flyout {
+    &.is-open {
+        > div > .main-navigation-flyout {
             @include show-flyout();
         }
     }
