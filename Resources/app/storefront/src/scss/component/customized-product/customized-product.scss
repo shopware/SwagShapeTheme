@@ -160,9 +160,12 @@
             }
         }
 
+        .swag-customized-products__type-imageupload,
         .swag-customized-products__type-fileupload {
             .customized-products-upload__dropzone {
                 border-radius: 8px;
+                border: none;
+                background-color: $shape-gray-100;
 
                 &-col {
                     padding-top: 35px;
@@ -222,11 +225,6 @@
             .date-picker-open {
                 @extend .d-none;
             }
-        }
-
-        .customized-products-upload__dropzone {
-            border: none;
-            background-color: $shape-gray-100;
         }
     }
 
