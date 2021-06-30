@@ -25,8 +25,8 @@ $offcanvas-cart-spacing: 24px;
         }
 
         &.cart-item-customized-products {
-            border-left: none;
             @extend .pl-0;
+            border: none;
 
             .cart-item-img {
                 height: 75px;
@@ -44,7 +44,8 @@ $offcanvas-cart-spacing: 24px;
 
             .swag-customized-products-cart__configuration {
                 @extend .ml-1, .mt-0, .pb-2;
-                border-bottom: 2px solid $sw-border-color;
+                border-top: $hr-border-width solid $sw-border-color;
+                border-bottom: $hr-border-width solid $sw-border-color;
 
                 .swag-customized-products-cart__items {
                     @extend .pl-0
@@ -70,6 +71,11 @@ $offcanvas-cart-spacing: 24px;
 
     .offcanvas-cart-tax {
         color: $shape-gray-900;
+    }
+
+    div[data-swag-paypal-express-button='true'],
+    div[data-swag-paypal-installment-banner="true"] {
+        @include make-col(12);
     }
 }
 
