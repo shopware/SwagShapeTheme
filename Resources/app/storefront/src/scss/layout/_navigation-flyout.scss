@@ -22,8 +22,8 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         left: 0;
         position: absolute;
         z-index: -1;
-        padding-bottom: $spacer-10;
         margin-top: $spacer-10;
+        transition-delay: 0.125s;
 
         &.is-level-1 {
             text-transform: uppercase;
@@ -39,27 +39,37 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         .navigation-flyout-link {
             color: $black;
             font-weight: $font-weight-bold;
-            padding: $spacer-30 0px;
+            padding: $spacer-30 $spacer-40 $spacer-30 0px;
             margin: 0;
-            margin-right: $spacer-40;
-            position: relative;
+            transition: 0.5s all;
+            transition-delay: 0.125s;
 
             &:hover {
                 color: $primary;
                 padding-left: 0px;
                 cursor: pointer;
+                transition-delay: 0s;
 
                 > .main-navigation-flyout {
                     @include show-flyout();
                 }
             }
 
+            .navigation-flyout-link-text {
+                position: relative;
+                pointer-events: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
             &.active {
-                &:after {
+                >.navigation-flyout-link-text:after {
                     content: "";
                     position: absolute;
                     height: 2px;
-                    bottom: $spacer-20;
+                    bottom: -$spacer-10;
                     margin: 0 auto;
                     left: 0;
                     right: 0;
@@ -114,16 +124,16 @@ Custom styling for navigation flyout which opens on hover over the main navigati
                 &:only-child {
                     border-radius: 4px;
                 }
-            }
 
-            .active:after {
-                content: none;
+                .navigation-flyout-link-text::after {
+                    content: none;
+                }
             }
         }
     }
 
-    &:hover {
-        > .main-navigation-flyout {
+    &.is-open {
+        > div > .main-navigation-flyout {
             @include show-flyout();
         }
     }
