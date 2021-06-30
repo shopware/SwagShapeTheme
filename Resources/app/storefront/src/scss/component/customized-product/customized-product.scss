@@ -221,9 +221,9 @@
                 border-radius: $btn-border-radius-lg;
             }
 
-            .date-picker-clear,
             .date-picker-open {
-                @extend .d-none;
+                min-width: unset;
+                right: 10px;
             }
         }
     }
