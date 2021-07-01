@@ -1,3 +1,13 @@
 .scroll-up-button {
     display: block;
 }
+
+.scroll-navigation-sidebar-mobile-menu {
+    top: -70px;
+    bottom: auto;
+
+    @include media-breakpoint-up(md) {
+        left: -154px;
+        right: auto;
+    }
+}

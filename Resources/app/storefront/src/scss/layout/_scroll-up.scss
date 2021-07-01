@@ -5,15 +5,11 @@ Shows a scroll up button at the bottom right of the page.
 */
 
 .scroll-up-button {
-    bottom: 70px;
-    right: 50%;
+    bottom: 40px;
+    right: 24px;
     transform: translateX(50%);
     padding: 0;
     left: auto;
-
-    &.is-visible {
-        transform: translateX(50%);
-    }
 
     .btn {
         font-weight: $font-weight-bolder;
