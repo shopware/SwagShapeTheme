@@ -18,6 +18,10 @@ specific styling for elements dependent on their parent block
     &-product-listing {
         .cms-block-container {
             padding: 0 !important;
+
+            .cms-full-width & {
+                padding: 0 $spacer-20 !important;
+            }
         }
     }
 

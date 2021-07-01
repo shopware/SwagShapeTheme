@@ -4,8 +4,47 @@ CMS sections
 General styling for cms sections
 */
 
+@mixin container-full-width () {
+    $gutter-width: calc((100vw - 100%) / 2);
+
+    margin-left: calc(#{$gutter-width} * -1);
+    margin-right: calc(#{$gutter-width} * -1);
+}
+
 .cms-section {
     .boxed {
-        padding: 0;
+        padding: $spacer-20 $spacer-20 0;
+    }
+
+    .full-width {
+        @extend .container;
+
+        padding: $spacer-20 0 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cms-section {
+        &.cms-full-width {
+            .cms-section-sidebar-main-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .cms-section {
+        &.cms-full-width {
+            @include container-full-width();
+
+            background-color: $shape-gray-100;
+
+            .full-width {
+                max-width: 100%;
+                padding: $spacer-20 0 0;
+            }
+        }
     }
 }

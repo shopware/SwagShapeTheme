@@ -19,12 +19,16 @@ https://getbootstrap.com/docs/4.3/layout/overview/
 .container-main {
     max-width: 1668px;
     margin: 0 auto;
-    padding: 0 $spacer-20;
+    padding: 0;
     background-color: $shape-gray-100;
 
     footer & {
         min-height: unset;
     }
+}
+
+.content-main {
+    overflow-x: hidden;
 }
 
 @include media-breakpoint-up(xl) {
