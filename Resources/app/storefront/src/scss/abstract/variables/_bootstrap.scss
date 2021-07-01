@@ -142,3 +142,13 @@ $modal-content-bg: $shape-gray-100;
 
 // Order
 $order-grid-gutter-width: 24px !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;

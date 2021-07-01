@@ -168,16 +168,16 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
     }
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xxl) {
     .gallery-slider-controls-prev {
         &.is-nav-prev-outside {
-            left: -60px;
+            left: -50px;
         }
     }
 
     .gallery-slider-controls-next {
         &.is-nav-next-outside {
-            right: -60px;
+            right: -50px;
         }
     }
 }

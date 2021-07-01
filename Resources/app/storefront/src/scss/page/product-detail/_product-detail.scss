@@ -347,7 +347,8 @@ div[data-swag-paypal-installment-banner="true"] {
 @include media-breakpoint-up(lg) {
     .cms-block-gallery-buybox .col-lg-5,
     .col-lg-5.product-detail-buy {
-        flex: 0 0 calc(41.6667% - 80px);
+        flex: 0 0 calc(41.6667% - #{$grid-gutter-width});
+        max-width: calc(41.6667% - #{$grid-gutter-width});
         margin-left: auto;
         margin-right: 0;
     }
@@ -355,6 +356,14 @@ div[data-swag-paypal-installment-banner="true"] {
     .cms-element-image-gallery,
     .product-detail-media {
         padding: $spacer-20;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .cms-block-gallery-buybox .col-lg-5,
+    .col-lg-5.product-detail-buy {
+        flex: 0 0 calc(41.6667% - 80px);
+        max-width: calc(41.6667% - 80px);
     }
 }
 
@@ -366,11 +375,11 @@ div[data-swag-paypal-installment-banner="true"] {
         text-transform: uppercase;
         font-weight: $font-weight-bolder;
     }
-    
+
     .list-price-price {
         line-height: 30px
     }
-    
+
     .list-price-badge,
     .list-price-percentage {
         @extend .d-none;
