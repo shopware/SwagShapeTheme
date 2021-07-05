@@ -16,7 +16,14 @@
 
     .swag-customized-products__card {
         @extend .m-0;
-        max-width: 450px;
+
+        @include media-breakpoint-down(sm) {
+            padding: $spacer-lg;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 450px;
+        }
     }
 
     .swag-customized-products__title {
