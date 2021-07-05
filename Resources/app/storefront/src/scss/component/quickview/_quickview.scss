@@ -32,6 +32,11 @@ $icon-fill-color: #f9f9f9;
         }
     }
 
+    .modal-content {
+        margin: 0 auto;
+        max-width: 316px;
+    }
+
     @include media-breakpoint-up(xl) {
         .modal-dialog {
             max-width: 1082px;
@@ -46,15 +51,16 @@ $icon-fill-color: #f9f9f9;
 .swag-cms-extensions-quickview-content {
     .base-slider.gallery-slider {
         box-shadow: none;
-        margin-bottom: 0;
+        max-width: 236px;
+        margin: 0 auto;
     }
 
     .gallery-slider-controls-next.is-nav-next-outside {
-        right: -35px;
+        right: -45px;
     }
 
     .gallery-slider-controls-prev.is-nav-prev-outside {
-        left: -35px;
+        left: -45px;
     }
 }
 
@@ -114,6 +120,13 @@ $icon-fill-color: #f9f9f9;
 
     .swag-cms-extensions-quickview-modal .modal-content {
         margin: 0 48px;
+        max-width: 100%;
+    }
+
+    .swag-cms-extensions-quickview-content {
+        .base-slider.gallery-slider {
+            max-width: 100%;
+        }
     }
 }
 

@@ -92,8 +92,8 @@ based on: https://github.com/ganlanyuan/tiny-slider
 
 .dots-text {
     position: absolute;
-    bottom: 24px;
-    right: 24px;
+    bottom: 10px;
+    right: 17px;
 }
 
 @include media-breakpoint-down(sm) {
@@ -101,6 +101,7 @@ based on: https://github.com/ganlanyuan/tiny-slider
         .tns-nav,
         .base-slider-dots {
             width: 100%;
+            bottom: 0;
         }
     }
 }
