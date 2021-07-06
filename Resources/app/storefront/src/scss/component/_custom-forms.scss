@@ -15,6 +15,19 @@
         font-weight: 600;
         border-bottom: none;
         padding-bottom: 6px;
+
+        .modal & {
+            font-size: $font-size-lg;
+            text-transform: unset;
+            padding-bottom: $spacer-md;
+            border-bottom: $hr-border-width solid $shape-gray-900;
+        }
+    }
+}
+
+.modal .cms-block-form {
+    .cms-block-container {
+        @extend .p-0;
     }
 }
 
@@ -41,6 +54,24 @@
         .btn-primary {
             order: 2;
             margin: 0 $spacer-12 100px $spacer-12;
+
+            .modal & {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.modal-body {
+    .cms-element-form {
+        .btn-primary {
+            margin-bottom: $spacer-sm;
+        }
+
+        @include media-breakpoint-up(md) {
+            .basic-captcha-content {
+                @include make-col(8);
+            }
         }
     }
 }
@@ -96,6 +127,14 @@
     .cms-block-form {
         .card-title {
             font-size: 44px;
+
+            .modal & {
+                font-size: $h2-font-size;
+
+                .btn-primary {
+                    margin-left: auto;
+                }
+            }
         }
     }
 }

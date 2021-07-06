@@ -29,7 +29,7 @@
                 font-size: 18px;
                 line-height: 26px;
                 font-weight: $font-weight-medium;
-                margin-bottom: $spacer-lg;
+                margin-bottom: 20px;
             }
 
             .form-control {
@@ -303,6 +303,11 @@
     }
 }
 
+#footerNewsletterBtnAddon {
+    display: block;
+    text-transform: uppercase;
+}
+
 @include media-breakpoint-up(md) {
     .footer {
         &-bottom {
@@ -325,10 +330,6 @@
 
                 h1 {
                     margin-bottom: 0;
-                }
-
-                h5 {
-                    margin-bottom: $spacer-lg;
                 }
 
                 .form-control {
@@ -421,6 +422,10 @@
                 margin-bottom: $spacer-md;
             }
         }
+    }
+
+    #footerNewsletterBtnAddon {
+        max-width: 225px;
     }
 }
 

@@ -17,10 +17,17 @@
     }
 }
 
-.captcha-google-re-captcha-v2 {
-    @extend .form-row;
+.captcha-google-re-captcha-v2,
+.captcha-google-re-captcha-v3 {
+    margin-top: $spacer-20;
+    margin-bottom: $spacer-20;
+    padding: 0 $spacer-12;
+    width: 100%;
+}
 
-    .grecaptcha-v2-container {
-        @extend .col;
+@include media-breakpoint-up(md) {
+    .captcha-google-re-captcha-v2,
+    .captcha-google-re-captcha-v3 {
+        margin-bottom: 0;
     }
 }
