@@ -5,7 +5,7 @@
         <div class="dots-text">
             <span class="js-dots-text-current"></span>/{{ imageCount }}
         </div>
-        <div class="base-slider-dots {% if imageCount > maxItemsToShowNav %} hide-dots{% elseif imageCount > maxItemsToShowMobileNav %} hide-dots-mobile{% endif %}">
+        <div class="base-slider-dots">
             {{ block('element_image_gallery_slider_dots_buttons') }}
         </div>
     {% endif %}
