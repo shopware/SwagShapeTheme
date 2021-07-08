@@ -20,7 +20,7 @@
 @include media-breakpoint-up(md) {
     .main-navigation-link {
         padding: 0;
-        margin-right: 32px;
+        padding-right: 32px;
         padding-bottom: 10px;
         border-bottom: 2px solid transparent;
 
@@ -30,32 +30,29 @@
             line-height: 1;
             text-transform: uppercase;
             font-weight: $font-weight-bold;
+            position: relative;
         }
 
         &.active {
             color: $sw-text-color;
-            margin-right: 32px;
-            padding-right: 0px;
-            border-bottom: 2px solid $primary;
+
+            .main-navigation-link-text::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                bottom: -$spacer-10;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: $primary;
+            }
+
         }
 
         &:hover {
             color: $primary;
             cursor: pointer;
-
-            .main-navigation-link-text {
-                position: relative;
-
-                &:before {
-                    content: '';
-                    width: 100%;
-                    height: 50px;
-                    background: transparent;
-                    display: block;
-                    position: absolute;
-                    top: 14px;
-                }
-            }
         }
     }
 }

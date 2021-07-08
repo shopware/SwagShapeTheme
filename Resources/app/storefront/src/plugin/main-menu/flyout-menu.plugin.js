@@ -1,7 +1,7 @@
 import Plugin from 'src/plugin-system/plugin.class';
 import DomAccess from 'src/helper/dom-access.helper';
 
-export default class FlyoutMenuPlugin extends Plugin {
+export default class ShapeFlyoutMenuPlugin extends Plugin {
 
     static options = {
         /**
@@ -34,7 +34,9 @@ export default class FlyoutMenuPlugin extends Plugin {
         const left = mainNavigation.getBoundingClientRect().left;
 
         Array.from(document.querySelectorAll(this.options.flyoutNavigationMenu)).forEach(flyoutNavigationMenu => {
-            flyoutNavigationMenu.style.marginLeft = `-${left}px`;
+            if (flyoutNavigationMenu.classList.contains('is-level-1')) {
+                flyoutNavigationMenu.style.marginLeft = `-${left}px`;
+            }
             flyoutNavigationMenu.style.paddingLeft = `${left}px`;
         });
     }
