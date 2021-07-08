@@ -5,11 +5,10 @@ Shows a scroll up button at the bottom right of the page.
 */
 
 .scroll-up-button {
-    bottom: 40px;
-    right: 24px;
+    bottom: 50px;
     transform: translateX(50%);
     padding: 0;
-    left: auto;
+    left: 20px;
 
     .btn {
         font-weight: $font-weight-bolder;
@@ -22,9 +21,6 @@ Shows a scroll up button at the bottom right of the page.
 
 @include media-breakpoint-up(md) {
     .scroll-up-button {
-        right: 60px;
-        bottom: 20px;
-
         &.is-visible {
             transform: scale(1);
         }
@@ -34,5 +30,7 @@ Shows a scroll up button at the bottom right of the page.
 @include media-breakpoint-up(xl) {
     .scroll-up-button {
         right: 155px;
+        bottom: 20px;
+        left: auto;
     }
 }

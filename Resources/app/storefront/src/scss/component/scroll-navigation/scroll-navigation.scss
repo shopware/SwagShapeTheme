@@ -49,13 +49,7 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.2);
-            top: -70px;
-            bottom: auto;
-
-            @include media-breakpoint-up(md) {
-                left: -154px;
-                right: auto;
-            }
+            bottom: 24px;
         }
 
         &-button {
