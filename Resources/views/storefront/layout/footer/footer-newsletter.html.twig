@@ -12,45 +12,17 @@
                     {% block layout_footer_newsletter_form_header %}
                         <h5>{{ 'footer.newsletterInfo'|trans|sw_sanitize }}</h5>
                     {% endblock %}
-                    {% block layout_footer_newsletter_form_element %}
-                        <form action="{{ path('frontend.form.newsletter.register.handle') }}"
-                              method="post"
-                              data-form-csrf-handler="true"
-                              data-form-validation="true">
-                            {% block layout_footer_newsletter_form_content %}
-                                <div class="form-content">
-                                    {% block layout_footer_newsletter_form_email %}
-                                        <div class="input-group">
-                                            <input name="email"
-                                                   type="email"
-                                                   class="form-control"
-                                                   placeholder="{{ 'newsletter.placeholderMail'|trans }}"
-                                                   aria-label="{{ 'newsletter.placeholderMail'|trans }}"
-                                                   aria-describedby="footerNewsletterBtnAddon">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary"
-                                                        type="button"
-                                                        title="{{ 'newsletter.formSubmit'|trans|striptags }}"
-                                                        id="footerNewsletterBtnAddon">
-                                                    {{ 'newsletter.formSubmit'|trans|striptags }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    {% endblock %}
-                                </div>
-                            {% endblock %}
-
-                            {% block layout_footer_newsletter_form_hidden_fields %}
-                                <div class="form-hidden-fields">
-                                    <input type="hidden"
-                                           value="{{ constant('Shopware\\Storefront\\Controller\\FormController::SUBSCRIBE') }}"
-                                           name="option">
-                                    {{ sw_csrf('frontend.form.newsletter.register.handle') }}
-                                    <input type="submit" class="submit--hidden d-none" />
-                                </div>
-                            {% endblock %}
-                        </form>
-                    {% endblock %}
+                    <a
+                        href="{{ path('frontend.cms.page',{ id: config('core.basicInformation.newsletterPage')}) }}"
+                        data-toggle="modal"
+                        data-url="{{ path('frontend.cms.page',{ id: config('core.basicInformation.newsletterPage')}) }}"
+                        class="btn btn-primary"
+                        role="button"
+                        title="{{ 'newsletter.formSubscribe'|trans|striptags }}"
+                        id="footerNewsletterBtnAddon"
+                   >
+                        {{ 'newsletter.formSubscribe'|trans|striptags }}
+                    </a>
                 </div>
             </div>
         </div>

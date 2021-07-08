@@ -29,6 +29,7 @@
     },
     "newsletter": {
         "formSubmit": "Anmelden",
+        "formSubscribe": "Anmelden",
         "placeholderMail": "Ihre E-Mail Adresse"
     },
     "detail": {
