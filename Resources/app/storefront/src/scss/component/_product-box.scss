@@ -23,6 +23,10 @@ $box-image-size-img-desktop: 425px;
 
             .product-action {
                 @extend .mt-0;
+
+                .btn-buy {
+                    line-height: $btn-line-height;
+                }
             }
 
             .product-wishlist {
@@ -79,6 +83,7 @@ $box-image-size-img-desktop: 425px;
 
         .icon-shape {
             margin-right: 7px;
+            display: inline-flex;
         }
     }
 
