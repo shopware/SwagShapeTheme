@@ -2,9 +2,11 @@ $box-standard-height-img: 290px;
 $box-standard-height-img-desktop: 375px;
 $box-image-size-img: 340px;
 $box-image-size-img-desktop: 425px;
+$box-bg-color: $shape-gray-100;
+$box-hover-bg-color: $white;
 
 .product-box {
-    background-color: transparent;
+    background-color: $box-bg-color;
     border: none;
 
     .card-body {
@@ -100,7 +102,7 @@ $box-image-size-img-desktop: 425px;
     }
 
     &:hover {
-        background-color: $white;
+        background-color: $box-hover-bg-color;
         box-shadow: $dropdown-box-shadow;
 
         .product-image-area .product-action-bar {
@@ -201,7 +203,7 @@ $box-image-size-img-desktop: 425px;
 
 .product-variant-characteristics {
     .product-variant-characteristics-text {
-        @include truncate-multiline(1.5em, 2, $shape-gray-100);
+        @include truncate-multiline(1.5em, 2, $box-bg-color);
 
         margin-right: 0;
         padding-right: 0;
@@ -212,7 +214,7 @@ $box-image-size-img-desktop: 425px;
 .product-box:hover {
     .product-variant-characteristics {
         .product-variant-characteristics-text {
-            @include truncate-multiline(1.5em, 2, $white);
+            @include truncate-multiline(1.5em, 2, $box-hover-bg-color);
 
             margin-right: 0;
             padding-right: 0;

@@ -11,20 +11,20 @@ General styling for cms sections
     margin-right: calc(#{$gutter-width} * -1);
 }
 
-.cms-section {
+.cms-page .cms-section {
     .boxed {
-        padding: $spacer-20 $spacer-20 0;
+        padding: 0 $spacer-20;
     }
 
     .full-width {
         @extend .container;
 
-        padding: $spacer-20 0 0;
+        padding: 0;
     }
 }
 
 @include media-breakpoint-up(lg) {
-    .cms-section {
+    .cms-page .cms-section {
         &.cms-full-width {
             .cms-section-sidebar-main-content {
                 padding-left: 0;
@@ -35,8 +35,9 @@ General styling for cms sections
 }
 
 @include media-breakpoint-up(xl) {
-    .cms-section {
-        &.cms-full-width {
+    .cms-page .cms-section {
+        &.cms-full-width,
+        &.cms-boxed {
             @include container-full-width();
 
             background-color: $shape-gray-100;
