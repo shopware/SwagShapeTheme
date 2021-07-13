@@ -41,14 +41,17 @@ $navigation-offcanvas-padding-lg: 60px;
                 }
             }
         }
-
-        @include media-breakpoint-up(md) {
-            width: 70%;
-        }
     }
 
     .offcanvas-content-container {
         padding-top: 12px;
+    }
+
+    @include media-breakpoint-up(md) {
+        &.navigation-offcanvas {
+            width: 70%;
+            max-width: 600px;
+        }
     }
 }
 
