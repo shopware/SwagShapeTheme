@@ -5,6 +5,12 @@
         overflow: hidden;
         justify-content: space-between;
 
+        .header-cart-icon,
+        .header-wishlist-icon {
+            display: flex;
+            justify-content: center;
+        }
+
         @include media-breakpoint-down(md) {
             align-items: center;
         }

@@ -50,11 +50,11 @@ $spacer-50: ($spacer * 3.125) !default; // 50px
 $spacer-60: ($spacer * 3.75) !default; // 60px
 
 // icon
-$icon-caret-down: url('#{$app-css-relative-asset-path}/icon/ic-caret-down.svg');
-$icon-caret-up: url('#{$app-css-relative-asset-path}/icon/ic-caret-up.svg');
-$icon-delete: url('#{$app-css-relative-asset-path}/icon/ic-delete.svg');
+$icon-caret-down: url('#{$app-css-relative-asset-path}/icon-pack/shape/ic-caret-down.svg');
+$icon-caret-up: url('#{$app-css-relative-asset-path}/icon-pack/shape/ic-caret-up.svg');
+$icon-delete: url('#{$app-css-relative-asset-path}/icon-pack/shape/ic-delete.svg');
 
 // Custom Forms
-$custom-select-indicator: url('#{$app-css-relative-asset-path}/icon/ic-chevron-down.svg') !default;
+$custom-select-indicator: url('#{$app-css-relative-asset-path}/icon-pack/shape/ic-chevron-down.svg') !default;
 
 $hr-border: $hr-border-width solid $hr-border-color;

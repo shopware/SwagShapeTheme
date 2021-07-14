@@ -91,7 +91,7 @@
 .custom-select {
     &.sorting {
         color: $shape-gray-500;
-        background-image: url('#{$app-css-relative-asset-path}/icon/ic-select-down.svg');
+        background-image: url('#{$app-css-relative-asset-path}/icon-pack/shape/ic-select-down.svg');
         margin-top: 0;
 
         &:invalid {
