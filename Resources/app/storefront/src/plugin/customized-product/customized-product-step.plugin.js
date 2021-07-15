@@ -111,11 +111,11 @@ function wrapper() {
              */
             renderNavigationSelection() {
                 const title = DomAccess.querySelector(this.el, this.options.productTitleSelector);
-                const description = DomAccess.querySelector(this.el, this.options.productDescriptionSelector);
-                return `
-                    ${title.outerHTML} 
+                const description = DomAccess.querySelector(this.el, this.options.productDescriptionSelector, false);
+                return description ? `
+                    ${title.outerHTML}
                     ${description.outerHTML}
-                `;
+                ` : `${title.outerHTML}`;
             }
         }
 

@@ -270,8 +270,20 @@
             padding: 28px 28px 0px 28px;
             border: none;
 
+            .swag-customized-products__title {
+                @extend .mb-0;
+            }
+
             .swag-customized-products__description {
-                @extend .m-0;
+                @extend .mb-0, .mt-4;
+            }
+        }
+
+        .swag-customized-products__introduction,
+        .swag-customized-products__finish {
+            .swag-customized-products__title,
+            .swag-customized-products__description {
+                @extend .d-none;
             }
         }
     }
