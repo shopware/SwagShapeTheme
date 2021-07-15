@@ -28,6 +28,7 @@ General styling for cms elements
 
     &-actions {
         padding-bottom: $spacer-20;
+        padding-top: $spacer-20;
         border-bottom: $hr-border-width solid $hr-border-color;
         margin-bottom: 0;
 
@@ -41,6 +42,12 @@ General styling for cms elements
     padding-top: $spacer-20;
     padding-bottom: $spacer-20;
     border-top: $hr-border-width solid $hr-border-color;
+
+    + .cms-block-product-listing {
+        .cms-element-product-listing-actions {
+            padding-top: 0;
+        }
+    }
 }
 
 @include media-breakpoint-down(md) {

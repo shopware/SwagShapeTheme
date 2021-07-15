@@ -32,4 +32,8 @@
     @include media-breakpoint-up(md) {
         padding: $spacer-40 0;
     }
+
+    &.cms-breadcrumb:not(.container) {
+        background-color: $white;
+    }
 }
