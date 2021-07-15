@@ -34,7 +34,8 @@ export default class ShapeFlyoutMenuPlugin extends Plugin {
         const left = mainNavigation.getBoundingClientRect().left;
 
         Array.from(document.querySelectorAll(this.options.flyoutNavigationMenu)).forEach(flyoutNavigationMenu => {
-            if (flyoutNavigationMenu.classList.contains('is-level-1')) {
+            const isLevel1 = flyoutNavigationMenu.classList && flyoutNavigationMenu.classList.contains('is-level-1')
+            if (isLevel1) {
                 flyoutNavigationMenu.style.marginLeft = `-${left}px`;
             }
             flyoutNavigationMenu.style.paddingLeft = `${left}px`;
