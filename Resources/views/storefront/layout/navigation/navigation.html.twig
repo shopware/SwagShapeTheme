@@ -40,7 +40,7 @@
                     <div class="main-navigation-link-text">
                         <span itemprop="name">{{ name }}</span>
                     </div>
-                    <div data-flyout-menu-id="{{ category.id }}">
+                    <div {% if treeItem.children|length > 0 %}data-flyout-menu-id="{{ category.id }}"{% endif %}>
                         {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {navigationTree: treeItem.children, level: level+1, page: page, haveGrandChildren: haveGrandChildren } only %}
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="main-navigation-link-text">
                         <span itemprop="name">{{ name }}</span>
                     </div>
-                    <div data-flyout-menu-id="{{ category.id }}">
+                    <div {% if treeItem.children|length > 0 %}data-flyout-menu-id="{{ category.id }}"{% endif %}>
                         {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {navigationTree: treeItem.children, level: level+1, page: page, haveGrandChildren: haveGrandChildren } only %}
                     </div>
                 </a>
