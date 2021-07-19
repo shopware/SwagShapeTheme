@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17" height="15" xmlns="http://www.w3.org/2000/svg">
+    <g id="Overviews" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Font-Family" transform="translate(-274 -820)" fill="#1F2E3D" fill-rule="nonzero">
+            <path
+                d="M8.25 1l2.4246142 4.9128049 5.4216021.7878049-3.9231082 3.8240853.9261202 5.3996951L8.25 13.375l-4.84922833 2.5493902.9261202-5.3996951L.40378374 6.7006098l5.42160209-.7878049L8.25 1zm1.09648314 6.74082043L8.25 5.518 7.15351686 7.74082043 4.701 8.097l1.77485301 1.7294553L6.057 12.268l2.193-1.1525515L10.442 12.268l-.417853-2.4415447L11.798 8.097l-2.45151686-.35617957z"
+                transform="translate(274 819)" id="Star-empty"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path
+            d="M19.5153144 22.55c-.5 0-1-.4-1-.9-.3-3.9-2.8-6.4-6.5-6.4-3.70000003 0-6.20000003 2.5-6.50000003 6.3 0 .6-.5 1-1.1.9-.6 0-1-.5-.9-1.1.4-4.8 3.8-8.1 8.50000003-8.1 4.7 0 8.1 3.3 8.5 8.2 0 .5-.4 1-1 1.1zm-7.5-10.3c-3.00000003 0-5.50000003-2.5-5.50000003-5.5s2.5-5.5 5.50000003-5.5c3 0 5.5 2.5 5.5 5.5s-2.5 5.5-5.5 5.5zm0-9c-1.9 0-3.50000003 1.6-3.50000003 3.5s1.60000003 3.5 3.50000003 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"
+            id="shape-profile"/>
+    </defs>
+    <g transform="translate(-3 -1)" fill="none" fill-rule="evenodd">
+        <mask id="profile" fill="currentColor">
+            <use xlink:href="#shape-profile"/>
+        </mask>
+        <use fill="currentColor" fill-rule="nonzero" xlink:href="#shape-profile"/>
+        <g mask="url(#profile)" fill="currentColor" fill-rule="nonzero">
+            <path d="M0 0h24v24H0z"/>
+        </g>
+    </g>
+</svg>
