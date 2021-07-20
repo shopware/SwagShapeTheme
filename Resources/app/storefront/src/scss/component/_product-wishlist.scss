@@ -15,6 +15,10 @@
         &-not-added, &-added {
             color: $shape-gray-900;
         }
+
+        &-remove {
+            color: $shape-gray-900;
+        }
     }
 
     &-info {
@@ -37,5 +41,11 @@
         text-transform: uppercase;
         font-weight: $font-weight-bold;
         color: $shape-gray-900;
+    }
+
+    &-btn-remove {
+        background-color: $shape-gray-200;
+        top: 35px;
+        right: 35px;
     }
 }
