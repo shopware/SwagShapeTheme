@@ -17,6 +17,12 @@ $product-buybox-max-width: 570px;
 
     .cms-block-product-description-reviews {
         padding-bottom: 54px;
+
+        .cms-block-container {
+            @extend .container;
+
+            padding: 0 $spacer-20 !important;
+        }
     }
 
     .cms-section-default.boxed {
@@ -24,10 +30,17 @@ $product-buybox-max-width: 570px;
         padding-left: 0;
         padding-right: 0;
     }
+
+    .cms-block-product-heading {
+        .cms-block-container {
+            padding: 0 !important;
+        }
+    }
 }
 
 .product-detail-content {
     background-color: $gray-100;
+    margin-bottom: 0;
 
     @include media-breakpoint-up(lg) {
         margin-bottom: 100px;
@@ -36,6 +49,18 @@ $product-buybox-max-width: 570px;
     .container {
         .product-detail-main:only-child {
             padding-top: 100px;
+        }
+    }
+}
+
+.product-detail-tabs {
+    &:not(.product-detail-cross-selling) {
+        background-color: $gray-100;
+        padding-bottom: 38px;
+
+        @include media-breakpoint-up(md) {
+            background-color: transparent;
+            padding: 0 0 70px;
         }
     }
 }
@@ -194,9 +219,9 @@ $product-buybox-max-width: 570px;
     }
 
     .product-wishlist {
-        @include make-col(8);
+        @extend .col-md-8;
+        @extend .offset-md-4;
 
-        margin-left: auto;
         text-align: center;
     }
 
@@ -321,6 +346,12 @@ div[data-swag-paypal-installment-banner="true"] {
     }
 }
 
+.cms-block-container-row {
+    .product-detail-media {
+        padding: 0;
+    }
+}
+
 @include media-breakpoint-up(md) {
     .is-ctl-product {
         .cms-block-product-description-reviews {
@@ -341,6 +372,10 @@ div[data-swag-paypal-installment-banner="true"] {
 
     .product-detail-media {
         padding: 0 $spacer-60;
+
+        .cms-block-container-row & {
+            padding: 0;
+        }
     }
 }
 
@@ -353,9 +388,12 @@ div[data-swag-paypal-installment-banner="true"] {
         margin-right: 0;
     }
 
-    .cms-element-image-gallery,
     .product-detail-media {
         padding: $spacer-20;
+    }
+
+    .cms-element-image-gallery {
+        padding: 0;
     }
 }
 

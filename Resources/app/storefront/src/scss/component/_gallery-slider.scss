@@ -79,17 +79,19 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
     }
 
     &.is-left {
+        padding-left: 0;
+        padding-right: $spacer-10;
+
+        .cms-element-image-gallery & {
+            padding-left: $spacer-20;
+        }
+
         .gallery-slider-thumbnails-controls-prev {
             top: -20px;
         }
 
         .gallery-slider-thumbnails-controls-next {
             bottom: -20px;
-        }
-
-        &.is-left {
-            padding-left: 0;
-            padding-right: $spacer-10;
         }
     }
 
