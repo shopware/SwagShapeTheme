@@ -23,11 +23,16 @@ $navigation-offcanvas-padding-lg: 60px;
     &.is-left {
         overflow-y: hidden;
 
+        &.navigation-offcanvas {
+            .offcanvas-close {
+                border-bottom: $hr-border-width solid $hr-border-color;
+            }
+        }
+
         .offcanvas-close {
             justify-content: center;
             padding-top: 26px;
             padding-bottom: 26px;
-            border-bottom: $hr-border-width solid $hr-border-color;
             position: relative;
 
             .btn.js-offcanvas-close {

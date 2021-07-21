@@ -106,9 +106,15 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
     }
 
     .account-aside-footer {
-        padding: $spacer-40 $spacer-xl 72px;
-        margin-top: auto;
-        background-color: $shape-gray-100;
+        &:not(.account-guest-abort) {
+            padding: $spacer-40 $spacer-xl 72px;
+            margin-top: auto;
+            background-color: $shape-gray-100;
+        }
+
+        &.account-guest-abort {
+            padding: 0 $spacer-xl;
+        }
     }
 
     .account-menu-register {
@@ -143,6 +149,11 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
             text-align: center;
             border-top: solid $hr-border-width $hr-border-color;
             margin-top: $spacer-10;
+
+            &.account-guest-abort {
+                border-top: none;
+                margin-top: 0;
+            }
         }
 
         .account-aside-btn {
