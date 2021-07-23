@@ -1,6 +1,11 @@
+.category-navigation-box {
+    padding-bottom: $spacer-20;
+}
+
 .category-navigation-label {
     padding-bottom: $spacer-10;
     border-bottom: $hr-border-width solid $shape-gray-900;
+    padding-top: $spacer-20;
 }
 
 .category-navigation.level-0 > .category-navigation-entry {

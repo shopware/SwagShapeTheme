@@ -22,6 +22,10 @@ specific styling for elements dependent on their parent block
             .cms-full-width & {
                 padding: 0 $spacer-20 !important;
             }
+
+            .alert {
+                margin-top: $spacer-20;
+            }
         }
     }
 
