@@ -77,7 +77,7 @@
 {% endblock %}
 
 {% block page_account_profile_delete_account %}
-    {% if shopware.config.core.loginRegistration.allowCustomerDeletion %}
+    {% if config('core.loginRegistration.allowCustomerDeletion') %}
         <div class="card-account-deleting account-deleting">
             <div class="card">
                 <div class="card-body">
@@ -117,7 +117,11 @@
         data-dismiss="modal"
         aria-label="Close">
             <span aria-hidden="true">
-                {% sw_icon 'ic-delete' style { 'pack': 'shape' } %}
+                {% sw_icon 'ic-close' style { 'pack': 'shape' } %}
             </span>
     </button>
+{% endblock %}
+
+{% block page_account_delete_account_confirm_alert %}
+    <p>{{ "account.profileDeleteAlert"|trans|sw_sanitize }}</p>
 {% endblock %}

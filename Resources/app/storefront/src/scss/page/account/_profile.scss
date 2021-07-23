@@ -110,10 +110,15 @@
     }
 
     .modal-body {
-        padding: 25px 0 0;
+        padding: 0;
+        form[action*="delete"] {
+            p {
+                white-space: pre-line;
 
-        p {
-            margin-bottom: $spacer-30;
+                + p {
+                    font-weight: $font-weight-bold;
+                }
+            }
         }
     }
 

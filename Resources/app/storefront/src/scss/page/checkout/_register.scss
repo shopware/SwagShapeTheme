@@ -17,7 +17,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     }
 
     .checkout {
-        @include container-gutter();
+        @extend .container;
     }
 
     .checkout-container {
