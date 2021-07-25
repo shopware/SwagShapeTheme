@@ -26,9 +26,22 @@ specific styling for elements dependent on their parent block
             .alert {
                 margin-top: $spacer-20;
             }
+
+            .product-detail-name {
+                @include media-breakpoint-up(md) {
+                    margin-top: 40px;
+                }
+            }
+
+            .base-slider {
+                margin-top: 40px;
+            }
         }
     }
 
+    &-product-heading .cms-block-container {
+        @extend .p-0;
+    }
 }
 
 .cms-section-sidebar-main-content,

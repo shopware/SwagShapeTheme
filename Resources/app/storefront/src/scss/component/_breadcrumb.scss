@@ -1,6 +1,7 @@
 .breadcrumb {
-    padding: $spacer-20 0;
+    padding: $spacer-20;
     margin-bottom: 0;
+    @extend .container;
 
     .breadcrumb {
         padding: 0;
@@ -30,15 +31,11 @@
     }
 
     @include media-breakpoint-up(md) {
-        padding: $spacer-40 0;
+        padding-top: $spacer-40;
+        padding-bottom: $spacer-40;
     }
 
     &.cms-breadcrumb {
-        padding-left: 0;
-        padding-right: 0;
-
-        &:not(.container) {
-            background-color: $white;
-        }
+        background-color: $white;
     }
 }
