@@ -20,7 +20,7 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
         position: relative;
 
         .gallery-slider-image {
-            position:  absolute;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -182,4 +182,15 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
             right: -50px;
         }
     }
+}
+
+.gallery-slider-single-image .icon-placeholder {
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; // IE polyfill
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
 }
