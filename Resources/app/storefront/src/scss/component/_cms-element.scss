@@ -42,11 +42,11 @@ General styling for cms elements
     padding-top: $spacer-20;
     padding-bottom: $spacer-20;
     border-top: $hr-border-width solid $hr-border-color;
+}
 
-    + .cms-block-product-listing {
-        .cms-element-product-listing-actions {
-            padding-top: 0;
-        }
+.cms-block-sidebar-filter + .cms-block-product-listing {
+    .cms-element-product-listing-actions {
+        padding-top: 0;
     }
 }
 
