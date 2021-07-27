@@ -16,6 +16,7 @@
 
         <div class="product-image-area">
             {% block component_product_box_image %}
+                {% set displayMode = displayMode ?: 'cover' %}
                 {{ parent() }}
             {% endblock %}
 

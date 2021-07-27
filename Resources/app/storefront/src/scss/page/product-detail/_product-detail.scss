@@ -81,6 +81,15 @@ $product-buybox-max-width: 570px;
 }
 
 .product-detail {
+    &-main {
+        .product-wishlist {
+            @extend .col-md-8;
+            @extend .offset-md-4;
+
+            text-align: center;
+        }
+    }
+
     &-name-container {
         justify-content: center;
     }
@@ -216,13 +225,6 @@ $product-buybox-max-width: 570px;
 
     &-form-container {
         margin-top: $spacer-40;
-    }
-
-    .product-wishlist {
-        @extend .col-md-8;
-        @extend .offset-md-4;
-
-        text-align: center;
     }
 
     @include media-breakpoint-up(md) {
