@@ -60,7 +60,6 @@ $box-hover-bg-color: $white;
         }
 
         .product-image {
-            object-fit: cover;
             max-height: $box-standard-height-img-desktop;
         }
     }
@@ -79,8 +78,11 @@ $box-hover-bg-color: $white;
     }
 
     .product-action {
-        .btn-buy {
-            @extend .btn-light;
+        .btn-buy,
+        .btn {
+            color: $shape-gray-900;
+            background-color: $shape-gray-200;
+            border-color: $shape-gray-200;
         }
 
         .icon-shape {
