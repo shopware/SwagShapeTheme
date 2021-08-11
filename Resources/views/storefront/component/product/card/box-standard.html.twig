@@ -9,7 +9,7 @@
     {% set listPrice = price.listPrice.percentage > 0 %}
     {% set hasRange = product.calculatedPrices.count > 1 %}
 
-    <div class="card-body">
+    <div class="card-body" data-product-box="true">
         {% block component_product_box_rich_snippets %}
             {% sw_include '@Storefront/storefront/component/product/card/meta.html.twig' %}
         {% endblock %}

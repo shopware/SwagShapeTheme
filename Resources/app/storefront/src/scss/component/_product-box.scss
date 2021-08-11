@@ -108,6 +108,7 @@ $box-hover-bg-color: $white;
         }
     }
 
+    &.hover,
     &:hover {
         background-color: $box-hover-bg-color;
         box-shadow: $dropdown-box-shadow;
