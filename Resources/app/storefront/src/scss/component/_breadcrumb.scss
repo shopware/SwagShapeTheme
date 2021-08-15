@@ -1,10 +1,11 @@
 .breadcrumb {
     padding: $spacer-20;
     margin-bottom: 0;
-    @extend .container;
 
-    .breadcrumb {
-        padding: 0;
+    @include media-breakpoint-down(lg) {
+        .container {
+            padding: 0;
+        }
     }
 
     .breadcrumb-item {
@@ -34,8 +35,19 @@
         padding-top: $spacer-40;
         padding-bottom: $spacer-40;
     }
+}
 
-    &.cms-breadcrumb {
-        background-color: $white;
+nav[aria-label="breadcrumb"] {
+    .breadcrumb {
+        @include make-container();
+        padding: 0;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .breadcrumb {
+        $gutter-width: calc((100vw - 100%) / 2);
+        margin-left: calc(#{$gutter-width} * -1);
+        margin-right: calc(#{$gutter-width} * -1);
     }
 }
