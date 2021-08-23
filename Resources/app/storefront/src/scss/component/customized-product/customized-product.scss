@@ -316,6 +316,52 @@
         @extend .form-control-lg;
         font-size: $font-size-base;
     }
+
+    .swag-customized-products__violation-list-holder {
+        .alert {
+            padding: 0;
+        }
+
+        .alert-content-container {
+            display: inline-flex;
+            position: relative;
+            padding: $spacer-md $spacer-lg;
+            align-items: center;
+            flex-direction: column;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 16px;
+                margin: 0;
+                height: calc(100% - 32px);
+            }
+        }
+
+        .entry__link {
+            color: $white;
+        }
+
+        .alert-heading,
+        .alert-content {
+            padding-left: 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .alert-content {
+            font-weight: $font-weight-normal;
+        }
+
+        .alert-heading {
+            margin-bottom: 0;
+        }
+
+        .icon.icon-blocked {
+            margin: $spacer-lg;
+            align-self: center;
+        }
+    }
 }
 
 .swag-customized-product__price-display-holder {
