@@ -186,7 +186,7 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
 
 .gallery-slider-single-image .icon-placeholder {
     object-fit: cover;
-    font-family: 'object-fit: cover;'; // IE polyfill
+    font-family: 'object-fit: cover;'; /* stylelint-disable-line */ // IE polyfill
     position: absolute;
     top: 0;
     right: 0;

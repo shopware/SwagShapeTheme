@@ -138,16 +138,13 @@
 @include media-breakpoint-up(md) {
     .register-required-info {
         width: 30%;
+        line-height: 21px;
+        text-align: right;
     }
 
     .privacy-notice {
         width: 70%;
         order: 0;
-    }
-
-    .register-required-info {
-        line-height: 21px;
-        text-align: right;
     }
 
     .account-register {

@@ -45,16 +45,6 @@ $product-configurator-media-width-lg: 50px;
         }
     }
 
-    &-option-input + &-option-label {
-        height: unset;
-        min-width: unset;
-        background-color: transparent;
-
-        box-shadow: none;
-        width: 100%;
-        display: block;
-    }
-
     &-option-input:checked + &-option-label {
         &.is-display-text {
             border-color: $primary;
@@ -74,6 +64,12 @@ $product-configurator-media-width-lg: 50px;
 
     &-option-input + &-option-label {
         margin-bottom: 0;
+        height: unset;
+        min-width: unset;
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+        display: block;
 
         &.is-display-text {
             @include border-radius(18px);
