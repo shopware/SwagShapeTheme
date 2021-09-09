@@ -22,7 +22,6 @@
         "shape": "app/storefront/src/assets/icon-pack/shape"
     },
     "asset": [
-        "@Storefront",
         "app/storefront/src/assets"
     ],
     "config": {
