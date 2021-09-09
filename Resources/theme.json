@@ -9,6 +9,7 @@
         "@Plugins",
         "@SwagShapeTheme"
     ],
+    "previewMedia": "app/storefront/src/assets/images/preview.png",
     "style": [
         "app/storefront/src/scss/overrides.scss",
         "@Storefront",
