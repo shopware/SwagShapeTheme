@@ -220,6 +220,10 @@
         .document-item {
             padding-left: $spacer-10;
         }
+
+        .order-item-name {
+            padding: 0;
+        }
     }
 
     .order-item {
@@ -282,12 +286,6 @@
     .order-detail-content-row {
         margin-left: 34px;
         margin-right: 34px;
-    }
-
-    .order-detail-content-row {
-        .order-item-name {
-            padding: 0;
-        }
     }
 
     .order-item-product-image {

@@ -311,6 +311,7 @@
 @include media-breakpoint-up(md) {
     .footer {
         &-bottom {
+            padding: $spacer-20 0 $spacer-30;
             p {
                 margin-bottom: $spacer-lg;
             }
@@ -411,10 +412,6 @@
 
         &-vat {
             padding-bottom: $spacer-40;
-        }
-
-        &-bottom {
-            padding: $spacer-20 0 $spacer-30;
         }
 
         &-minimal {

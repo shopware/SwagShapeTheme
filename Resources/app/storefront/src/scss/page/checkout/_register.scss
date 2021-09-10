@@ -16,10 +16,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         @extend .pt-0;
     }
 
-    .checkout {
-        @extend .container;
-    }
-
     .checkout-container {
         @extend .mb-0;
 
@@ -28,6 +24,8 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     }
 
     .checkout {
+        @extend .container;
+
         .checkout-aside,
         .checkout-main {
             padding-top: $checkout-spacing-sm;
@@ -173,10 +171,6 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     }
 
     @include media-breakpoint-up(lg) {
-        .checkout-main {
-            padding-top: 72px;
-        }
-
         .register-submit button {
             width: 50%;
         }

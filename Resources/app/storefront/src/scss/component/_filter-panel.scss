@@ -210,18 +210,6 @@
     }
 }
 
-.offcanvas-filter .filter-panel-active-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: $spacer-md;
-
-    &:empty {
-        display: none;
-        padding: 0;
-    }
-}
-
 .btn.filter-reset-all {
     @extend .btn-outline-primary;
 
@@ -307,6 +295,9 @@
         border-bottom: $hr-border;
         width: 100%;
         margin-bottom: $spacer-sm;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         &:empty {
             display: none;

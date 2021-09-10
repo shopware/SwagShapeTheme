@@ -1,10 +1,6 @@
 .offcanvas {
     width: 100%;
 
-    .offcanvas-close {
-        text-transform: unset;
-    }
-
     .offcanvas-content-container {
         padding: 33px;
     }
@@ -24,6 +20,8 @@
     }
 
     .offcanvas-close {
+        text-transform: unset;
+
         &:not(:disabled):not(.disabled):active,
         &:not(:disabled):not(.disabled).active,
         .show > &.dropdown-toggle {
