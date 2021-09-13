@@ -17,7 +17,7 @@ export default class ShapeFlyoutMenuPlugin extends Plugin {
 
     init() {
         this._registerEventListeners();
-        this._makeFlyoutMenuFullWidth();
+        document.addEventListener('readystatechange', this._makeFlyoutMenuFullWidth.bind(this), false);
     }
 
     /**
