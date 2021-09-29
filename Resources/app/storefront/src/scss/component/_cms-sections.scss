@@ -36,10 +36,6 @@ General styling for cms sections
 
 @include media-breakpoint-up(xl) {
     .cms-page .cms-section {
-        &:first-child {
-            padding-top: 20px;
-        }
-
         &.cms-full-width,
         &.cms-boxed {
             @include container-full-width();

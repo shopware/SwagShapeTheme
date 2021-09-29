@@ -93,9 +93,8 @@
 
 .curtain-area {
     @extend .d-none, .d-lg-inline-block;
-    width: $input-height-lg;
     height: $input-height-lg;
-    background-image: linear-gradient(to right, rgba($sw-background-color, 0.2) 5%, rgba($sw-background-color, 1) 95%);
+    box-shadow: 0 0 20px 20px $sw-background-color;
 }
 
 @include media-breakpoint-up(sm) {

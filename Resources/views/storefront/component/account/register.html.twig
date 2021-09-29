@@ -8,7 +8,7 @@
         'prefix': 'shippingAddress',
         'data': data.get('shippingAddress'),
         'hideCustomerTypeSelect': false,
-        'accountType': data.get('accountType')
+        'accountType': data.get('shippingAddress').get('accountType')
     } %}
 {% endblock %}
 
