@@ -19,9 +19,6 @@
         "@Storefront",
         "app/storefront/dist/storefront/js/swag-shape-theme.js"
     ],
-    "iconSets": {
-        "shape": "app/storefront/src/assets/icon-pack/shape"
-    },
     "asset": [
         "app/storefront/src/assets"
     ],
