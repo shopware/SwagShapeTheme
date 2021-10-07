@@ -11,18 +11,6 @@
     }
 }
 
-.icon-shape,
 .icon-review {
     color: $shape-gray-900;
-    width: unset;
-    height: unset;
-    display: inline-block;
-}
-
-.btn {
-    .icon-shape {
-        > svg {
-            top: 0;
-        }
-    }
 }
