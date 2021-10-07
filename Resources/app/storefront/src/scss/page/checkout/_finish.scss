@@ -66,11 +66,9 @@
         padding-right: 0;
     }
 
-    @include media-breakpoint-up(lg) {
-        .checkout-aside-summary {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+    .finish-header {
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
     }
 
     .finish-header-icon {
@@ -111,6 +109,11 @@
     @include media-breakpoint-up(lg) {
         .checkout-product-table {
             padding-top: 70px;
+        }
+
+        .checkout-aside-summary {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
 }
