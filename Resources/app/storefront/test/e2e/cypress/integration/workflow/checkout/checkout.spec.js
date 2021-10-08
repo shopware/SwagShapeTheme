@@ -47,6 +47,7 @@ describe('Checkout: Basic', {tags: ['@workflow', '@checkout']}, () => {
 
         // Login
         cy.get('.checkout-main').should('be.visible');
+        accountPage.getLoginCollapse().click();
         accountPage.login();
 
         cy.get('.confirm-tos .custom-checkbox label').scrollIntoView();

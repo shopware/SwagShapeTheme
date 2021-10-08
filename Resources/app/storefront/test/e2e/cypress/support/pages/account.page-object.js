@@ -47,7 +47,6 @@ export default class AccountPageObject {
             registerCard: '.register-card',
             registerForm: '.register-form',
             registerSubmit: '.register-submit',
-            loginCard: '.login-card',
             loginForm: '.login-form',
             loginSubmit: '.login-submit',
 
@@ -77,7 +76,6 @@ export default class AccountPageObject {
     }
 
     login(email = 'test@example.com', pw = 'shopware') {
-        this.getLoginCollapse().click();
         this.getEmail().type(email)
         this.getPassword().type(pw)
         this.getSubmitButton().click()
