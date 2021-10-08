@@ -71,7 +71,11 @@ $product-buybox-max-width: 570px;
 
         @include media-breakpoint-up(md) {
             background-color: transparent;
-            padding: 0 0 70px;
+            padding: 40px 0 70px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
         }
     }
 }
@@ -122,6 +126,11 @@ $product-buybox-max-width: 570px;
         @extend .ml-2;
         font-size: $font-size-base;
         font-weight: $font-weight-bold;
+        vertical-align: middle;
+
+        @include media-breakpoint-down(md) {
+            height: 26px;
+        }
     }
 
     &-name,
