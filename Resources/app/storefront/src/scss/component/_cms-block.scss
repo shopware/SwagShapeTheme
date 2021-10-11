@@ -12,13 +12,21 @@ specific styling for elements dependent on their parent block
         overflow: unset;
     }
 
+    &.cms-block-product-listing {
+        .cms-block-container {
+            padding-top: 0;
+        }
+    }
+
+    .cms-block-container {
+        padding: $spacer-20 0;
+    }
+
     &-category-navigation,
     &-sidebar-filter,
     &-gallery-buybox,
     &-product-listing {
         .cms-block-container {
-            padding: 0 !important;
-
             .cms-full-width & {
                 padding: 0 $spacer-20 !important;
             }
@@ -38,21 +46,11 @@ specific styling for elements dependent on their parent block
             }
         }
     }
-
-    &-product-heading .cms-block-container {
-        @extend .p-0;
-    }
 }
 
 .cms-section-sidebar-main-content,
 .cms-section-sidebar-sidebar-content {
     padding: 0;
-}
-
-.cms-section-sidebar-sidebar-content {
-    .cms-block-category-navigation {
-        padding-bottom: 72px;
-    }
 }
 
 .cms-element-text {
@@ -68,6 +66,12 @@ specific styling for elements dependent on their parent block
     }
 }
 
+.cms-block-sidebar-filter {
+    .cms-block-container {
+        padding: 0 !important;
+    }
+}
+
 .cms-block-sidebar-filter + .cms-block-category-navigation {
     margin-bottom: $spacer-20;
     border-bottom: $hr-border;
@@ -79,11 +83,10 @@ specific styling for elements dependent on their parent block
     }
 }
 
-@include media-breakpoint-down(xs) {
-    .cms-block-product-description-reviews,
-    .cms-block-cross-selling {
+@include media-breakpoint-up(md) {
+    .cms-block {
         .cms-block-container {
-            padding: 0 !important;
+            padding: $spacer-50 0;
         }
     }
 }
