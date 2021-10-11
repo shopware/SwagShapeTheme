@@ -87,6 +87,7 @@ describe('Checkout: Use different taxes in products while checkout', () => {
 
                 // Login
                 cy.get('.checkout-main').should('be.visible');
+                accountPage.getLoginCollapse().click();
                 accountPage.login();
 
                 // Confirm
