@@ -175,3 +175,15 @@ Cypress.Commands.add('patchViaAdminApi', ({ endpoint, data }) => {
         data
     );
 });
+
+Cypress.Commands.add('initializePluginConfig', (config, endpoint) => {
+    return cy.fixture(config).then((data) => {
+        return cy.requestAdminApi(
+            'POST',
+            endpoint,
+            {
+                data
+            }
+        )
+    });
+});
