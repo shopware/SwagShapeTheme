@@ -87,6 +87,10 @@ $icon-fill-color: #f9f9f9;
     }
 }
 
+.swag-cms-extensions-quickview-header {
+    display: none;
+}
+
 @include media-breakpoint-down(sm) {
     .form-row {
         .swag-cms-extensions-quickview-content--buy-quantity {
