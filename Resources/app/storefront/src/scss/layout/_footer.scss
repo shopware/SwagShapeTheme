@@ -504,5 +504,11 @@
         &-minimal .footer-vat p {
             margin-bottom: 0;
         }
+
+        &-main {
+            .footer-vat {
+                padding-bottom: 0;
+            }
+        }
     }
 }
