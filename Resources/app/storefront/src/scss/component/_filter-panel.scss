@@ -229,6 +229,11 @@
 
 .filter-panel-items-container {
     @include shape-scrollbar;
+
+    &:empty {
+        border: none;
+        padding-top: 0;
+    }
 }
 
 @include media-breakpoint-up(lg) {
