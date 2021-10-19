@@ -18,6 +18,7 @@ variables:
     CYPRESS_screenshotsFolder: $CI_PROJECT_DIR/platform/var/log/screenshots
     CUSTOM_PRODUCT_EXTENSIONS_BRANCH: "master"
     CUSTOM_PRODUCT_EXTENSIONS_NAME: "SwagCustomizedProducts"
+    PAYPAL_PLUGIN_BRANCH: "master"
 
 stages:
     - Static analyze
@@ -36,12 +37,15 @@ default:
         - unzip -q custom-theme.zip -d platform/custom/apps/$THEME_NAME
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.shopware.com/shopware/6/services/cms-extensions.git platform/custom/plugins/SwagCmsExtensions --branch $CMS_EXTENSIONS_BRANCH
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.shopware.com/shopware/6/services/customized-product.git platform/custom/plugins/SwagCustomizedProducts --branch $CUSTOM_PRODUCT_EXTENSIONS_BRANCH
+        - git clone http://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.shopware.com/shopware/6/services/paypal.git platform/custom/plugins/SwagPayPal --branch $PAYPAL_PLUGIN_BRANCH
         - cd platform
         - composer run setup
         - chown -R application:application .
+        - npm --prefix custom/plugins/SwagPayPal/src/Resources/app/storefront/ clean-install
         - bin/console plugin:refresh
         - bin/console plugin:install --activate $CMS_EXTENSIONS_NAME
         - bin/console plugin:install --activate $CUSTOM_PRODUCT_EXTENSIONS_NAME
+        - bin/console plugin:install --activate SwagPayPal
         - bin/console cache:clear
         - bin/console app:install --activate $THEME_NAME
         - bin/console theme:change $THEME_NAME --all
