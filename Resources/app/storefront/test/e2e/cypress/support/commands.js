@@ -187,3 +187,15 @@ Cypress.Commands.add('initializePluginConfig', (config, endpoint) => {
         )
     });
 });
+
+Cypress.Commands.add('updatePluginConfig', (data, salesChannelId) => {
+    return cy.requestAdminApi(
+        'POST',
+        `/api/_action/system-config?salesChannelId=${salesChannelId}`,
+        {
+            data: {
+                [`SwagAmazonPay.settings.${data.key}`]: data.value
+            }
+        }
+    );
+});
