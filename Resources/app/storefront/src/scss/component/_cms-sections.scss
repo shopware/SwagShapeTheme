@@ -18,8 +18,6 @@ General styling for cms sections
 
     .full-width {
         @extend .container;
-
-        padding: 0;
     }
 }
 
@@ -40,11 +38,13 @@ General styling for cms sections
         &.cms-boxed {
             @include container-full-width();
 
-            background-color: $shape-gray-100;
-
             .full-width {
                 max-width: 100%;
             }
+        }
+
+        &.cms-full-width {
+            background-color: $shape-gray-100;
         }
     }
 }
