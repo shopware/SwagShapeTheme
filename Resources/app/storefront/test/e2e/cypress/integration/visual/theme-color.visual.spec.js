@@ -99,6 +99,7 @@ describe('ThemeColor: Visual tests', () => {
 
         // account overview page
         cy.visit('/account');
+        cy.changeElementStyling('.order-table-header-heading', 'display: none');
         cy.takeSnapshot('[Theme Color] Account Overview page', '.account');
     });
 });
