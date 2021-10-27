@@ -31,7 +31,7 @@ export default class NavigationMenu extends Plugin {
      * @private
      */
     _registerEventListeners() {
-        document.addEventListener('Viewport/isLG', this._hideNavigationMenuItem.bind(this));
+        document.addEventListener('Viewport/hasChanged', this._hideNavigationMenuItem.bind(this));
     }
 
     _hideNavigationMenuItem() {
