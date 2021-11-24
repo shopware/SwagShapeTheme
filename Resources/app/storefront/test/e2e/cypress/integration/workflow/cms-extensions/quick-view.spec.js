@@ -1,6 +1,6 @@
 let product = {};
 
-describe('Quick View: Test if it works correctly', () => {
+describe('Quick View: Test if it works correctly', {tags: ['@workflow', '@QuickView']}, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
@@ -83,7 +83,7 @@ describe('Quick View: Test if it works correctly', () => {
         cy.get('.cms-listing-row').should('be.visible');
         cy.get('.cms-listing-row > :nth-child(1) .product-name').last().click({ force: true });
         cy.get('.swag-cms-extensions-quickview-modal').should('be.visible');
-        cy.get('.swag-cms-extensions-quickview-header-headline').should('be.visible');
+        cy.get('.swag-cms-extensions-quickview-content-right .product-detail-name').should('be.visible');
 
         cy.get('[data-slide="prev"]').should('be.visible');
         cy.get('[data-slide="next"]').should('be.visible');

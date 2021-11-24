@@ -2,7 +2,7 @@ import ContactPageObject from "../../../support/pages/contact.page-object";
 
 const contactPage = new ContactPageObject();
 
-describe('Contact: Basic', {tags: ['@workflow']}, () => {
+describe('Contact: Basic', { tags: ['@workflow', '@Contact'] }, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {

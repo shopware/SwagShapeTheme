@@ -1,6 +1,6 @@
 let product;
 
-describe('Customize Product: Visual test customize product in German', () => {
+describe('Customize Product: Visual test customize product in German', { tags: ['@workflow', '@CustomizedProduct'] }, () => {
 
     beforeEach(() => {
         let salesChannelId = '';

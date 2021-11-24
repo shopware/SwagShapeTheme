@@ -13,10 +13,6 @@ $cart-item-img-width: 112px;
         min-width: 0;
     }
 
-    .cart-item-details-container {
-        padding-left: $spacer;
-    }
-
     .cart-item-unit-price-label {
         display: inline;
         color: $shape-gray-500;
@@ -50,6 +46,10 @@ $cart-item-img-width: 112px;
     .cart-item-total-price-label,
     .cart-item-tax-price-label {
         display: none;
+    }
+
+    .cart-item-quantity-row {
+        margin-bottom: 0;
     }
 
     .cart-item-remove {
@@ -93,6 +93,10 @@ $cart-item-img-width: 112px;
         .cart-item-total-price,
         .cart-item-label {
             font-size: 20px;
+        }
+
+        .cart-item-details-container {
+            padding-left: $spacer;
         }
     }
 }

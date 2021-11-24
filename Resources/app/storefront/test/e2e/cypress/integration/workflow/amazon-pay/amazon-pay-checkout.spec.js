@@ -5,7 +5,7 @@ const checkoutPage = new CheckoutPageObject();
 let salesChannelId;
 let product;
 
-describe('AmazonPay: Basic workflow', () => {
+describe('AmazonPay: Basic workflow', { tags: ['@workflow', '@AmazonPay'] }, () => {
     beforeEach(() => {
         return cy.setToInitialState()
             .then(() => {
@@ -59,11 +59,18 @@ describe('AmazonPay: Basic workflow', () => {
             checkoutPage.search(product.name);
             cy.get('.search-suggest-product-name').contains(product.name).click();
 
+            cy.get('body').screenshot('amazon-pay-button-in-product-detail--page');
+
             // Put product into cart
             cy.get('button.btn-buy').scrollIntoView().should('be.visible').click();
 
+            cy.wait(1000);
+            cy.get('body').screenshot('amazon-pay-button-in-offcanvas-cart');
+
             // Checkout
             cy.get('.offcanvas-cart-actions .btn-primary').click();
+
+            cy.get('body').screenshot('amazon-pay-button-in-checkout-register-page');
 
             // AmazonPay button should be visible
             cy.get('#swag-amazon-pay-button-container-account-login')

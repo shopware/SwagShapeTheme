@@ -1,4 +1,4 @@
-describe('Wishlist: Disable wishlist', () => {
+describe('Wishlist: Disable wishlist', { tags: ['@workflow', '@Wishlist'] }, () => {
     beforeEach(() => {
         cy.setToInitialState().then(() => {
             cy.authenticate()

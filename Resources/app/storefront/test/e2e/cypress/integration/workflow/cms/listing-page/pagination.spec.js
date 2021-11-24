@@ -1,6 +1,6 @@
 import products from '../../../../fixtures/listing-pagination-products.json';
 
-const testCases = [2, 4];
+const testCases = [2, 4, 8];
 const maximumCase = Math.max(...testCases);
 
 describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
@@ -17,7 +17,7 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 cy.loginViaApi().then(() => cy.visit('/admin#/sw/settings/listing/index'));
             });
 
-            it.skip('@base @cms: Run pagination', () => {
+            it('@base @cms: Run pagination', () => {
                 cy.get('input[name="core.listing.productsPerPage"]').scrollIntoView().then(() => {
                     cy.get('input[name="core.listing.productsPerPage"]').clearTypeAndCheck(testCase.toString());
                 });
@@ -26,24 +26,19 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
                 cy.visit('/');
 
-                cy.intercept({
-                    method: 'GET',
-                    url: '/widgets/cms/navigation/**',
-                }).as('loadNextPage');
-
                 cy.get('.cms-listing-row .card').should('have.length', testCase);
 
                 const pageCount = maximumCase / testCase;
-                if (pageCount !== 1) {
+                if (pageCount === 1) {
+                    cy.get('.cms-element-product-listing .pagination-nav').should('not.exist');
+                } else {
                     cy.get('.pagination-nav .page-prev').should('have.class', 'disabled');
                     cy.get('.pagination-nav .page-next').should('not.have.class', 'disabled');
 
                     cy.get('.cms-element-product-listing .pagination-nav').should('have.length', 1);
 
                     for (let i = 1; i < pageCount; i++) {
-                        cy.get('.pagination-nav .page-next').scrollIntoView().should('be.visible').click({force: true});
-                        cy.wait('@loadNextPage')
-                            .its('response.statusCode').should('equal', 200);
+                        cy.get('.pagination-nav .page-next').scrollIntoView().should('be.visible').click();
                         cy.get('.cms-listing-row .card').should('have.length', testCase);
                     }
 
@@ -52,7 +47,7 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 }
             });
 
-            it.skip('@base @cms: Run pagination on search', () => {
+            it('@base @cms: Run pagination on search', () => {
                 cy.get('input[name="core.listing.productsPerPage"]').scrollIntoView().then(() => {
                     cy.get('input[name="core.listing.productsPerPage"]').clearTypeAndCheck(testCase.toString());
                 });
@@ -61,11 +56,6 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
 
                 cy.visit('/');
-
-                cy.intercept({
-                    pathname: '/widgets/search/filter',
-                    method: 'GET'
-                }).as('loadNextSearchPage')
 
                 cy.get('#searchCollapse .header-search-input:visible').type('Test').type('{enter}');
 
@@ -80,8 +70,6 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
 
                     for (let i = 1; i < pageCount; i++) {
                         cy.get('.pagination-nav .page-next').click();
-                        cy.wait('@loadNextSearchPage')
-                            .its('response.statusCode').should('equal', 200);
                         cy.get('.cms-listing-row .card').should('have.length', testCase);
                     }
 
