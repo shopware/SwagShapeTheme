@@ -23,6 +23,32 @@
         "app/storefront/src/assets"
     ],
     "config": {
+        "blocks": {
+            "footer": {
+                "label": {
+                    "en-GB": "Footer",
+                    "de-DE": "Fußzeile"
+                }
+            },
+            "404 Page": {
+                "label": {
+                    "en-GB": "404 Page",
+                    "de-DE": "404 Seite"
+                }
+            },
+            "Maintenance Page": {
+                "label": {
+                    "en-GB": "Maintenance Page",
+                    "de-DE": "Wartungsseite"
+                }
+            },
+            "wishlist": {
+                "label": {
+                    "en-GB": "Wishlist",
+                    "de-DE": "Wunschzettel"
+                }
+            }
+        },
         "fields": {
             "sw-color-brand-primary": {
                 "value": "#f17662"
@@ -193,8 +219,13 @@
                 "block": "footer"
             },
             "sw-wishlist-empty": {
+                "label": {
+                    "en-GB": "Empty state",
+                    "de-DE": "Leerzustand"
+                },
                 "type": "media",
-                "value": "app/storefront/src/assets/images/wishlist_empty.svg"
+                "value": "app/storefront/src/assets/images/wishlist_empty.svg",
+                "block": "wishlist"
             }
         }
     }
