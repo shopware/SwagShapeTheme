@@ -22,7 +22,7 @@ const product = {
     },
 };
 
-describe('Wishlist: Merge wishlist', () => {
+describe('Wishlist: Merge wishlist', { tags: ['@workflow', '@Wishlist'] }, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {

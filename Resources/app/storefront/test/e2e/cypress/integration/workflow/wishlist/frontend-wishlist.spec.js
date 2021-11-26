@@ -23,7 +23,7 @@ const product = {
     },
 };
 
-describe('Wishlist: for wishlist page', () => {
+describe('Wishlist: for wishlist page', { tags: ['@workflow', '@Wishlist'] }, () => {
     beforeEach(() => {
         cy.setToInitialState().then(() => {
             cy.setCookie('wishlist-enabled', '1');

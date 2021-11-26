@@ -8,7 +8,7 @@ const checkoutPage = new CheckoutPageObject();
 let salesChannelId;
 let product = {};
 
-describe('Paypal: Checkout', () => {
+describe('Paypal: Checkout', { tags: ['@workflow', '@Paypal'] }, () => {
     before(() => {
         return cy.setToInitialState()
             .then(() => {
@@ -71,6 +71,8 @@ describe('Paypal: Checkout', () => {
 
         // verify on footer
         cy.get('div[data-swag-paypal-marks="true"] .paypal-logo-card').should('be.visible');
+
+        cy.get('body').screenshot('smart-logo-in-footer');
     });
 
     it('@workflow @paypal: should be able to checkout using smart payment', () => {
@@ -84,10 +86,15 @@ describe('Paypal: Checkout', () => {
         cy.get('.search-suggest-product-name')
             .contains(product.name)
             .click();
+
+        cy.screenshot('smart-paypal-button-in-product-detail--page');
+
         cy.get('.product-detail-buy .btn-buy').click();
 
         // Offcanvas
-        cy.get('.offcanvas').should('be.visible');
+        cy.get('.offcanvas').scrollIntoView().should('be.visible');
+        cy.wait(1000);
+        cy.screenshot('smart-paypal-button-in-offcanvas-cart');
         cy.get('.offcanvas-cart-actions .begin-checkout-btn').click();
 
         // Login
@@ -97,5 +104,7 @@ describe('Paypal: Checkout', () => {
         // Confirm: Change payment method to "Paypal"
         cy.get('.paypal-marks').click();
         cy.get('div[data-swag-paypal-marks="true"] .paypal-logo-card').should('be.visible');
+
+        cy.get('body').screenshot('smart-paypal-button-in-checkout-complete-order');
     })
 })

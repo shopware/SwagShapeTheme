@@ -19,7 +19,7 @@ const product = {
     },
 };
 
-describe('Wishlist: Check appearance of wishlist', () => {
+describe('Wishlist: Check appearance of wishlist', { tags: ['@workflow', '@Wishlist'] }, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {

@@ -8,7 +8,7 @@ const checkoutPage = new CheckoutPageObject();
 let salesChannelId;
 let product = {};
 
-describe('Paypal: Checkout', () => {
+describe('Paypal: Checkout', { tags: ['@workflow', '@Paypal'] }, () => {
     beforeEach(() => {
         return cy.setToInitialState()
             .then(() => {
@@ -50,6 +50,8 @@ describe('Paypal: Checkout', () => {
     it('@workflow @paypal: should see Paypal logo in footer', () => {
         cy.get('.footer-logos div[data-swag-paypal-installment-banner="true"]')
             .should('be.visible');
+
+        cy.get('body').screenshot('logo-in-footer');
     });
 
     it('@workflow @paypal: should be visible in product box', () => {
@@ -68,6 +70,7 @@ describe('Paypal: Checkout', () => {
         cy.get('div[data-swag-paypal-express-button="true"]')
             .scrollIntoView()
             .should('be.visible');
+        cy.screenshot('paypal-button-in-product-detail-page');
     });
 
     it('@workflow @paypal: should have Paypal checkout button in Offcanvas cart', () => {
@@ -75,6 +78,8 @@ describe('Paypal: Checkout', () => {
 
         cy.get('.offcanvas-cart div[data-swag-paypal-express-button="true"]').should('be.visible');
         cy.get('.offcanvas-cart div[data-swag-paypal-installment-banner="true"]').should('be.visible');
+
+        cy.screenshot('paypal-button-in-offcanvas-cart');
     });
 
     it('@workflow @paypal: should have Paypal checkout in checkout register page', () => {
@@ -94,6 +99,8 @@ describe('Paypal: Checkout', () => {
         // Paypal Express checkout
         cy.get('div[data-swag-paypal-express-button="true"]').scrollIntoView().should('be.visible');
         cy.get('div[data-swag-paypal-installment-banner="true"]').should('be.visible');
+
+        cy.get('body').screenshot('paypal-button-in-checkout-register-page');
     });
 
     it('@workflow @paypal: should have Paypal checkout in checkout cart page', () => {
@@ -108,6 +115,8 @@ describe('Paypal: Checkout', () => {
         cy.get('.offcanvas-cart-actions a[href="/checkout/cart"]').click();
 
         cy.get('div[data-swag-paypal-installment-banner="true"]').should('be.visible');
+
+        cy.get('body').screenshot('paypalbutton-in-checkout-cart-page');
     });
 
     it('@workflow @paypal: should be able to checkout using Paypal as payment method', () => {

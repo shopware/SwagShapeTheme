@@ -10,7 +10,7 @@ function nextButton() {
     cy.get('.swag-customized-products-pager__button.btn-next').click();
 }
 
-describe('Customized Product: Visual tests product with full customize option', () => {
+describe('Customized Product: Visual tests product with full customize option', { tags: ['@workflow', '@CustomizedProduct'] }, () => {
     beforeEach(() => {
         return cy.setToInitialState().then(() => {
             return cy.createDefaultFixture('category')

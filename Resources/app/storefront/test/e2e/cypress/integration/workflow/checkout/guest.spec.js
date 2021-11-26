@@ -5,7 +5,7 @@ let product = {};
 const checkoutPage = new CheckoutPageObject();
 const accountPage = new AccountPageObject();
 
-describe(`Checkout as Guest`, () => {
+describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
     beforeEach(() => {
         return cy.setToInitialState()
             .then(() => {
@@ -21,7 +21,7 @@ describe(`Checkout as Guest`, () => {
             });
     });
 
-    it.skip('@workflow @checkout: Run checkout', () => {
+    it('@workflow @checkout: Run checkout', () => {
         // search product
         checkoutPage.search(product.name);
 
@@ -130,8 +130,8 @@ describe(`Checkout as Guest`, () => {
 
             cy.get('.register-different-shipping label[for="differentShippingAddress"]').click();
             // check Company, Department, VatId fields not exists in register shipping address form
-            cy.get(`.register-shipping ${shippingAddressCompanySelector}`).should('not.exist');
-            cy.get(`.register-shipping ${shippingAddressDepartmentSelector}`).should('not.exist');
+            cy.get(`.register-shipping ${shippingAddressCompanySelector}`).should('not.be.visible');
+            cy.get(`.register-shipping ${shippingAddressDepartmentSelector}`).should('not.be.visible');
             cy.get(`.register-shipping ${vatIdsSelector}`).should('not.exist');
 
             cy.get(accountTypeSelector).typeAndSelect('Private');
@@ -146,8 +146,8 @@ describe(`Checkout as Guest`, () => {
             cy.get(`.register-address ${vatIdsSelector}`).should('not.exist');
 
             // check Company, Department, VatId fields not exists in register shipping address form
-            cy.get(`.register-shipping ${shippingAddressCompanySelector}`).should('not.exist');
-            cy.get(`.register-shipping ${shippingAddressDepartmentSelector}`).should('not.exist');
+            cy.get(`.register-shipping ${shippingAddressCompanySelector}`).should('not.be.visible');
+            cy.get(`.register-shipping ${shippingAddressDepartmentSelector}`).should('not.be.visible');
             cy.get(`.register-shipping ${vatIdsSelector}`).should('not.exist');
 
             cy.get(billingAddressCompanySelector).should('be.visible');
@@ -157,9 +157,7 @@ describe(`Checkout as Guest`, () => {
             cy.get(vatIdsSelector).type('vat-id-test');
 
             cy.get(shippingAccountTypeSelector).typeAndSelect('Commercial');
-            cy.get(`.register-shipping ${shippingAddressCompanySelector}`)
-                .should('be.visible')
-                .should('have.attr', 'required');
+            cy.get(`.register-shipping ${shippingAddressCompanySelector}`).should('not.be.visible');
 
             cy.get(`${accountPage.elements.registerForm} input[name="email"]`)
                 .type('john-doe-for-testing@example.com');
@@ -181,9 +179,9 @@ describe(`Checkout as Guest`, () => {
             cy.get('.confirm-tos .custom-checkbox label').scrollIntoView();
             cy.get('.confirm-tos .custom-checkbox label').click(1, 1);
             cy.get('.confirm-address').contains('John Doe');
-            cy.get(`${accountPage.elements.cartItem}-details-container ${accountPage.elements.cartItem}-label`)
+            cy.get(`${checkoutPage.elements.cartItem}-details-container ${checkoutPage.elements.cartItem}-label`)
                 .contains(product.name);
-            cy.get(`${accountPage.elements.cartItem}-total-price`).contains(product.price[0].gross);
+            cy.get(`${checkoutPage.elements.cartItem}-total-price`).contains(product.price[0].gross);
 
             // Finish checkout
             cy.get('#confirmFormSubmit').scrollIntoView();

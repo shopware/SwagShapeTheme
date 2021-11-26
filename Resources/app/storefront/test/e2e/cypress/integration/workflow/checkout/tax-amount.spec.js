@@ -17,7 +17,7 @@ const additionalProducts = [{
 
 let product = {};
 
-describe('Checkout: Use different taxes in products while checkout', () => {
+describe('Checkout: Use different taxes in products while checkout',  {tags: ['@workflow', '@checkout']}, () => {
     beforeEach(() => {
         return cy.setToInitialState()
             .then(() => {

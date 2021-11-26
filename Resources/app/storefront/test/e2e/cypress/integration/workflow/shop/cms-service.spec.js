@@ -1,6 +1,6 @@
 import CategoryPageObject from '../../../support/pages/sw-category.page-object';
 
-describe('Shop page: CMS service page', () => {
+describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {

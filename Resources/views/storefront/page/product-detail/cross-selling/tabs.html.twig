@@ -4,34 +4,31 @@
     <ul class="nav nav-tabs product-detail-tab-navigation-list"
         id="product-detail-cross-selling-tabs"
         role="tablist">
-        {% for item in crossSellings %}
+        {% for item in crossSellings|filter(item => item.total > 0 and item.crossSelling.active == true) %}
             {% set id = item.crossSelling.id %}
-            {% if item.crossSelling.active and item.getProducts().elements %}
-                <li class="nav-item">
-                    <a class="nav-link product-detail-tab-navigation-link{% if loop.first %} active{% endif %}"
-                       id="cs-{{ id }}-tab"
-                       data-toggle="tab"
-                       href="#cs-{{ id }}-tab-pane"
-                       role="tab"
-                       aria-controls="cs-{{ id }}-tab-pane"
-                       aria-selected="true">
-                        {{ item.crossSelling.translated.name }}
-                        <span class="product-detail-tab-navigation-icon">
-                            {% sw_icon 'ic-chevron-right' style {'pack':'shape'} %}
-                        </span>
-                    </a>
-                </li>
-            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link product-detail-tab-navigation-link{% if loop.first %} active{% endif %}"
+                   id="cs-{{ id }}-tab"
+                   data-toggle="tab"
+                   href="#cs-{{ id }}-tab-pane"
+                   role="tab"
+                   aria-controls="cs-{{ id }}-tab-pane"
+                   aria-selected="true">
+                    {{ item.crossSelling.translated.name }}
+                    <span class="product-detail-tab-navigation-icon">
+                        {% sw_icon 'ic-chevron-right' style {'pack':'shape'} %}
+                    </span>
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
 
 {% block page_product_detail_cross_selling_tabs_content_container %}
     <div class="tab-content">
-        {% for item in crossSellings %}
+        {% for item in crossSellings|filter(item => item.total > 0 and item.crossSelling.active == true) %}
             {% set id = item.crossSelling.id %}
-            {% if item.crossSelling.active and item.getProducts().elements %}
-                <div class="tab-pane fade show{% if loop.first %} active{% endif %}"
+            <div class="tab-pane fade show{% if loop.first %} active{% endif %}"
                      id="cs-{{ id }}-tab-pane"
                      role="tabpanel"
                      aria-labelledby="cs-{{ id }}-tab">
@@ -77,7 +74,6 @@
                         }
                     } %}
                 </div>
-            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
