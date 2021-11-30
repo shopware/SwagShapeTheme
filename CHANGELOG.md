@@ -1,3 +1,11 @@
+# 1.1.0
+- Check theme compatibility with Shopware 6.4.7.0
+- Change text snippet
+- Change plugin installation order
+- Changing the theme primary color / recompiling the theme breaks navbar dropdowns
+- Review issues: Rating stars and second review is possible
+- Missing snippets on management page
+
 # 1.0.0
 - PDP Images in fullscreen mode not available
 - Review issues: Rating stars and second review is possible
