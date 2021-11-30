@@ -1,3 +1,12 @@
+# 1.1.0
+- Kompatibilität des Themas mit Shopware 6.4.7.0 prüfen
+- Textschnipsel ändern
+- Reihenfolge der Plugin-Installation ändern
+- Ändern der Primärfarbe des Themas / Neukompilieren des Themas führt dazu, dass die Dropdowns der Navigationsleiste
+  nicht mehr funktionieren
+- Probleme bei der Bewertung: Bewertung mit Sternen und zweite Bewertung ist möglich
+- Fehlende Snippets auf der Verwaltungsseite
+
 # 1.0.0
 - PDP-Bilder im Vollbildmodus nicht verfügbar
 - Probleme bei der Bewertung: Bewertung mit Sternen und zweite Bewertung ist möglich
