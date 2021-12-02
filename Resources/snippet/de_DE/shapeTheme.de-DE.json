@@ -24,7 +24,7 @@
         "welcome": "Willkommen zurück!",
         "addressRegisterCardTitle": "Ich bin neu hier.",
         "registerWelcome": "Herzlich willkommen! Bitte registrieren Sie sich, um fortzufahren:",
-        "addressLogin": "Sind Sie bereits Kunde?",
+        "addressLoginToggle": "Sind Sie bereits Kunde? Klicken Sie hier, um sich einzuloggen.",
         "cartyEmptyDesc": "Fügen Sie ein Produkt hinzu, um Ihren Warenkorb zu füllen."
     },
     "newsletter": {
