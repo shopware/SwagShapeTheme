@@ -24,7 +24,7 @@
         "welcome": "Welcome back!",
         "addressRegisterCardTitle": "I am new here.",
         "registerWelcome": "Welcome! Please register to continue:",
-        "addressLogin": "If you already have an account.",
+        "addressLoginToggle": "If you already have an account? Click here to login.",
         "cartyEmptyDesc": "Add some product to fill your cart."
     },
     "newsletter": {

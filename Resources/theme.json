@@ -33,13 +33,13 @@
             },
             "404 Page": {
                 "label": {
-                    "en-GB": "404 Page",
-                    "de-DE": "404 Seite"
+                    "en-GB": "404 page",
+                    "de-DE": "404-seite"
                 }
             },
             "Maintenance Page": {
                 "label": {
-                    "en-GB": "Maintenance Page",
+                    "en-GB": "Maintenance page",
                     "de-DE": "Wartungsseite"
                 }
             },
