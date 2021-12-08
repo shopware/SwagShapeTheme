@@ -19,6 +19,7 @@ $table-radius: 24px;
         :is(th, td):first-child {
             @include border-left-radius($table-radius);
         }
+
         :is(th,td):last-child {
             @include border-right-radius($table-radius);
         }

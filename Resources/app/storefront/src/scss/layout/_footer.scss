@@ -42,9 +42,11 @@
 
             @include media-breakpoint-down(sm) {
                 .form-control {
-                    &:not(:last-child) { @include border-right-radius($input-border-radius-lg); }
-
                     margin-right: 0;
+                }
+
+                .form-control:not(:last-child) {
+                    @include border-right-radius($input-border-radius-lg);
                 }
 
                 .input-group-append {
@@ -127,17 +129,6 @@
                     content: none;
                 }
             }
-
-            @include media-breakpoint-down(sm) {
-                .footer-minimal &,
-                .footer-simple & {
-                    display: block;
-
-                    &::after {
-                        content: none;
-                    }
-                }
-            }
         }
 
         &-link {
@@ -184,7 +175,7 @@
             padding: 0 $spacer-20;
         }
 
-        &.is-payment:not([data-swag-paypal-marks="true"]) {
+        &.is-payment:not([data-swag-paypal-marks='true']) {
             padding: $spacer-10 12px;
             margin-right: $spacer-10;
             background-color: $white;
@@ -312,6 +303,7 @@
     .footer {
         &-bottom {
             padding: $spacer-20 0 $spacer-30;
+
             p {
                 margin-bottom: $spacer-lg;
             }
@@ -509,6 +501,17 @@
             .footer-vat {
                 padding-bottom: 0;
             }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer-minimal .footer-newsletter-form,
+    .footer-simple .footer-newsletter-form {
+        display: block;
+
+        &::after {
+            content: none;
         }
     }
 }

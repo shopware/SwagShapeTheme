@@ -16,6 +16,7 @@
                 box-shadow: none;
             }
         }
+
         .input-group-append {
             min-width: 48px;
 
@@ -61,7 +62,7 @@
         }
 
         .swag-customized-products-option:not(a .show) {
-            background-color: red;
+            background-color: $red;
         }
 
         .swag-customized-products-configuration__description {
@@ -118,26 +119,26 @@
                 .swag-customized-products-option-type-select-checkboxes-label {
                     padding: 16px 24px;
                     font-weight: $font-weight-bold;
-
-                    &.no-selection {
-                        .swag-customized-products-option-type-select-checkboxes-label__property {
-                            flex-grow: 1;
-                            text-align: center;
-                        }
-
-                        .swag-customized-products-option-type-select-checkboxes-label__surcharge-info {
-                            flex-grow: 0;
-                        }
-                    }
-
-                    &::before {
-                        border-color: #1f2e3d;
-                        border-radius: 8px;
-                    }
                 }
 
-                .custom-control-input:checked ~ .custom-control-label::before{
+                .custom-control-input:checked ~ .custom-control-label::before {
                     border-color: $sw-color-brand-primary;
+                }
+            }
+
+            .swag-customized-products-option-type-select-checkboxes-label::before {
+                border-color: #1f2e3d;
+                border-radius: 8px;
+            }
+
+            .swag-customized-products-option-type-select-checkboxes-label.no-selection {
+                .swag-customized-products-option-type-select-checkboxes-label__property {
+                    flex-grow: 1;
+                    text-align: center;
+                }
+
+                .swag-customized-products-option-type-select-checkboxes-label__surcharge-info {
+                    flex-grow: 0;
                 }
             }
 
@@ -205,13 +206,13 @@
                 }
 
                 &-button {
-                    text-align: center;
                     @extend .pt-4;
                     @include make-col(12);
+                    text-align: center;
+                }
 
-                    button {
-                        @extend .btn-primary;
-                    }
+                button {
+                    @extend .btn-primary;
                 }
 
                 &-text-headline {
@@ -291,7 +292,7 @@
         }
 
         .swag-customized-products__navigation-holder {
-            padding: 28px 28px 0px 28px;
+            padding: 28px 28px 0;
             border: none;
 
             .swag-customized-products__title {
@@ -312,7 +313,7 @@
         }
     }
 
-    [data-swag-customized-products-field-validation="true"] {
+    [data-swag-customized-products-field-validation='true'] {
         @extend .form-control-lg;
         font-size: $font-size-base;
     }
@@ -329,7 +330,7 @@
             align-items: center;
             flex-direction: column;
 
-            &:before {
+            &::before {
                 position: absolute;
                 left: 0;
                 top: 16px;
@@ -368,8 +369,8 @@
     @extend .mt-1;
     position: relative;
 
-    &:after {
-        content: "";
+    &::after {
+        content: '';
         position: absolute;
         left: 0;
         top: 100%;

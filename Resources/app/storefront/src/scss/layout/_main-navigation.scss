@@ -37,7 +37,7 @@
             color: $sw-text-color;
 
             .main-navigation-link-text::after {
-                content: "";
+                content: '';
                 position: absolute;
                 height: 2px;
                 bottom: -$spacer-10;

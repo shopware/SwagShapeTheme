@@ -305,7 +305,7 @@ $product-buybox-max-width: 570px;
 }
 
 div[data-swag-paypal-express-button='true'],
-div[data-swag-paypal-installment-banner="true"] {
+div[data-swag-paypal-installment-banner='true'] {
     @include make-col(12);
 
     @include media-breakpoint-up(md) {
@@ -315,7 +315,7 @@ div[data-swag-paypal-installment-banner="true"] {
 
 .product-block-prices-grid {
     border-collapse: separate;
-    border-spacing: 0px $spacer-xs;
+    border-spacing: 0 $spacer-xs;
 
     thead {
         background-color: transparent;
@@ -436,7 +436,7 @@ div[data-swag-paypal-installment-banner="true"] {
     }
 
     .list-price-price {
-        line-height: 30px
+        line-height: 30px;
     }
 
     .list-price-badge,

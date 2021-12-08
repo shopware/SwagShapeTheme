@@ -9,6 +9,7 @@
         .account-item-children {
             padding: $spacer-sm $spacer-12;
         }
+
         .account-item-collapse {
             align-items: center;
         }
@@ -120,8 +121,8 @@
         &:first-child {
             margin-right: 0;
 
-            &:after {
-                content: "|";
+            &::after {
+                content: '|';
                 display: inline-block;
                 margin: 0 $spacer-sm;
             }
@@ -325,7 +326,8 @@
                 @include make-col(4);
             }
 
-            dt, dd {
+            dt,
+            dd {
                 &:nth-of-type(1) {
                     order: -2;
                 }

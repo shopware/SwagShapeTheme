@@ -4,7 +4,7 @@ $product-image-size: 56px;
     @include border-radius(4px);
 
     border: none;
-    box-shadow: 0px 2px 15px 0px rgba(74, 84, 91, 0.13);
+    box-shadow: 0 2px 15px 0 rgba(74, 84, 91, 0.13);
     padding-bottom: $spacer-20;
 
     &::after {

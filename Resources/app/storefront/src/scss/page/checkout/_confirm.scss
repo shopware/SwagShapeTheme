@@ -33,10 +33,10 @@
 }
 
 :is(
-  .confirm-shipping .card-title,
-  .confirm-payment .card-title,
-  .confirm-card-title
- ) {
+.confirm-shipping .card-title,
+.confirm-payment .card-title,
+.confirm-card-title
+) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -53,7 +53,7 @@
 
 @include media-breakpoint-only(md) {
     .is-act-confirmpage {
-        div[data-swag-paypal-smart-payment-buttons="true"] {
+        div[data-swag-paypal-smart-payment-buttons='true'] {
             width: 50%;
         }
     }

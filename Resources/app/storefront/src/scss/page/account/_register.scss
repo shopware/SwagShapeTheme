@@ -9,7 +9,7 @@
             > .form-row {
                 .form-group.col-md-2,
                 .form-group.col-md-4 {
-                    @include make-col(12)
+                    @include make-col(12);
                 }
             }
         }

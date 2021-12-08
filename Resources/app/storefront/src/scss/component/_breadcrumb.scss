@@ -3,7 +3,7 @@
     margin-bottom: 0;
 
     &.cms-breadcrumb {
-        background-color: white;
+        background-color: $white;
     }
 
     @include media-breakpoint-down(lg) {
@@ -41,7 +41,7 @@
     }
 }
 
-nav[aria-label="breadcrumb"] {
+nav[aria-label='breadcrumb'] {
     .breadcrumb {
         @include make-container();
         padding: 0;

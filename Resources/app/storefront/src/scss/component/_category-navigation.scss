@@ -22,8 +22,8 @@
     padding-left: $spacer-26;
     position: relative;
 
-    &:before {
-        content: "";
+    &::before {
+        content: '';
         display: block;
         position: absolute;
         left: $spacer-26;

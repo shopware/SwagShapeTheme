@@ -6,15 +6,15 @@
 .address-editor-create-address-wrapper {
     .contact-address {
         > .form-group.col-md-6 {
-            @include make-col(12)
+            @include make-col(12);
         }
 
         > .form-group.col-md-2.col-4 {
-            @include make-col(6)
+            @include make-col(6);
         }
 
         > .form-group.col-md-4.col-8 {
-            @include make-col(6)
+            @include make-col(6);
         }
     }
 }
@@ -23,7 +23,7 @@
     .card-actions {
         .col-6,
         .col-sm-6 {
-            @include make-col(12)
+            @include make-col(12);
         }
     }
 }
@@ -45,7 +45,7 @@
 
     @include media-breakpoint-up(md) {
         > .col-12.col-md-4 {
-            @include make-col(3)
+            @include make-col(3);
         }
     }
 }

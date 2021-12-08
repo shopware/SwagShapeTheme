@@ -112,6 +112,7 @@ describe('CMS: Landing Page', { tags: ['@visual', '@cms'] }, () => {
         cy.get('.is-ctl-landingpage').should('be.visible');
         cy.get('.cms-block h2').contains('This is the landing page');
 
+        cy.wait(1000);
         cy.takeSnapshot('[CMS] Landing Page', '.content-main');
     });
 })

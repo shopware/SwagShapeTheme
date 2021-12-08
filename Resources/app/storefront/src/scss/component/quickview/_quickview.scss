@@ -107,7 +107,8 @@ $icon-fill-color: #f9f9f9;
 @include media-breakpoint-only(lg) {
     #swag-cms-extensions-quickview-carousel {
         .carousel-control {
-            &-prev, &-next {
+            &-prev,
+            &-next {
                 background-color: transparent;
             }
         }

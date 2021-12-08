@@ -111,7 +111,8 @@
 
     .modal-body {
         padding: 0;
-        form[action*="delete"] {
+
+        form[action*='delete'] {
             p {
                 white-space: pre-line;
 
@@ -127,7 +128,7 @@
         line-height: 34px;
         padding-bottom: 14px;
         border-bottom: $hr-border-width solid $sw-text-color;
-        width: 100%
+        width: 100%;
     }
 }
 

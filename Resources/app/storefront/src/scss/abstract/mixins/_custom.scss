@@ -43,7 +43,9 @@
     }
 
     &:not(:disabled):not(.disabled) {
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
             background-color: transparent;
             border-color: transparent;
             box-shadow: none;
@@ -67,14 +69,15 @@
 }
 
 @mixin shape-filter-selector {
-    .filter-panel-item-toggle[aria-expanded="true"] {
+    .filter-panel-item-toggle[aria-expanded='true'] {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         border-color: $shape-gray-900;
         border-bottom: none;
         color: $shape-gray-900;
 
-        .icon-filter-panel-item-toggle, svg {
+        .icon-filter-panel-item-toggle,
+        svg {
             color: inherit;
             transform: none;
         }

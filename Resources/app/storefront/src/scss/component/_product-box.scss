@@ -17,7 +17,7 @@ $box-hover-bg-color: $white;
         position: relative;
 
         .product-action-bar {
-            @include transition(opacity .15s ease-in-out);
+            @include transition(opacity 0.15s ease-in-out);
             @extend .d-flex, .w-100, .justify-content-center;
             position: absolute;
             bottom: 15px;
@@ -35,13 +35,13 @@ $box-hover-bg-color: $white;
                 @extend .mt-0;
                 position: absolute;
                 top: 0;
+            }
 
-                &-action-circle {
-                    position: unset;
+            .product-wishlist-action-circle {
+                position: unset;
 
-                    &::before {
-                        content: none;
-                    }
+                &::before {
+                    content: none;
                 }
             }
         }
@@ -184,13 +184,13 @@ $box-hover-bg-color: $white;
 
         .product-info {
             @include media-breakpoint-up(md) {
-                padding:0px 30px;
+                padding: 0 30px;
             }
         }
     }
 
     div[data-swag-paypal-express-button='true'],
-    div[data-swag-paypal-installment-banner="true"] {
+    div[data-swag-paypal-installment-banner='true'] {
         @include make-col(12);
     }
 }
