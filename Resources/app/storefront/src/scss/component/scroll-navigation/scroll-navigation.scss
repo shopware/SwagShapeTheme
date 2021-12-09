@@ -63,8 +63,8 @@
                 border-right: none;
                 position: relative;
 
-                &:before {
-                    content: "";
+                &::before {
+                    content: '';
                     display: block;
                     position: absolute;
                     border-right: 1px solid $shape-gray-500;

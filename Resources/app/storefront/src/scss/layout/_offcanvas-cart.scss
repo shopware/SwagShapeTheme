@@ -48,7 +48,7 @@ $offcanvas-cart-spacing: 24px;
                 border-bottom: $hr-border-width solid $sw-border-color;
 
                 .swag-customized-products-cart__items {
-                    @extend .pl-0
+                    @extend .pl-0;
                 }
 
                 .swag-customized-products-cart__item {
@@ -74,7 +74,7 @@ $offcanvas-cart-spacing: 24px;
     }
 
     div[data-swag-paypal-express-button='true'],
-    div[data-swag-paypal-installment-banner="true"] {
+    div[data-swag-paypal-installment-banner='true'] {
         @include make-col(12);
     }
 }

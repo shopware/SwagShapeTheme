@@ -47,7 +47,7 @@
     border-width: $hr-border-width;
 }
 
-.checkout-aside-summary-value.checkout-aside-summary-total:before {
+.checkout-aside-summary-value.checkout-aside-summary-total::before {
     left: 0;
     right: $grid-gutter-width / 2;
 }

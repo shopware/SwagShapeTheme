@@ -5,6 +5,7 @@
     &-not-added {
         background-color: $shape-gray-200;
     }
+
     &-added {
         background-color: $white;
     }
@@ -12,7 +13,8 @@
     .icon-wishlist {
         width: $spacer-lg;
 
-        &-not-added, &-added {
+        &-not-added,
+        &-added {
             color: $shape-gray-900;
         }
 

@@ -39,14 +39,14 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         .navigation-flyout-link {
             color: $black;
             font-weight: $font-weight-bold;
-            padding: $spacer-30 $spacer-40 $spacer-30 0px;
+            padding: $spacer-30 $spacer-40 $spacer-30 0;
             margin: 0;
             transition: 0.5s all;
             transition-delay: 0.125s;
 
             &:hover {
                 color: $primary;
-                padding-left: 0px;
+                padding-left: 0;
                 cursor: pointer;
                 transition-delay: 0s;
 
@@ -65,8 +65,8 @@ Custom styling for navigation flyout which opens on hover over the main navigati
             }
 
             &.active {
-                >.navigation-flyout-link-text:after {
-                    content: "";
+                >.navigation-flyout-link-text::after {
+                    content: '';
                     position: absolute;
                     height: 2px;
                     bottom: -$spacer-10;
@@ -80,7 +80,8 @@ Custom styling for navigation flyout which opens on hover over the main navigati
 
             &.is-level-last {
                 position: relative;
-                .active:after {
+
+                .active::after {
                     content: none;
                 }
             }
@@ -89,7 +90,7 @@ Custom styling for navigation flyout which opens on hover over the main navigati
         &.last-navigation {
             display: none;
             top: 70%;
-            left: 0px;
+            left: 0;
             border: none;
             background-color: $gray-600;
             width: auto;

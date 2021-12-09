@@ -73,7 +73,7 @@ $product-configurator-media-width-lg: 50px;
 
         &.is-display-text {
             @include border-radius(18px);
-            @include transition(border .15s ease-in-out);
+            @include transition(border 0.15s ease-in-out);
 
             border-width: $hr-border-width !important;
             border-color: $hr-border-color;
@@ -106,7 +106,7 @@ $product-configurator-media-width-lg: 50px;
 
         &.is-display-color {
             @include border-radius(25px);
-            @include transition(box-shadow .15s ease-in-out);
+            @include transition(box-shadow 0.15s ease-in-out);
 
             box-shadow: 0 0 0 2px $sw-border-color;
             width: 36px;

@@ -4,7 +4,7 @@ $checkout-offset: 163px;
 $checkout-spacing-sm: 40px;
 $checkout-spacing: 70px;
 $checkout-aside-spacing: 27px;
-$checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+$checkout-aside-drop: rgba(0, 0, 0, 0.1) 0 1px 2px;
 
 .is-act-checkoutregisterpage,
 .is-act-confirmpage,
@@ -47,14 +47,14 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
             padding-left: $grid-gutter-width / 2;
             padding-right: $grid-gutter-width / 2;
 
-            &:after {
-                content: "";
+            &::after {
+                content: '';
                 position: absolute;
                 left: 0;
                 top: 100%;
 
                 background: linear-gradient(135deg, $white 33.333%, transparent 0),
-                linear-gradient(-135deg, $white 33.333%, transparent 0);
+                    linear-gradient(-135deg, $white 33.333%, transparent 0);
                 width: 100%;
                 height: 1em;
                 background-size: 1.5em 100%;
@@ -118,7 +118,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
         @include make-col(12);
     }
 
-    div[data-swag-paypal-installment-banner="true"] {
+    div[data-swag-paypal-installment-banner='true'] {
         margin-top: 0 !important;
     }
 
@@ -155,7 +155,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     }
 
     @include media-breakpoint-down(sm) {
-        div[data-swag-paypal-installment-banner="true"] {
+        div[data-swag-paypal-installment-banner='true'] {
             display: none;
         }
     }
@@ -183,15 +183,15 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
 .register-billing > .form-row:first-child {
     .form-group.col-md-6 {
-        @include make-col(12)
+        @include make-col(12);
     }
 
     .form-group.col-md-2 {
-        @include make-col(6)
+        @include make-col(6);
     }
 
     .form-group.col-md-4 {
-        @include make-col(6)
+        @include make-col(6);
     }
 }
 

@@ -144,12 +144,12 @@
             position: unset;
 
             path {
-                fill: $gray-900
+                fill: $gray-900;
             }
         }
     }
 
-    &:after {
+    &::after {
         content: unset;
     }
 }
@@ -184,7 +184,9 @@
         border-radius: 0;
 
         &:not(:disabled):not(.disabled) {
-            &:hover, &:focus, &:active {
+            &:hover,
+            &:focus,
+            &:active {
                 background-color: $shape-gray-200;
                 color: inherit;
             }

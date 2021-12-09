@@ -13,7 +13,7 @@ $checkout-empty-spacing: 150px !default;
     border-bottom: $hr-border-width solid $hr-border-color;
 
     > .form-group {
-        @include make-col(6)
+        @include make-col(6);
     }
 
     .custom-select {
@@ -50,7 +50,7 @@ $checkout-empty-spacing: 150px !default;
 
     @include media-breakpoint-up(md) {
         .cart-add-product-container {
-            @include make-col(6)
+            @include make-col(6);
         }
     }
 }

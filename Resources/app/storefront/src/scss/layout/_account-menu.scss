@@ -68,7 +68,9 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
         padding: 0 $spacer-xl;
         margin-bottom: $spacer-lg;
 
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
             color: $gray-900;
             background: transparent;
         }
@@ -179,6 +181,7 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
             }
         }
     }
+
     .account-menu-header {
         display: block;
         padding: 35px 0 12px;

@@ -2,7 +2,6 @@ $modal-max-width: 872px;
 $modal-spacing: 84px;
 
 .quickview-modal {
-
     .quickview-minimal {
         &-top {
             margin-bottom: $spacer-60;
@@ -54,7 +53,7 @@ $modal-spacing: 84px;
     }
 
     .product-detail-properties-container {
-        > div[class^="col"] {
+        > div[class^='col'] {
             @include make-col(12);
         }
     }

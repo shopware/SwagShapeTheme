@@ -5,7 +5,7 @@
         width: $spacer-lg;
         height: $spacer-lg;
 
-        &[style*="background-image"] {
+        &[style*='background-image'] {
             border-radius: $spacer-sm;
 
             .filter-property-select-preview-checkmark {
