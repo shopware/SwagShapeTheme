@@ -151,3 +151,6 @@ $grid-breakpoints: (
     xl: 1200px,
     xxl: 1400px
 ) !default;
+
+// Form
+$custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
