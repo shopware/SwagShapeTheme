@@ -14,7 +14,7 @@ function changeColorScheme(colorScheme) {
         .first().clear()
         .typeAndCheck(colorScheme.primary);
 
-    cy.get('.sw-card__title').contains('E-Commerce')
+    cy.get('.sw-card__title').contains('eCommerce')
         .parent('.sw-theme-manager-detail__area')
         .find('.sw-colorpicker__input')
         .first().clear().typeAndCheck(colorScheme.primary);

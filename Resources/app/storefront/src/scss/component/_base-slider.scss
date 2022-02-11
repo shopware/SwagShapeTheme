@@ -13,9 +13,14 @@ based on: https://github.com/ganlanyuan/tiny-slider
         z-index: 1;
         margin-bottom: 87px;
         background-color: $white;
+        overflow: unset;
 
         &:hover {
             box-shadow: 0 80px 80px -20px rgba($box-shadow-color, 0.3);
+        }
+
+        .tns-ovh {
+            overflow: hidden;
         }
     }
 
