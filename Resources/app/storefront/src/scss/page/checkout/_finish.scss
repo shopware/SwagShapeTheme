@@ -148,6 +148,6 @@
     padding-right: $spacer-20;
 
     @include media-breakpoint-up(lg) {
-        padding: 0 0 $spacer-40;
+        padding-bottom: $spacer-40;
     }
 }
