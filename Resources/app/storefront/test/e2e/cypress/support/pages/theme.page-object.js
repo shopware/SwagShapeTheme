@@ -7,7 +7,7 @@ function changeColorScheme(colorScheme) {
     cy.get('.sw-theme-list-item')
         .last()
         .get('.sw-theme-list-item__title')
-        .contains('SwagShapeTheme')
+        .contains('Shape Theme')
         .click();
 
     cy.get('.sw-colorpicker .sw-colorpicker__input')
