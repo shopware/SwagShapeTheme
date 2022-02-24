@@ -1,3 +1,9 @@
+# 1.2.0
+- Theme-Kompatibilität mit Plattform v6.4.9.0 prüfen
+- Theme-Kompatibilität mit Plattform v6.4.8.0 prüfen
+- Überarbeitung der Textschnipsel
+- Verbesserungen im Themenmanager
+
 # 1.1.0
 - Kompatibilität des Themas mit Shopware 6.4.7.0 prüfen
 - Textschnipsel ändern
