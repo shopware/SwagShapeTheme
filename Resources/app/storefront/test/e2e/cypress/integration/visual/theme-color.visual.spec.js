@@ -42,7 +42,7 @@ describe('ThemeColor: Visual tests', () => {
                 }).as('saveData');
 
                 cy.get('.sw-theme-list-item .sw-theme-list-item__title')
-                    .contains('SwagShapeTheme')
+                    .contains('Shape Theme')
                     .click();
 
                 cy.get('.smart-bar__actions .sw-button-process.sw-button--primary').click();

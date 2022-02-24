@@ -43,7 +43,10 @@
                             {% if treeItem.category.type != 'folder' %}
                                 data-href="{{ link }}"
                                 itemprop="url"
-                                {% if category_linknewtab(treeItem.category) %}target="_blank"{% endif %}
+                                {% if category_linknewtab(treeItem.category) %}target="_blank"
+                                    {# Added rel="noopener noreferrer" to flyout navigation if the link is external #}
+                                    {% if treeItem.category.linkType == "external" %}rel="noopener noreferrer"{% endif %}
+                                {% endif %}
                                 data-navigation-link="true"
                             {% endif %}
                             title="{{ name }}">
