@@ -20,7 +20,13 @@
             {% if not context.customer.guest %}
                 <div class="dropdown-header account-menu-header">
                     {% sw_icon 'ic-profile' style { 'pack': 'shape' } %}
-                    {{ "account.myAccount"|trans|sw_sanitize }}
+
+                    {% if b2bSuite %}
+                        <a href="{{ path('frontend.b2b.b2baccount.index') }}">{{ "account.myAccount"|trans|sw_sanitize }}</a>
+                    {% else %}
+                        {{ "account.myAccount"|trans|sw_sanitize }}
+                    {% endif %}
+
                 </div>
             {% endif %}
         {% endblock %}

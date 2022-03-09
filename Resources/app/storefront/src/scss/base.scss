@@ -73,6 +73,7 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'layout/navigation-offcanvas';
 @import 'layout/navigation-flyout';
 @import 'layout/search-suggest';
+@import 'layout/plugin';
 /*
  * Page-specific styles
  * -------------------- */
@@ -105,3 +106,24 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'page/wishlist/wishlist';
 @import 'page/listing/listing';
 @import 'page/search/search';
+/*
+ * Plugin styles
+ * -------------------- */
+@import 'styles/pages/statistic';
+@import 'styles/pages/dashboard';
+@import 'styles/pages/account';
+@import 'styles/pages/fastorder';
+@import 'styles/pages/order';
+@import 'styles/component/grid-container';
+@import 'styles/component/headline';
+@import 'styles/component/tree-node';
+@import 'styles/component/table';
+@import 'styles/component/tab';
+@import 'styles/component/assignment-grid';
+@import 'styles/component/modal';
+@import 'styles/component/remote-list';
+@import 'styles/component/accordion';
+@import 'styles/component/upload';
+@import 'styles/component/avatar';
+@import 'styles/component/product-search';
+@import 'styles/layout/navigation';

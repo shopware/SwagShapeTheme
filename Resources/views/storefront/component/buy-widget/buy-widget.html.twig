@@ -1,6 +1,9 @@
 {% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}
 
 {% block buy_widget_ordernumber_container %}
+    {% if b2bSuite %}
+        {% sw_include '@SwagB2bPlatform/storefront/_custom/product-detail/b2b-product-detail.html.twig' ignore missing %}
+    {% endif %}
 {% endblock %}
 
 {% block buy_widget_data %}

@@ -36,6 +36,13 @@
     @include hover {
         color: $white;
     }
+
+    &.disabled,
+    &:disabled {
+        color: $gray-300;
+        background-color: $white;
+        border-color: $gray-300;
+    }
 }
 
 .btn-outline-dark {
