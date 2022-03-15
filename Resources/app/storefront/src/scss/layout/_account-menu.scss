@@ -10,6 +10,10 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
     font-size: $font-size-lg;
     padding: 0 $spacer-xl;
     margin-bottom: 28px;
+
+    a {
+        color: $headings-color;
+    }
 }
 
 .account-menu-offcanvas {

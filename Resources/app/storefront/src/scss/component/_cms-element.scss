@@ -35,6 +35,30 @@ General styling for cms elements
             border-bottom: 0;
         }
     }
+
+    .b2b--ajax-panel {
+        @extend .mt-0;
+    }
+}
+
+.cms-element-product-listing-view-mode {
+    float: left;
+
+    .border-primary {
+        line-height: 30px;
+        border-color: $custom-select-border-color !important;
+
+        .icon {
+            width: 18px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: $primary;
+            box-shadow: none;
+        }
+    }
 }
 
 .cms-element-sidebar-filter {

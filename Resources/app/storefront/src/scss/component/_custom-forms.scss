@@ -89,7 +89,8 @@
 }
 
 .custom-select {
-    &.sorting {
+    &.sorting,
+    &.b2b--orderlist-dropdown {
         color: $shape-gray-500;
         background-image: $icon-caret-down;
         margin-top: 0;

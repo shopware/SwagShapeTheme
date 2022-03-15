@@ -101,6 +101,8 @@ $cart-item-img-width: 112px;
     }
 }
 
-.cart-item-product + .form-row {
-    margin-top: $spacer-lg;
+.checkout-product-table {
+    div[data-swag-paypal-installment-banner=true] {
+        @include make-col(12);
+    }
 }

@@ -9,6 +9,10 @@
     > .form-control {
         margin-right: $input-group-append-width / 2;
         padding-right: calc(#{$input-padding-x} + #{$input-group-append-width} / 2);
+
+        &[type='number'] {
+            padding-right: $input-padding-x;
+        }
     }
 
     > .input-group-append {

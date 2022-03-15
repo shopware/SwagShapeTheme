@@ -93,6 +93,15 @@ $product-buybox-max-width: 570px;
         max-width: $product-buybox-max-width;
         margin: 0 auto 1rem;
     }
+
+    .btn-buy {
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+
+    .b2b--orderlist-dropdown {
+        height: 48px;
+        border-radius: 24px;
+    }
 }
 
 .product-detail {
@@ -178,10 +187,6 @@ $product-buybox-max-width: 570px;
 
     &-reviews-link {
         color: $shape-gray-900;
-    }
-
-    .btn-buy {
-        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     }
 
     &-select {
