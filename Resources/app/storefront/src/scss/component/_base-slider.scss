@@ -7,21 +7,22 @@ based on: https://github.com/ganlanyuan/tiny-slider
 */
 
 .base-slider {
+    overflow: unset;
+
     &.gallery-slider {
         position: relative;
         box-shadow: 0 80px 80px -20px rgba($box-shadow-color, 0.2);
         z-index: 1;
         margin-bottom: 87px;
         background-color: $white;
-        overflow: unset;
 
         &:hover {
             box-shadow: 0 80px 80px -20px rgba($box-shadow-color, 0.3);
         }
+    }
 
-        .tns-ovh {
-            overflow: hidden;
-        }
+    .tns-ovh {
+        overflow: hidden;
     }
 
     .tns-nav,
@@ -107,6 +108,23 @@ based on: https://github.com/ganlanyuan/tiny-slider
         .base-slider-dots {
             width: 100%;
             bottom: 0;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .base-slider {
+        &.gallery-slider {
+            .cms-block-gallery-buybox & {
+                box-shadow: none;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .cms-element-image-gallery {
+        .gallery-slider-row {
+            margin-bottom: 38px;
         }
     }
 }

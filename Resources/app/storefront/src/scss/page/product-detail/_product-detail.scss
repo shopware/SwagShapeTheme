@@ -16,23 +16,12 @@ $product-buybox-max-width: 570px;
         @include container-gutter();
     }
 
-    .cms-block-gallery-buybox,
     .cms-block-product-description-reviews {
-        background-color: $gray-100;
-    }
-
-    .cms-block-product-description-reviews {
+        padding-top: 32px;
         padding-bottom: 54px;
 
         .cms-block-container {
             @extend .container;
-        }
-
-        @include media-breakpoint-up(md) {
-            .cms-element-product-description-reviews {
-                padding-left: $spacer-20;
-                padding-right: $spacer-20;
-            }
         }
     }
 
@@ -42,11 +31,30 @@ $product-buybox-max-width: 570px;
         padding-right: 0;
     }
 
+    .cms-block-gallery-buybox,
     .cms-block-product-heading {
+        background-color: $gray-100;
+    }
+
+    .cms-block-product-heading {
+        padding-top: 24px;
+
         .cms-block-container {
             padding: 0 !important;
         }
+
+        .cms-block-container-row {
+            align-items: flex-end;
+        }
+
+        .product-detail-name {
+            margin-bottom: 0;
+        }
     }
+}
+
+.product-detail-price-unit {
+    margin-top: 12px;
 }
 
 .product-detail-content {
@@ -64,7 +72,13 @@ $product-buybox-max-width: 570px;
     }
 }
 
-.product-detail-tabs {
+.cms-block-product-description-reviews {
+    .cms-block-container {
+        @extend .p-0;
+    }
+}
+
+.product-detail .product-detail-tabs {
     &:not(.product-detail-cross-selling) {
         background-color: $gray-100;
         padding-bottom: 38px;
@@ -84,6 +98,10 @@ $product-buybox-max-width: 570px;
     text-align: center;
     z-index: 1; // fix shadow issue
 
+    .cms-block-gallery-buybox & {
+        text-align: left;
+    }
+
     .product-detail-headline {
         margin-bottom: 0;
     }
@@ -92,6 +110,12 @@ $product-buybox-max-width: 570px;
         text-align: left;
         max-width: $product-buybox-max-width;
         margin: 0 auto 1rem;
+
+        .cms-block-gallery-buybox & {
+            max-width: 100%;
+            padding-right: 60px;
+            padding-left: 60px;
+        }
     }
 
     .btn-buy {
@@ -142,8 +166,7 @@ $product-buybox-max-width: 570px;
         }
     }
 
-    &-name,
-    &-price-container {
+    &-name {
         margin-bottom: $spacer-40;
     }
 
@@ -187,6 +210,10 @@ $product-buybox-max-width: 570px;
 
     &-reviews-link {
         color: $shape-gray-900;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 4px;
+        line-height: 16px;
     }
 
     &-select {
@@ -249,7 +276,7 @@ $product-buybox-max-width: 570px;
     }
 
     &-form-container {
-        margin-top: $spacer-40;
+        margin-top: $spacer-30;
     }
 
     @include media-breakpoint-up(md) {
@@ -265,6 +292,12 @@ $product-buybox-max-width: 570px;
             padding-right: $grid-gutter-width / 2;
             max-width: $product-buybox-max-width;
             margin: 0 auto 1rem;
+
+            .cms-block-product-description-reviews & {
+                max-width: 100%;
+                padding-right: 60px;
+                padding-left: 60px;
+            }
         }
 
         &-cross-selling.product-detail-tabs {
@@ -388,19 +421,21 @@ div[data-swag-paypal-installment-banner='true'] {
 
 @include media-breakpoint-up(md) {
     .is-ctl-product {
-        .cms-block-product-description-reviews {
-            background-color: transparent;
+        .cms-block-product-description-reviews,
+        .cms-block-cross-selling {
+            background-color: $white;
             padding-bottom: 0;
         }
     }
 
-    .cms-element-image-gallery {
+    .cms-element-image-gallery,
+    .cms-block-product-heading {
         padding: 0 $spacer-40;
     }
 
     .cms-block-gallery-buybox {
         .is-ctl-product & {
-            margin-bottom: 100px;
+            margin-bottom: 30px;
         }
     }
 }
