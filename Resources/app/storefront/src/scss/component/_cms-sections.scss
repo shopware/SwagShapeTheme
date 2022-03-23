@@ -34,17 +34,12 @@ General styling for cms sections
 
 @include media-breakpoint-up(xl) {
     .cms-page .cms-section {
-        &.cms-full-width,
-        &.cms-boxed {
+        &.cms-full-width {
             @include container-full-width();
 
             .full-width {
                 max-width: 100%;
             }
-        }
-
-        &.cms-full-width {
-            background-color: $shape-gray-100;
         }
     }
 }

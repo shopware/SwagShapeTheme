@@ -46,6 +46,12 @@ specific styling for elements dependent on their parent block
             }
         }
     }
+
+    &-gallery-buybox .cms-block-container {
+        .base-slider {
+            margin-top: 0;
+        }
+    }
 }
 
 .cms-section-sidebar-main-content,
@@ -80,6 +86,12 @@ specific styling for elements dependent on their parent block
     .cms-section-sidebar-sidebar-content & {
         padding-top: $spacer-20;
         border-top: $hr-border;
+    }
+}
+
+.cms-element-manufacturer-logo {
+    .cms-image-link {
+        line-height: 32px;
     }
 }
 
