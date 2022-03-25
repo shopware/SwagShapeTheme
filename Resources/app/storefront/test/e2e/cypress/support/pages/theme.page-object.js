@@ -14,10 +14,10 @@ function changeColorScheme(colorScheme) {
         .first().clear()
         .typeAndCheck(colorScheme.primary);
 
-    cy.get('.sw-card__title').contains('eCommerce')
-        .parent('.sw-theme-manager-detail__area')
+    cy.get('.sw-field-id-sw-color-price')
         .find('.sw-colorpicker__input')
-        .first().clear().typeAndCheck(colorScheme.primary);
+        .clear()
+        .typeAndCheck(colorScheme.price);
 
     cy.get('.smart-bar__actions .sw-button-process.sw-button--primary').click();
     cy.get('.sw-modal .sw-button--primary').click();
