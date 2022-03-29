@@ -342,6 +342,15 @@ $product-buybox-max-width: 570px;
     }
 }
 
+.product-detail-buy,
+.swag-cms-extensions-quickview-modal {
+    .product-block-prices-grid {
+        .list-price-price {
+            line-height: 20px;
+        }
+    }
+}
+
 div[data-swag-paypal-express-button='true'],
 div[data-swag-paypal-installment-banner='true'] {
     @include make-col(12);
