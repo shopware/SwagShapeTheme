@@ -1,4 +1,6 @@
 .b2b--grid-container {
+    padding-bottom: 63px;
+
     > .pl-2.pr-2 {
         padding-left: $spacer-md !important;
         padding-right: $spacer-md !important;
@@ -13,7 +15,7 @@
     }
 
     .header-search-btn.btn:disabled {
-        justify-content: center;
+        display: block;
         opacity: 0.5;
     }
 }
