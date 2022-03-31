@@ -160,6 +160,7 @@ $product-buybox-max-width: 570px;
         font-size: $font-size-base;
         font-weight: $font-weight-bold;
         vertical-align: middle;
+        line-height: 30px;
 
         @include media-breakpoint-down(md) {
             height: 26px;
@@ -426,6 +427,11 @@ div[data-swag-paypal-installment-banner='true'] {
         padding-top: 0;
         padding-bottom: 0;
     }
+}
+
+.regulation-price {
+    font-weight: $font-weight-normal;
+    color: $shape-gray-500;
 }
 
 @include media-breakpoint-up(md) {
