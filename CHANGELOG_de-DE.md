@@ -1,3 +1,12 @@
+# 1.3.0
+- Anzeige des niedrigsten Preises, wenn z.B. Grundpreise angezeigt werden
+- Die Abstände für cms-Block-Container werden im Shape-Theme nicht übernommen
+- Qualitätskontrolle für das Thema Elle
+- Abgestimmte erweiterte Preistabelle
+- Prüfung der Theme-Kompatibilität mit Shopware 6.4.10.0
+- Unterstützung der benutzerdefinierten Produktdetail-Seite im CMS
+- Unterstützung des B2B-Suite-Plugins
+
 # 1.2.0
 - Theme-Kompatibilität mit Plattform v6.4.9.0 prüfen
 - Theme-Kompatibilität mit Plattform v6.4.8.0 prüfen

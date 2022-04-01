@@ -1,3 +1,12 @@
+# 1.3.0
+- Display the lowest price where f.e. base prices are displayed
+- The spacing for cms-block-container is not adopted in the shape theme
+- Quality check for the Shape theme
+- Aligned Advanced pricing table
+- Check theme compatibility with Shopware 6.4.10.0
+- Support the custom product detail page in the CMS
+- Support B2B Suite plugin
+
 # 1.2.0
 - Check theme compatibility with platform v6.4.9.0
 - Check theme compatibility with platform v6.4.8.0
