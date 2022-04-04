@@ -39,17 +39,17 @@ export default class NavigationMenu extends Plugin {
 
         Array.from(document.querySelectorAll(this.options.mainNavigationLink)).forEach(mainNavigationItem => {
             if (mainNavigationItem.getBoundingClientRect().left > searchPosition.left) {
-                $(mainNavigationItem).addClass("d-none");
+                mainNavigationItem.classList.add("d-none");
             } else {
-                $(mainNavigationItem).removeClass("d-none");
+                mainNavigationItem.classList.remove("d-none");
             }
         });
 
         Array.from(document.querySelectorAll(this.options.flyoutNavigationMenuItem)).forEach(flyoutNavigationMenuItem => {
             if (flyoutNavigationMenuItem.getBoundingClientRect().right > searchPosition.right) {
-                $(flyoutNavigationMenuItem).addClass("d-none");
+                flyoutNavigationMenuItem.classList.add("d-none");
             } else {
-                $(flyoutNavigationMenuItem).removeClass("d-none");
+                flyoutNavigationMenuItem.classList.remove("d-none");
             }
         });
 

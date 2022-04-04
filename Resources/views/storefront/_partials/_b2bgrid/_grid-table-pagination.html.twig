@@ -22,7 +22,7 @@
 
 {% block b2b_grid_table_pagination_button_current %}
     <button
-        class="btn btn-primary ml-1 mr-1"
+        class="btn btn-primary {{ marginStartClass }}-1 {{ marginEndClass }}-1"
         value="{{ gridState.currentPage }}"
     >
         {{ gridState.currentPage }}/{{ gridState.maxPage }}

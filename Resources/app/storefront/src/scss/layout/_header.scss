@@ -23,12 +23,21 @@
     &-search {
         width: 288px;
 
-        .input-group-append {
-            min-width: 0;
-
-            > button.header-search-btn {
-                @include border-left-radius(0);
+        @if (feature('V6_5_0_0')) {
+            button.header-search-btn {
+                @include border-start-radius(0 !important);
                 background-color: transparent;
+                display: flex;
+                align-items: center;
+            }
+        } @else {
+            .input-group-append {
+                min-width: 0;
+
+                > button.header-search-btn {
+                    @include border-left-radius(0);
+                    background-color: transparent;
+                }
             }
         }
 
@@ -64,6 +73,9 @@
         font-size: $font-size-sm;
         background-color: transparent;
         color: $shape-gray-900;
+        @if (feature('V6_5_0_0')) {
+            top: 3px !important;
+        }
     }
 
     &-actions {

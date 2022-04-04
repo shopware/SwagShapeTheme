@@ -30,7 +30,12 @@
 
         .payment-method-radio {
             display: flex;
-            flex-direction: column;
+            @if (feature('V6_5_0_0')) {
+                flex-direction: row;
+                gap: 4px;
+            } @else {
+                flex-direction: column;
+            }
         }
     }
 

@@ -14,7 +14,7 @@
                 {% endif %}
             {% endfor %}
 
-            <button class="btn btn-block dropdown-toggle" aria-expanded="false" data-toggle="dropdown" aria-haspopup="true">
+            <button class="btn {% if not feature('v6.5.0.0') %} btn-block {% endif %} dropdown-toggle" aria-expanded="false" {{ dataBsToggleAttr }}="dropdown" aria-haspopup="true">
                 {{ activeOption.translated.name }}
             </button>
         {% endblock %}

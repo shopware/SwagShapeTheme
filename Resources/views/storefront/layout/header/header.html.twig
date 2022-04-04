@@ -7,7 +7,7 @@
                 <div class="nav-main-toggle d-none d-md-block d-xl-none">
                     {% block layout_header_navigation_toggle_tablet %}
                         {% block layout_header_navigation_toggle_tablet_button %}
-                            <button class="btn nav-main-toggle-btn header-actions-btn pl-0 pr-4"
+                            <button class="btn nav-main-toggle-btn header-actions-btn {{ paddingStartClass }}-0 {{ paddingEndClass }}-4"
                                     type="button"
                                     data-offcanvas-menu="true"
                                     aria-label="{{ "general.menuLink"|trans|striptags }}">
@@ -30,8 +30,8 @@
                 {% endblock %}
             </div>
 
-            <div class="col-8 col-lg-5 col-xl-auto pl-0">
-                <div class="d-flex align-items-center justify-content-end no-gutters header-actions">
+            <div class="col-8 col-lg-5 col-xl-auto {{ paddingStartClass }}-0 {% if feature('v6.5.0.0') %} position-relative {% endif %}">
+                <div class="d-flex align-items-center justify-content-end {{ gridNoGuttersClass }} header-actions">
                     <span class="col-auto curtain-area"></span>
                     {% block layout_header_search %}
                         <div class="col-auto d-none d-md-block header-search-col" data-navigation-menu="true">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col-12 d-sm-block d-md-none py-2">
-                <div class="row align-items-center justify-content-between no-gutters">
+                <div class="row align-items-center justify-content-between {{ gridNoGuttersClass }}">
                     {% block layout_header_navigation_toggle %}
                         <div class="col-auto d-md-none">
                             <div class="menu-button">

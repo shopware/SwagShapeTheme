@@ -11,10 +11,18 @@
 
 .b2b--modal,
 .b2b--plugin {
-    .input-group > .input-group-append > .btn.header-search-btn {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+    @if (feature('V6_5_0_0')) {
+        .input-group > .btn.header-search-btn {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+    } @else {
+        .input-group > .input-group-append > .btn.header-search-btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
+
 }
 
 .b2b--component-pagination {
@@ -48,7 +56,11 @@
 
 .is--b2b-acl-controller-b2bbudget {
     select {
-        @extend .custom-select;
+        @if (feature('V6_5_0_0')) {
+            @extend .form-select;
+        } @else {
+            @extend .custom-select;
+        }
     }
 }
 

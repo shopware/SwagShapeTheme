@@ -150,7 +150,7 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
         border: none;
         border-radius: 0;
 
-        .account-aside-footer {
+        .list-group + .account-aside-footer {
             padding: $spacer-20 28px;
             text-align: center;
             border-top: solid $hr-border-width $hr-border-color;
@@ -177,6 +177,7 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
         .list-group-item {
             font-size: $font-size-base;
             font-weight: $font-weight-base;
+            color: $sw-text-color;
             line-height: 23px;
             padding: $spacer-10 55px;
 

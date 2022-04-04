@@ -2,7 +2,7 @@
 
 {% block utilities_offcanvas_close %}
     <div class="offcanvas-header-mobile">
-        <button class="btn btn-light btn-block offcanvas-close js-offcanvas-close sticky-top">
+        <button class="btn btn-light {% if not feature('v6.5.0.0') %} btn-block {% endif %} offcanvas-close js-offcanvas-close sticky-top">
             {% block utilities_offcanvas_close_icon %}
                 {% sw_icon 'ic-close' style { 'pack': 'shape' } %}
             {% endblock %}

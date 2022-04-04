@@ -1,16 +1,16 @@
 {% sw_extends '@Storefront/storefront/component/listing/filter/filter-multi-select.html.twig' %}
 
 {% block component_filter_multi_select_toggle %}
-    <button class="filter-panel-item-toggle btn{% if sidebar %} btn-block{% endif %}"
+    <button class="filter-panel-item-toggle btn{% if sidebar and (not feature('v6.5.0.0')) %} btn-block{% endif %}"
             aria-expanded="false"
             data-text="{{ displayName }}"
             {% if sidebar %}
-            data-toggle="collapse"
-            data-target="#{{ filterItemId }}"
+            {{ dataBsToggleAttr }}="collapse"
+            {{ dataBsTargetAttr }}="#{{ filterItemId }}"
             {% else %}
-            data-toggle="dropdown"
+            {{ dataBsToggleAttr }}="dropdown"
             data-boundary="viewport"
-            data-offset="0,8"
+            {{ dataBsOffsetAttr }}="0,8"
             aria-haspopup="true"
             {% endif %}>
 

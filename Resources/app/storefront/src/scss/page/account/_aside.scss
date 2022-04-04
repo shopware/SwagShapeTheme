@@ -2,6 +2,7 @@
     background: transparent;
     font-weight: $font-weight-bold;
     font-size: $h5-font-size;
+    color: $sw-text-color;
 
     &.is-active {
         color: $primary;

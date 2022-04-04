@@ -5,13 +5,13 @@
                 {% if b2bListingView == 'table' %}
                     {% sw_icon 'view-grid' %}
 
-                    <span class="ml-2">
+                    <span class="{{ marginStartClass }}-2">
                             {{ 'b2b.CategoryViewStandard'|trans }}
                         </span>
                 {% else %}
                     {% sw_icon 'editor-list' %}
 
-                    <span class="ml-2">
+                    <span class="{{ marginStartClass }}-2">
                             {{ 'b2b.CategoryViewTable'|trans }}
                         </span>
                 {% endif %}

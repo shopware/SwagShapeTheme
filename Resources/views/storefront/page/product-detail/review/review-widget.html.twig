@@ -34,7 +34,7 @@
 {% endblock %}
 
 {% block page_product_detail_review_filter_checkbox_label %}
-    <label class="custom-control-label text-nowrap"
+    <label class="{{ formCheckLabelClass }} text-nowrap"
            for="reviewRating{{ matrix.points }}">
         <small>{{ matrix.points }}</small>
     </label>

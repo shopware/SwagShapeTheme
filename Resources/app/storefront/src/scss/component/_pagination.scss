@@ -13,12 +13,22 @@
         }
     }
 
-    .page-prev {
-        @extend .pr-4;
-    }
+    @if (feature('V6_5_0_0')) {
+        .page-prev {
+            @extend .pe-4;
+        }
 
-    .page-next {
-        @extend .pl-4;
+        .page-next {
+            @extend .ps-4;
+        }
+    } @else {
+        .page-prev {
+            @extend .pr-4;
+        }
+
+        .page-next {
+            @extend .pl-4;
+        }
     }
 
     .page-item {

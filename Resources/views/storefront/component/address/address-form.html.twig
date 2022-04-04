@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/component/address/address-form.html.twig' %}
 
 {% block component_address_form_address_fields %}
-    <div class="form-row contact-address">
+    <div class="{{ formRowClass }} contact-address">
         {% block component_address_form_street %}
             <div class="form-group col-12">
                 {% if formViolations.getViolations("/street") is not empty %}
@@ -77,13 +77,13 @@
         {% endblock %}
     </div>
 
-    <div class="form-row country-and-state-form-elements" data-country-state-select="true">
+    <div class="{{ formRowClass }} country-and-state-form-elements" data-country-state-select="true">
         {% block component_address_form_country %}
             {{ parent() }}
         {% endblock %}
     </div>
 
-    <div class="form-row contact-form">
+    <div class="{{ formRowClass }} contact-form">
         {% block component_address_form_phone_number %}
             {{ parent() }}
         {% endblock %}
