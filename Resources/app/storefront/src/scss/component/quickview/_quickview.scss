@@ -163,3 +163,12 @@ $icon-fill-color: #f9f9f9;
         }
     }
 }
+
+@include media-breakpoint-up(xl) {
+    .swag-cms-extensions-quickview-container {
+        .product-detail-buy.col-lg-5 {
+            max-width: unset;
+            flex: 1;
+        }
+    }
+}
