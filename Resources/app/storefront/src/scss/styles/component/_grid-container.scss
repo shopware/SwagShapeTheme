@@ -1,13 +1,24 @@
 .b2b--grid-container {
     padding-bottom: 63px;
 
-    > .pl-2.pr-2 {
-        padding-left: $spacer-md !important;
-        padding-right: $spacer-md !important;
-    }
+    @if (feature('V6_5_0_0')) {
+        > .ps-2.pe-2 {
+            padding-left: $spacer-md !important;
+            padding-right: $spacer-md !important;
+        }
 
-    .custom-select {
-        line-height: 16px;
+        .form-select {
+            line-height: 16px;
+        }
+    } @else {
+        > .pl-2.pr-2 {
+            padding-left: $spacer-md !important;
+            padding-right: $spacer-md !important;
+        }
+
+        .custom-select {
+            line-height: 16px;
+        }
     }
 
     &.m-n4 {
@@ -29,16 +40,35 @@
         margin-right: 10px;
     }
 
-    > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
-        border-top-right-radius: 24px;
-        border-bottom-right-radius: 24px;
-        margin-right: 10px;
-        min-width: 90px;
-        width: auto;
-    }
+    @if (feature('V6_5_0_0')) {
+        > .btn:not(:last-child):not(.dropdown-toggle) {
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            margin-right: 10px;
+            min-width: 90px;
+            width: auto;
+        }
 
-    &.input-group > .input-group-append {
-        position: relative;
-        min-width: auto;
+        &.input-group > .btn {
+            position: relative;
+            min-width: auto;
+        }
+    } @else {
+        > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            margin-right: 10px;
+            min-width: 90px;
+            width: auto;
+        }
+
+        &.input-group > .input-group-append {
+            position: relative;
+            min-width: auto;
+        }
     }
+}
+
+.row:empty {
+    display: none;
 }

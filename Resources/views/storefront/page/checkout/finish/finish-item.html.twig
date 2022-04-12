@@ -15,7 +15,7 @@
            class="cart-item-label"
            title="{{ lineItem.label }}"
             {% if controllerAction is same as('confirmPage') %}
-                data-toggle="modal"
+                {{ dataBsToggleAttr }}="modal"
                 data-modal-class="quickview-modal"
                 data-url="{{ path('widgets.quickview.minimal',{ 'productId': lineItem.referencedId }) }}"
             {% endif %}

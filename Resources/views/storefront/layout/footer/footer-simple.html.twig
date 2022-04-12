@@ -9,7 +9,7 @@
                                 <li class="footer-service-menu-item">
                                     <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: config('core.basicInformation.imprintPage') }) }}"
                                        title="{{ "general.imprintLink"|trans|sw_sanitize }}"
-                                       class="pl-2 pr-2">
+                                       class="{{ paddingStartClass }}-2 {{ paddingEndClass }}-2">
                                         {{ "general.imprintLink"|trans|sw_sanitize }}
                                     </a>
                                 </li>
@@ -18,7 +18,7 @@
                                 <li class="footer-service-menu-item">
                                     <a href="{{ seoUrl('frontend.maintenance.singlepage',{ id: config('core.basicInformation.privacyPage') }) }}"
                                        title="{{ "general.privacyLink"|trans|sw_sanitize }}"
-                                       class="pl-2 pr-2">
+                                       class="{{ paddingStartClass }}-2 {{ paddingEndClass }}-2">
                                         {{ "general.privacyLink"|trans|sw_sanitize }}
                                     </a>
                                 </li>

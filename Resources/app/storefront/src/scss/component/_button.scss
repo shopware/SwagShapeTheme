@@ -3,13 +3,17 @@
 }
 
 .btn-buy {
-    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    @if (feature('V6_5_0_0')) {
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+    } @else {
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
 }
 
 .btn-primary {
     color: $shape-gray-light;
 
-    @include hover {
+    &:hover {
         background-color: $gray-800;
         border-color: $gray-800;
     }
@@ -25,7 +29,7 @@
 .btn-secondary {
     color: $white;
 
-    @include hover {
+    &:hover {
         background-color: $gray-800;
         border-color: $gray-800;
     }
@@ -33,7 +37,7 @@
 
 .btn-outline-primary,
 .btn-outline-secondary {
-    @include hover {
+    &:hover {
         color: $white;
     }
 
@@ -48,7 +52,7 @@
 .btn-outline-dark {
     @include button-outline-variant($shape-gray-900);
 
-    @include hover {
+    &:hover {
         color: $gray-700;
         background-color: transparent;
         border-color: $gray-700;
@@ -57,12 +61,11 @@
 
 .btn-light {
     --bg-color: #fff;
-
     background-color: var(--bg-color);
     color: $shape-gray-900;
     border-color: var(--bg-color);
 
-    @include hover {
+    &:hover {
         color: $shape-gray-900;
         background-color: var(--bg-color);
         border-color: var(--bg-color);

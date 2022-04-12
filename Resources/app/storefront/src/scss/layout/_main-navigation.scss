@@ -3,7 +3,11 @@
 }
 
 .main-navigation {
-    @extend .ml-4;
+    @if (feature('V6_5_0_0')) {
+        @extend .ms-4;
+    } @else {
+        @extend .ml-4;
+    }
 
     &-menu {
         display: flex;

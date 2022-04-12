@@ -17,16 +17,29 @@
             }
         }
 
-        .input-group-append {
-            min-width: 48px;
-
+        @if (feature('V6_5_0_0')) {
             .btn {
+                min-width: 48px;
                 &:focus {
                     box-shadow: none;
                 }
 
                 &:hover .icon {
                     color: $primary;
+                }
+            }
+        } @else {
+            .input-group-append {
+                min-width: 48px;
+
+                .btn {
+                    &:focus {
+                        box-shadow: none;
+                    }
+
+                    &:hover .icon {
+                        color: $primary;
+                    }
                 }
             }
         }
@@ -121,8 +134,14 @@
                     font-weight: $font-weight-bold;
                 }
 
-                .custom-control-input:checked ~ .custom-control-label::before {
-                    border-color: $sw-color-brand-primary;
+                @if (feature('V6_5_0_0')) {
+                    .form-check-input:checked ~ .form-check-label::before {
+                        border-color: $sw-color-brand-primary;
+                    }
+                } @else {
+                    .custom-control-input:checked ~ .custom-control-label::before {
+                        border-color: $sw-color-brand-primary;
+                    }
                 }
             }
 
@@ -143,11 +162,16 @@
             }
 
             .swag-customized-products-form-control {
-                @extend .custom-select;
+                @if (feature('V6_5_0_0')) {
+                    line-height: $line-height-lg;
+                    @extend .form-select;
+                } @else {
+                    line-height: $input-line-height-lg;
+                    @extend .custom-select;
+                }
                 height: $input-height-lg;
                 padding: $input-padding-y-lg $input-padding-x-lg;
                 @include font-size($input-font-size-lg);
-                line-height: $input-line-height-lg;
                 @include border-radius($input-border-radius-lg);
             }
 
@@ -177,7 +201,11 @@
 
         .swag-customized-products__type-imageselect {
             .swag-customized-products-option-type-select-checkboxes-label__property-image {
-                @extend .mr-2;
+                @if (feature('V6_5_0_0')) {
+                    @extend .me-2;
+                } @else {
+                    @extend .mr-2;
+                }
 
                 .swag-customized-products-option__image {
                     @extend .rounded-circle;
@@ -281,12 +309,22 @@
                     flex-grow: unset;
                 }
 
-                .btn-prev {
-                    @extend .pl-0, .text-left;
-                }
+                @if (feature('V6_5_0_0')) {
+                    .btn-prev {
+                        @extend .ps-0, .text-start;
+                    }
 
-                .btn-next {
-                    @extend .pr-0;
+                    .btn-next {
+                        @extend .pe-0;
+                    }
+                } @else {
+                    .btn-prev {
+                        @extend .pl-0, .text-left;
+                    }
+
+                    .btn-next {
+                        @extend .pr-0;
+                    }
                 }
             }
         }

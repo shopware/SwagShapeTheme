@@ -23,7 +23,11 @@ $product-image-size: 56px;
     }
 
     .search-suggest-product-name {
-        @extend .ml-3;
+        @if (feature('V6_5_0_0')) {
+            @extend .ms-3;
+        } @else {
+            @extend .ml-3;
+        }
     }
 
     .search-suggest-product-image {

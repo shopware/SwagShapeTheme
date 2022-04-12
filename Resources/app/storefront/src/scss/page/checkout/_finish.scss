@@ -4,6 +4,10 @@
     }
 
     .checkout-main {
+        @if (feature('V6_5_0_0')) {
+            width: 100% !important;
+        }
+
         &:first-child {
             padding: 0;
 
@@ -57,6 +61,9 @@
 
         .checkout-aside {
             margin-left: 0;
+            @if (feature('V6_5_0_0')) {
+                width: 100%;
+            }
         }
     }
 

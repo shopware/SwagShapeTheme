@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
 
 {% block page_product_detail_product_buy_button %}
-    <button class="btn btn-block btn-buy"
+    <button class="btn {% if not feature('v6.5.0.0') %} btn-block {% endif %} btn-buy"
             title="{{ "listing.boxAddProduct"|trans|striptags }}">
         {% sw_icon 'ic-plus' style {'pack': 'shape'} %}
         <span class="d-lg-none">{{ "listing.boxAddProductMobile"|trans|sw_sanitize }}</span>
@@ -12,7 +12,7 @@
 
 {% block component_product_box_action_detail %}
     <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
-       class="btn btn-block btn-light"
+       class="btn {% if feature('v6.5.0.0') %} btn-block {% endif %} btn-light"
        title="{{ "listing.boxProductDetails"|trans|striptags }}">
         {% sw_icon 'ic-arrow-detail' style {'pack': 'shape'} %}
         {{ "listing.boxProductDetails"|trans|sw_sanitize }}

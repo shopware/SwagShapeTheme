@@ -10,7 +10,7 @@
 
 {% block component_address_address_editor_modal_accordion_actions %}
     {% if not page.address %}
-        <div class="row address-editor-accordion-row no-gutters">
+        <div class="row address-editor-accordion-row {{ gridNoGuttersClass }}">
             {{ block("component_address_address_editor_modal_accordion_action_edit") }}
 
             {{ block("component_address_address_editor_modal_accordion_action_list") }}

@@ -46,7 +46,11 @@ General styling for cms elements
 
     .border-primary {
         line-height: 30px;
-        border-color: $custom-select-border-color !important;
+        @if (feature('V6_5_0_0')) {
+            border-color: $form-select-border-color !important;
+        } @else {
+            border-color: $custom-select-border-color !important;
+        }
 
         .icon {
             width: 18px;

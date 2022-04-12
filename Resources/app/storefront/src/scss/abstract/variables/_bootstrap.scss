@@ -53,6 +53,7 @@ $btn-line-height-lg: 40px;
 $btn-border-width: 2px !default;
 $btn-font-size-lg: 14px !default;
 $btn-block-spacing-y: 12px !default;
+$btn-padding-y-lg: 5px !default;
 
 // Form Input
 $input-border-width: 2px !default;
@@ -132,6 +133,7 @@ $headings-line-height: 1.4 !default;
 // Forms
 $form-grid-gutter-width: 24px;
 $form-text-margin-top: 10px !default;
+$form-text-color: $sw-text-color !default;
 
 // Modal
 $modal-lg: 870px;

@@ -7,7 +7,7 @@
           data-form-validation="true">
 
         <div class="form-content">
-            <div class="form-row">
+            <div class="{{ formRowClass }}">
                 {% block cms_form_contact_select_salutation %}
                     {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-select-salutation.html.twig'
                         with {
@@ -18,7 +18,7 @@
                 {% endblock %}
             </div>
 
-            <div class="form-row">
+            <div class="{{ formRowClass }}">
                 {% block cms_form_contact_input_first_name %}
                     {% set firstNameFieldRequired = config('core.basicInformation.firstNameFieldRequired') == true %}
                     {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
@@ -46,7 +46,7 @@
                 {% endblock %}
             </div>
 
-            <div class="form-row">
+            <div class="{{ formRowClass }}">
                 {% block cms_form_contact_input_email %}
                     {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
                         with {
@@ -61,7 +61,7 @@
                 {% endblock %}
             </div>
 
-            <div class="form-row">
+            <div class="{{ formRowClass }}">
                 {% block cms_form_contact_input_phome %}
                     {% set phoneNumberFieldRequired = config('core.basicInformation.phoneNumberFieldRequired') == true %}
                     {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
@@ -88,7 +88,7 @@
                 {% endblock %}
             </div>
 
-            <div class="form-row">
+            <div class="{{ formRowClass }}">
                 {{ block('cms_form_contact_comment_textarea') }}
             </div>
 

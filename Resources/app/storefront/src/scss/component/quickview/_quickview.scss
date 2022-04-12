@@ -74,9 +74,17 @@ $icon-fill-color: #f9f9f9;
     }
 }
 
-.form-row {
-    .swag-cms-extensions-quickview-content--buy-quantity {
-        padding-right: 0;
+@if (feature('V6_5_0_0')) {
+    .row {
+        .swag-cms-extensions-quickview-content--buy-quantity {
+            padding-right: 0;
+        }
+    }
+} @else {
+    .form-row {
+        .swag-cms-extensions-quickview-content--buy-quantity {
+            padding-right: 0;
+        }
     }
 }
 
@@ -92,14 +100,27 @@ $icon-fill-color: #f9f9f9;
 }
 
 @include media-breakpoint-down(sm) {
-    .form-row {
-        .swag-cms-extensions-quickview-content--buy-quantity {
-            max-width: 87px;
-        }
+    @if (feature('V6_5_0_0')) {
+        .row {
+            .swag-cms-extensions-quickview-content--buy-quantity {
+                max-width: 87px;
+            }
 
-        .swag-cms-extensions-quickview-content--buy-button {
-            max-width: calc(100% - 87px);
-            padding-left: 8px;
+            .swag-cms-extensions-quickview-content--buy-button {
+                max-width: calc(100% - 87px);
+                padding-left: 8px;
+            }
+        }
+    } @else {
+        .form-row {
+            .swag-cms-extensions-quickview-content--buy-quantity {
+                max-width: 87px;
+            }
+
+            .swag-cms-extensions-quickview-content--buy-button {
+                max-width: calc(100% - 87px);
+                padding-left: 8px;
+            }
         }
     }
 }
@@ -116,10 +137,19 @@ $icon-fill-color: #f9f9f9;
 }
 
 @include media-breakpoint-up(md) {
-    .form-row {
-        .swag-cms-extensions-quickview-content--buy-quantity {
-            margin-bottom: $spacer-12;
-            padding-right: $spacer-xs;
+    @if (feature('V6_5_0_0')) {
+        .row {
+            .swag-cms-extensions-quickview-content--buy-quantity {
+                margin-bottom: $spacer-12;
+                padding-right: $spacer-xs;
+            }
+        }
+    } @else {
+        .form-row {
+            .swag-cms-extensions-quickview-content--buy-quantity {
+                margin-bottom: $spacer-12;
+                padding-right: $spacer-xs;
+            }
         }
     }
 
