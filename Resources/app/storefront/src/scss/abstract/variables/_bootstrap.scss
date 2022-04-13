@@ -156,3 +156,9 @@ $grid-breakpoints: (
 
 // Form
 $custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 30px !default;

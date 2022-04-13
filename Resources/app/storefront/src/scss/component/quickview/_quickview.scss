@@ -14,7 +14,7 @@ $icon-fill-color: #f9f9f9;
         text-align: center;
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
         .gallery-slider-thumbnails-col.is-left {
             display: none;
         }
@@ -99,7 +99,7 @@ $icon-fill-color: #f9f9f9;
     display: none;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
     @if (feature('V6_5_0_0')) {
         .row {
             .swag-cms-extensions-quickview-content--buy-quantity {

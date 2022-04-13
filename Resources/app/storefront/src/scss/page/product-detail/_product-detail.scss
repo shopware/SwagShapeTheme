@@ -171,7 +171,7 @@ $product-buybox-max-width: 570px;
         vertical-align: middle;
         line-height: 30px;
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
             height: 26px;
         }
     }
@@ -330,7 +330,7 @@ $product-buybox-max-width: 570px;
         }
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
         &-form-container .buy-widget-container {
             > .col-4 {
                 margin-bottom: 10px;

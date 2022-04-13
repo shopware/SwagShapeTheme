@@ -1,5 +1,5 @@
 .product-detail-cross-selling {
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(if(feature('V6_5_0_0'), sm, xs)) {
         .tab-pane {
             margin-top: 0;
             padding-top: 12px;
@@ -33,7 +33,7 @@
     }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(if(feature('V6_5_0_0'), sm, xs)) {
     .product-cross-selling-tab-navigation {
         .nav-link {
             display: flex;

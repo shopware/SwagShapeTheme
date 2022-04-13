@@ -71,7 +71,7 @@
             transform: none;
         }
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
             @include shape-filter-selector;
         }
     }
@@ -95,6 +95,16 @@
             font-weight: $font-weight-bold;
             color: $shape-gray-900;
         }
+
+        &.disabled {
+            background-color: $shape-gray-200;
+            border-color: transparent;
+            color: $shape-gray-500;
+
+            .filter-boolean-label {
+                color: inherit;
+            }
+        }
     }
 
     @if (feature('V6_5_0_0')) {
@@ -102,6 +112,15 @@
             display: flex;
             align-items: center;
             flex-grow: 1;
+            gap: 4px;
+
+            .form-check-input[type="checkbox"] {
+                margin-bottom: 4px;
+            }
+
+            .filter-boolean-label {
+                width: auto;
+            }
         }
     } @else {
         .custom-checkbox {
