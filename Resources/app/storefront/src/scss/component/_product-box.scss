@@ -73,11 +73,12 @@ $box-hover-bg-color: $white;
 
         .product-price-unit {
             height: fit-content;
-            @extend .mb-2;
+            @extend .mb-0;
         }
 
         .product-cheapest-price {
-            min-height: fit-content;
+            min-height: 20px;
+            margin-bottom: 0;
         }
     }
 
@@ -246,6 +247,8 @@ $box-hover-bg-color: $white;
 }
 
 .product-variant-characteristics {
+    min-height: 36px;
+
     .product-variant-characteristics-text {
         @include truncate-multiline(1.5em, 2, $box-bg-color);
 
@@ -265,4 +268,10 @@ $box-hover-bg-color: $white;
             max-width: 100%;
         }
     }
+}
+
+.product-unit-label,
+.price-unit-content {
+    margin-bottom: 8px;
+    display: inline-block;
 }
