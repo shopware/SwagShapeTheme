@@ -14,7 +14,7 @@
             text-align: center;
 
             h1,
-            h5 {
+            .h5 {
                 color: $white;
             }
 
@@ -25,7 +25,7 @@
                 margin-bottom: $spacer-md;
             }
 
-            h5 {
+            .h5 {
                 font-size: 18px;
                 line-height: 26px;
                 font-weight: $font-weight-medium;
