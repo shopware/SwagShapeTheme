@@ -7,7 +7,9 @@
             {{ parent() }}
         {% endblock %}
 
-        {% if page.customer.requestedGroup %}
+        {% if not feature('FEATURE_NEXT_15707') and page.customer.requestedGroup %}
+
+            {# @deprecated tag:v6.5.0 - Alert will be removed use block "page_account_overview_request_group_info" instead #}
             {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
                 type: 'info',
                 content: 'account.overviewCustomerGroupRequest'|trans({
