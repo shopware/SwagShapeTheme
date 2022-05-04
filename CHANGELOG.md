@@ -1,3 +1,10 @@
+# 1.4.0
+- Lighthouse error
+- Product cards should have the same height
+- Quickview variant prices not displayed correctly
+- Check theme compatibility with platform v6.4.11.0
+- B2B Suite 4.6.0 Improvements
+
 # 1.3.0
 - Display the lowest price where f.e. base prices are displayed
 - The spacing for cms-block-container is not adopted in the shape theme

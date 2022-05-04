@@ -20,6 +20,7 @@ module.exports = {
             true, {
                 ignore: ['attribute', 'class']
             }
-        ]
+        ],
+        'font-family-no-missing-generic-family-keyword': true
     }
 };

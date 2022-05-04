@@ -52,7 +52,7 @@
         margin-right: $input-group-append-width-lg / 2;
         padding-right: calc(#{$input-padding-x} + #{$input-group-append-width-lg} / 2);
         @if (feature('V6_5_0_0')) {
-            padding-top: 10px ;
+            padding-top: 10px;
             padding-bottom: 10px;
         }
     }

@@ -149,6 +149,7 @@ $product-buybox-max-width: 570px;
     &-name {
         @include font-size(44);
         line-height: 46px;
+        margin-bottom: $spacer-40;
     }
 
     &-price {
@@ -173,10 +174,6 @@ $product-buybox-max-width: 570px;
         @include media-breakpoint-down(md) {
             height: 26px;
         }
-    }
-
-    &-name {
-        margin-bottom: $spacer-40;
     }
 
     &-ordernumber-container,
@@ -334,31 +331,26 @@ $product-buybox-max-width: 570px;
     }
 
     @include media-breakpoint-down(sm) {
-        &-form-container {
-            .buy-widget-container {
-                > .col-4 {
-                    margin-bottom: 10px;
-                    line-height: 26px;
-                }
-
-                > .col-8,
-                > .col-4 {
-                    @include make-col(12);
-                }
+        &-form-container .buy-widget-container {
+            > .col-4 {
+                margin-bottom: 10px;
+                line-height: 26px;
             }
 
-            .buy-widget-container {
-                @if (feature('V6_5_0_0')) {
-                    + .row {
-                        margin-top: 10px !important;
-                    }
-                } @else {
-                    + .form-row {
-                        margin-top: 10px !important;
-                    }
-                }
+            > .col-8,
+            > .col-4 {
+                @include make-col(12);
             }
 
+            @if (feature('V6_5_0_0')) {
+                + .row {
+                    margin-top: 10px !important;
+                }
+            } @else {
+                + .form-row {
+                    margin-top: 10px !important;
+                }
+            }
         }
 
         #swag-amazon-pay-product-detail-wrapper {
@@ -367,15 +359,6 @@ $product-buybox-max-width: 570px;
             > .col-8 {
                 @include make-col(12);
             }
-        }
-    }
-}
-
-.product-detail-buy,
-.swag-cms-extensions-quickview-modal {
-    .product-block-prices-grid {
-        .list-price-price {
-            line-height: 20px;
         }
     }
 }
@@ -521,6 +504,12 @@ div[data-swag-paypal-installment-banner='true'] {
 
 .product-detail-buy,
 .swag-cms-extensions-quickview-modal {
+    .product-block-prices-grid {
+        .list-price-price {
+            line-height: 20px;
+        }
+    }
+
     .product-detail-price-discount {
         font-size: $font-size-lg;
         color: $primary;
