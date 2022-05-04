@@ -128,7 +128,7 @@ async function main() {
             '--disable-setuid-sandbox',
         ],
         // For debugging uncomment next line:
-        headless: false,
+        // headless: false,
         slowMo: 50,
     });
 
