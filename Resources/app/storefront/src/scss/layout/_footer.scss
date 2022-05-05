@@ -7,70 +7,68 @@
         }
     }
 
-    &-newsletter {
-        &-form {
-            padding: $spacer-xl $spacer-20 $spacer-xxl;
-            background-color: $newsletter-bg-color;
+    &-newsletter-form {
+        padding: $spacer-xl $spacer-20 $spacer-xxl;
+        background-color: $newsletter-bg-color;
+        text-align: center;
+
+        h1,
+        .h5 {
+            color: $white;
+        }
+
+        h1 {
+            font-size: $h3-font-size;
+            line-height: 36px;
+            font-weight: $font-weight-semibold;
+            margin-bottom: $spacer-md;
+        }
+
+        .h5 {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: $font-weight-medium;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            @extend .form-control-lg;
+
+            font-size: $font-size-base;
             text-align: center;
+            border: none;
+        }
 
-            h1,
-            .h5 {
-                color: $white;
-            }
-
-            h1 {
-                font-size: $h3-font-size;
-                line-height: 36px;
-                font-weight: $font-weight-semibold;
-                margin-bottom: $spacer-md;
-            }
-
-            .h5 {
-                font-size: 18px;
-                line-height: 26px;
-                font-weight: $font-weight-medium;
-                margin-bottom: 20px;
-            }
-
+        @include media-breakpoint-down(sm) {
             .form-control {
-                @extend .form-control-lg;
-
-                font-size: $font-size-base;
-                text-align: center;
-                border: none;
+                margin-right: 0;
             }
 
-            @include media-breakpoint-down(sm) {
-                .form-control {
-                    margin-right: 0;
-                }
-
-                .form-control:not(:last-child) {
-                    @if (feature('V6_5_0_0')) {
-                        @include border-end-radius($input-border-radius-lg);
-                    } @else {
-                        @include border-right-radius($input-border-radius-lg);
-                    }
-                }
-
+            .form-control:not(:last-child) {
                 @if (feature('V6_5_0_0')) {
-                    .btn {
-                        position: unset;
-                        min-width: 100%;
-                        margin-top: $spacer-10;
-                    }
+                    @include border-end-radius($input-border-radius-lg);
                 } @else {
-                    .input-group-append {
-                        position: unset;
-                        min-width: 100%;
-                        margin-top: $spacer-10;
-                    }
+                    @include border-right-radius($input-border-radius-lg);
                 }
             }
 
-            .btn {
-                @extend .btn-lg;
+            @if (feature('V6_5_0_0')) {
+                .btn {
+                    position: unset;
+                    min-width: 100%;
+                    margin-top: $spacer-10;
+                }
+            } @else {
+                .input-group-append {
+                    position: unset;
+                    min-width: 100%;
+                    margin-top: $spacer-10;
+                }
             }
+        }
+
+        .btn {
+            @extend .btn-lg;
         }
     }
 

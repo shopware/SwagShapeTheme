@@ -44,37 +44,37 @@ $offcanvas-cart-spacing: 24px;
                 border-radius: $border-radius-sm;
             }
 
-            .cart-quantity-price {
-                >.cart-item-quantity {
-                    @if (feature('V6_5_0_0')) {
-                        padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
-                    } @else {
-                        padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
-                    }
+            .cart-quantity-price >.cart-item-quantity {
+                @if (feature('V6_5_0_0')) {
+                    padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+                } @else {
+                    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
                 }
             }
+        }
 
-            .swag-customized-products-cart__configuration {
-                border-top: $hr-border-width solid $sw-border-color;
-                border-bottom: $hr-border-width solid $sw-border-color;
-                @if (feature('V6_5_0_0')) {
-                    @extend .ms-1, .mt-0, .pb-2;
+        &.cart-item-customized-products .swag-customized-products-cart__configuration {
+            border-top: $hr-border-width solid $sw-border-color;
+            border-bottom: $hr-border-width solid $sw-border-color;
+            @if (feature('V6_5_0_0')) {
+                @extend .ms-1, .mt-0, .pb-2;
 
-                    .swag-customized-products-cart__items {
-                        @extend .ps-0;
-                    }
-                    .swag-customized-products-cart__item {
-                        @extend .ps-2, .mt-0;
-                    }
-                } @else {
-                    @extend .ml-1, .mt-0, .pb-2;
+                .swag-customized-products-cart__items {
+                    @extend .ps-0;
+                }
 
-                    .swag-customized-products-cart__items {
-                        @extend .pl-0;
-                    }
-                    .swag-customized-products-cart__item {
-                        @extend .pl-2, .mt-0;
-                    }
+                .swag-customized-products-cart__item {
+                    @extend .ps-2, .mt-0;
+                }
+            } @else {
+                @extend .ml-1, .mt-0, .pb-2;
+
+                .swag-customized-products-cart__items {
+                    @extend .pl-0;
+                }
+
+                .swag-customized-products-cart__item {
+                    @extend .pl-2, .mt-0;
                 }
             }
         }

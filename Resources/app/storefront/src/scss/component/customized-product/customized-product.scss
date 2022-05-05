@@ -20,6 +20,7 @@
         @if (feature('V6_5_0_0')) {
             .btn {
                 min-width: 48px;
+
                 &:focus {
                     box-shadow: none;
                 }
@@ -32,14 +33,12 @@
             .input-group-append {
                 min-width: 48px;
 
-                .btn {
-                    &:focus {
-                        box-shadow: none;
-                    }
+                .btn:focus {
+                    box-shadow: none;
+                }
 
-                    &:hover .icon {
-                        color: $primary;
-                    }
+                .btn:hover .icon {
+                    color: $primary;
                 }
             }
         }
@@ -128,23 +127,6 @@
         }
 
         .swag-customized-products__type-select {
-            .swag-customized-products-option-type-select-wrapper {
-                .swag-customized-products-option-type-select-checkboxes-label {
-                    padding: 16px 24px;
-                    font-weight: $font-weight-bold;
-                }
-
-                @if (feature('V6_5_0_0')) {
-                    .form-check-input:checked ~ .form-check-label::before {
-                        border-color: $sw-color-brand-primary;
-                    }
-                } @else {
-                    .custom-control-input:checked ~ .custom-control-label::before {
-                        border-color: $sw-color-brand-primary;
-                    }
-                }
-            }
-
             .swag-customized-products-option-type-select-checkboxes-label::before {
                 border-color: #1f2e3d;
                 border-radius: 8px;
@@ -174,8 +156,23 @@
                 @include font-size($input-font-size-lg);
                 @include border-radius($input-border-radius-lg);
             }
+        }
 
+        .swag-customized-products__type-select .swag-customized-products-option-type-select-wrapper {
+            .swag-customized-products-option-type-select-checkboxes-label {
+                padding: 16px 24px;
+                font-weight: $font-weight-bold;
+            }
 
+            @if (feature('V6_5_0_0')) {
+                .form-check-input:checked ~ .form-check-label::before {
+                    border-color: $sw-color-brand-primary;
+                }
+            } @else {
+                .custom-control-input:checked ~ .custom-control-label::before {
+                    border-color: $sw-color-brand-primary;
+                }
+            }
         }
 
         .swag-customized-products__type-colorselect,
@@ -296,35 +293,35 @@
                     border: none;
                 }
             }
+        }
 
-            .swag-customized-products-pager {
-                justify-content: space-between;
-                border-color: $sw-border-color;
+        &.swag-customized-products .swag-customized-products-pager {
+            justify-content: space-between;
+            border-color: $sw-border-color;
 
-                .swag-customized-products__pager-number {
-                    font-weight: $font-weight-normal;
+            .swag-customized-products__pager-number {
+                font-weight: $font-weight-normal;
+            }
+
+            .swag-customized-products-pager__button {
+                flex-grow: unset;
+            }
+
+            @if (feature('V6_5_0_0')) {
+                .btn-prev {
+                    @extend .ps-0, .text-start;
                 }
 
-                .swag-customized-products-pager__button {
-                    flex-grow: unset;
+                .btn-next {
+                    @extend .pe-0;
+                }
+            } @else {
+                .btn-prev {
+                    @extend .pl-0, .text-left;
                 }
 
-                @if (feature('V6_5_0_0')) {
-                    .btn-prev {
-                        @extend .ps-0, .text-start;
-                    }
-
-                    .btn-next {
-                        @extend .pe-0;
-                    }
-                } @else {
-                    .btn-prev {
-                        @extend .pl-0, .text-left;
-                    }
-
-                    .btn-next {
-                        @extend .pr-0;
-                    }
+                .btn-next {
+                    @extend .pr-0;
                 }
             }
         }

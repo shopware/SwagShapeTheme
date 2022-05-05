@@ -1,3 +1,10 @@
+# 1.4.0
+- Der Lighthouse-Fehler
+- Produktkarten sollten die gleiche Höhe haben
+- Quickview-Variantenpreise werden nicht korrekt angezeigt
+- Prüfung der Theme-Kompatibilität mit platform 6.4.11.0
+- B2B Suite 4.6.0 Verbesserungen
+
 # 1.3.0
 - Anzeige des niedrigsten Preises, wenn z.B. Grundpreise angezeigt werden
 - Die Abstände für cms-Block-Container werden im Shape-Theme nicht übernommen
