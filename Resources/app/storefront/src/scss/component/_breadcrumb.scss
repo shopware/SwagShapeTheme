@@ -6,7 +6,7 @@
         background-color: $white;
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(if(feature('V6_5_0_0'), xl, lg)) {
         .container {
             padding: 0;
         }

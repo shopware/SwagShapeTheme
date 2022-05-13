@@ -5,7 +5,7 @@
 
     .register-billing,
     .register-shipping {
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
             @if (feature('V6_5_0_0')) {
                 > .row .form-group.col-md-2,
                 > .row .form-group.col-md-4 {

@@ -1,5 +1,11 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
+{% if feature('V6_5_0_0') %}
+    {% set formRowClass = 'row' %}
+{% else %}
+    {% set formRowClass = 'form-row' %}
+{% endif %}
+
 {% block base_navigation %}
 {% endblock %}
 

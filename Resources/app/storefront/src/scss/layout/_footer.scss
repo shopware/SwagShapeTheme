@@ -39,7 +39,7 @@
             border: none;
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
             .form-control {
                 margin-right: 0;
             }
@@ -526,7 +526,7 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
     .footer-minimal .footer-newsletter-form,
     .footer-simple .footer-newsletter-form {
         display: block;
