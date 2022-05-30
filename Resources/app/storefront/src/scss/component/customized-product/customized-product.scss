@@ -57,15 +57,12 @@
         @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
             padding: $spacer-lg;
         }
-
-        @include media-breakpoint-up(lg) {
-            max-width: 450px;
-        }
     }
 
     .swag-customized-products__title {
         font-size: 44px;
         line-height: 46px;
+        font-weight: $font-weight-semibold;
     }
 
     .swag-customized-products__item {
