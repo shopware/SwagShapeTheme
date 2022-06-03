@@ -75,15 +75,7 @@
         {{ block('page_checkout_confirm_tos') }}
     </div>
 
-
-
     {{ parent() }}
-{% endblock %}
-
-{% block page_checkout_confirm_table_header %}
-    <div class="cart-header-info">
-        {{ "checkout.cartHeaderInfo"|trans|sw_sanitize }}
-    </div>
 {% endblock %}
 
 {% block b2b_checkout_confirm_additional %}
