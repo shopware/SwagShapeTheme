@@ -1,3 +1,5 @@
+# 1.5.0
+- Unterstützt Bootstrap 5
 # 1.4.0
 - Der Lighthouse-Fehler
 - Produktkarten sollten die gleiche Höhe haben

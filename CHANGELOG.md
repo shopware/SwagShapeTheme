@@ -1,3 +1,5 @@
+# 1.5.0
+- Support Bootstrap 5
 # 1.4.0
 - Lighthouse error
 - Product cards should have the same height
