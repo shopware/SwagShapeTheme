@@ -27,7 +27,7 @@
 }
 
 .order-detail-content-header {
-    margin-top: 0;
+    margin: 0 20px;
     line-height: 20px;
     padding-top: 32px;
     text-transform: uppercase;
@@ -206,6 +206,12 @@
     }
 }
 
+.order-item-image {
+    img {
+        width: 100%;
+    }
+}
+
 @include media-breakpoint-up(xs) {
     .account-orders {
         .account-welcome {
@@ -300,19 +306,6 @@
         img {
             max-width: 100%;
         }
-    }
-
-    .order-header-price,
-    .order-item-price {
-        @include make-col(3);
-    }
-
-    .order-header-name {
-        @include make-col(5);
-    }
-
-    .order-item-name {
-        @include make-col(3);
     }
 
     .order-item-detail {

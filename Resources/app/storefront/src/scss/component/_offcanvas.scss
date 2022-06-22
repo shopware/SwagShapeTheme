@@ -1,8 +1,8 @@
 .offcanvas {
     width: 100%;
 
-    .offcanvas-content-container {
-        padding: 33px;
+    &.cart-offcanvas {
+        width: 400px;
     }
 
     &.is-bottom {
@@ -47,9 +47,15 @@
 }
 
 .is-ctl-product {
-    .offcanvas {
-        .offcanvas-content-container {
-            padding: $spacer-30 $grid-gutter-width / 2;
+    .offcanvas:not(.navigation-offcanvas) {
+        @if (feature('V6_5_0_0')) {
+            .offcanvas-body {
+                padding: $spacer-30 $grid-gutter-width / 2;
+            }
+        } @else {
+            .offcanvas-content-container {
+                padding: $spacer-30 $grid-gutter-width / 2;
+            }
         }
     }
 
@@ -77,7 +83,21 @@
         svg {
             top: 0;
             height: 14px;
-            margin-top: -2px;
+            margin-top: -1px;
         }
+    }
+}
+
+.offcanvas-close {
+    .icon {
+        svg {
+            top: 4px;
+        }
+    }
+}
+
+@if (feature('V6_5_0_0')) {
+    .offcanvas-header {
+        display: block;
     }
 }

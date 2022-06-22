@@ -89,6 +89,7 @@ $offcanvas-cart-spacing: 24px;
         line-height: 33px;
         padding-bottom: 1rem;
         border-bottom: 2px solid $shape-gray-900;
+        margin-bottom: 0;
     }
 
     .offcanvas-cart-tax {
@@ -140,5 +141,17 @@ $offcanvas-cart-spacing: 24px;
 
     .d-grid {
         margin-bottom: 12px;
+    }
+}
+
+.cart-offcanvas {
+    @if (feature('V6_5_0_0')) {
+        .offcanvas-body {
+            padding: 33px;
+        }
+    } @else {
+        .offcanvas-content-container {
+            padding: 33px;
+        }
     }
 }
