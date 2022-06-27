@@ -99,6 +99,10 @@
     select {
         min-width: 81px;
     }
+
+    > .line-item-quantity {
+        padding-top: 0;
+    }
 }
 
 .line-item {

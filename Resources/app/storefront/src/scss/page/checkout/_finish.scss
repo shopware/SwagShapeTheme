@@ -111,6 +111,14 @@
 
     .cart-header-info {
         @include checkout-headline;
+        @extend .col-12;
+    }
+
+    .cart-header-quantity,
+    .cart-header-tax-price,
+    .cart-header-unit-price,
+    .cart-header-total-price {
+        @extend .d-none;
     }
 
     @include media-breakpoint-up(lg) {

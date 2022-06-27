@@ -201,48 +201,25 @@ $box-hover-bg-color: $white;
     position: unset;
     text-transform: uppercase;
 
-    @if (feature('V6_5_0_0')) {
-        .bg-success,
-        .bg-danger,
-        .bg-warning {
-            @extend .m-0;
-            background-color: transparent;
-            font-size: $font-size-lg;
-            font-weight: $font-weight-bolder;
-        }
+    .badge-success,
+    .badge-danger,
+    .badge-warning {
+        @extend .m-0;
+        background-color: transparent;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bolder;
+    }
 
-        .bg-danger {
-            color: $primary;
-        }
+    .badge-danger {
+        color: $primary;
+    }
 
-        .bg-success {
-            color: $success;
-        }
+    .badge-success {
+        color: $success;
+    }
 
-        .bg-warning {
-            color: $warning;
-        }
-    } @else {
-        .badge-success,
-        .badge-danger,
-        .badge-warning {
-            @extend .m-0;
-            background-color: transparent;
-            font-size: $font-size-lg;
-            font-weight: $font-weight-bolder;
-        }
-
-        .badge-danger {
-            color: $primary;
-        }
-
-        .badge-success {
-            color: $success;
-        }
-
-        .badge-warning {
-            color: $warning;
-        }
+    .badge-warning {
+        color: $warning;
     }
 }
 
