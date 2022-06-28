@@ -1,4 +1,4 @@
-{% sw_extends '@Storefront/storefront/component/review/review.html.twig' %}
+{% sw_extends '@Storefront/storefront/component/product/description.html.twig' %}
 
 {% block utilities_offcanvas_close %}
     {# @deprecated tag:v6.5.0 - Bootstrap v5 will not require classes `.btn-block .sticky-top`. Only `.offcanvas-body` will be scrollable #}
@@ -8,19 +8,7 @@
         {% endblock %}
 
         {% block utilities_offcanvas_close_text %}
-            {{ "detail.tabsReview"|trans|sw_sanitize }}
+            {{ "detail.tabsDescription"|trans|sw_sanitize }}
         {% endblock %}
     </button>
-{% endblock %}
-
-{% block component_review_tab_pane %}
-    <div class="row product-detail-review-content js-review-container">
-        {{ block('component_review_main') }}
-
-        {% block component_review_aside %}
-            <div class="col-12 col-lg-5 product-detail-review-widget-wrapper">
-                {{ block('component_review_widget_container') }}
-            </div>
-        {% endblock %}
-    </div>
 {% endblock %}

@@ -1,7 +1,18 @@
 $checkout-empty-spacing: 150px !default;
 
 .cart-table-header {
-    display: none;
+    display: block;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .cart-header-row {
+        margin: 0;
+    }
+
+    .is-act-cartpage & {
+        display: none;
+    }
 }
 
 .cart-shipping-costs-container {

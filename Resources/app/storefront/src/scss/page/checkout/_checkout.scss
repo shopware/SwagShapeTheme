@@ -4,8 +4,20 @@
 .checkout-aside-product-header,
 .checkout-aside-summary-header {
     @include checkout-headline;
+}
 
+.address-main-header,
+.confirm-main-header,
+.checkout-aside-summary-header {
     margin-bottom: 30px;
+}
+
+.cart-main-header {
+    margin-bottom: 0;
+}
+
+.checkout-aside-product-header {
+    margin-bottom: 0;
 }
 
 .checkout-aside-summary {

@@ -6,7 +6,7 @@ $cart-item-img-width: 84px;
     position: relative;
 
     .cart-item-row {
-        align-items: center;
+        align-items: flex-start;
     }
 
     &-details {
@@ -104,13 +104,27 @@ $cart-item-img-width: 84px;
         .cart-item-label {
             font-size: 20px;
         }
-
-
     }
 }
 
 .checkout-product-table {
+    margin-bottom: 40px;
+
     div[data-swag-paypal-installment-banner=true] {
         @include make-col(12);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .checkout-product-table {
+        .line-item-quantity,
+        .line-item-total-price {
+            padding-top: 20px;
+        }
+
+        .cart-item-details {
+            flex: 0 0 auto;
+            width: calc(100% - 84px);
+        }
     }
 }

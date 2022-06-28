@@ -173,10 +173,6 @@
 
             text-align: center;
         }
-
-        &.order-item-actions {
-            margin-top: 32px;
-        }
     }
 
     &-table-header-cell[class*='col-'] {
@@ -268,6 +264,11 @@
 }
 
 @include media-breakpoint-up(md) {
+    .order-item-header {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
     .order-table-header-order-table-body {
         border-width: $hr-border-width;
 
