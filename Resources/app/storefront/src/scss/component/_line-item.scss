@@ -32,6 +32,12 @@
             border-bottom: 1px solid $hr-border-color;
         }
     }
+
+    &.line-item-container {
+        .line-item:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 .is-offcanvas {
@@ -112,6 +118,10 @@
     &.is-default {
         padding: 34px 0;
     }
+
+    &:last-child {
+        border-bottom: 1px solid $hr-border-color;
+    }
 }
 
 .line-item-info {
@@ -120,7 +130,10 @@
 
 .line-item-details {
     width: calc(100% - 78px);
-    padding: 0 14px;
+
+    .is-default & {
+        padding: 0 14px;
+    }
 
     .product-wishlist {
         margin: $spacer-lg 0 0;
@@ -192,6 +205,26 @@
     top: 0;
 }
 
+.line-item-container {
+    .line-item-children {
+        .line-item-row {
+            margin: 0;
+        }
+
+        .line-item-details {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &.is-offcanvas {
+        .line-item-quantity-select-wrapper {
+            padding: 0 calc(var(--bs-gutter-x) * .5);
+            margin-left: 0;
+        }
+    }
+}
+
 .is-order {
     .line-item-unit-price,
     .line-item-total-price {
@@ -206,6 +239,15 @@
 
             display: block;
             text-align: center;
+        }
+    }
+}
+
+.is-default {
+    .line-item-quantity-select-wrapper {
+        .line-item-quantity {
+            width: auto;
+            padding-top: 0;
         }
     }
 }
@@ -258,6 +300,16 @@
         .line-item-remove {
             top: -20px;
         }
+
+        .line-item-children.nesting-level-1 {
+            margin-left: 134px;
+        }
+
+        .line-item-container {
+            .line-item {
+                padding: $spacer-20 0;
+            }
+        }
     }
 
     .line-item-quantity {
@@ -303,5 +355,18 @@
         .line-item-unit-price {
             text-align: center;
         }
+    }
+}
+
+// Styling for nested line items
+.line-item-children {
+    background-color: $white;
+
+    &.nesting-level-2 {
+        background-color: $gray-100;
+    }
+
+    &.nesting-level-3 {
+        background-color: darken($gray-100, 3.5%);
     }
 }

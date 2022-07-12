@@ -182,7 +182,10 @@
         .footer-links & {
             margin-right: 0;
             margin-bottom: 0;
-            padding: 0 $spacer-20;
+
+            @if (not feature('v6.5.0.0')) {
+                padding: 0 $spacer-20;
+            }
         }
 
         &.is-payment:not([data-swag-paypal-marks='true']) {
@@ -249,8 +252,11 @@
 
     &-social-media,
     &-navigation {
-        padding-left: 0;
         padding-right: 0;
+
+        @if (not feature('v6.5.0.0')) {
+            padding-left: 0;
+        }
     }
 
     &-social-media {
