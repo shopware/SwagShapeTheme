@@ -7,7 +7,8 @@
 
     .order-detail-item-customized-products {
         .account-item-children {
-            padding: $spacer-sm $spacer-12;
+            padding: $spacer-sm 0;
+            margin: 12px 34px;
         }
 
         .account-item-collapse {
@@ -311,6 +312,14 @@
     .order-item-detail {
         .swag-customized-products-cart__configuration {
             padding: 0 18px;
+        }
+    }
+
+    .account-item-collapse-container,
+    .account-item-children-elements {
+        &.container {
+            @extend .col-md-10;
+            @extend .offset-md-2;
         }
     }
 }

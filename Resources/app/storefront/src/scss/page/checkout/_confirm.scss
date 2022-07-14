@@ -46,6 +46,8 @@
 }
 
 .confirm-product {
+    margin-bottom: 0;
+
     .cart-header-info {
         @include checkout-headline;
         @extend .col-12;

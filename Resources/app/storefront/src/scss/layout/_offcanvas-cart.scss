@@ -145,6 +145,8 @@ $offcanvas-cart-spacing: 24px;
 }
 
 .cart-offcanvas {
+    background-color: $white;
+
     @if (feature('V6_5_0_0')) {
         .offcanvas-body {
             padding: 33px;
