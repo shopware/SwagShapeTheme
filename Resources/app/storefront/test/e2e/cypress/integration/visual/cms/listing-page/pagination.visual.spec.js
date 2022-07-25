@@ -25,7 +25,7 @@ describe('CMS: Listing Page', {tags: ['@visual', '@cms']}, () => {
                     });
                 cy.get('label').eq(0).click();
                 cy.get('.sw-settings-listing__save-action').click();
-                cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
+                cy.get('.icon--regular-checkmark-xs').should('be.visible');
 
                 cy.visit('/');
                 cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});

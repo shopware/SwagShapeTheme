@@ -50,7 +50,7 @@ describe('Checkout: Use rounding', {tags: ['@workflow', '@checkout']}, () => {
         cy.get('.sw-settings-currency-detail__save-action').click();
         cy.wait('@saveData').then((xhr) => {
             expect(xhr).to.have.property('status', 204);
-            cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
+            cy.get('.icon--regular-checkmark-xs').should('be.visible');
         });
         cy.get('.sw-loader').should('not.exist');
 

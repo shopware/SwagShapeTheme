@@ -170,6 +170,7 @@ describe('Customized Product: Check appearance of customized products', () => {
             .click();
         cy.get('.flatpickr-calendar').should('be.visible');
         cy.get('.numInputWrapper .flatpickr-hour').type('3');
+        cy.get('.swag-customized-products-options-datetime.active').click();
 
         // Price display
         cy.get('.swag-customized-product__price-display').should('be.exist');
@@ -177,7 +178,7 @@ describe('Customized Product: Check appearance of customized products', () => {
         cy.contains('.list__one-time-price .price-display__item:nth-child(7) .price-display__price', '€10.00*');
 
         // Total price
-        cy.contains('.price-display__total-price > .price-display__price', '€110.00*');
+        cy.contains('.price-display__total-price > .price-display__price', '€100.00*');
 
         // Color select
         cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example Purple')

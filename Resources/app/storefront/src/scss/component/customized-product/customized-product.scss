@@ -306,19 +306,10 @@
 
             @if (feature('V6_5_0_0')) {
                 .btn-prev {
-                    @extend .ps-0, .text-start;
-                }
-
-                .btn-next {
-                    @extend .pe-0;
+                    @extend .text-start;
                 }
             } @else {
                 .btn-prev {
-                    @extend .pl-0, .text-left;
-                }
-
-                .btn-next {
-                    @extend .pr-0;
                 }
             }
         }
