@@ -166,6 +166,7 @@ describe('Customized Product: Visual tests product with full customize option', 
             .click();
         cy.get('.flatpickr-calendar').should('be.visible');
         cy.get('.numInputWrapper .flatpickr-hour').type('3');
+        cy.get('.swag-customized-products-options-datetime.active').click();
 
         // Price display
         cy.get('.swag-customized-product__price-display').should('be.exist');
@@ -195,7 +196,7 @@ describe('Customized Product: Visual tests product with full customize option', 
         cy.contains('.list__unit-price .price-display__item:nth-child(3) > .price-display__price', '€10.00*');
 
         // Total price
-        cy.contains('.price-display__total-price > .price-display__price', '€110.00*').should('be.visible');
+        cy.contains('.price-display__total-price > .price-display__price', '€100.00*').should('be.visible');
 
         // Expand all configuration
         cy.get('.swag-customized-products-option .toggle-icon-plus').each(($el) => {

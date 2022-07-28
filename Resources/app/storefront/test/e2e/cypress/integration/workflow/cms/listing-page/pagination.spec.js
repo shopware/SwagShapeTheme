@@ -23,7 +23,7 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 });
                 cy.get('label').eq(0).click();
                 cy.get('.sw-settings-listing__save-action').click();
-                cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
+                cy.get('.icon--regular-checkmark-xs').should('be.visible');
                 cy.visit('/');
 
                 cy.get('.cms-listing-row .card').should('have.length', testCase);
@@ -53,7 +53,7 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
                 });
                 cy.get('label').eq(0).click();
                 cy.get('.sw-settings-listing__save-action').click();
-                cy.get('.icon--small-default-checkmark-line-medium').should('be.visible');
+                cy.get('.icon--regular-checkmark-xs').should('be.visible');
 
                 cy.visit('/');
 
