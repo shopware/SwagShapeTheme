@@ -1,5 +1,12 @@
+# 1.6.0
+- Added Bootstrap 5 compatibility
+- Checked theme compatibility with platform v6.4.13.0
+- Fixed nested line items UI issues
+- Checked theme compatibility with the platform v6.4.14.0
+
 # 1.5.0
 - Support Bootstrap 5
+
 # 1.4.0
 - Lighthouse error
 - Product cards should have the same height
