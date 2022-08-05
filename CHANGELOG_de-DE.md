@@ -1,5 +1,12 @@
+# 1.6.0
+- Hinzufügen von Kompatibilität mit Bootstrap 5
+- Überprüfung der Kompatibilität mit Platform v6.4.13.0
+- Behoben der UI-Probleme mit verschachtelten Elementen
+- Überprüfung der Kompatibilität mit Platform v6.4.14.0
+
 # 1.5.0
 - Unterstützt Bootstrap 5
+
 # 1.4.0
 - Der Lighthouse-Fehler
 - Produktkarten sollten die gleiche Höhe haben
