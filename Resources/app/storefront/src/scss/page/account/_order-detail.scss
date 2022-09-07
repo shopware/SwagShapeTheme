@@ -213,6 +213,14 @@
     }
 }
 
+.account-item-collapse-container,
+.account-item-children-elements {
+    &.container {
+        @extend .col-md-10;
+        @extend .offset-md-2;
+    }
+}
+
 @include media-breakpoint-up(xs) {
     .account-orders {
         .account-welcome {
@@ -312,14 +320,6 @@
     .order-item-detail {
         .swag-customized-products-cart__configuration {
             padding: 0 18px;
-        }
-    }
-
-    .account-item-collapse-container,
-    .account-item-children-elements {
-        &.container {
-            @extend .col-md-10;
-            @extend .offset-md-2;
         }
     }
 }
