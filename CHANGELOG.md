@@ -1,3 +1,6 @@
+# 1.7.0
+- Checked theme compatibility with the platform v6.4.15.0
+
 # 1.6.0
 - Added Bootstrap 5 compatibility
 - Checked theme compatibility with platform v6.4.13.0

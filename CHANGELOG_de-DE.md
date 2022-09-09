@@ -1,3 +1,6 @@
+# 1.7.0
+- Überprüfung der Kompatibilität mit Platform v6.4.15.0
+
 # 1.6.0
 - Hinzufügen von Kompatibilität mit Bootstrap 5
 - Überprüfung der Kompatibilität mit Platform v6.4.13.0
