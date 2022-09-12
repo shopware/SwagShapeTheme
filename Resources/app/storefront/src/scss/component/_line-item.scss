@@ -161,6 +161,11 @@
 
 .line-item-total-price-value {
     text-align: right;
+
+    small {
+        color: $shape-gray-500;
+        font-size: 12px;
+    }
 }
 
 .line-item-remove-button {
@@ -192,13 +197,6 @@
     }
 }
 
-.line-item-total-price-value {
-    small {
-        color: $shape-gray-500;
-        font-size: 12px;
-    }
-}
-
 .line-item-remove {
     position: absolute;
     right: 0;
@@ -219,7 +217,7 @@
 
     &.is-offcanvas {
         .line-item-quantity-select-wrapper {
-            padding: 0 calc(var(--bs-gutter-x) * .5);
+            padding: 0 calc(var(--bs-gutter-x) * 0.5);
             margin-left: 0;
         }
     }

@@ -308,9 +308,6 @@
                 .btn-prev {
                     @extend .text-start;
                 }
-            } @else {
-                .btn-prev {
-                }
             }
         }
 

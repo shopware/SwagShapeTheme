@@ -34,7 +34,8 @@
     },
     "detail": {
         "propertyTitle": "Material",
-        "sale": "Verkauf"
+        "sale": "Verkauf",
+        "addProduct": "zum warenkorb hinzufügen"
     },
     "account": {
         "overviewTitle": "Hallo",

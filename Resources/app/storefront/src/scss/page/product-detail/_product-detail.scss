@@ -53,10 +53,6 @@ $product-buybox-max-width: 570px;
     }
 }
 
-.product-detail-price-unit {
-    margin-top: 12px;
-}
-
 .product-detail-content {
     background-color: $gray-100;
     margin-bottom: 0;
@@ -124,6 +120,8 @@ $product-buybox-max-width: 570px;
         } @else {
             @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
         }
+
+        line-height: 34px;
     }
 
     .b2b--orderlist-dropdown {
@@ -147,9 +145,9 @@ $product-buybox-max-width: 570px;
     }
 
     &-name {
-        @include font-size(44);
-        line-height: 46px;
-        margin-bottom: $spacer-40;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: $spacer-30;
     }
 
     &-price {
@@ -158,6 +156,11 @@ $product-buybox-max-width: 570px;
         &.with-list-price {
             color: $shape-gray-900;
         }
+    }
+
+    &-price-unit,
+    &-tax-container {
+        margin-bottom: $spacer-xs;
     }
 
     &-list-price-wrapper {
@@ -181,9 +184,8 @@ $product-buybox-max-width: 570px;
         font-size: $font-size-sm;
     }
 
-    &-reviews,
     &-ordernumber-container {
-        margin-bottom: $spacer-30;
+        margin-bottom: $spacer-lg;
     }
 
     &-tax {
@@ -201,6 +203,7 @@ $product-buybox-max-width: 570px;
 
     &-reviews {
         font-weight: $font-weight-bolder;
+        margin-bottom: $spacer-30;
     }
 
     &-configurator-container {
@@ -226,8 +229,10 @@ $product-buybox-max-width: 570px;
         border: none;
     }
 
-    &-quantity-select {
+    &-quantity-select,
+    &-quantity-input {
         @include border-radius(24px);
+        line-height: 26px;
     }
 
     &-configurator-dropdown {
@@ -296,6 +301,11 @@ $product-buybox-max-width: 570px;
     &-form-container {
         margin-top: $spacer-30;
     }
+
+    &-ordernumber-label {
+        font-weight: $font-weight-normal;
+    }
+
 
     @include media-breakpoint-up(md) {
         &-name-container {
@@ -455,6 +465,37 @@ div[data-swag-paypal-installment-banner='true'] {
     color: $shape-gray-500;
 }
 
+.buy-widget-container {
+    .input-group {
+        > .form-control {
+            margin-right: 0;
+            min-width: 0;
+            padding-right: 0;
+            height: 48px;
+        }
+
+        @if (not feature('V6_5_0_0')) {
+            > .input-group-append {
+                min-width: auto;
+                position: unset;
+            }
+        }
+    }
+
+    .input-group-text {
+        line-height: 26px;
+        padding: 9px;
+        border-radius: 24px;
+    }
+}
+
+@if (feature('V6_5_0_0')) {
+    .product-review-rating {
+        display: inline-block;
+        margin-top: 4px;
+    }
+}
+
 @include media-breakpoint-up(md) {
     .is-ctl-product {
         .cms-block-product-description-reviews,
@@ -474,23 +515,32 @@ div[data-swag-paypal-installment-banner='true'] {
             margin-bottom: 30px;
         }
     }
+
+    .buy-widget-container {
+        > .col-4 {
+            &.quantity-input {
+                padding-right: 0;
+
+                ~ .col-8 {
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
-    .cms-block-gallery-buybox .col-lg-5,
-    .col-lg-5.product-detail-buy {
-        flex: 0 0 calc(41.6667% - #{$grid-gutter-width});
-        max-width: calc(41.6667% - #{$grid-gutter-width});
-        margin-left: auto;
-        margin-right: 0;
-    }
-
     .product-detail-media {
         padding: 0 $spacer-20;
     }
 
     .cms-element-image-gallery {
         padding: 0;
+    }
+
+    .product-detail-name {
+        font-size: 44px;
+        line-height: 46px;
     }
 }
 
@@ -515,6 +565,7 @@ div[data-swag-paypal-installment-banner='true'] {
         color: $primary;
         text-transform: uppercase;
         font-weight: $font-weight-bolder;
+        text-align: left;
     }
 
     .list-price-price {
@@ -524,5 +575,9 @@ div[data-swag-paypal-installment-banner='true'] {
     .list-price-badge,
     .list-price-percentage {
         @extend .d-none;
+    }
+
+    .price-unit-content {
+        margin-bottom: 0;
     }
 }

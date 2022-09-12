@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/component/quickview/buy-widget-form.html.twig' %}
+
+{% block page_product_detail_buy_quantity_container %}
+    {% set selectQuantityThreshold = 100 %}
+    <div class="swag-cms-extensions-quickview-content--buy-quantity col-12 col-md-4{% if (product.calculatedMaxPurchase - product.minPurchase) / product.purchaseSteps > selectQuantityThreshold %} quantity-input{% endif %}">
+        {% block page_product_detail_buy_quantity %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}
