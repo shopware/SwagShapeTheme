@@ -34,7 +34,8 @@
     },
     "detail": {
         "propertyTitle": "Material",
-        "sale": "Sale"
+        "sale": "Sale",
+        "addProduct": "Add to cart"
     },
     "account": {
         "overviewTitle": "Hello",
