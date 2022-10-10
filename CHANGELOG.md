@@ -1,3 +1,7 @@
+# 1.8.0
+- Checked theme compatibility with the platform v6.4.16.0
+- Updated compatibility of CMS Extensions with Bootstrap 5
+
 # 1.7.0
 - Checked theme compatibility with the platform v6.4.15.0
 
