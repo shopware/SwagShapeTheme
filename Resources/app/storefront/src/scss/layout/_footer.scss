@@ -303,6 +303,10 @@
 
     &-links {
         margin-bottom: 35px;
+
+        .icon-shape {
+            pointer-events: none;
+        }
     }
 
     &-link-item {
@@ -482,7 +486,7 @@
 
             .links {
                 padding-left: 0;
-                padding-right: $spacer-30;
+                margin-right: $spacer-30;
             }
         }
 
