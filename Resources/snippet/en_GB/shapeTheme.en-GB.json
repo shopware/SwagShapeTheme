@@ -5,7 +5,8 @@
         "maintenanceModeHeader": "We`ll be back soon.",
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
         "requiredFields": "*required field",
-        "offcanvasCloseMenu": "My Account"
+        "offcanvasCloseMenu": "My Account",
+        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
     },
     "header": {
         "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros",
@@ -76,5 +77,8 @@
     "listing": {
         "boxAddProductMobile": "Add to cart",
         "boxProductDetails": "More details"
+    },
+    "contact": {
+        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
     }
 }
