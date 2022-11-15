@@ -199,3 +199,15 @@ Cypress.Commands.add('updatePluginConfig', (data, salesChannelId) => {
         }
     );
 });
+
+/**
+ * Patch to update create customer fixture storefront
+ *
+ */
+Cypress.Commands.overwrite('createCustomerFixtureStorefront', (originalFn, userData) => {
+    return originalFn(userData)
+        .then(() => {
+            return cy.exec(`${Cypress.env('shopwareRoot')}/bin/console cache:clear`)
+                .its('code').should('eq', 0);
+        });
+});

@@ -5,7 +5,8 @@
         "maintenanceModeHeader": "Wir werden bald wiederkommen.",
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr.",
         "requiredFields": "*Pflichtfeld",
-        "offcanvasCloseMenu": "Mein Konto"
+        "offcanvasCloseMenu": "Mein Konto",
+        "privacyNotice": "Ich habe gelesen <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>"
     },
     "header": {
         "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro",
@@ -76,5 +77,8 @@
     "listing": {
         "boxAddProductMobile": "In den Warenkorb",
         "boxProductDetails": "Mehr Details"
+    },
+    "contact": {
+        "privacyNotice": "Ich habe gelesen <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>"
     }
 }
