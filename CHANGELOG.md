@@ -1,3 +1,7 @@
+# 1.9.0
+- Checked theme compatibility with the platform v6.4.17.0
+- Fixed footer social media links snippet
+
 # 1.8.0
 - Checked theme compatibility with the platform v6.4.16.0
 - Updated compatibility of CMS Extensions with Bootstrap 5
