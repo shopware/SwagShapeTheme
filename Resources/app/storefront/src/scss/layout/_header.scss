@@ -103,6 +103,14 @@
     box-shadow: 0 0 20px 20px $sw-background-color;
 }
 
+.header-actions-btn {
+    &,
+    &:active,
+    &:hover {
+        border: $btn-border-width solid transparent;
+    }
+}
+
 @include media-breakpoint-up(sm) {
     .header-actions-btn {
         &.account-menu-btn,

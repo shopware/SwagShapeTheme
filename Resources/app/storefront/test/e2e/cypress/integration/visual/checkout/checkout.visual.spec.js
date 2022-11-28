@@ -56,7 +56,7 @@ describe('Checkout: Visual tests', () => {
 
         cy.get('.offcanvas').should('be.visible');
         cy.wait(1000);
-        cy.takeSnapshot('[Checkout] Offcanvas open', `${checkoutPage.elements.offCanvasCart}.is-open`);
+        cy.takeSnapshot('[Checkout] Offcanvas open', `${checkoutPage.elements.offCanvasCart}.is-open`, {widths: [768, 1920]});
 
         // Checkout
         cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);

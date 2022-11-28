@@ -74,7 +74,7 @@ describe('ThemeColor: Visual tests', () => {
         });
         cy.get('.cart-offcanvas').should('be.visible');
         cy.wait(500);
-        cy.takeSnapshot('[Theme Color] Cart Offcanvas', '.cart-offcanvas');
+        cy.takeSnapshot('[Theme Color] Cart Offcanvas', '.cart-offcanvas', {widths: [768, 1920]});
 
         // checkout cart page
         cy.get('.offcanvas-cart-actions .btn-link').click();
