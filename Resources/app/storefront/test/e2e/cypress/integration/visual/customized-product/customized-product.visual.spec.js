@@ -216,7 +216,7 @@ describe('Customized Product: Check appearance of customized products', () => {
         // Off canvas cart
         cy.get('.offcanvas.is-open').should('be.visible');
         cy.get('.cart-item-label').contains(product.name);
-        cy.takeSnapshot('[Customized Product] Offcanvas', '.cart-offcanvas');
+        cy.takeSnapshot('[Customized Product] Offcanvas', '.cart-offcanvas', {widths: [768, 1920]});
 
         // Check the configuration
         cy.get('.cart-item-collapse-button').click();

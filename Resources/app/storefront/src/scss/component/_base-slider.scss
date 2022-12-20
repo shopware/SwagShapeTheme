@@ -94,6 +94,11 @@ based on: https://github.com/ganlanyuan/tiny-slider
             height: 24px;
         }
     }
+
+    &.is-nav-prev-outside,
+    &.is-nav-next-outside {
+        background-color: transparent;
+    }
 }
 
 .dots-text {

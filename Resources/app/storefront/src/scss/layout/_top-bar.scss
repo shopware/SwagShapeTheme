@@ -71,6 +71,10 @@
     &-menu {
         margin-left: -$spacer-10;
     }
+
+    &-nav-btn.btn {
+        border: $btn-border-width solid transparent;
+    }
 }
 
 .service-menu {
