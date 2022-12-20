@@ -1,5 +1,9 @@
 .scroll-up-button {
     display: block;
+
+    .text {
+        padding-left: $spacer-12;
+    }
 }
 
 .scroll-navigation-sidebar {
