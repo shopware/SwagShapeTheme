@@ -17,29 +17,15 @@
             }
         }
 
-        @if (feature('V6_5_0_0')) {
-            .btn {
-                min-width: 48px;
+        .btn {
+            min-width: 48px;
 
-                &:focus {
-                    box-shadow: none;
-                }
-
-                &:hover .icon {
-                    color: $primary;
-                }
+            &:focus {
+                box-shadow: none;
             }
-        } @else {
-            .input-group-append {
-                min-width: 48px;
 
-                .btn:focus {
-                    box-shadow: none;
-                }
-
-                .btn:hover .icon {
-                    color: $primary;
-                }
+            &:hover .icon {
+                color: $primary;
             }
         }
     }
@@ -54,7 +40,7 @@
     .swag-customized-products__card {
         @extend .m-0;
 
-        @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
+        @include media-breakpoint-down(md) {
             padding: $spacer-lg;
         }
     }
@@ -141,13 +127,8 @@
             }
 
             .swag-customized-products-form-control {
-                @if (feature('V6_5_0_0')) {
-                    line-height: $line-height-lg;
-                    @extend .form-select;
-                } @else {
-                    line-height: $input-line-height-lg;
-                    @extend .custom-select;
-                }
+                line-height: $line-height-lg;
+                @extend .form-select;
                 height: $input-height-lg;
                 padding: $input-padding-y-lg $input-padding-x-lg;
                 @include font-size($input-font-size-lg);
@@ -161,14 +142,8 @@
                 font-weight: $font-weight-bold;
             }
 
-            @if (feature('V6_5_0_0')) {
-                .form-check-input:checked ~ .form-check-label::before {
-                    border-color: $sw-color-brand-primary;
-                }
-            } @else {
-                .custom-control-input:checked ~ .custom-control-label::before {
-                    border-color: $sw-color-brand-primary;
-                }
+            .form-check-input:checked ~ .form-check-label::before {
+                border-color: $sw-color-brand-primary;
             }
         }
 
@@ -195,11 +170,7 @@
 
         .swag-customized-products__type-imageselect {
             .swag-customized-products-option-type-select-checkboxes-label__property-image {
-                @if (feature('V6_5_0_0')) {
-                    @extend .me-2;
-                } @else {
-                    @extend .mr-2;
-                }
+                @extend .me-2;
 
                 .swag-customized-products-option__image {
                     @extend .rounded-circle;
@@ -304,10 +275,8 @@
                 flex-grow: unset;
             }
 
-            @if (feature('V6_5_0_0')) {
-                .btn-prev {
-                    @extend .text-start;
-                }
+            .btn-prev {
+                @extend .text-start;
             }
         }
 

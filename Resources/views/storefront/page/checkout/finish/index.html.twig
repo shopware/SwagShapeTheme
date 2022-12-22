@@ -17,3 +17,11 @@
             </div>
     </div>
 {% endblock %}
+
+{% block page_checkout_finish_item %}
+    {% sw_include '@Storefront/storefront/component/line-item/line-item.html.twig' with {
+        redirectTo: 'frontend.checkout.confirm.page',
+        showTaxPrice: false,
+        showRemoveButton: false
+    } %}
+{% endblock %}

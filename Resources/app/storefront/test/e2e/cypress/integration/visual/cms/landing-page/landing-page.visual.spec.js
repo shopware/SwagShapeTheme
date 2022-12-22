@@ -63,10 +63,16 @@ describe('CMS: Landing Page', { tags: ['@visual', '@cms'] }, () => {
 
         // Add three slider images
         cy.get('#sw-field--currentBlockCategory').select('Images');
+        cy.get('.sw-cms-sidebar__block-selection').should('be.visible');
+        cy.get('.sw-cms-sidebar__block-selection > div:nth-of-type(10)').should('exist');
 
         cy.get('.sw-cms-sidebar__block-selection > div:nth-of-type(10)').scrollIntoView();
-        cy.get('.sw-cms-sidebar__block-selection > div:nth-of-type(10)').find('.sw-cms-sidebar__block-preview')
+        cy.get('.sw-cms-sidebar__block-selection > div:nth-of-type(10)')
+            .invoke('outerHeight')
+            .should('be.greaterThan', 200);
+        cy.get('.sw-cms-sidebar__block-selection > div:nth-of-type(10)')
             .dragTo('.sw-cms-stage-add-block:last-child');
+
         cy.get('.sw-cms-block').should('be.visible');
         cy.get('.sw-cms-block__config-overlay').last().invoke('show');
         cy.get('.sw-cms-block__config-overlay').last().should('be.visible');
@@ -110,7 +116,7 @@ describe('CMS: Landing Page', { tags: ['@visual', '@cms'] }, () => {
         cy.get('.offcanvas .btn-primary').contains('Save').click();
 
         cy.get('.is-ctl-landingpage').should('be.visible');
-        cy.get('.cms-block h2').contains('This is the landing page');
+        cy.get('.cms-block .cms-element-text').contains('This is the landing page');
 
         cy.wait(1000);
         cy.takeSnapshot('[CMS] Landing Page', '.content-main');

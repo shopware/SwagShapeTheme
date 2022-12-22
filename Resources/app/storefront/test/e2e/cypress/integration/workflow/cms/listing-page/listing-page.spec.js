@@ -131,6 +131,6 @@ describe('CMS: Listing Page', {tags: ['@workflow', '@cms']}, () => {
         // Verify category
         cy.visit('/');
         cy.get('.main-navigation-link-text').contains('Full width Listing Categorian').click();
-        cy.get('.cms-block h2').contains('This is the listing page');
+        cy.get('.cms-block .cms-element-text').contains('This is the listing page');
     });
 });

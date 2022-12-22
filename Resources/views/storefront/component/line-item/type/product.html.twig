@@ -1,0 +1,40 @@
+{# Override to do unit price same column with total price on the displaMode default #}
+{% sw_extends '@Storefront/storefront/component/line-item/type/product.html.twig' %}
+
+{% block component_line_item_type_product_col_tax_price %}
+    {% if displayMode != 'default' %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block component_line_item_type_product_col_unit_price %}
+    {% if displayMode != 'default' %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block component_line_item_type_product_col_total_price %}
+    {% if displayMode === 'default' %}
+        <div class="line-item-total-price line-item-price">
+            {% sw_include '@Storefront/storefront/component/line-item/element/total-price.html.twig' %}
+
+            {% if showTaxPrice %}
+                {% block component_line_item_type_product_col_wrap_tax_price %}
+                    <div class="line-item-tax-price">
+                        {% if context.salesChannel.taxCalculationType == 'horizontal' %}
+                            {% sw_include '@Storefront/storefront/component/line-item/element/tax-price.html.twig' %}
+                        {% endif %}
+                    </div>
+                {% endblock %}
+            {% else %}
+                {% block component_line_item_type_product_col_wrap_unit_price %}
+                    <div class="line-item-unit-price{% if lineItem.quantity > 1 %} is-shown{% endif %}">
+                        {% sw_include '@Storefront/storefront/component/line-item/element/unit-price.html.twig' %}
+                    </div>
+                {% endblock %}
+            {% endif %}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

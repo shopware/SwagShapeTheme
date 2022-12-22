@@ -17,7 +17,7 @@ describe('Checkout: Visual tests', () => {
             })
             .then(() => cy.visit('/'))
             .then(() => {
-                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click();
+                cy.get('.js-cookie-configuration-button > .btn').contains('Configure').click({force: true});
                 cy.get('.offcanvas-cookie > .btn').scrollIntoView().should('be.visible').click();
             });
     });
@@ -37,12 +37,12 @@ describe('Checkout: Visual tests', () => {
         cy.get('.search-suggest-product-name').click();
         cy.get('.product-detail-buy .btn-buy').click();
         cy.wait('@cartInfo').then((xhr) => {
-            expect(xhr.response).to.have.property('statusCode', 200)
+            expect(xhr.response).to.have.property('statusCode', 204)
         });
 
         // Offcanvas
         cy.get('.offcanvas').should('be.visible');
-        cy.get('.cart-item-price').contains('64');
+        cy.get('.line-item-price').contains('64');
         cy.get('.offcanvas').should('be.visible');
         cy.contains('Continue shopping').should('be.visible');
         cy.contains('Continue shopping').click();
@@ -56,7 +56,7 @@ describe('Checkout: Visual tests', () => {
 
         cy.get('.offcanvas').should('be.visible');
         cy.wait(1000);
-        cy.takeSnapshot('[Checkout] Offcanvas open', `${checkoutPage.elements.offCanvasCart}.is-open`, {widths: [768, 1920]});
+        cy.takeSnapshot('[Checkout] Offcanvas open', `${checkoutPage.elements.offCanvasCart}.show`, {widths: [768, 1920]});
 
         // Checkout
         cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);
@@ -68,8 +68,8 @@ describe('Checkout: Visual tests', () => {
         accountPage.login();
 
         // Confirm
-        cy.get('.confirm-tos .custom-checkbox label').scrollIntoView();
-        cy.get('.confirm-tos .custom-checkbox label').click(1, 1);
+        cy.get('.confirm-tos .form-check label').scrollIntoView();
+        cy.get('.confirm-tos .form-check label').click(1, 1);
         cy.get('.confirm-address').contains('Pep Eroni');
 
         cy.get(`${checkoutPage.elements.cartItem}-details-container ${checkoutPage.elements.cartItem}-label`).contains(product.name);
@@ -90,7 +90,19 @@ describe('Checkout: Visual tests', () => {
     })
 
     it('@visual @checkout: checkout cart', () => {
-        cy.get('.btn-buy').click();
+        cy.intercept({
+            path: '/widgets/checkout/info',
+            method: 'get'
+        }).as('cartInfo');
+
+        // hover over product-box
+        cy.get('.product-box').should('be.visible');
+        cy.get('.product-box').first().invoke('addClass', 'hover');
+        cy.get('.product-box .btn-buy').click();
+
+        cy.wait('@cartInfo').then((xhr) => {
+            expect(xhr.response).to.have.property('statusCode', 200)
+        });
 
         // Checkout
         cy.get('.offcanvas-cart-actions .btn-link').click();

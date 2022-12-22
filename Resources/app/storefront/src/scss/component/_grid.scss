@@ -1,0 +1,9 @@
+// Row
+//
+// Rows contain your columns.
+
+.row.g-2 {
+    @extend .gx-4;
+
+    margin-top: 0;
+}

@@ -47,36 +47,16 @@
 
     &-submit {
         margin-top: $spacer-10;
-        @if (feature('V6_5_0_0')) {
-            @extend .d-grid;
-        }
-
-        .btn {
-            @if (not feature('V6_5_0_0')) {
-                @extend .btn-block;
-            }
-
-            @extend .btn-outline-primary;
-
-            background-color: transparent;
-        }
+        @extend .d-grid;
     }
 
     &-form {
         display: flex;
         flex-direction: column;
 
-        @if (feature('V6_5_0_0')) {
-            .row > .col-md-6 {
-                .account-register & {
-                    @include make-col(12);
-                }
-            }
-        } @else {
-            .form-row > .col-md-6 {
-                .account-register & {
-                    @include make-col(12);
-                }
+        .row > .col-md-6 {
+            .account-register & {
+                @include make-col(12);
             }
         }
     }
@@ -107,6 +87,13 @@
         .content-main .container-main {
             padding-top: 80px;
             padding-bottom: 132px;
+        }
+    }
+
+    .is-act-loginpage,
+    .is-act-accountregisterpage {
+        .register-submit {
+            @extend .offset-md-0;
         }
     }
 

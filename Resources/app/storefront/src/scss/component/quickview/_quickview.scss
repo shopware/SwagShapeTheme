@@ -7,7 +7,7 @@ $icon-fill-color: #f9f9f9;
         text-align: center;
     }
 
-    @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
+    @include media-breakpoint-down(lg) {
         .gallery-slider-thumbnails-col.is-left {
             display: none;
         }
@@ -156,52 +156,27 @@ $icon-fill-color: #f9f9f9;
         ~ .swag-cms-extensions-quickview-content--buy-button {
             @include make-col(12);
 
-            @if (feature('V6_5_0_0')) {
-                padding-left: 4px;
-            } @else {
-                padding-left: 12px;
-            }
+            padding-left: 4px;
         }
     }
 }
 
-@if (feature('V6_5_0_0')) {
-    .row {
-        .swag-cms-extensions-quickview-content--buy-quantity,
-        .swag-cms-extensions-quickview-content--buy-button {
-            margin-top: 0;
-        }
-    }
-} @else {
+.row {
+    .swag-cms-extensions-quickview-content--buy-quantity,
     .swag-cms-extensions-quickview-content--buy-button {
-        .btn-primary {
-            line-height: 40px;
-        }
+        margin-top: 0;
     }
 }
 
 @include media-breakpoint-up(md) {
-    @if (feature('V6_5_0_0')) {
-        .row {
-            > .swag-cms-extensions-quickview-content--buy-quantity:not(.quantity-input) {
-                margin-bottom: $spacer-sm;
-                padding-right: 8px;
-            }
-
-            > .swag-cms-extensions-quickview-content--buy-button {
-                padding-left: 8px;
-            }
+    .row {
+        > .swag-cms-extensions-quickview-content--buy-quantity:not(.quantity-input) {
+            margin-bottom: $spacer-sm;
+            padding-right: 8px;
         }
-    } @else {
-        .form-row {
-            .swag-cms-extensions-quickview-content--buy-quantity:not(.quantity-input) {
-                margin-bottom: $spacer-sm;
-                padding-right: 8px;
-            }
 
-            > .swag-cms-extensions-quickview-content--buy-button {
-                padding-left: 8px;
-            }
+        > .swag-cms-extensions-quickview-content--buy-button {
+            padding-left: 8px;
         }
     }
 

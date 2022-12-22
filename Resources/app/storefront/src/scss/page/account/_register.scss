@@ -5,57 +5,28 @@
 
     .register-billing,
     .register-shipping {
-        @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
-            @if (feature('V6_5_0_0')) {
-                > .row .form-group.col-md-2,
-                > .row .form-group.col-md-4 {
-                    @include make-col(12);
-                }
-            } @else {
-                > .form-row .form-group.col-md-2,
-                > .form-row .form-group.col-md-4 {
-                    @include make-col(12);
-                }
+        @include media-breakpoint-down(md) {
+            > .row .form-group.col-md-2,
+            > .row .form-group.col-md-4 {
+                @include make-col(12);
             }
         }
     }
 
     .register-billing {
-        @if (feature('V6_5_0_0')) {
-            .row.country-and-state-form-elements,
-            .row.contact-address {
-                > .col-md-6,
-                > .col-sm-6 {
-                    @include make-col(12);
-                }
-            }
-        } @else {
-            .form-row.country-and-state-form-elements,
-            .form-row.contact-address {
-                > .col-md-6,
-                > .col-sm-6 {
-                    @include make-col(12);
-                }
+        .row.country-and-state-form-elements,
+        .row.contact-address {
+            > .col-md-6,
+            > .col-sm-6 {
+                @include make-col(12);
             }
         }
     }
 
-    @if (feature('V6_5_0_0')) {
-        .row.contact-register {
-            &:not(:first-child) {
-                > .col-md-6,
-                > .col-sm-6 {
-                    @include make-col(12);
-                }
-            }
-        }
-    } @else {
-        .form-row.contact-register {
-            &:not(:first-child) {
-                > .col-md-6,
-                > .col-sm-6 {
-                    @include make-col(12);
-                }
+    .row.contact-register {
+        @include media-breakpoint-up(sm) {
+            > .col-sm-6 {
+                @include make-col(12);
             }
         }
     }
@@ -109,27 +80,14 @@
             }
         }
 
-        @if (feature('V6_5_0_0')) {
-            .row {
-                > .col-md-3 {
-                    @include make-col(12);
-                }
-
-                > .col-md-2,
-                > .col-md-4 {
-                    @include make-col(6);
-                }
+        .row {
+            > .col-md-3 {
+                @include make-col(12);
             }
-        } @else {
-            .form-row {
-                > .col-md-3 {
-                    @include make-col(12);
-                }
 
-                > .col-md-2,
-                > .col-md-4 {
-                    @include make-col(6);
-                }
+            > .col-md-2,
+            > .col-md-4 {
+                @include make-col(6);
             }
         }
     }
@@ -145,9 +103,6 @@
 
         .btn {
             @extend .btn-lg;
-            @if (not feature('V6_5_0_0')) {
-                @extend .btn-block;
-            }
         }
     }
 
@@ -192,17 +147,9 @@
         }
 
         .register-personal {
-            @if (feature('V6_5_0_0')) {
-                .row {
-                    > .col-md-2 {
-                        @include make-col(4);
-                    }
-                }
-            } @else {
-                .form-row {
-                    > .col-md-2 {
-                        @include make-col(4);
-                    }
+            .row {
+                > .col-md-2 {
+                    @include make-col(4);
                 }
             }
         }
@@ -213,17 +160,9 @@
                 padding-bottom: $spacer-lg;
             }
 
-            @if (feature('V6_5_0_0')) {
-                .row.country-and-state-form-elements {
-                    > .col-md-6 {
-                        @include make-col(12);
-                    }
-                }
-            } @else {
-                .form-row.country-and-state-form-elements {
-                    > .col-md-6 {
-                        @include make-col(12);
-                    }
+            .row.country-and-state-form-elements {
+                > .col-md-6 {
+                    @include make-col(12);
                 }
             }
         }
@@ -237,17 +176,9 @@
     }
 
     .register-shipping {
-        @if (feature('V6_5_0_0')) {
-            .row.contact-address {
-                > .col-md-6 {
-                    @include make-col(12);
-                }
-            }
-        } @else {
-            .form-row.contact-address {
-                > .col-md-6 {
-                    @include make-col(12);
-                }
+        .row.contact-address {
+            > .col-md-6 {
+                @include make-col(12);
             }
         }
     }

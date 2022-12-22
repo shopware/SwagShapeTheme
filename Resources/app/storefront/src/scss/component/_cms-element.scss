@@ -46,11 +46,7 @@ General styling for cms elements
 
     .border-primary {
         line-height: 30px;
-        @if (feature('V6_5_0_0')) {
-            border-color: $form-select-border-color !important;
-        } @else {
-            border-color: $custom-select-border-color !important;
-        }
+        border-color: $form-select-border-color !important;
 
         .icon {
             width: 18px;
@@ -77,7 +73,7 @@ General styling for cms elements
     }
 }
 
-@include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
+@include media-breakpoint-down(lg) {
     .cms-element-product-listing-actions {
         .sorting {
             margin-top: 0;

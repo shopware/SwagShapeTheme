@@ -62,7 +62,7 @@ describe('Checkout: Use rounding', {tags: ['@workflow', '@checkout']}, () => {
         cy.get('.product-detail-buy .btn-buy').click();
 
         // Off canvas
-        cy.get(`${checkoutPage.elements.offCanvasCart}.is-open`).should('be.visible');
+        cy.get(`${checkoutPage.elements.offCanvasCart}.show`).should('be.visible');
         cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);
 
         // Checkout

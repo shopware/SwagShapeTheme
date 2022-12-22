@@ -44,7 +44,7 @@ describe('Customized Product: Check appearance of customized products', () => {
         })
     });
 
-    it('@visual @customized: Customized product with all options', () => {
+    it.skip('@visual @customized: Customized product with all options', () => {
         cy.visit('Customized-Product/RS-333');
         cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});
         cy.get('.offcanvas .btn-primary').contains('Save').click();

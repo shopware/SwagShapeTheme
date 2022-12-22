@@ -32,10 +32,9 @@
     justify-content: center;
 
     > .col-12.col-md-4 {
-        margin-right: 1rem;
-        @if (feature('V6_5_0_0')) {
-            @extend .d-grid;
-        }
+        padding: 0;
+
+        @extend .d-grid;
     }
 
     .btn {
@@ -49,6 +48,7 @@
     @include media-breakpoint-up(md) {
         > .col-12.col-md-4 {
             @include make-col(3);
+            margin-right: 1rem;
         }
     }
 }
@@ -71,6 +71,16 @@
 
     .address-editor-card:hover {
         box-shadow: none;
+    }
+
+    .address {
+        margin-bottom: $spacer;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .tab-content {
+            padding-top: 0;
+        }
     }
 }
 
@@ -99,11 +109,7 @@
 }
 
 .address-form-actions {
-    @if (feature('V6_5_0_0')) {
-        @extend .row, .g-2;
-    } @else {
-        @extend .form-row;
-    }
+    @extend .row, .g-2;
 
     .btn {
         @extend .col-6;

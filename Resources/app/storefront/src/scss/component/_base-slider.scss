@@ -107,7 +107,7 @@ based on: https://github.com/ganlanyuan/tiny-slider
     right: 17px;
 }
 
-@include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
+@include media-breakpoint-down(md) {
     .base-slider {
         .tns-nav,
         .base-slider-dots {
@@ -117,7 +117,7 @@ based on: https://github.com/ganlanyuan/tiny-slider
     }
 }
 
-@include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
+@include media-breakpoint-down(lg) {
     .base-slider {
         &.gallery-slider {
             .cms-block-gallery-buybox & {

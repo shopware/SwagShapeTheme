@@ -12,12 +12,18 @@ $modal-inner-padding-lg: 100px;
 
 .modal-header {
     padding-bottom: 0;
+    align-items: flex-start;
 
     .close {
         padding: 0;
+        background: none;
 
         .icon {
             color: $black;
+        }
+
+        &:focus:not(:focus-visible) {
+            box-shadow: none;
         }
     }
 }

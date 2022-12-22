@@ -6,7 +6,7 @@
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
         "requiredFields": "*required field",
         "offcanvasCloseMenu": "My Account",
-        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
+        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-bs-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
     },
     "header": {
         "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros",
@@ -61,7 +61,7 @@
         "profileChangePassword": "Change",
         "profilePasswordText": "**************************",
         "profileAccountDeleting": "Customer account",
-        "profileDelete": "<a href=\"%target%\" data-toggle=\"modal\" data-target=\"%target%\">Click here</a> to delete all your personal data",
+        "profileDelete": "<a href=\"%target%\" data-toggle=\"modal\" data-bs-toggle=\"modal\" data-target=\"%target%\">Click here</a> to delete all your personal data",
         "profileDeleteModalTitle": "Customer Account",
         "profileDeleteButton": "Delete Account",
         "profileDeleteAlert": "After deleting your customer account personal data, newsletter entries and reviews won't be accessible to you anymore.\n Note that records of all orders will be kept nonetheless in order to fulfill legal regulations.",

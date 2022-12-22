@@ -6,7 +6,7 @@
         "maintenanceModeDescription": "Die Seite, die Sie suchen, existiert nicht mehr.",
         "requiredFields": "*Pflichtfeld",
         "offcanvasCloseMenu": "Mein Konto",
-        "privacyNotice": "Ich habe gelesen <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>"
+        "privacyNotice": "Ich habe gelesen <a data-toggle=\"modal\" data-bs-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>"
     },
     "header": {
         "topBarMessage": "KOSTENLOSE ÜBERWEISUNG UND KOSTENLOSE RÜCKGABE ab einem Bestellwert von X Euro",
@@ -61,7 +61,7 @@
         "profileChangePassword": "Ändern",
         "profilePasswordText": "**************************",
         "profileAccountDeleting": "Kundenkonto",
-        "profileDelete": "<a href=\"%target%\" data-toggle=\"modal\" data-target=\"%target%\">Klicken Sie hier</a> um alle Ihre persönlichen Daten zu löschen",
+        "profileDelete": "<a href=\"%target%\" data-toggle=\"modal\" data-bs-toggle=\"modal\" data-target=\"%target%\">Klicken Sie hier</a> um alle Ihre persönlichen Daten zu löschen",
         "profileDeleteModalTitle": "Kundenkonto",
         "profileDeleteButton": "Konto löschen",
         "profileDeleteAlert": "Nach der Löschung der persönlichen Daten Ihres Kundenkontos sind Newsletter-Einträge und Bewertungen für Sie nicht mehr zugänglich.\n Beachten Sie, dass dennoch Aufzeichnungen über alle Bestellungen aufbewahrt werden, um die gesetzlichen Bestimmungen zu erfüllen.",

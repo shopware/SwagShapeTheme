@@ -45,7 +45,7 @@ describe('Wishlist: Check appearance of wishlist', () => {
             });
         })
 
-        return cy.createCustomerFixtureStorefront()
+        cy.createCustomerFixtureStorefront()
             .then(() => {
                 return cy.createProductFixture(product)
                     .then(() => {
@@ -123,6 +123,6 @@ describe('Wishlist: Check appearance of wishlist', () => {
         cy.get('.product-wishlist-btn-content.text-wishlist-not-added').first().should('not.be.visible');
         cy.get('.product-wishlist-btn-content.text-wishlist-remove').first().contains('Remove from wishlist');
 
-        cy.takeSnapshot('[Wishlist] Product detail', '.product-detail');
+        cy.takeSnapshot('[Wishlist] Product detail', '.product-detail-name');
     });
 });

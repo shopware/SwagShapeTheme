@@ -78,22 +78,12 @@
             }
         }
 
-        @if (feature('V6_5_0_0')) {
-            .btn-close {
-                margin: 0;
-                height: 20px;
-                position: absolute;
-                top: 30px;
-                right: 30px;
-            }
-        } @else {
-            .modal-close {
-                margin: 0;
-                height: 20px;
-                position: absolute;
-                top: 30px;
-                right: 30px;
-            }
+        .btn-close {
+            margin: 0;
+            height: 20px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
         }
     }
 }

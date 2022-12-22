@@ -5,7 +5,7 @@
         overflow: hidden;
         justify-content: space-between;
 
-        @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
+        @include media-breakpoint-down(lg) {
             align-items: center;
         }
     }
@@ -23,22 +23,11 @@
     &-search {
         width: 288px;
 
-        @if (feature('V6_5_0_0')) {
-            button.header-search-btn {
-                @include border-start-radius(0 !important);
-                background-color: transparent;
-                display: flex;
-                align-items: center;
-            }
-        } @else {
-            .input-group-append {
-                min-width: 0;
-
-                > button.header-search-btn {
-                    @include border-left-radius(0);
-                    background-color: transparent;
-                }
-            }
+        button.header-search-btn {
+            @include border-start-radius(0 !important);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
         }
 
         .header-search-input {
@@ -49,6 +38,9 @@
         .btn.header-search-btn {
             padding-left: $spacer-md;
             padding-right: $spacer-md;
+            min-width: 22px;
+            border: $input-border-width solid $input-border-color;
+            border-left: none;
 
             :hover {
                 color: $primary;
@@ -73,17 +65,21 @@
         font-size: $font-size-sm;
         background-color: transparent !important;
         color: $shape-gray-900;
-        @if (feature('V6_5_0_0')) {
-            top: -3px !important;
-        }
+        top: -3px !important;
     }
 
     &-actions {
         @extend .d-flex;
 
         &-btn {
+            &,
+            &:active {
+                border: $btn-border-width solid transparent;
+            }
+
             &:hover {
                 color: $primary;
+                border: $btn-border-width solid transparent;
 
                 .header-wishlist-badge {
                     color: $primary;
@@ -95,20 +91,18 @@
             background-color: rgba($sw-background-color, 1);
         }
     }
+
+    &-search-input:focus {
+        ~ .input-group-append .header-search-btn {
+            border-color: $primary;
+        }
+    }
 }
 
 .curtain-area {
     @extend .d-none, .d-lg-inline-block;
     height: $input-height-lg;
     box-shadow: 0 0 20px 20px $sw-background-color;
-}
-
-.header-actions-btn {
-    &,
-    &:active,
-    &:hover {
-        border: $btn-border-width solid transparent;
-    }
 }
 
 @include media-breakpoint-up(sm) {

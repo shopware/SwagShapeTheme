@@ -5,12 +5,12 @@
             aria-expanded="false"
             data-text="{{ displayName }}"
             {% if sidebar %}
-            {{ dataBsToggleAttr }}="collapse"
-            {{ dataBsTargetAttr }}="#{{ filterItemId }}"
+            data-bs-toggle="collapse"
+            data-bs-target="#{{ filterItemId }}"
             {% else %}
-            {{ dataBsToggleAttr }}="dropdown"
+            data-bs-toggle="dropdown"
             data-boundary="viewport"
-            {{ dataBsOffsetAttr }}="0,8"
+            data-bs-offset="0,8"
             aria-haspopup="true"
             {% endif %}>
 

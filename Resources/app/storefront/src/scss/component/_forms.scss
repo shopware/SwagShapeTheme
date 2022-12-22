@@ -1,7 +1,23 @@
+.form-group {
+    margin-top: 0;
+}
+
 .form-label {
     padding-left: $input-padding-x;
 }
 
+.form-control {
+    height: 40px;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
 .form-control + small.form-text {
     padding-left: $input-padding-x;
+}
+
+textarea.form-control {
+    height: auto;
 }

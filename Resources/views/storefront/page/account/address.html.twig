@@ -7,7 +7,12 @@
                 <div class="card-title">
                     <div>{{ "account.overviewBillingHeader"|trans|sw_sanitize }}</div>
 
-                    {{ block('page_account_overview_billing_address_actions') }}
+                    {% block page_account_overview_billing_address_actions %}
+                        {% set addressEditorOptions = {
+                            changeBilling: true,
+                        } %}
+                        {{ parent() }}
+                    {% endblock %}
                 </div>
             {% endblock %}
 

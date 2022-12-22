@@ -58,27 +58,14 @@
         @include card-box;
     }
 
-    @if (feature('V6_5_0_0')) {
-        .row {
-            > .col,
-            > .col-6 {
-                @extend .col-12;
-                @extend .col-md-6;
+    .row {
+        > .col,
+        > .col-6 {
+            @extend .col-12;
+            @extend .col-md-6;
 
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-        }
-    } @else {
-        .form-row {
-            > .col,
-            > .col-6 {
-                @extend .col-12;
-                @extend .col-md-6;
-
-                padding-left: 12px;
-                padding-right: 12px;
-            }
+            padding-left: 12px;
+            padding-right: 12px;
         }
     }
 
@@ -102,26 +89,15 @@
         border-bottom: none;
         flex-wrap: wrap;
 
-        @if (feature('V6_5_0_0')) {
-            .btn-close {
-                order: -1;
-                padding: 0;
-                margin: 0 0 6px;
-                width: 100%;
-                text-align: right;
-                opacity: 1;
-                line-height: 14px;
-            }
-        } @else {
-            .modal-close {
-                order: -1;
-                padding: 0;
-                margin: 0 0 6px;
-                width: 100%;
-                text-align: right;
-                opacity: 1;
-                line-height: 14px;
-            }
+        .btn-close {
+            order: -1;
+            padding: 0;
+            margin: 0 0 6px;
+            width: 100%;
+            text-align: right;
+            opacity: 1;
+            line-height: 14px;
+            font-size: 0;
         }
     }
 

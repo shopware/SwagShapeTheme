@@ -90,6 +90,7 @@ describe('Product Detail: Product', () => {
             .scrollIntoView()
             .should('be.visible');
         cy.get('.product-detail-tab-navigation-link.active').contains('Kunden kauften auch');
+        cy.wait(1000);
         cy.takeSnapshot('[Product detail] Cross Selling', '.product-detail-cross-selling');
     });
 })

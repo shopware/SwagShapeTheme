@@ -1,11 +1,5 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
-{% if feature('V6_5_0_0') %}
-    {% set formRowClass = 'row' %}
-{% else %}
-    {% set formRowClass = 'form-row' %}
-{% endif %}
-
 {% block base_navigation %}
 {% endblock %}
 
@@ -15,4 +9,13 @@
 
 {% block base_header_inner %}
     {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+{% endblock %}
+
+{% block base_noscript %}
+    <noscript class="noscript-main">
+        {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+            type: 'alert',
+            content: 'general.noscriptNotice'|trans|sw_sanitize
+        } %}
+    </noscript>
 {% endblock %}
