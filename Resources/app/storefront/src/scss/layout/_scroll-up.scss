@@ -12,10 +12,20 @@ Shows a scroll up button at the bottom right of the page.
 
     .btn {
         font-weight: $font-weight-bolder;
+        display: flex;
+        align-items: center;
     }
 
-    .icon-shape-ic-arrow-up path {
-        fill: $white;
+    .icon-shape-ic-arrow-up {
+        svg {
+            width: inherit;
+            height: inherit;
+            display: block;
+        }
+
+        path {
+            fill: $white;
+        }
     }
 }
 
