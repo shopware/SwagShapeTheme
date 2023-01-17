@@ -8,4 +8,28 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
 
 .product-slider-container {
     display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.product-slider-item {
+    min-width: 100%;
+
+    .tns-slider & {
+        min-width: 200px;
+        margin-right: 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .product-slider-item {
+        min-width: calc(50% - 15px);
+        margin-right: 30px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .product-slider-item {
+        min-width: calc(25% - 22px);
+    }
 }

@@ -22,21 +22,13 @@ $table-radius: 24px;
 
         :is(th, td):first-child {
             &:hover {
-                @if (feature('V6_5_0_0')) {
-                    @include border-start-radius($table-radius);
-                } @else {
-                    @include border-left-radius($table-radius);
-                }
+                @include border-start-radius($table-radius);
             }
         }
 
         :is(th,td):last-child {
             &:hover {
-                @if (feature('V6_5_0_0')) {
-                    @include border-end-radius($table-radius);
-                } @else {
-                    @include border-right-radius($table-radius);
-                }
+                @include border-end-radius($table-radius);
             }
         }
     }

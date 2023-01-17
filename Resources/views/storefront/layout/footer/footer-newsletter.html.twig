@@ -14,7 +14,7 @@
                     {% endblock %}
                     <a
                         href="{{ path('frontend.cms.page',{ id: config('core.basicInformation.newsletterPage')}) }}"
-                        {{ dataBsToggleAttr }}="modal"
+                        data-bs-toggle="modal"
                         data-url="{{ path('frontend.cms.page',{ id: config('core.basicInformation.newsletterPage')}) }}"
                         class="btn btn-primary"
                         role="button"

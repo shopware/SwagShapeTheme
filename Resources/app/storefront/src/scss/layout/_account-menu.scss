@@ -51,16 +51,9 @@ The menu opens on smaller viewports inside an offcanvas and on larger viewports 
             text-align: center;
         }
 
-        @if (feature('V6_5_0_0')) {
-            .offcanvas-body {
-                padding: $spacer-40 0 0;
-                flex-grow: 1;
-            }
-        } @else {
-            .offcanvas-content-container {
-                padding: $spacer-40 0 0;
-                flex-grow: 1;
-            }
+        .offcanvas-body {
+            padding: $spacer-40 0 0;
+            flex-grow: 1;
         }
     }
 

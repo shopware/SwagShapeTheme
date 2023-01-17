@@ -135,7 +135,7 @@ describe('CMS: Listing Page', { tags: ['@visual', '@cms'] }, () => {
         cy.get('.offcanvas .btn-primary').contains('Save').click();
 
         cy.get('.main-navigation-link-text').contains('Listing Categorian').click();
-        cy.get('.cms-block h2').contains('This is the listing page');
+        cy.get('.cms-block .cms-element-text').contains('This is the listing page');
 
         cy.takeSnapshot('[CMS] Listing Page', '.content-main');
     });

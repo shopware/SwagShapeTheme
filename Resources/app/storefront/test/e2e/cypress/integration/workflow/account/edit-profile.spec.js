@@ -105,7 +105,8 @@ describe('Account: Profile', { tags: ['@workflow', '@profile'] }, () => {
 
         cy.wait(1000);
 
-        cy.get('#confirmDeleteAccountModal button[type="submit"]').click();
+        cy.get('.confirm-delete-account-modal .btn-primary').click();
+
         cy.wait('@deleteRequest').then((xhr) => {
             expect(xhr.response.statusCode).to.eq(302);
         });

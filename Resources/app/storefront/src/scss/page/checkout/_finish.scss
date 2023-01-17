@@ -4,9 +4,7 @@
     }
 
     .checkout-main {
-        @if (feature('V6_5_0_0')) {
-            width: 100% !important;
-        }
+        width: 100% !important;
 
         &:first-child {
             padding: 0;
@@ -61,9 +59,7 @@
 
         .checkout-aside {
             margin-left: 0;
-            @if (feature('V6_5_0_0')) {
-                width: 100%;
-            }
+            width: 100%;
         }
     }
 
@@ -117,7 +113,8 @@
     .cart-header-quantity,
     .cart-header-tax-price,
     .cart-header-unit-price,
-    .cart-header-total-price {
+    .cart-header-total-price,
+    .line-item-quantity {
         @extend .d-none;
     }
 

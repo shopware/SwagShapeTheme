@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/component/address/address.html.twig' %}
+
+{% block component_address_action_button %}
+    <div class="card-actions">
+        {% sw_include '@Storefront/storefront/page/account/addressbook/address-actions.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block component_address %}
+    {% apply spaceless %}
+        {{ parent() }}
+    {% endapply %}
+{% endblock %}

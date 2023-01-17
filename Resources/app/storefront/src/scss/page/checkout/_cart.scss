@@ -27,14 +27,8 @@ $checkout-empty-spacing: 150px !default;
         @include make-col(6);
     }
 
-    @if (feature('V6_5_0_0')) {
-        .form-select {
-            @extend .form-select-lg;
-        }
-    } @else {
-        .custom-select {
-            @extend .custom-select-lg;
-        }
+    .form-select {
+        @extend .form-select-lg;
     }
 }
 
@@ -48,12 +42,7 @@ $checkout-empty-spacing: 150px !default;
     font-size: $font-size-base;
     font-weight: $font-weight-bolder;
     width: 100%;
-    @if (feature('V6_5_0_0')) {
-        padding-left: 12px;
-    } @else {
-        @extend .btn-block;
-    }
-
+    padding-left: 12px;
 }
 
 .is-act-cartpage {

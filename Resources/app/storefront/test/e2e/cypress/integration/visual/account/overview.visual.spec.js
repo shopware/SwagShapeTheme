@@ -9,7 +9,7 @@ describe('Account: Overview page', () => {
             .then(() => {
                 cy.visit('/');
             }).then(() => {
-                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click();
+                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click({force: true});
                 cy.get('.offcanvas-cookie > .btn').scrollIntoView().should('be.visible').click();
             });
     });
@@ -24,9 +24,7 @@ describe('Account: Overview page', () => {
 
         cy.get('.account-overview-profile').should('be.visible');
         cy.get('.account-overview-newsletter').should('be.visible');
-        cy.get('#newsletterRegister').should('not.be.visible')
-            .check({ force: true })
-            .should('be.checked');
+        cy.get('label[for="newsletterRegister"]').click();
 
         cy.get('.newsletter-alerts').should((element) => {
             expect(element).to.contain('You have subscribed to the newsletter');
@@ -49,7 +47,7 @@ describe('Account: Overview page', () => {
 
         cy.takeSnapshot('[Overview] Create a new billing address form', '.address-editor-modal');
 
-        cy.get('.address-editor-modal').find('.modal-close').click();
+        cy.get('.address-editor-modal').find('.btn-close').click();
 
         cy.get('.overview-shipping-address [data-address-editor="true"]').click();
         cy.get('.address-editor-modal').should('be.visible');

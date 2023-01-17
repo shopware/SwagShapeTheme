@@ -165,16 +165,9 @@
         }
     }
 
-    @if (feature('V6_5_0_0')) {
-        dl dt[class*=col-],
-        .g-0 > [class*=col-] {
-            margin-bottom: 0;
-        }
-    } @else {
-        dl dt[class*=col-],
-        .no-gutters > [class*=col-] {
-            margin-bottom: 0;
-        }
+    dl dt[class*=col-],
+    .g-0 > [class*=col-] {
+        margin-bottom: 0;
     }
 }
 

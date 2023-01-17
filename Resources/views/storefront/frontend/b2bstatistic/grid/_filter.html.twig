@@ -8,7 +8,7 @@
 
 {% block b2b_statistic_filter_panel_content_filter %}
     {# Hide the first form-group when contact length < 1 #}
-    <div class="{{ formRowClass }} panel-content-filter">
+    <div class="row g-2 panel-content-filter">
         {% if contacts|length > 1 %}
             <div class="form-group">
                 {% block b2b_statistic_filter_panel_content_filter_contact %}

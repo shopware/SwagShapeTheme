@@ -2,23 +2,12 @@ $navigation-offcanvas-padding: 12px;
 $navigation-offcanvas-padding-lg: 60px;
 
 .navigation-offcanvas {
-    @if (feature('V6_5_0_0')) {
-        .offcanvas-body {
-            @extend .px-0;
-            background-color: $white;
+    .offcanvas-body {
+        @extend .px-0;
+        background-color: $white;
 
-            @include media-breakpoint-up(md) {
-                width: 100%;
-            }
-        }
-    } @else {
-        .offcanvas-content-container {
-            @extend .px-0;
-            background-color: $white;
-
-            @include media-breakpoint-up(md) {
-                width: 100%;
-            }
+        @include media-breakpoint-up(md) {
+            width: 100%;
         }
     }
 

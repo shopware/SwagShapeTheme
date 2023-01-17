@@ -17,7 +17,7 @@
     "fs-extra": "^10.1.0",
     "lighthouse": "^9.5.0",
     "puppeteer": "^13.6.0",
-    "stylelint": "^13.11.0",
-    "stylelint-config-sass-guidelines": "^6.0.0"
+    "stylelint": "^14.3.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
   }
 }

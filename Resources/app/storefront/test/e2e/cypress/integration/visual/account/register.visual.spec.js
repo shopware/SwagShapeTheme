@@ -10,7 +10,7 @@ describe('Account: Register via account menu', () => {
     before(() => {
         return cy.visit('/')
             .then(() => {
-                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click();
+                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click({force: true});
                 cy.get('.offcanvas-cookie > .btn').scrollIntoView().should('be.visible').click();
             });
     })
@@ -126,7 +126,7 @@ describe('Account: Register via account menu', () => {
         cy.get('#billingAddressAdditionalField2').type('GHK Ansgarstr 3');
         cy.get('#billingAddressAddressPhoneNumber').type('0123456789');
 
-        cy.get('input[name="acceptedDataProtection"]').should('not.be.visible')
+        cy.get('input[name="acceptedDataProtection"]').should('be.visible')
             .check({force: true})
             .should('be.checked');
 

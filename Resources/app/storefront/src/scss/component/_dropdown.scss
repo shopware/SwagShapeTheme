@@ -21,6 +21,10 @@
         box-shadow: $dropdown-box-shadow;
 
         @include shape-scrollbar;
+
+        &:not(.filter-panel-item-dropdown) {
+            @extend .dropdown-menu-end;
+        }
     }
 
     &.show {

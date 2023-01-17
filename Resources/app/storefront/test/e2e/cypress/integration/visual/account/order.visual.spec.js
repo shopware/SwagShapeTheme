@@ -30,7 +30,7 @@ describe('Account: Order page', () => {
             })
             .then(() => cy.visit('/'))
             .then(() => {
-                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click();
+                cy.get('.js-cookie-configuration-button > .btn').should('be.visible').click({force: true});
                 cy.get('.offcanvas-cookie > .btn').scrollIntoView().should('be.visible').click();
             });
     });

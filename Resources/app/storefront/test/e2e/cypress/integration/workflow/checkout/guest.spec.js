@@ -31,7 +31,7 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
         cy.get('.product-detail-buy .btn-buy').click();
 
         // Off canvas
-        cy.get(`${checkoutPage.elements.offCanvasCart}.is-open`).should('be.visible');
+        cy.get(`${checkoutPage.elements.offCanvasCart}.show`).should('be.visible');
         cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);
 
         // Checkout
@@ -44,9 +44,10 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
         cy.get('input[name="lastName"]').type('Doe');
 
         cy.get(`${accountPage.elements.registerForm} input[name="email"]`).type('john-doe-for-testing@example.com');
-        cy.get('.register-guest-control.custom-checkbox label').scrollIntoView();
-        cy.get('.register-guest-control.custom-checkbox label').click(1, 1);
+        cy.get('.register-guest-control.form-check label').scrollIntoView();
+        cy.get('.register-guest-control.form-check label').click(1, 1);
 
+        cy.get(`${accountPage.elements.registerForm} input[name="password"]`).type('Shopware@123');
         cy.get('input[name="billingAddress[street]"]').type('123 Main St');
         cy.get('input[name="billingAddress[zipcode]"]').type('9876');
         cy.get('input[name="billingAddress[city]"]').type('Anytown');
@@ -58,8 +59,8 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
         cy.get(`${accountPage.elements.registerSubmit} [type="submit"]`).click();
 
         // Checkout
-        cy.get('.confirm-tos .custom-checkbox label').scrollIntoView();
-        cy.get('.confirm-tos .custom-checkbox label').click(1, 1);
+        cy.get('.confirm-tos .form-check label').scrollIntoView();
+        cy.get('.confirm-tos .form-check label').click(1, 1);
         cy.get('.confirm-address').contains('John Doe');
         cy.get(`${checkoutPage.elements.cartItem}-details-container ${checkoutPage.elements.cartItem}-label`).contains(product.name);
         cy.get(`${checkoutPage.elements.cartItem}-total-price`).contains(product.price[0].gross);
@@ -102,7 +103,7 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
             cy.get('.product-detail-buy .btn-buy').click();
 
             // Off canvas
-            cy.get(`${checkoutPage.elements.offCanvasCart}.is-open`).should('be.visible');
+            cy.get(`${checkoutPage.elements.offCanvasCart}.show`).should('be.visible');
             cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);
 
             // Checkout
@@ -161,9 +162,10 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
 
             cy.get(`${accountPage.elements.registerForm} input[name="email"]`)
                 .type('john-doe-for-testing@example.com');
-            cy.get('.register-guest-control.custom-checkbox label').scrollIntoView();
-            cy.get('.register-guest-control.custom-checkbox label').click(1, 1);
+            cy.get('.register-guest-control.form-check label').scrollIntoView();
+            cy.get('.register-guest-control.form-check label').click(1, 1);
 
+            cy.get(`${accountPage.elements.registerForm} input[name="password"]`).type('Shopware@123');
             cy.get('input[name="billingAddress[street]"]').type('123 Main St');
             cy.get('input[name="billingAddress[zipcode]"]').type('9876');
             cy.get('input[name="billingAddress[city]"]').type('Anytown');
@@ -176,8 +178,8 @@ describe(`Checkout as Guest`, {tags: ['@workflow', '@checkout']}, () => {
             cy.get(`${accountPage.elements.registerSubmit} [type="submit"]`).click();
 
             // Checkout
-            cy.get('.confirm-tos .custom-checkbox label').scrollIntoView();
-            cy.get('.confirm-tos .custom-checkbox label').click(1, 1);
+            cy.get('.confirm-tos .form-check label').scrollIntoView();
+            cy.get('.confirm-tos .form-check label').click(1, 1);
             cy.get('.confirm-address').contains('John Doe');
             cy.get(`${checkoutPage.elements.cartItem}-details-container ${checkoutPage.elements.cartItem}-label`)
                 .contains(product.name);

@@ -28,6 +28,8 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'component/button';
 @import 'component/icon';
 @import 'component/forms';
+@import 'component/form-check';
+@import 'component/grid';
 @import 'component/input-group';
 @import 'component/product-box';
 @import 'component/alert';
@@ -60,6 +62,7 @@ https://sass-guidelin.es/#the-7-1-pattern
 @import 'component/basic-captcha';
 @import 'component/product-slider';
 @import 'component/line-item';
+@import 'component/list-group';
 /*
  * Layout-related sections
  * ----------------------- */
@@ -80,8 +83,6 @@ https://sass-guidelin.es/#the-7-1-pattern
  * Page-specific styles
  * -------------------- */
 @import 'page/checkout/aside';
-@import 'page/checkout/cart-item';
-@import 'page/checkout/cart-item-children';
 @import 'page/checkout/checkout';
 @import 'page/checkout/register';
 @import 'page/checkout/finish';

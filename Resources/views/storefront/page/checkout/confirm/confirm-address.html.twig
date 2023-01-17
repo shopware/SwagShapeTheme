@@ -15,8 +15,7 @@
         <div class="card-actions">
             {% set addressEditorOptions = {
                 changeBilling: true,
-                addressId: billingAddress.id,
-                csrfToken: sw_csrf("frontend.account.addressbook", {"mode": "token"})
+                addressId: billingAddress.id
             } %}
 
             {% block  page_checkout_confirm_address_billing_actions_link %}
@@ -39,8 +38,7 @@
         <div class="card-actions">
             {% set addressEditorOptions = {
                 changeShipping: true,
-                addressId: shippingAddress.id,
-                csrfToken: sw_csrf("frontend.account.addressbook", {"mode": "token"})
+                addressId: shippingAddress.id
             } %}
 
             {% block  page_checkout_confirm_address_shipping_actions_link %}

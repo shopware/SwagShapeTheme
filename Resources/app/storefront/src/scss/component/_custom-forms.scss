@@ -1,38 +1,22 @@
-@if (feature('V6_5_0_0')) {
-    .form-switch {
-        height: 1rem;
+.form-switch {
+    height: 1rem;
+
+    .form-check-input {
+        background-image: $icon-check-input;
     }
+}
 
-    .form-select-lg {
-        @include border-radius($btn-border-radius-lg, 0);
-
-        padding-left: 24px;
-        padding-right: 24px;
+.form-check.form-text {
+    .form-check-input {
+        margin: 0 8px 0 0;
     }
-} @else {
-    @if (feature('V6_5_0_0')) {
-        .form-switch {
-            height: $custom-control-indicator-size;
-        }
+}
 
-        .form-select-lg {
-            @include border-radius($btn-border-radius-lg, 0);
+.form-select-lg {
+    @include border-radius($btn-border-radius-lg, 0);
 
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-    } @else {
-        .custom-switch {
-            height: $custom-control-indicator-size;
-        }
-
-        .custom-select-lg {
-            @include border-radius($btn-border-radius-lg, 0);
-
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-    }
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .cms-block-form {
@@ -59,13 +43,11 @@
 }
 
 .cms-element-form {
-    @if (feature('V6_5_0_0')) {
-        .row > *,
-        .row {
-            --bs-gutter-x: 24px;
-            --bs-gutter-y: 24px;
-            margin-top: 0;
-        }
+    .row > *,
+    .row {
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 24px;
+        margin-top: 0;
     }
 
     .btn-primary {
@@ -75,32 +57,18 @@
     .form-content {
         display: flex;
         flex-wrap: wrap;
-        @if (not feature('V6_5_0_0')) {
-            margin: 0 -12px;
+        text-align: left;
+        margin: 0 -12px;
 
-            .row,
-            .d-block {
-                width: 100%;
-            }
-        } @else {
-            text-align: left;
+        .row {
+            width: 100%;
+            margin: 0;
+        }
 
-            > .row {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-
-                .form-group {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-
-            .form-row,
-            .d-block {
-                width: 100%;
-                margin: 0;
-            }
+        .form-row,
+        .d-block {
+            width: 100%;
+            margin: 0;
         }
 
         strong {
@@ -140,103 +108,52 @@
     }
 }
 
-@if (feature('V6_5_0_0')) {
-    .required-fields-content,
-    .form-check.privacy-notice {
-        margin-top: 0;
-        margin-bottom: $spacer-40;
-        padding: 0 12px;
-        width: 100%;
-    }
-} @else {
-    .required-fields-content,
-    .custom-checkbox.privacy-notice {
-        margin-top: 0;
-        margin-bottom: $spacer-40;
-        padding: 0 12px;
-        width: 100%;
-    }
+.required-fields-content,
+.form-check.privacy-notice {
+    margin-top: 0;
+    margin-bottom: $spacer-40;
+    padding: 0 12px;
+    width: 100%;
 }
 
 .required-fields-content {
     order: 2;
 }
 
-@if (feature('V6_5_0_0')) {
-    .form-select {
-        color: $shape-gray-900;
-        background-image: $icon-caret-down;
-        margin-top: 0;
-        background-size: 10px;
+.form-select {
+    color: $shape-gray-900;
+    background-image: $icon-caret-down;
+    margin-top: 0;
+    background-size: 10px;
+    height: 40px;
 
-        &:invalid {
-            color: $input-placeholder-color;
-        }
-
-        &:hover {
-            color: $primary;
-        }
+    &:invalid {
+        color: $input-placeholder-color;
     }
-} @else {
-    .custom-select {
-        &.sorting,
-        &.b2b--orderlist-dropdown {
-            color: $shape-gray-500;
-            background-image: $icon-caret-down;
-            margin-top: 0;
 
-            &:invalid {
-                color: $input-placeholder-color;
-            }
-
-            &:hover {
-                color: $primary;
-            }
-        }
+    &:hover {
+        color: $primary;
     }
 }
 
 @include media-breakpoint-up(md) {
-    @if (feature('V6_5_0_0')) {
-        .form-check.privacy-notice,
-        .required-fields-content {
-            padding: $spacer-lg 0 0;
-            border-top: $hr-border;
-        }
+    .form-check.privacy-notice,
+    .required-fields-content {
+        padding: $spacer-lg 0 0;
+        border-top: $hr-border;
+    }
 
-        .form-check {
-            &.privacy-notice {
-                width: 70%;
-                margin: $spacer-20 0 46px;
-            }
-        }
-
-        .required-fields-content {
-            width: 30%;
-            margin: $spacer-20 0 46px 0;
-        }
-    } @else {
-        .custom-checkbox.privacy-notice,
-        .required-fields-content {
-            padding: $spacer-lg 0 0;
-            border-top: $hr-border;
-        }
-
-        .custom-checkbox {
-            &.privacy-notice {
-                width: calc(70% - 12px);
-                margin: $spacer-20 0 46px 12px;
-            }
-        }
-
-        .required-fields-content {
-            width: calc(30% - 12px);
-            margin: $spacer-20 12px 46px 0;
+    .form-check {
+        &.privacy-notice {
+            width: calc(70% - 12px);
+            margin: $spacer-20 0 46px 12px;
         }
     }
 
     .required-fields-content {
         text-align: right;
+        width: calc(30% - 12px);
+        margin: $spacer-20 12px 46px 0;
     }
 
     .cms-block-form {

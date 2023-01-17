@@ -7,6 +7,20 @@
 {% endblock %}
 
 {% block buy_widget_data %}
+    {% set price = page.product.calculatedPrice %}
+    {% if page.product.calculatedPrices.count > 0 %}
+        {% set price = product.calculatedPrices.last %}
+    {% endif %}
+
+    {% set listPrice = price.listPrice.percentage > 0 %}
+    {% set hasRange = product.calculatedPrices.count > 1 %}
+
+    {% if listPrice and not hasRange %}
+        {% block buy_widget_data_was_price_badge %}
+            <p class="product-detail-price-discount">{{ "detail.sale"|trans|sw_sanitize }}</p>
+        {% endblock %}
+    {% endif %}
+
     {{ block('buy_widget_data_rich_snippet_url') }}
 
     {{ block('buy_widget_data_rich_snippet_price_range') }}

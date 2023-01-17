@@ -3,11 +3,7 @@
 }
 
 .main-navigation {
-    @if (feature('V6_5_0_0')) {
-        @extend .ms-4;
-    } @else {
-        @extend .ml-4;
-    }
+    @extend .ms-4;
 
     &-menu {
         display: flex;
@@ -31,7 +27,7 @@
         .main-navigation-link-text {
             padding: 0;
             border: none;
-            line-height: 1;
+            line-height: 24px;
             text-transform: uppercase;
             font-weight: $font-weight-bold;
             position: relative;

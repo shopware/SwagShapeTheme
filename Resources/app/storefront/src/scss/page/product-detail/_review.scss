@@ -13,6 +13,21 @@
 
     &-sortby-label {
         margin-right: 12px;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    &-sortby-form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-language-form {
+        .form-check,
+        .form-label {
+            margin-bottom: 0;
+        }
     }
 
     &-progressbar-bar {
@@ -119,16 +134,11 @@
         font-weight: $font-weight-medium;
     }
 
-    @if (feature('V6_5_0_0')) {
-        .form-select {
-            font-size: $font-size-base;
-            font-weight: $font-weight-medium;
-        }
-    } @else {
-        .custom-select {
-            font-size: $font-size-base;
-            font-weight: $font-weight-medium;
-        }
+    .form-select {
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        height: 33px;
+        border-radius: 24px;
     }
 
     &-list-content {
@@ -140,14 +150,8 @@
         font-weight: $font-weight-medium;
     }
 
-    @if (feature('V6_5_0_0')) {
-        .form-check-input:disabled ~ .form-check-label {
-            color: $sw-border-color;
-        }
-    } @else {
-        .custom-control-input:disabled ~ .custom-control-label {
-            color: $sw-border-color;
-        }
+    .form-check-input:disabled ~ .form-check-label {
+        color: $sw-border-color;
     }
 
     @include media-breakpoint-only(md) {
@@ -230,7 +234,7 @@
 
 .product-detail-review-form-rating-text {
     &.h6 {
-        margin-bottom: 5px;
+        margin-bottom: 0;
         min-width: 100px;
     }
 }

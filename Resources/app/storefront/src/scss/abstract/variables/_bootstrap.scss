@@ -1,6 +1,6 @@
 // contains variable overrides for bootstrap variables located under
 // shopRoot/src/vendor/shopware/storefront/Resources/app/storefront/vendor/bootstrap/scss/_variables.scss
-$asset-path: '#{$sw-asset-theme-url}/bundles/swagshapetheme/assets' !default;
+$app-css-relative-asset-path: '../assets' !default;
 
 // Color system
 $gray-100: lighten($sw-color-brand-primary, 30%) !default;
@@ -53,7 +53,12 @@ $btn-line-height-lg: 40px;
 $btn-border-width: 2px !default;
 $btn-font-size-lg: 14px !default;
 $btn-block-spacing-y: 12px !default;
-$btn-padding-y-lg: 5px !default;
+$btn-padding-y-lg: 6px !default;
+
+$btn-hover-bg-shade-amount: 1% !default;
+$btn-hover-bg-tint-amount: 1% !default;
+$btn-active-bg-shade-amount: 1% !default;
+$btn-active-bg-tint-amount: 1% !default;
 
 // Form Input
 $input-border-width: 2px !default;
@@ -107,6 +112,7 @@ $list-group-border-radius: 22px !default;
 //
 $hr-border-width: 2px !default;
 $hr-border-color: $shape-gray-300;
+$hr-border: $hr-border-width solid $hr-border-color;
 
 // Dropdowns
 $dropdown-color: $shape-gray-800;
@@ -155,10 +161,34 @@ $grid-breakpoints: (
 ) !default;
 
 // Form
-$custom-select-indicator: url('#{$asset-path}/icon/ic-chevron-down.svg') !default;
+$custom-select-indicator: url('#{$app-css-relative-asset-path}/icon/ic-chevron-down.svg') !default;
 
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
 
 $grid-gutter-width: 30px !default;
+
+$disabled-btn-bg: $gray-300 !default;
+$disabled-btn-border-color: $gray-300 !default;
+
+// Cards
+
+// scss-docs-start card-variables
+$card-title-spacer-y: 12px !default;
+$card-spacer-y: 24px !default;
+$card-spacer-x: 20px !default;
+
+// List group
+
+// scss-docs-start list-group-variables
+$list-group-item-padding-y: 12px !default;
+$list-group-item-padding-x: 20px !default;
+
+$form-check-input-width: 16px !default;
+$form-check-input-border: $hr-border !default;
+$form-check-padding-start: $form-check-input-width + 8px !default;
+
+$form-select-indicator-padding: 32px !default;
+// Alerts
+$alert-border-radius: 3px !default;

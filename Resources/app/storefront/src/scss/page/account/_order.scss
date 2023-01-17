@@ -132,7 +132,7 @@
 
 .order-table-header-order {
     &-status {
-        @include media-breakpoint-down(if(feature('V6_5_0_0'), sm, xs)) {
+        @include media-breakpoint-down(sm) {
             margin-bottom: $spacer-sm;
         }
     }

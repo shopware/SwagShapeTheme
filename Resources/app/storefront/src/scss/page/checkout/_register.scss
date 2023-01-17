@@ -33,11 +33,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0 1px 2px;
         }
 
         .checkout-main {
-            @if (feature('V6_5_0_0')) {
-                @extend .ms-0;
-            } @else {
-                @extend .ml-0;
-            }
+            @extend .ms-0;
             @extend .mb-0;
         }
 
@@ -158,7 +154,7 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0 1px 2px;
         }
     }
 
-    @include media-breakpoint-down(if(feature('V6_5_0_0'), md, sm)) {
+    @include media-breakpoint-down(md) {
         div[data-swag-paypal-installment-banner='true'] {
             display: none;
         }
@@ -186,33 +182,17 @@ $checkout-aside-drop: rgba(0, 0, 0, 0.1) 0 1px 2px;
 }
 
 .register-billing {
-    @if (feature('V6_5_0_0')) {
-        > .row:first-child {
-            .form-group.col-md-6 {
-                @include make-col(12);
-            }
-
-            .form-group.col-md-2 {
-                @include make-col(6);
-            }
-
-            .form-group.col-md-4 {
-                @include make-col(6);
-            }
+    > .row:first-child {
+        .form-group.col-md-6 {
+            @include make-col(12);
         }
-    } @else {
-        > .form-row:first-child {
-            .form-group.col-md-6 {
-                @include make-col(12);
-            }
 
-            .form-group.col-md-2 {
-                @include make-col(6);
-            }
+        .form-group.col-md-2 {
+            @include make-col(6);
+        }
 
-            .form-group.col-md-4 {
-                @include make-col(6);
-            }
+        .form-group.col-md-4 {
+            @include make-col(6);
         }
     }
 }

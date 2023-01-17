@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block component_address_personal_account_type %}
-    <div class="{{ formRowClass }}">
+    <div class="row g-2">
         {% if config('core.loginRegistration.showAccountTypeSelection') and not hideCustomerTypeSelect %}
             <div class="form-group col-sm-6 contact-type">
                 {% block component_address_personal_account_type_label %}

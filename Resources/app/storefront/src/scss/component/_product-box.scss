@@ -85,9 +85,7 @@ $box-hover-bg-color: $white;
     .product-action {
         .btn-buy,
         .btn {
-            color: $shape-gray-900;
-            background-color: $shape-gray-200;
-            border-color: $shape-gray-200;
+            @include button-variant($shape-gray-200, $shape-gray-200, $shape-gray-900);
         }
 
         .icon-shape {
@@ -135,9 +133,13 @@ $box-hover-bg-color: $white;
     }
 
     .product-name {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 28px;
         height: 56px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 24px;
+        }
     }
 
     .product-price {
@@ -251,4 +253,8 @@ $box-hover-bg-color: $white;
 .price-unit-content {
     margin-bottom: 8px;
     display: inline-block;
+}
+
+.product-price-wrapper {
+    font-size: $font-size-base;
 }

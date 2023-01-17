@@ -2,11 +2,7 @@
     font-size: 0;
 
     > a {
-        @if (feature('V6_5_0_0')) {
-            @extend .m-2;
-        } @else {
-            @extend .mr-4;
-        }
+        @extend .m-2;
     }
 }
 
@@ -24,35 +20,18 @@
             margin-bottom: 20px;
         }
 
-        @if (feature('V6_5_0_0')) {
-            .row {
-                margin: 0;
-            }
+        .row {
+            margin: 0;
+        }
 
-            > .row:not(.panel-content-filter) {
-                margin: 0 -4px;
+        > .row:not(.panel-content-filter) {
+            margin: 0 -4px;
 
-                .form-group {
-                    @include make-col(6);
-                    @extend .me-0;
+            .form-group {
+                @include make-col(6);
+                @extend .me-0;
 
-                    padding: 0 4px;
-                }
-            }
-        } @else {
-            .form-row {
-                margin: 0;
-            }
-
-            > .form-row:not(.panel-content-filter) {
-                margin: 0 -12px;
-
-                .form-group {
-                    @include make-col(6);
-                    @extend .mr-0;
-
-                    padding: 0 12px;
-                }
+                padding: 0 4px;
             }
         }
 
@@ -78,39 +57,19 @@
         }
     }
 
-    @if (feature('V6_5_0_0')) {
-        .flatpickr-input {
-            + .input-group-text {
-                min-width: auto;
-                right: 12px;
-                top: -1px;
-                border: 0;
-                background: transparent;
-                padding: 0;
-            }
-        }
-    } @else {
-        .flatpickr-input + .input-group-append {
+    .flatpickr-input {
+        + .input-group-text {
             min-width: auto;
             right: 12px;
             top: -1px;
-
-            > .input-group-text {
-                border: 0;
-                background: transparent;
-                padding: 0;
-            }
+            border: 0;
+            background: transparent;
+            padding: 0;
         }
     }
 
-
     select {
-        @if (feature('V6_5_0_0')) {
-            @extend .form-select;
-        } @else {
-            @extend .custom-select;
-        }
-
+        @extend .form-select;
     }
 
     label {
@@ -133,20 +92,6 @@
         width: 16px !important;
         height: 16px !important;
         margin-right: 8px;
-
-        @if (not feature('V6_5_0_0')) {
-            &::after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                width: 16px;
-                height: 16px;
-                content: '';
-                background: no-repeat 50% / #{$custom-control-indicator-bg-size};
-                background-image: $custom-checkbox-indicator-icon-checked;
-            }
-        }
     }
 
     .apexcharts-legend.position-bottom {

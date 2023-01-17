@@ -71,7 +71,7 @@
             transform: none;
         }
 
-        @include media-breakpoint-down(if(feature('V6_5_0_0'), lg, md)) {
+        @include media-breakpoint-down(lg) {
             @include shape-filter-selector;
         }
     }
@@ -107,27 +107,24 @@
         }
     }
 
-    @if (feature('V6_5_0_0')) {
-        .form-check {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            gap: 4px;
+    .form-check {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        gap: 4px;
 
-            .form-check-input[type='checkbox'] {
-                margin-bottom: 4px;
-            }
+        .form-check-input[type='checkbox'] {
+            margin-bottom: 4px;
+        }
 
-            .filter-boolean-label {
-                width: auto;
-            }
+        .filter-boolean-label {
+            width: auto;
         }
-    } @else {
-        .custom-checkbox {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-        }
+    }
+
+    &-toggle.btn.show {
+        color: var(--bs-btn-active-color);
+        border-color: $primary;
     }
 }
 
@@ -136,14 +133,12 @@
         min-width: 222px;
         border-radius: 20.5px 20.5px 10px 10px;
         box-shadow: $dropdown-box-shadow;
-        margin-left: -22px;
-        margin-top: $spacer-xs;
+        margin-top: $spacer-10 !important;
         font-size: $font-size-base;
         z-index: 1;
 
-        @if (not feature('V6_5_0_0')) {
-            max-height: 100%;
-            padding: 12px 0 $spacer-sm 0;
+        @include media-breakpoint-up(lg) {
+            margin-left: -22px !important;
         }
     }
 
@@ -391,12 +386,20 @@
     }
 }
 
-.btn.filter-panel-wrapper-toggle {
-    @extend .btn-primary;
+.cms-element-sidebar-filter {
+    .filter-panel-wrapper-toggle {
+        @extend .btn-primary;
 
-    padding: 0;
-    line-height: 38px;
-    border-radius: 20px;
+        background: $primary;
+        padding: 0;
+        line-height: 38px;
+        border-radius: 20px;
+
+        &:active,
+        &:hover {
+            border-width: 1px;
+        }
+    }
 }
 
 @include media-breakpoint-up(sm) {
