@@ -2,9 +2,11 @@
 
 {% block page_product_detail_buy_quantity_container %}
     {% set selectQuantityThreshold = 100 %}
-    <div class="col-4{% if (product.calculatedMaxPurchase - product.minPurchase) / product.purchaseSteps > selectQuantityThreshold %} quantity-input{% endif %}">
-        {% block page_product_detail_buy_quantity %}
-            {{ parent() }}
-        {% endblock %}
-    </div>
+    {% if showQuantitySelect %}
+        <div class="col-4{% if (product.calculatedMaxPurchase - product.minPurchase) / product.purchaseSteps > selectQuantityThreshold %} quantity-input{% endif %}">
+            {% block page_product_detail_buy_quantity %}
+                {{ parent() }}
+            {% endblock %}
+        </div>
+    {% endif %}
 {% endblock %}
