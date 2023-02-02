@@ -1,3 +1,9 @@
+# 1.10.0
+- Checked theme compatibility with the platform v6.4.18.0
+- Checked theme compatibility with the platform v6.4.19.0
+- Fixed product image is scaled larger than the image viewer
+- Fixed oversized arrow icon in 'To The Top' button
+
 # 1.9.0
 - Checked theme compatibility with the platform v6.4.17.0
 - Fixed footer social media links snippet
