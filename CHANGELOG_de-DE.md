@@ -1,3 +1,9 @@
+# 1.10.0
+- Überprüfung der Kompatibilität mit Platform v6.4.18.0
+- Überprüfung der Kompatibilität mit Platform v6.4.19.0
+- Behobene Produktbilder, die größer skaliert als der Bildbetrachter
+- Behobene übergroßes Pfeilsymbol in der Schaltfläche "Nach oben"
+
 # 1.9.0
 - Überprüfung der Kompatibilität mit Platform v6.4.17.0
 - Social-Media-Links-Snippet in der Fußzeile wurde behoben
