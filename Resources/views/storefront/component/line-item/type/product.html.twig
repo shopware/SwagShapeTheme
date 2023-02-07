@@ -1,6 +1,9 @@
 {# Override to do unit price same column with total price on the displaMode default #}
 {% sw_extends '@Storefront/storefront/component/line-item/type/product.html.twig' %}
 
+{% block component_line_item_type_product_wishlist %}
+{% endblock %}
+
 {% block component_line_item_type_product_col_tax_price %}
     {% if displayMode != 'default' %}
         {{ parent() }}
@@ -36,5 +39,18 @@
         </div>
     {% else %}
         {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block component_line_item_type_product_col_quantity %}
+    {{ parent() }}
+    {% if config('core.cart.wishlistEnabled') %}
+        <div class="line-item-wishlist">
+            {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                showText: true,
+                size: 'sm',
+                productId: lineItem.referencedId
+            } %}
+        </div>
     {% endif %}
 {% endblock %}

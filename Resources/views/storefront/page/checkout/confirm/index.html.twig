@@ -64,6 +64,16 @@
 
 {% endblock %}
 
+{% block page_checkout_confirm_revocation_control %}
+    {% if page.showRevocation() %}
+        <div class="form-check">
+            {{ block('page_checkout_confirm_revocation_control_checkbox') }}
+
+            {{ block('page_checkout_confirm_revocation_control_label') }}
+        </div>
+    {% endif %}
+{% endblock %}
+
 {% block page_checkout_additional %}
 {% endblock %}
 

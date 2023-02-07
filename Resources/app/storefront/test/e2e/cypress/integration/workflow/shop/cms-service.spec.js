@@ -4,7 +4,7 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
-                return cy.loginViaApi()
+                return cy.login()
             })
             .then(() => {
                 return cy.createDefaultFixture('category', {}, 'footer-category-first');
@@ -93,7 +93,9 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
             salesChannel = data.id;
             return cy.createDefaultFixture('cms-page', {}, 'cms-service-page')
         }).then(() => {
-            return cy.openInitialPage(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.visit(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.get('.sw-skeleton').should('not.exist');
+            cy.get('.sw-loader').should('not.exist');
         }).then(() => {
             assignToFooterLink();
         })

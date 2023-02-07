@@ -6,7 +6,7 @@ describe('Product Detail: Product media', () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
-                cy.loginViaApi();
+                cy.login();
             })
             .then(() => {
                 cy.createProductFixture();
@@ -34,11 +34,11 @@ describe('Product Detail: Product media', () => {
 
         // Add first image to product
         cy.get('.sw-product-media-form__previews').scrollIntoView();
-        cy.get('#files').attachFile(
+        cy.get('.sw-product-detail-base__media #files').attachFile(
             'img/sw-product-preview.png',
             {
-                fileName: 'sw-product-preview.jpg',
-                mimeType: 'image/jpg',
+                fileName: 'sw-product-preview.png',
+                mimeType: 'image/png',
                 subjectType: 'input'
             }
         );
@@ -89,7 +89,7 @@ describe('Product Detail: Product media', () => {
         // Upload Image
         for (let i = 0; i < 5; i++) {
             cy.get('.sw-product-media-form__previews').scrollIntoView();
-            cy.get('#files').attachFile(
+            cy.get('.sw-product-detail-base__media #files').attachFile(
                 `img/sw-product-preview-${i}.png`,
                 {
                     fileName: `sw-product-preview-${i}.png`,

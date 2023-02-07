@@ -11,7 +11,7 @@ describe('Product Detail: Check appearance of product review', () => {
     });
 
     it('@visual, @review: show review tab', () => {
-        cy.get('.review-tab').click();
+        cy.get('#review-tab').click();
         cy.get('.product-detail-review-teaser-btn').should('be.visible');
         cy.get('.product-detail-review-list').contains('No reviews found');
         cy.wait(1000);
@@ -23,7 +23,7 @@ describe('Product Detail: Check appearance of product review', () => {
         const now = new Date(2020, 1,1).getTime();
         cy.clock(now);
 
-        cy.get('.review-tab').click()
+        cy.get('#review-tab').click()
         cy.get('.product-detail-review-teaser button').click();
         cy.get('.product-detail-review-login').should('be.visible');
         cy.takeSnapshot('[Product Detail] Review Login', '.product-detail-tabs', {widths: [768, 1920]});
@@ -36,7 +36,7 @@ describe('Product Detail: Check appearance of product review', () => {
         cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});
         cy.get('.offcanvas-cookie .btn-primary').contains('Save').click({force: true});
 
-        cy.get('.review-tab').click();
+        cy.get('#review-tab').click();
         cy.get('.product-detail-review-teaser-btn').click();
 
         cy.get('#reviewTitle').type('Review title '.repeat(4));
@@ -54,7 +54,7 @@ describe('Product Detail: Check appearance of product review', () => {
 
     it('@visual, @review: show review tab on the mobile', () => {
         cy.viewport('iphone-6');
-        cy.get('.review-tab').click();
+        cy.get('#review-tab').click();
         cy.get('.product-detail-review').should('be.visible');
         cy.get('.product-detail-review-list .alert').contains('No reviews found');
 

@@ -3,9 +3,13 @@ import ProductPageObject from "../../../support/pages/sw-product.page-object";
 describe('Product Detail: Check appearance of product variants', () => {
     beforeEach(() => {
         cy.setToInitialState()
-            .then(() => cy.loginViaApi())
+            .then(() => cy.login())
             .then(() => cy.createProductVariantFixture())
-            .then(() => cy.openInitialPage(`${Cypress.env('admin')}#/sw/product/index`));
+            .then(() => {
+                cy.visit(`${Cypress.env('admin')}#/sw/product/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
+            });
     });
 
     it('@visual @variants: add multidimensional variant to product', () => {

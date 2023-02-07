@@ -7,7 +7,7 @@ describe('CMS: Landing Page', { tags: ['@visual', '@cms'] }, () => {
         let salesChannel;
         cy.setToInitialState()
             .then(() => {
-                cy.loginViaApi()
+                cy.login()
             })
             .then(() => {
                 return cy.searchViaAdminApi({
@@ -33,7 +33,9 @@ describe('CMS: Landing Page', { tags: ['@visual', '@cms'] }, () => {
                 });
             })
             .then(() => {
-                cy.openInitialPage(`${Cypress.env('admin')}#/sw/cms/index`);
+                cy.visit(`${Cypress.env('admin')}#/sw/cms/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
             });
     });
 

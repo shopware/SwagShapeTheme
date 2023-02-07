@@ -13,7 +13,7 @@ describe('CMS: Listing Page', {tags: ['@visual', '@cms']}, () => {
     testCases.forEach(testCase => {
         context(`Check pagination for ${testCase} products`, () => {
             beforeEach(() => {
-                cy.loginViaApi().then(() => cy.visit('/admin#/sw/settings/listing/index'));
+                cy.login().then(() => cy.visit('/admin#/sw/settings/listing/index'));
             });
 
             it('@base @cms: Run pagination', () => {
