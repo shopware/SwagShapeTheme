@@ -3,7 +3,7 @@ import CategoryPageObject from '../../../support/pages/sw-category.page-object';
 describe('Shop page: CMS service page', () => {
     beforeEach(() => {
         cy.setToInitialState()
-            .then(() => cy.loginViaApi())
+            .then(() => cy.login())
             .then(() => {
                 cy.createDefaultFixture('category',{}, 'footer-category-first');
             })
@@ -91,7 +91,9 @@ describe('Shop page: CMS service page', () => {
             salesChannel = data.id;
             cy.createDefaultFixture('cms-page', {}, 'cms-service-page')
         }).then(() => {
-            cy.openInitialPage(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.visit(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.get('.sw-skeleton').should('not.exist');
+            cy.get('.sw-loader').should('not.exist');
             assignToFooterLink();
         });
     }

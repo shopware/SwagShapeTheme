@@ -23,6 +23,33 @@
             padding-right: $input-padding-x;
         }
     }
+
+    &.quantity-selector-group {
+        flex-wrap: nowrap;
+        border: $hr-border;
+        border-radius: $input-border-radius-lg;
+        background-color: #fff;
+        min-width: 136px;
+
+        button.btn {
+            position: unset;
+            min-width: auto;
+            border: none;
+            padding: 0 14px;
+            height: auto;
+            background-color: transparent;
+        }
+
+        > .form-control {
+            margin-right: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .icon {
+            color: $shape-gray-800;
+        }
+    }
 }
 
 .input-group-lg {

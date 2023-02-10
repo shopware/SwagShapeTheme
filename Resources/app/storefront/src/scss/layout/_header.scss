@@ -23,16 +23,13 @@
     &-search {
         width: 288px;
 
-        button.header-search-btn {
-            @include border-start-radius(0 !important);
-            background-color: transparent;
-            display: flex;
-            align-items: center;
-        }
-
         .header-search-input {
             padding-right: $spacer-md;
             background-color: transparent;
+
+            &:focus ~ .header-search-btn {
+                border-color: $primary;
+            }
         }
 
         .btn.header-search-btn {
@@ -41,8 +38,12 @@
             min-width: 22px;
             border: $input-border-width solid $input-border-color;
             border-left: none;
+            @include border-start-radius(0 !important);
+            background-color: transparent;
+            display: flex;
+            align-items: center;
 
-            :hover {
+            &:hover {
                 color: $primary;
             }
         }
@@ -89,12 +90,6 @@
 
         > div {
             background-color: rgba($sw-background-color, 1);
-        }
-    }
-
-    &-search-input:focus {
-        ~ .input-group-append .header-search-btn {
-            border-color: $primary;
         }
     }
 }

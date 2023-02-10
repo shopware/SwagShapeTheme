@@ -8,8 +8,12 @@ describe('Product Detail: Product', () => {
             .then(() => {
                 return cy.createPropertyFixture({options: [{name: 'Red'}]});
             })
-            .then(() => cy.loginViaApi())
-            .then(() => cy.openInitialPage(`${Cypress.env('admin')}#/sw/product/index`));
+            .then(() => cy.login())
+            .then(() => {
+                cy.visit(`${Cypress.env('admin')}#/sw/product/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
+            });
     });
 
     it('@visual @detail: check appearance of product cross selling workflow', () => {
@@ -80,7 +84,7 @@ describe('Product Detail: Product', () => {
         cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});
         cy.get('.offcanvas .btn-primary').contains('Save').click();
 
-        cy.get('.header-search-input').first().type('Original product');
+        cy.get('.col-lg-5 .header-search-input').type('Original product');
         cy.get('.search-suggest-container').should('be.visible');
         cy.get('.search-suggest-product-name')
             .contains('Original product')

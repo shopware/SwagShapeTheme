@@ -58,23 +58,22 @@ export default class ProductPageObject {
 
         cy.get(`.sw-grid ${optionsIndicator}`)
             .contains(`${optionPosition.length} ${optionString} selected`);
-        cy.get('.sw-product-variant-generation__generate-action').click();
-        cy.get('.sw-product-modal-variant-generation__notification-modal').should('be.visible');
+        cy.get('.sw-product-variant-generation__next-action').click();
+        cy.get('.sw-product-modal-variant-generation').should('be.visible');
 
         if (totalCount !== 1) {
-            cy.get('.sw-product-modal-variant-generation__notification-modal .sw-modal__body')
+            cy.get('.sw-product-modal-variant-generation .sw-modal__body')
                 .contains(`${totalCount} variants will be added`);
         }
 
-        cy.get('.sw-product-modal-variant-generation__notification-modal .sw-button--primary')
+        cy.get('.sw-product-modal-variant-generation .sw-button--primary')
             .click();
 
         cy.wait('@productCall').then((xhr) => {
             expect(xhr).to.have.property('status', 200);
         });
 
-        cy.get('.sw-product-modal-variant-generation__notification-modal').should('not.exist');
-        cy.get('.generate-variant-progress-bar__description').contains(`0 of ${totalCount} variations generated`);
+        cy.get('.sw-product-modal-variant-generation').should('not.exist');
 
         cy.wait('@searchCall').then((xhr) => {
             expect(xhr).to.have.property('status', 200);

@@ -18,7 +18,7 @@ describe('Contact: Visual tests', {tags: ['@visual']}, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => cy.createProductFixture())
-            .then(() => cy.loginViaApi())
+            .then(() => cy.login())
             .then(() => cy.createCmsFixture())
             .then(() => cy.visit('/'))
             .then(() => {
@@ -76,7 +76,9 @@ describe('Contact: Visual tests', {tags: ['@visual']}, () => {
             salesChannel = data.id;
             cy.createDefaultFixture('cms-page', {}, 'cms-contact-page')
         }).then(() => {
-            cy.openInitialPage(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.visit(`${Cypress.env('admin')}#/sw/category/index`);
+            cy.get('.sw-skeleton').should('not.exist');
+            cy.get('.sw-loader').should('not.exist');
             assignContactFormToHomepage();
         });
     }

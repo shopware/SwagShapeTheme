@@ -6,14 +6,16 @@ describe('CMS: Listing Page', { tags: ['@visual', '@cms'] }, () => {
     beforeEach(() => {
         cy.setToInitialState()
             .then(() => {
-                cy.loginViaApi();
+                cy.login();
             })
             .then(() => {
                 cy.createProductFixture();
             })
             .then((result) => {
                 product = result;
-                cy.openInitialPage(`${Cypress.env('admin')}#/sw/cms/index`);
+                cy.visit(`${Cypress.env('admin')}#/sw/cms/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
             });
     });
 

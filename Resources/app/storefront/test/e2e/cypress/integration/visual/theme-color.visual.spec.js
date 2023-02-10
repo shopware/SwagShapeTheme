@@ -10,9 +10,11 @@ describe('ThemeColor: Visual tests', () => {
             .then(() => cy.setShippingMethodInSalesChannel('Standard'))
             .then(() => cy.createProductFixture())
             .then(() => cy.createCustomerFixtureStorefront())
-            .then(() => cy.loginViaApi())
+            .then(() => cy.login())
             .then(() => {
-                return cy.openInitialPage(`${Cypress.env('admin')}#/sw/theme/manager/index`);
+                cy.visit(`${Cypress.env('admin')}#/sw/theme/manager/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
             })
             .then(() => cy.fixture('color-scheme.json'))
             .then((colorSchemeFixture) => {
@@ -32,10 +34,12 @@ describe('ThemeColor: Visual tests', () => {
                 cy.clearCookies();
             })
             .then(() => {
-                cy.loginViaApi()
+                cy.login()
             })
             .then(() => {
                 cy.visit(`${Cypress.env('admin')}#/sw/theme/manager/index`);
+                cy.get('.sw-skeleton').should('not.exist');
+                cy.get('.sw-loader').should('not.exist');
                 cy.intercept({
                     path: `${Cypress.env('apiPath')}/_action/theme/*`,
                     method: 'patch'
