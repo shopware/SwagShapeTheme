@@ -100,6 +100,11 @@
     box-shadow: 0 0 20px 20px $sw-background-color;
 }
 
+.header-cart .header-cart-badge,
+.header-wishlist .header-wishlist-badge {
+    right: -6px;
+}
+
 @include media-breakpoint-up(sm) {
     .header-actions-btn {
         &.account-menu-btn,
