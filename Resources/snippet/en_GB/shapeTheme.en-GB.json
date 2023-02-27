@@ -1,21 +1,21 @@
 {
     "general": {
-        "404ErrorPageHeader": "It looks like you are lost.",
-        "404ErrorDescription": "The page you are looking for no longer exists",
-        "maintenanceModeHeader": "We`ll be back soon.",
+        "404ErrorPageHeader": "How did you end up here?",
+        "404ErrorDescription": "This page no longer exists",
+        "maintenanceModeHeader": "We will be back soon.",
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
-        "requiredFields": "*required field",
-        "offcanvasCloseMenu": "My Account",
-        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-bs-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
+        "requiredFields": "Asterisks (*) mark required fields",
+        "offcanvasCloseMenu": "My account",
+        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-bs-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>."
     },
     "header": {
-        "topBarMessage": "FREE TRANSFER TO AND FREE OF CHARGE RETURNS from an order value of X euros",
+        "topBarMessage": "Free shipping and free of charge returns from an order value of X",
         "searchPlaceholder": "Search...",
         "searchAllResults": "Show all results"
     },
     "footer": {
-        "newsletterHeadline": "Our newsletter.<br>Subscribe now and don't miss anything anymore!",
-        "newsletterInfo": "Subscribe to the newsletter now and get a x Euro voucher!",
+        "newsletterHeadline": "Our newsletter.<br>Subscribe now and don't miss out anymore!",
+        "newsletterInfo": "Subscribe to the newsletter now and receive a gift voucher!",
         "instagramLink": "Instagram",
         "facebookLink": "Facebook",
         "pinterestLink": "Pinterest",
@@ -23,37 +23,37 @@
     },
     "checkout":{
         "welcome": "Welcome back!",
-        "addressRegisterCardTitle": "I am new here.",
-        "registerWelcome": "Welcome! Please register to continue:",
-        "addressLoginToggle": "If you already have an account? Click here to login.",
-        "cartyEmptyDesc": "Add some product to fill your cart."
+        "addressRegisterCardTitle": "Are you new here?",
+        "registerWelcome": "Welcome! Please sign up to continue:",
+        "addressLoginToggle": "Do you already have an account? Click here to log in.",
+        "cartyEmptyDesc": "Add products to your shopping cart."
     },
     "newsletter": {
-        "formSubmit": "Sign up",
+        "formSubmit": "Confirm",
         "formSubscribe": "Subscribe",
-        "placeholderMail": "Your e-mail address"
+        "placeholderMail": "Enter your email address..."
     },
     "detail": {
         "propertyTitle": "Material",
         "sale": "Sale",
-        "addProduct": "Add to cart"
+        "addProduct": "Add to shopping cart"
     },
     "account": {
         "overviewTitle": "Hello",
-        "overviewInfo": "This is the account overview! Find and edit basic information on selected payment methods and addresses.",
-        "overviewProfileHeader": "your profile",
+        "overviewInfo": "Find and edit basic information, selected payment methods and addresses.",
+        "overviewProfileHeader": "Your profile",
         "overviewChangeProfile": "Change",
-        "overviewPaymentHeader": "Payment Method",
+        "overviewPaymentHeader": "Payment method",
         "overviewChangePayment": "Change",
-        "newsletterTitle": "newsletter setting",
+        "newsletterTitle": "Newsletter subscription",
         "overviewNewestOrderHeader": "Your last order",
-        "orderActionView": "View more",
+        "orderActionView": "Expand",
         "overviewChangeBilling": "Change",
         "overviewChangeShipping": "Change",
         "orderContextMenuChangePayment": "Change",
-        "greetings": "Your Account",
+        "greetings": "Your account",
         "loginHeader": "Welcome back!",
-        "registerPersonalHeader": "I am new here.",
+        "registerPersonalHeader": "Are you new here?",
         "loginPasswordRecover": "Did you forget your password?",
         "personalPasswordDescription": "Your password must contain at least %minLength% characters.",
         "profileCurrentPass": "Password",
@@ -62,23 +62,23 @@
         "profilePasswordText": "**************************",
         "profileAccountDeleting": "Customer account",
         "profileDelete": "<a href=\"%target%\" data-toggle=\"modal\" data-bs-toggle=\"modal\" data-target=\"%target%\">Click here</a> to delete all your personal data",
-        "profileDeleteModalTitle": "Customer Account",
-        "profileDeleteButton": "Delete Account",
-        "profileDeleteAlert": "After deleting your customer account personal data, newsletter entries and reviews won't be accessible to you anymore.\n Note that records of all orders will be kept nonetheless in order to fulfill legal regulations.",
+        "profileDeleteModalTitle": "Customer account",
+        "profileDeleteButton": "Delete account",
+        "profileDeleteAlert": "After deleting your customer account and personal data, newsletter entries and reviews won't be accessible to you anymore.\n Note that records of all orders will be kept nonetheless in order to fulfill legal regulations.",
         "profileDeleteConfirm": "Do you really want to delete your customer account?",
-        "addressListHeader": "Your Address",
+        "addressListHeader": "Your address",
         "addressesContentItemActionEdit": "Change",
         "addressHeadline": "Change billing address",
-        "orRegisterLink": "Register",
+        "orRegisterLink": "sign up",
         "orderItemColumnProductNumber": "Product number: ",
-        "orderItemColumnPrice": "Price per unit",
+        "orderItemColumnPrice": "Unit price",
         "orderItemDate": "From:"
     },
     "listing": {
         "boxAddProductMobile": "Add to cart",
-        "boxProductDetails": "More details"
+        "boxProductDetails": "Details"
     },
     "contact": {
-        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
+        "privacyNotice": "I have read the <a data-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>."
     }
 }
