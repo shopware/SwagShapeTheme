@@ -27,6 +27,7 @@
 
         .btn-light {
             @include button-change;
+            padding: 3px;
         }
     }
 

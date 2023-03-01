@@ -178,7 +178,8 @@
         cursor: pointer;
         text-align: left;
         font-weight: $font-weight-base;
-        text-transform: capitalize;
+        font-size: 14px;
+        text-transform: none;
         line-height: 18px;
         padding: $spacer-10 14px;
         border-radius: 0;
