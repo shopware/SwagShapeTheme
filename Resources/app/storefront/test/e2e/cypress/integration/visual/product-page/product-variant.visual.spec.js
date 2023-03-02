@@ -36,15 +36,9 @@ describe('Product Detail: Check appearance of product variants', () => {
         page.generateVariants('Size', [0, 1, 2], 6);
 
         // Verify in storefront
-        cy.visit('/');
+        cy.visit('/Variant-product-name/RS-333');
         cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});
         cy.get('.offcanvas .btn-primary').contains('Save').click();
-
-        cy.get('input[name=search]').first().type('Variant product name');
-        cy.get('.search-suggest-container').should('be.visible');
-        cy.get('.search-suggest-product-name')
-            .contains('Variant product name')
-            .click();
 
         cy.get('.product-detail-name').contains('Variant product name');
         cy.get('.product-detail-configurator-option-label').contains('Red');

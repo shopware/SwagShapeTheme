@@ -41,3 +41,12 @@
         {% endif %}
     </div>
 {% endblock %}
+
+{% block component_account_register_submit %}
+    <div class="register-submit d-grid col-lg-6 offset-lg-6">
+        <button type="submit"
+                class="btn btn-primary btn-lg">
+            {{ "account.registerSubmit"|trans|sw_sanitize }}
+        </button>
+    </div>
+{% endblock %}
