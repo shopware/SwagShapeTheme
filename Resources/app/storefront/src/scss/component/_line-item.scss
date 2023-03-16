@@ -1,5 +1,6 @@
 .is-default,
-.is-offcanvas {
+.is-offcanvas,
+.is- {
     .line-item-quantity,
     .line-item-total-price {
         width: 100%;
@@ -10,8 +11,7 @@
 
         .line-item-quantity-label,
         .line-item-unit-price-label,
-        .line-item-total-price-label,
-        .line-item-tax-price-label {
+        .line-item-total-price-label {
             display: none;
         }
     }
@@ -27,6 +27,10 @@
         }
     }
 
+    .line-item-row > .line-item-tax-price {
+        order: 5;
+    }
+
     @include media-breakpoint-up(sm) {
         .line-item-quantity {
             display: block;
@@ -37,7 +41,9 @@
 .is-offcanvas {
     .line-item-unit-price,
     .line-item-tax-price {
-        @extend .d-none;
+        text-align: right;
+        color: $shape-gray-500;
+        display: block;
     }
 
     .line-item-info {
@@ -107,6 +113,7 @@
         @extend .justify-content-center;
 
         .is-default &,
+        .is- &,
         .is-offcanvas & {
             @extend .justify-content-start;
         }
@@ -135,6 +142,10 @@
 
 .line-item-info {
     margin-bottom: $spacer-sm;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+    }
 }
 
 .line-item-details {
@@ -145,7 +156,7 @@
     }
 
     .product-wishlist {
-        margin: $spacer-lg 0 0;
+        margin: $spacer-sm 0 0;
 
         .icon-wishlist {
             width: 13px;
@@ -217,7 +228,7 @@
     order: 6;
 
     .product-wishlist {
-        margin: 0;
+        margin: $spacer-sm;
         line-height: 22px;
 
         .icon-wishlist {
@@ -235,7 +246,8 @@
         padding-left: 104px;
     }
 
-    .is-default & {
+    .is-default &,
+    .is- {
         padding-left: 92px;
     }
 
@@ -245,7 +257,8 @@
     }
 
     @include media-breakpoint-up(md) {
-        .is-default & {
+        .is-default &,
+        .is- & {
             padding-left: 134px;
             padding-top: $spacer-lg;
         }
@@ -326,8 +339,7 @@
         }
 
         .line-item-unit-price-label,
-        .line-item-total-price-label,
-        .line-item-tax-price-label {
+        .line-item-total-price-label {
             display: none;
         }
 
@@ -337,7 +349,8 @@
     }
 }
 
-.is-default {
+.is-default,
+.is- {
     .line-item-quantity-select-wrapper {
         @include make-col(12);
         padding-left: 102px;
@@ -372,6 +385,10 @@
         margin-right: $spacer-xs;
     }
 
+    .line-item-tax-price-label {
+        display: inline;
+    }
+
     .line-item-info {
         width: 100%;
     }
@@ -384,15 +401,20 @@
 }
 
 @include media-breakpoint-up(md) {
-    .is-default {
+    .is-default,
+    .is- {
         .line-item {
             padding: 33px 0;
         }
 
         .line-item-label,
-        .line-item-total-price-value {
+        .line-item-total-price > .line-item-total-price-value {
             font-size: 20px;
-            line-height: 26px;
+        }
+
+        .line-item-total-price > .line-item-total-price-value {
+            font-size: 20px;
+            line-height: 22px;
         }
 
         .line-item-details-container {
@@ -425,9 +447,15 @@
 
         .line-item-total-price {
             width: 30%;
+            display: block;
 
             .is-act-finishpage & {
                 width: 40%;
+            }
+
+            .line-item-unit-price,
+            .line-item-tax-price {
+                min-height: 50px;
             }
         }
 
@@ -450,8 +478,20 @@
         }
     }
 
+    .is- {
+        .line-item-info,
+        .line-item-quantity,
+        .line-item-unit-price,
+        .line-item-total-price,
+        .line-item-tax-price,
+        .line-item-remove {
+            order: 0;
+        }
+    }
+
     .line-item-quantity {
         .is-default &,
+        .is- &,
         .is-order & {
             justify-content: flex-start;
         }

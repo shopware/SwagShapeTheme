@@ -39,6 +39,7 @@ describe('Product Detail: Check appearance of product review', () => {
         cy.get('#review-tab').click();
         cy.get('.product-detail-review-teaser-btn').click();
 
+        cy.wait(1000);
         cy.get('#reviewTitle').type('Review title '.repeat(4));
         cy.get('#reviewContent').type('Review content '.repeat(10));
         cy.get('.product-detail-review-form-actions button').click();

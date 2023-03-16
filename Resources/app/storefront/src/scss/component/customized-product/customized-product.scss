@@ -10,7 +10,7 @@
     .swag-customized-products-share__card {
         .form-control {
             margin-right: 0;
-            border-radius: 24px;
+            border-radius: 24px !important;
 
             &.is-valid:focus {
                 box-shadow: none;
@@ -84,6 +84,7 @@
         .swag-customized-products__type-checkbox {
             .swag-customized-products-option-type__checkbox-wrapper {
                 border-width: 2px;
+                border-radius: 40px;
             }
         }
 
@@ -243,7 +244,7 @@
         .swag-customized-products__type-datetime {
             .swag-customized-products-options-datetime {
                 @extend .form-control-lg, .mx-0;
-                border-radius: $btn-border-radius-lg;
+                border-radius: $btn-border-radius-lg !important;
             }
 
             .date-picker-open {
@@ -299,6 +300,11 @@
             .swag-customized-products__description {
                 @extend .d-none;
             }
+        }
+
+        .swag-customized-products__item > div {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -394,5 +400,117 @@
 .cart-item-customized-products {
     .cart-aside-item-children {
         background-color: $white;
+    }
+}
+
+.input-group > .swag-customized-products-form-control:focus {
+    z-index: 1;
+}
+
+.forms-boolean > .form-check-input {
+    opacity: 0;
+}
+
+// Styling for customized poducts
+.line-item-customized-products {
+    .swag-customized-products__line-item-options-container {
+        @include make-col(10);
+
+        .order-detail-content-list & {
+            @include make-col(12);
+        }
+    }
+
+    .swag-customized-products__line-item-option-elements {
+        .line-item-row {
+            padding-left: 0;
+            margin: 0;
+        }
+    }
+
+    .swag-customized-products__line-item-option-price-elements-small {
+        .cart-offcanvas & {
+            margin-top: 45px;
+        }
+
+        .line-item-unit-price,
+        .line-item-tax-price {
+            display: none;
+        }
+
+        .line-item-total-price {
+            margin-bottom: 2px;
+        }
+    }
+
+    .swag-customized-products__line-item-options-inline-price-caption {
+        display: none;
+    }
+
+    .swag-customized-products__line-item-options-headline-wrapper {
+        line-height: 1;
+    }
+
+    .swag-customized-products__line-item-options-headline {
+        line-height: 18px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .line-item-row > .line-item-unit-price > .line-item-unit-price-value,
+        .line-item-row > .line-item-total-price > .line-item-total-price-value,
+        .line-item-row > .line-item-tax-price > .line-item-tax-price-value {
+            display: block;
+        }
+    }
+
+    &.is-order {
+        .swag-customized-products__line-item-options-inline-price-caption {
+            display: none;
+        }
+    }
+
+    &.is-default {
+        .swag-customized-products__line-item-options-inline-price-caption {
+            display: none;
+        }
+    }
+
+    .row {
+        --bs-gutter-x: 4px;
+        --bs-gutter-y: 4px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .line-item-customized-products {
+        .swag-customized-products__line-item-option-price-elements-small {
+            margin-top: 37px;
+
+            .checkout & {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .line-item-customized-products {
+        .swag-customized-products__line-item-options-container {
+            @include make-col(12);
+
+            .offcanvas-cart & {
+                @include make-col(10);
+            }
+        }
+
+        .swag-customized-products__line-item-option-price-elements {
+            margin-top: 22px;
+        }
+
+        &.is-order {
+            .swag-customized-products__line-item-option-price-elements {
+                margin-top: 73px;
+            }
+        }
     }
 }

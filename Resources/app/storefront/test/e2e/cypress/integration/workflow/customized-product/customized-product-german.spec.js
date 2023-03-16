@@ -80,15 +80,11 @@ describe('Customize Product: Visual test customize product in German', { tags: [
             .then(() => cy.visit(`/de/detail/${product.id}`))
     });
 
-    it.skip('@visual @customized: should translate the price detail box to german', () => {
+    it('@visual @customized: should translate the price detail box to german', () => {
         // Verify we are on the correct product detail page, by checking the product name
         cy.get('.product-detail-name')
             .should('be.visible')
             .contains(product.name);
-
-        // Check for the price box
-        cy.get('.swag-customized-product__price-display').should('not.exist');
-        cy.get('.swag-customized-product__price-display').should('be.exist');
 
         // Check the price box card titel
         cy.contains('.swag-customized-product__price-display > .card-body > .card-title', 'Pro-Stück-Aufschläge');

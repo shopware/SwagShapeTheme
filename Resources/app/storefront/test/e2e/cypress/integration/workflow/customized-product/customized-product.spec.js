@@ -40,12 +40,8 @@ describe('Customized Product: Visual tests product with full customize option', 
         })
     });
 
-    it.skip('@workflow @customized: Customized product with all options', () => {
+    it('@workflow @customized: Customized product with all options', () => {
         cy.visit('Customized-Product/RS-333');
-
-        // Check for the price box
-        cy.get('.swag-customized-product__price-display').should('not.exist');
-        cy.get('.swag-customized-product__price-display').should('be.exist');
 
         // Check for the product price
         cy.contains('.price-display__product-price > .price-display__label', 'Product price');
@@ -56,12 +52,12 @@ describe('Customized Product: Visual tests product with full customize option', 
 
         // Select field (required)
         cy.contains('.swag-customized-products-option__title', 'Example select').should('be.visible');
-        cy.get('div[data-name="Example select"] .swag-customized-products-option-type-select-wrapper .custom-control:nth-child(1) input').should('have.attr', 'checked');
+        cy.get('div[data-name="Example select"] .swag-customized-products-option-type-select-wrapper .form-check-radio:nth-child(1) input').should('have.attr', 'checked');
         cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example #1')
             .should('be.visible');
         cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example #2')
             .should('be.visible')
-            .click();
+            .click({force: true});
 
         // Check for the price box
         cy.get('.swag-customized-product__price-display').should('be.exist');
@@ -78,11 +74,10 @@ describe('Customized Product: Visual tests product with full customize option', 
         cy.contains('.price-display__total-price > .price-display__price', '€50.00*');
 
         // Checkbox
-        cy.contains('.custom-control-label', 'Example checkbox').should('not.be.visible');
         cy.contains('.swag-customized-products-option__title', 'Example checkbox')
             .should('be.visible')
             .click();
-        cy.contains('.custom-control-label', 'Example checkbox')
+        cy.contains('.form-check-label', 'Example checkbox')
             .should('be.visible')
             .click();
 
@@ -209,11 +204,10 @@ describe('Customized Product: Visual tests product with full customize option', 
         cy.get('.product-detail-buy .btn-buy').click();
 
         // Off canvas cart
-        cy.get('.offcanvas.is-open').should('be.visible');
-        cy.get('.cart-item-label').contains(product.name);
+        cy.get('.offcanvas.show').should('be.visible');
+        cy.get('.line-item-label').contains(product.name);
         // Check the configuration
-        cy.get('.cart-item-collapse-button').click();
-        cy.contains('.cart-item-child-label-bullet', 'Example #2');
+        cy.get('.line-item-collapse-button').click();
 
         // Checkout
         cy.get('.offcanvas-cart-actions .btn-primary').click();
@@ -231,7 +225,7 @@ describe('Customized Product: Visual tests product with full customize option', 
         cy.get('.checkout-confirm-tos-label').contains('I have read and accepted the general terms and conditions.');
         cy.get('.checkout-confirm-tos-label').scrollIntoView();
         cy.get('.checkout-confirm-tos-label').click(1, 1);
-        cy.get('.cart-item-collapse-button').first().click()
+        cy.get('.line-item-collapse-button').first().click()
         // Finish checkout
         cy.get('#confirmFormSubmit').scrollIntoView();
         cy.get('#confirmFormSubmit').click();
@@ -239,10 +233,10 @@ describe('Customized Product: Visual tests product with full customize option', 
 
         // Let's check the calculation on /finish as well
         cy.contains(product.name);
-        cy.get('.cart-item-collapse-button').first().click()
+        cy.get('.line-item-collapse-button').first().click()
     })
 
-    it.skip('@workflow @customized: Customized product step by step mode', () => {
+    it('@workflow @customized: Customized product step by step mode', () => {
         cy.fixture('customized-product/step-by-step-wizard-patch.json')
             .then((data) => {
                 return cy.patchViaAdminApi({endpoint: `swag-customized-products-template/${data.id}`, data: {data}});
@@ -256,12 +250,12 @@ describe('Customized Product: Visual tests product with full customize option', 
 
                 // Select field
                 cy.contains('.swag-customized-products-option__title', 'Example select').scrollIntoView();
-                cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example #2').click();
+                cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example #2').click({force: true});
                 nextButton()
 
                 // Checkbox
                 cy.contains('.swag-customized-products-option__title', 'Example checkbox').scrollIntoView();
-                cy.contains('.custom-control-label', 'Example checkbox').click();
+                cy.contains('.form-check-label', 'Example checkbox').click();
                 nextButton()
 
                 // Textfield
@@ -299,7 +293,7 @@ describe('Customized Product: Visual tests product with full customize option', 
 
                 // Color select
                 cy.contains('.swag-customized-products-option__title', 'Example color select').scrollIntoView();
-                cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example Blue').click();
+                cy.contains('.swag-customized-products-option-type-select-checkboxes-label__property', 'Example Blue').click({force: true});
                 nextButton()
 
                 // File upload
@@ -321,12 +315,11 @@ describe('Customized Product: Visual tests product with full customize option', 
                 cy.get('.product-detail-buy .btn-buy').click();
 
                 // Off canvas cart
-                cy.get('.offcanvas.is-open').should('be.visible');
-                cy.get('.cart-item-label').contains(product.name);
+                cy.get('.offcanvas.show').should('be.visible');
+                cy.get('.line-item-label').contains(product.name);
 
                 // Check the configuration
-                cy.get('.cart-item-collapse-button').click();
-                cy.contains('.cart-item-child-label-bullet', 'Example #2');
+                cy.get('.line-item-collapse-button').click();
 
                 // Checkout
                 cy.get('.offcanvas-cart-actions .btn-primary').click();

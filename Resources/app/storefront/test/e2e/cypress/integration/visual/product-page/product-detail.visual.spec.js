@@ -80,15 +80,9 @@ describe('Product Detail: Product', () => {
         });
 
         // Verify in storefront
-        cy.visit('/');
+        cy.visit('Original-product/RS-11111');
         cy.get('.js-cookie-configuration-button .btn-primary').contains('Configure').click({force: true});
         cy.get('.offcanvas .btn-primary').contains('Save').click();
-
-        cy.get('.col-lg-5 .header-search-input').type('Original product');
-        cy.get('.search-suggest-container').should('be.visible');
-        cy.get('.search-suggest-product-name')
-            .contains('Original product')
-            .click();
 
         cy.get('.product-cross-selling-tab-navigation')
             .scrollIntoView()
