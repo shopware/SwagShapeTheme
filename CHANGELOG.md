@@ -1,3 +1,6 @@
+# 2.0.0
+- Release v2.0 compatible with 6.5 version
+
 # 1.9.0
 - Checked theme compatibility with the platform v6.4.17.0
 - Fixed footer social media links snippet
