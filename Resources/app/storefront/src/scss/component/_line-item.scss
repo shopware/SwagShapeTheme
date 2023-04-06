@@ -128,6 +128,18 @@
         padding-top: 0;
         margin: 0;
     }
+
+    @include media-breakpoint-up(sm) {
+        .justify-content-sm-center {
+            @extend .justify-content-sm-end;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .justify-content-sm-center {
+            @extend .justify-content-md-center;
+        }
+    }
 }
 
 .line-item {
@@ -182,6 +194,7 @@
     margin-bottom: 0;
     font-size: 11px;
     color: $shape-gray-500;
+    word-break: break-all;
 }
 
 .line-item-total-price-value {
@@ -398,6 +411,20 @@
             border-bottom: 1px solid $hr-border-color;
         }
     }
+
+    .line-item-status-wrapper {
+        text-align: right;
+    }
+
+    .line-item-status-label {
+        opacity: 0;
+    }
+}
+
+.line-item-status {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
 }
 
 @include media-breakpoint-up(md) {
@@ -438,6 +465,18 @@
 
             .is-act-finishpage & {
                 width: 60%;
+            }
+        }
+
+        .line-item-status {
+            width: 15%;
+
+            + .line-item-quantity {
+                width: 15%;
+            }
+
+            ~ .line-item-total-price {
+                width: 20%;
             }
         }
 
@@ -546,5 +585,54 @@
 
     &.nesting-level-3 {
         background-color: darken($gray-100, 3.5%);
+    }
+}
+
+// Styling for return management status
+.line-item-status-label,
+.line-item-status-wrapper {
+    width: 50%;
+    text-align: left;
+}
+
+.has-line-item-status {
+    &.is-order .line-item-info {
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+    }
+
+    &.is-default .line-item-info {
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+
+    .line-item-unit-price,
+    .line-item-total-price,
+    .line-item-quantity {
+        @include media-breakpoint-up(sm) {
+            @include make-col(2);
+        }
+    }
+
+    .line-item-quantity {
+        @include media-breakpoint-up(md) {
+            @include make-col(2);
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .line-item-status-wrapper {
+        text-align: center;
+    }
+
+    .is-default,
+    .is- {
+        .line-item-status-wrapper {
+            margin: 8px 0;
+            line-height: 21px;
+        }
     }
 }
