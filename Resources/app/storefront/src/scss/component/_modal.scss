@@ -1,17 +1,8 @@
 $modal-inner-padding-lg: 100px;
 
-@include media-breakpoint-up(lg) {
-    .modal-body {
-        padding: 0 $modal-inner-padding-lg $spacer-30 $modal-inner-padding-lg;
-    }
-
-    .modal-dialog {
-        max-width: $modal-lg;
-    }
-}
-
 .modal-header {
     padding-bottom: 0;
+    padding-top: 20px;
     align-items: flex-start;
 
     .close {
@@ -36,13 +27,74 @@ $modal-inner-padding-lg: 100px;
         font-weight: $font-weight-bold;
         line-height: 34px;
         padding-bottom: 1rem;
-        border-bottom: $hr-border-width solid $black;
         margin-bottom: $spacer-20;
+        width: 100%;
+
+        &:not(:empty) {
+            border-bottom: $hr-border-width solid $black;
+        }
+    }
+
+    .modal-header.only-close {
+        padding: 16px 16px 0;
     }
 }
 
 .modal-body {
     .cms-section .boxed {
         padding: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .modal-body {
+        padding: 0 $modal-inner-padding-lg $spacer-30 $modal-inner-padding-lg;
+    }
+
+    .modal-dialog {
+        max-width: $modal-lg;
+    }
+
+    .modal-content {
+        .modal-header.only-close {
+            padding: 65px $modal-inner-padding-lg $spacer $modal-inner-padding-lg;
+        }
+
+        .swag-custom-notification-info-modal__content {
+            padding-bottom: $spacer-30;
+        }
+    }
+}
+
+.swag-custom-notification-info-modal__content,
+.swag-custom-notifications-newsletter-popup__content {
+    padding: 0;
+
+    .modal-body {
+        padding: 12px;
+    }
+
+    .modal-footer {
+        width: 100%;
+
+        .btn-primary {
+            margin-right: 0;
+        }
+    }
+
+    .confirm-message {
+        padding: 0;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 12px 0 0;
+        }
+    }
+}
+
+.swag-custom-notification-consent-modal__content {
+    border-radius: $modal-content-border-radius;
+
+    h3 {
+        font-size: 28px;
     }
 }
