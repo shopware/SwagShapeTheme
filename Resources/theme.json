@@ -9,6 +9,7 @@
         "@SwagCmsExtensions",
         "@SwagB2bPlatform",
         "@ReturnManagement",
+        "@SwagCustomNotification",
         "@SwagShapeTheme",
         "@Plugins"
     ],
