@@ -265,7 +265,6 @@
             font-size: $font-size-base;
             color: $sw-text-color;
             align-items: center;
-            text-transform: capitalize;
             padding: $spacer-10 0;
             border-bottom: $hr-border-width solid $hr-border-color;
 
@@ -281,10 +280,6 @@
         .icon-shape {
             pointer-events: none;
         }
-    }
-
-    &-link-item {
-        text-transform: capitalize;
     }
 }
 
@@ -346,7 +341,6 @@
                 font-weight: $font-weight-extrabold;
                 line-height: 36px;
                 color: $shape-gray-500;
-                text-transform: uppercase;
                 padding: $spacer-10 0;
                 border-bottom: none;
 
