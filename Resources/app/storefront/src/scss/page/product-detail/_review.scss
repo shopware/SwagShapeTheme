@@ -1,6 +1,16 @@
 .product-detail-review {
     &-content {
         flex-direction: column-reverse;
+
+        [data-review-translator] {
+            .product-detail-review-main {
+                width: 100%;
+            }
+
+            + .product-detail-review-widget-wrapper .product-detail-review-widget {
+                top: 0;
+            }
+        }
     }
 
     &-main {
