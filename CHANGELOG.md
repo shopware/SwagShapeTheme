@@ -1,3 +1,12 @@
+# 2.1.0
+- Checked compatibility with the subscription
+- Checked compatibility with the return management
+- Fixed stylings of the product review summary
+- Fixed the capital letter problem in the footer categories
+- Unified stylings of SwagCustomNotification
+- Fixed modal close button is hidden
+- Fixed the change tab problem on the product detail page
+
 # 2.0.0
 - Release v2.0 compatible with 6.5 version
 

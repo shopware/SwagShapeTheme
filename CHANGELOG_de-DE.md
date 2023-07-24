@@ -1,3 +1,12 @@
+# 2.1.0
+- Überprüfung der Kompatibilität mit dem Abonnement
+- Überprüfung der Kompatibilität mit dem Retourenmanagement
+- Styling der Zusammenfassung der Produktbewertung wurde korrigiert
+- Das Problem mit den Großbuchstaben in den Fußzeilen-Kategorien wurde behoben
+- Vereinheitlichtes Styling der SwagCustomNotification
+- Die versteckte Schaltfläche zum Schließen des Modals wurde behoben
+- Problem mit der Registerkarte "Ändern" auf der Produkt-Detailseite wurde behoben
+
 # 2.0.0
 - Freigabe v2.0 kompatibel mit Version 6.5
 
