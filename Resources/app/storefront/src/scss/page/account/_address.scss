@@ -14,6 +14,16 @@
 .address-card {
     padding-left: 12px;
     padding-right: 12px;
+
+    .address {
+        &:first-line {
+            font-weight: 400 !important;
+        }
+    }
+
+    .card-title {
+        font-weight: 700;
+    }
 }
 
 .default-address,
@@ -22,6 +32,23 @@
     > .row {
         margin-right: -12px;
         margin-left: -12px;
+    }
+
+    .billing-address,
+    .shipping-address {
+        .h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+
+        .address-action-edit {
+            font-weight: 700;
+        }
     }
 }
 
@@ -101,6 +128,31 @@
 // New Address Form
 .address-form-actions {
     margin: $spacer-lg 0 0;
+    gap: 10px;
+    flex-direction: column-reverse;
+
+    .btn-light {
+        @extend .btn-outline-secondary;
+        width: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        --#{$prefix}btn-color: #{$shape-gray-900};
+        --#{$prefix}btn-border-color: #{$shape-gray-900};
+        --#{$prefix}btn-hover-color: #{$shape-gray-900};
+        --#{$prefix}btn-hover-border-color: #{$shape-gray-900};
+    }
+
+    @include media-breakpoint-down(md) {
+        .address-form-submit {
+            width: auto;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        gap: 22px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
 }
 
 .address-required-info {
@@ -132,6 +184,11 @@
     border-width: $hr-border-width;
     position: relative;
     overflow: unset;
+    --#{$prefix}btn-hover-border-color: #{$gray-900};
+
+    &.show {
+        border-color: $gray-900;
+    }
 
     .icon {
         position: unset;
@@ -180,7 +237,7 @@
         font-weight: $font-weight-base;
         text-transform: capitalize;
         line-height: 18px;
-        padding: $spacer-10 14px;
+        padding: $spacer-10 14px !important;
         border-radius: 0;
 
         &:not(:disabled):not(.disabled) {
@@ -207,5 +264,17 @@
 
     .col-auto {
         @include make-col(12);
+    }
+
+    .address-actions {
+        flex-direction: column;
+
+        .icon {
+            display: none;
+        }
+
+        > * {
+            padding: 0 !important;
+        }
     }
 }
