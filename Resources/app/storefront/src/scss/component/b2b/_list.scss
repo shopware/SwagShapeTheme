@@ -1,0 +1,20 @@
+.b2b-list, .b2b-listing {
+    .dropdown-toggle {
+        justify-content: center;
+
+        .icon > svg {
+            width: 24px;
+            position: unset;
+        }
+    }
+
+    .dropdown-menu {
+        min-width: 172px;
+    }
+}
+
+.b2b-roles {
+    .b2b-table-action-column-actions .b2b-table-context-menu-button {
+        float: right;
+    }
+}

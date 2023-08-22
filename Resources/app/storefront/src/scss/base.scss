@@ -136,3 +136,8 @@ https://sass-guidelin.es/#the-7-1-pattern
  * Subscriptions
  * -------------------- */
 @import 'subscriptions/submit-disclaimer';
+/*
+ * B2B Components
+ * -------------------- */
+@import 'component/b2b/list';
+@import 'page/account/b2b/create';

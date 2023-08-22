@@ -1,6 +1,12 @@
 .account {
     &.account-content {
         min-height: inherit;
+
+        .account-menu-inner {
+            .badge {
+                margin-left: $spacer-20 !important;
+            }
+        }
     }
 
     .card-body {

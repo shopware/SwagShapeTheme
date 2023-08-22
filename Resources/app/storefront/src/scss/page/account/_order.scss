@@ -38,6 +38,16 @@
             fill: $gray-900;
         }
     }
+
+    .order-table-b2b-employee {
+        padding-left: 0 !important;
+        padding-bottom: 24px;
+        margin-top: -24px;
+
+        strong {
+            font-weight: $font-weight-bold;
+        }
+    }
 }
 
 .order-table-header-context-menu {
