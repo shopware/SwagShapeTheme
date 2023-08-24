@@ -4,7 +4,7 @@
         "404ErrorDescription": "The page you are looking for no longer exists",
         "maintenanceModeHeader": "We`ll be back soon.",
         "maintenanceModeDescription": "The page you are looking for no longer exists.",
-        "requiredFields": "*required field",
+        "requiredFields": "Fields marked with asterisks (*) are required.",
         "offcanvasCloseMenu": "My Account",
         "privacyNotice": "I have read the <a data-toggle=\"modal\" data-bs-toggle=\"modal\" data-url=\"%privacyUrl%\" href=\"%privacyUrl%\" title=\"Data protection information\">data protection information</a>"
     },
@@ -67,12 +67,14 @@
         "profileDeleteAlert": "After deleting your customer account personal data, newsletter entries and reviews won't be accessible to you anymore.\n Note that records of all orders will be kept nonetheless in order to fulfill legal regulations.",
         "profileDeleteConfirm": "Do you really want to delete your customer account?",
         "addressListHeader": "Your Address",
-        "addressesContentItemActionEdit": "Change",
+        "addressesContentItemActionEdit": "Edit",
         "addressHeadline": "Change billing address",
         "orRegisterLink": "Register",
         "orderItemColumnProductNumber": "Product number: ",
         "orderItemColumnPrice": "Price per unit",
-        "orderItemDate": "From:"
+        "orderItemDate": "From:",
+        "addressCreateBtn": "Add new",
+        "addressEditBtn": "Edit"
     },
     "listing": {
         "boxAddProductMobile": "Add to cart",

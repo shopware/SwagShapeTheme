@@ -52,3 +52,12 @@
         </div>
     </div>
 {% endblock %}
+
+
+{% block page_checkout_confirm_address %}
+    <div class="row js-confirm-overview-addresses gap-4 gap-md-0">
+        {{ block('page_checkout_confirm_address_shipping') }}
+
+        {{ block('page_checkout_confirm_address_billing') }}
+    </div>
+{% endblock %}
