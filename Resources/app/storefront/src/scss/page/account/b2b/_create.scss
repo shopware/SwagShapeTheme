@@ -1,0 +1,27 @@
+.b2b-role-create {
+    .b2b-edit-role-form, .b2b-create-role-form {
+        margin-bottom: $spacer-20;
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacer-5;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        .b2b-create-form-default-role {
+            margin-bottom: 0;
+
+            label {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .b2b-create-for-permission-title {
+        margin: $spacer-36 0 $spacer-20 0 !important;
+    }
+}
