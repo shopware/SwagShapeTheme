@@ -142,11 +142,11 @@
         }
 
         .required-fields {
-            width: calc(100% - 140px);
+            flex: auto
         }
 
         .card-actions {
-            width: 140px;
+            float: right
         }
 
         .profile-form-submit {

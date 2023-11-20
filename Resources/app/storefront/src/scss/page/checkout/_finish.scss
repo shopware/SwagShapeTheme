@@ -89,11 +89,13 @@
     }
 
     .finish-content {
+        margin-left: 5;
+        margin-right: auto;
         margin-bottom: $spacer-30;
     }
 
     .finish-back-home {
-        min-width: 176px;
+        min-width: max-content;
     }
 
     .finish-info {

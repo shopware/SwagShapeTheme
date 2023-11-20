@@ -211,6 +211,7 @@
     .order-hide-btn-text,
     .order-view-btn-text {
         font-weight: $font-weight-bold;
+        padding: 3px;
     }
 }
 
@@ -235,11 +236,12 @@
 }
 
 .order-table-header-context-menu-content {
-    min-width: 172px;
+    min-width: max-content;
     border-radius: 4px;
     margin-top: $spacer-10;
 
     &-link {
+        font-size: 14px;
         padding: $spacer-10 14px;
 
         &:hover {
