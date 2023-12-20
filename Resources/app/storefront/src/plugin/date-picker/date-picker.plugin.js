@@ -1,5 +1,4 @@
 import deepmerge from 'deepmerge';
-
 import DatePickerPlugin from 'src/plugin/date-picker/date-picker.plugin';
 
 export default class ShapeDatePickerPlugin extends DatePickerPlugin {

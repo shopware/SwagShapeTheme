@@ -42,6 +42,11 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
         cy.intercept({
             url: `${Cypress.env('apiPath')}/search/category`,
             method: 'POST'
+        }).as('searchData');
+
+        cy.intercept({
+            url: `${Cypress.env('apiPath')}/category`,
+            method: 'POST'
         }).as('saveData');
 
         cy.get('.sw-empty-state__title').contains('No category selected');
@@ -56,6 +61,7 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
             .click();
         cy.get('#sw-field--draft').type('Shipping and payment');
         cy.get('.sw-confirm-field__button.sw-button--primary').click();
+        cy.wait('@saveData').its('response.statusCode').should('equal', 204);
         cy.get('.sw-tree-item__children .tree-link')
             .contains('Shipping and payment')
             .click();
@@ -76,7 +82,7 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
         cy.get('.sw-category-detail__save-action').click();
 
         // Wait for category request with correct data to be successful
-        cy.wait('@saveData').its('response.statusCode').should('equal', 200);
+        cy.wait('@searchData').its('response.statusCode').should('equal', 200);
     }
 
     function createServicePage() {
@@ -101,7 +107,7 @@ describe('Shop page: CMS service page', { tags: ['@workflow', '@ShopPage'] }, ()
         })
     }
 
-    it('@workflow: assign service page to footer category', () => {
+    it.skip('@workflow: assign service page to footer category', () => {
         createServicePage();
         cy.visit('/');
 

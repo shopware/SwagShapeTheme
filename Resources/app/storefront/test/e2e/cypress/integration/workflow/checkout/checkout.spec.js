@@ -39,7 +39,7 @@ describe('Checkout: Basic', {tags: ['@workflow', '@checkout']}, () => {
 
         cy.wait(500);
         cy.get('.header-cart-count').contains(1);
-        cy.get('[data-offcanvas-cart="true"] > .btn').click();
+        cy.get('[data-off-canvas-cart="true"] > .btn').click();
         cy.get(`${checkoutPage.elements.cartItem}-label`).contains(product.name);
 
         // Checkout

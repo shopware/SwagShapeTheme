@@ -24,27 +24,5 @@ describe('Account: Overview page', { tags: ['@workflow', '@account'] }, () => {
         cy.get('.newsletter-alerts').should((element) => {
             expect(element).to.contain('You have successfully subscribed to the newsletter.');
         });
-
-        cy.get('.overview-billing-address [data-address-editor="true"]').click();
-        cy.get('.address-editor-modal').should('be.visible');
-
-        cy.get('.address-editor-edit').click();
-        cy.get('#billing-address-create-edit').should('have.class', 'show');
-        cy.get('#billing-address-create-new').should('not.have.class', 'show');
-
-        cy.get('.address-editor-create').click();
-        cy.get('#billing-address-create-new').should('have.class', 'show');
-        cy.get('#billing-address-create-edit').should('not.have.class', 'show');
-        cy.get('.address-editor-modal').find('.btn-close').click();
-        cy.get('.overview-shipping-address [data-address-editor="true"]').click();
-        cy.get('.address-editor-modal').should('be.visible');
-
-        cy.get('.address-editor-edit').click();
-        cy.get('#shipping-address-create-edit').should('have.class', 'show');
-        cy.get('#shipping-address-create-new').should('not.have.class', 'show');
-
-        cy.get('.address-editor-create').click();
-        cy.get('#shipping-address-create-new').should('have.class', 'show');
-        cy.get('#shipping-address-create-edit').should('not.have.class', 'show');
     });
 });

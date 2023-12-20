@@ -1,4 +1,7 @@
-# 2.1.0
+# 3.0.0
+* Shopware 6.6 Kompatibilität
+
+* # 2.1.0
 - Überprüfung der Kompatibilität mit dem Abonnement
 - Überprüfung der Kompatibilität mit dem Retourenmanagement
 - Styling der Zusammenfassung der Produktbewertung wurde korrigiert

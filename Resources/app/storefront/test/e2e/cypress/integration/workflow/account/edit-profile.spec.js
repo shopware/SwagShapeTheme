@@ -30,10 +30,7 @@ describe('Account: Profile', { tags: ['@workflow', '@profile'] }, () => {
 
         cy.visit('/account/login');
         accountPage.login();
-
-        cy.get('.account-welcome h1').contains('Hello');
-
-        cy.get('.card-actions [href="/account/profile"]').click();
+        cy.visit('/account/profile');
 
         const accountTypeSelector = 'select[name="accountType"]';
         const companySelector = 'input[name="company"]';
@@ -99,8 +96,8 @@ describe('Account: Profile', { tags: ['@workflow', '@profile'] }, () => {
 
         cy.visit('/account/login');
         accountPage.login();
+        cy.visit('/account/profile');
 
-        cy.get('.card-actions [href="/account/profile"]').click();
         cy.get('a[href="#confirmDeleteAccountModal"]').click();
 
         cy.wait(1000);
