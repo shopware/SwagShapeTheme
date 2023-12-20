@@ -12,15 +12,15 @@
     {% endif %}
 {% endblock %}
 
-{% block component_address_address_editor_modal_accordion_overview_shipping_card_address %}
-    <div class="py-3 border-top border-2">
+{% block component_address_editor_modal_accordion_overview_shipping_card_address %}
+    <div class="py-3">
         {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
             'address': context.customer.defaultShippingAddress
         } %}
     </div>
 {% endblock %}
 
-{% block component_address_address_editor_modal_accordion_action_edit %}
+{% block component_address_editor_modal_accordion_action_edit %}
     <a class="address-editor-edit btn btn-outline-secondary"
        data-bs-toggle="collapse"
        data-bs-target="#{{ typePrefix }}address-create-edit"
@@ -29,7 +29,7 @@
     </a>
 {% endblock %}
 
-{% block component_address_address_editor_modal_accordion_action_create %}
+{% block component_address_editor_modal_accordion_action_create %}
     <a class="address-editor-create btn btn-outline-secondary"
        data-bs-toggle="collapse"
        data-bs-target="#{{ typePrefix }}address-create-new"
@@ -38,10 +38,22 @@
     </a>
 {% endblock %}
 
-{% block component_address_address_editor_modal_accordion_overview_billing_card_address %}
-    <div class="py-3 border-top border-2">
+{% block component_address_editor_modal_accordion_overview_billing_card_address %}
+    <div class="py-3">
         {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
             'address': context.customer.defaultBillingAddress
         } %}
+    </div>
+{% endblock %}
+
+{% block component_address_editor_modal_accordion_overview_shipping_card %}
+    <div class="card pt-3">
+        {{ block('component_address_editor_modal_accordion_overview_shipping_card_body') }}
+    </div>
+{% endblock %}
+
+{% block component_address_editor_modal_accordion_overview_billing_card %}
+    <div class="card pt-3">
+        {{ block('component_address_editor_modal_accordion_overview_billing_card_body') }}
     </div>
 {% endblock %}

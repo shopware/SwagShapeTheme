@@ -1,8 +1,7 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/review/review.html.twig' %}
 
 {% block utilities_offcanvas_close %}
-    {# @deprecated tag:v6.5.0 - Bootstrap v5 will not require classes `.btn-block .sticky-top`. Only `.offcanvas-body` will be scrollable #}
-    <button class="product-detail-offcanvas-close offcanvas-close js-offcanvas-close{% if not feature('v6.5.0.0') %} btn-block sticky-top{% endif %}">
+    <button class="product-detail-offcanvas-close offcanvas-close js-offcanvas-close">
         {% block utilities_offcanvas_close_icon %}
             {% sw_icon 'ic-chevron-left' style { 'pack': 'shape', 'size': 'xs' } %}
         {% endblock %}

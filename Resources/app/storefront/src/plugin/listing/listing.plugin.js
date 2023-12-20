@@ -1,7 +1,6 @@
 import ListingPlugin from 'src/plugin/listing/listing.plugin';
 
 export default class ShapeListingPlugin extends ListingPlugin {
-
     /**
      * Template for an active filter label.
      *

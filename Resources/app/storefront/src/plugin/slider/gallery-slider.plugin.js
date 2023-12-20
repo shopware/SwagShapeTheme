@@ -1,9 +1,6 @@
 import GallerySliderPlugin from 'src/plugin/slider/gallery-slider.plugin';
 
 export default class ShapeGallerySliderPlugin extends GallerySliderPlugin {
-
-
-
     /**
      * sets the active dot depending on the slider index
      *

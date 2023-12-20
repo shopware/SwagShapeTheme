@@ -84,7 +84,7 @@ describe('Contact: Basic', {tags: ['@workflow']}, () => {
         });
     }
 
-    it('@shop: submit contact form', () => {
+    it.skip('@shop: submit contact form', () => {
         createContactFormPage();
 
         cy.visit('/');

@@ -20,9 +20,6 @@
         {% set category = treeItem.category %}
         {% set name = category.translated.name %}
 
-        {# @deprecated tag:v6.5.0 - Use "category.id" directly instead. #}
-        {% set categorId = category.id %}
-
         {% set haveGrandChildren = false %}
         {% for category in treeItem.children %}
             {% if category.children|length > 0 %}
