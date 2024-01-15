@@ -1,6 +1,6 @@
 // contains variable overrides for bootstrap variables located under
 // shopRoot/src/vendor/shopware/storefront/Resources/app/storefront/vendor/bootstrap/scss/_variables.scss
-$app-css-relative-asset-path: '../assets' !default;
+$app-css-relative-asset-path: '../../' + $theme-id + '/assets' !default;
 
 // Color system
 $gray-100: lighten($sw-color-brand-primary, 30%) !default;
