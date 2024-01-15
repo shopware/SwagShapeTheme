@@ -21,7 +21,7 @@
     ],
     "script": [
         "@Storefront",
-        "app/storefront/dist/storefront/js/swag-shape-theme.js"
+        "app/storefront/dist/storefront/js/swag-shape-theme/swag-shape-theme.js"
     ],
     "asset": ["app/storefront/src/assets"],
     "config": {
