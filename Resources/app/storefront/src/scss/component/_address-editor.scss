@@ -28,7 +28,7 @@
 
     @include media-breakpoint-up(md) {
         .card-title {
-            padding-left: $spacer-lg;;
+            padding-left: $spacer-30;
         }
     }
 }
@@ -54,6 +54,7 @@
         border: 2px solid $shape-gray-900;
         background: $white;
         box-shadow: 0px 20px 160px 0px rgba(0, 0, 0, 0.12);
+        margin-bottom: 0;
     }
 
     .btn.collapsed {
@@ -64,13 +65,21 @@
         padding: $spacer-lg;
 
         > .col-12.col-md-4 {
-            @include make-col(3);
+            @extend .col-md-auto;
+
             margin-right: 1rem;
         }
     }
 }
 
 .address-editor-modal {
+    .modal-dialog {
+        --bs-modal-width: 872px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .btn-close {
         position: absolute;
         top: 15px;
@@ -82,6 +91,11 @@
         padding: 0;
     }
 
+    .card-title {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
     .modal-title:empty {
         display: none;
     }
@@ -89,6 +103,7 @@
     .address-editor-title {
         padding-bottom: 16px;
         border-bottom: 2px solid $shape-gray-900;
+        margin-bottom: 24px;
     }
 
     .address-billing-card,
@@ -185,5 +200,13 @@
 
     .btn {
         @extend .col-6;
+    }
+}
+
+.js-address-editor {
+    > .card .card-body {
+        @include card-box;
+
+        padding: $spacer-20 $spacer-30;
     }
 }

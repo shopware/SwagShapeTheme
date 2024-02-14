@@ -225,7 +225,7 @@
         }
     }
 
-    .address-actions-buttons .btn-light,
+    .btn-light,
     .btn-link {
         display: block;
         border: 0 none;
@@ -254,6 +254,20 @@
         }
     }
 
+    .btn .icon {
+        display: none;
+    }
+
+    .col-auto {
+        order: 1;
+    }
+
+    &.dropdown-menu.show {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 260px;
+    }
+
     .address-action-delete {
         margin-left: 0;
 
@@ -277,4 +291,10 @@
             padding: 0 !important;
         }
     }
+}
+
+#shipping-addressEditorAccordion,
+#billing-addressEditorAccordion {
+    display: flex;
+    flex-direction: column-reverse;
 }

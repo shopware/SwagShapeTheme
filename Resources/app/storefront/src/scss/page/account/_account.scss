@@ -30,10 +30,6 @@
 
     .card-title {
         @include card-title;
-
-        .btn-light {
-            @include button-change;
-        }
     }
 
     &-item-children {
