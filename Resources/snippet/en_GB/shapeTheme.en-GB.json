@@ -73,8 +73,8 @@
         "orderItemColumnProductNumber": "Product number: ",
         "orderItemColumnPrice": "Price per unit",
         "orderItemDate": "From:",
-        "addressCreateBtn": "Add new",
-        "addressEditBtn": "Edit"
+        "addressCreateBtn": "Add new address",
+        "addressEditBtn": "Edit address"
     },
     "listing": {
         "boxAddProductMobile": "Add to cart",

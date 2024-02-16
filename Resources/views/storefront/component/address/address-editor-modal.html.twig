@@ -5,41 +5,37 @@
         <div class="row address-editor-accordion-row g-0">
             {{ block("component_address_address_editor_modal_accordion_action_edit") }}
 
-            {{ block("component_address_address_editor_modal_accordion_action_list") }}
-
             {{ block("component_address_address_editor_modal_accordion_action_create") }}
         </div>
     {% endif %}
 {% endblock %}
 
 {% block component_address_editor_modal_accordion_overview_shipping_card_address %}
-    <div class="py-3">
+    <div class="py-3 border-top border-2">
         {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
             'address': context.customer.defaultShippingAddress
         } %}
     </div>
 {% endblock %}
 
-{% block component_address_editor_modal_accordion_action_edit %}
-    <a class="address-editor-edit btn btn-outline-secondary"
-       data-bs-toggle="collapse"
-       data-bs-target="#{{ typePrefix }}address-create-edit"
-    >
-        {{ "account.addressEditBtn"|trans|sw_sanitize }}
-    </a>
-{% endblock %}
-
-{% block component_address_editor_modal_accordion_action_create %}
-    <a class="address-editor-create btn btn-outline-secondary"
-       data-bs-toggle="collapse"
-       data-bs-target="#{{ typePrefix }}address-create-new"
-    >
-        {{ "account.addressCreateBtn"|trans|sw_sanitize }}
-    </a>
-{% endblock %}
-
 {% block component_address_editor_modal_accordion_overview_billing_card_address %}
-    <div class="py-3">
+    <div class="py-3 border-top border-2">
+        {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
+            'address': context.customer.defaultBillingAddress
+        } %}
+    </div>
+{% endblock %}
+
+{% block component_address_address_editor_modal_accordion_overview_shipping_card_address %}
+    <div class="py-3 border-top border-2">
+        {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
+            'address': context.customer.defaultShippingAddress
+        } %}
+    </div>
+{% endblock %}
+
+{% block component_address_address_editor_modal_accordion_overview_billing_card_address %}
+    <div class="py-3 border-top border-2">
         {% sw_include '@Storefront/storefront/component/address/address.html.twig' with {
             'address': context.customer.defaultBillingAddress
         } %}
@@ -56,4 +52,23 @@
     <div class="card pt-3">
         {{ block('component_address_editor_modal_accordion_overview_billing_card_body') }}
     </div>
+{% endblock %}
+
+{# @deprecated tag:v6.7.0 - Block will be removed. Use `component_address_editor_modal` instead. #}
+{% block component_address_address_editor_modal %}
+    {% block component_address_address_editor_modals_title %}
+        <div class="address-editor-title h2 mb-4">
+            {% if changeBilling %}
+                {{ 'account.addressTitleChangeBillingAddress'|trans|sw_sanitize }}
+            {% else %}
+                {{ 'account.addressTitleChangeShippingAddress'|trans|sw_sanitize }}
+            {% endif %}
+        </div>
+    {% endblock %}
+
+    {{ parent() }}
+{%  endblock %}
+
+{# @deprecated tag:v6.7.0 - Block will be removed. Use `component_address_editor_modal_accordion_action_list` instead. #}
+{% block component_address_address_editor_modal_accordion_action_list %}
 {% endblock %}
