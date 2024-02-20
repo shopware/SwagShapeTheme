@@ -1,3 +1,8 @@
+# 3.1.0
+- TSP-370 - Fehler bei Styles von Adress-Komponenten wurden behoben
+- TSP-374 - Fehler behoben, durch den das Account-Menü von der Produktseite verdeckt wurde
+- TSP-381 - Fehler bei Styles auf der Account-Seite wurden behoben 
+
 # 3.0.0
 * Shopware 6.6 Kompatibilität
 
