@@ -1,3 +1,8 @@
+# 3.1.0
+- TSP-370 - Fixed styles of address components
+- TSP-374 - Fixed account menu hidden by product page
+- TSP-381 - Fixed styles on account page
+
 # 3.0.0
 * Shopware 6.6 compatibility
 
