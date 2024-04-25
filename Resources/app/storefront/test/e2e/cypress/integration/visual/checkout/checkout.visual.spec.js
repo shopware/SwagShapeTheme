@@ -48,7 +48,7 @@ describe('Checkout: Visual tests', () => {
         cy.contains('Continue shopping').click();
 
         cy.wait(500);
-        cy.get('[data-offcanvas-cart="true"] > .btn').click();
+        cy.get('[data-off-canvas-cart="true"] > .btn').click();
 
         cy.wait('@cartInfo').then((xhr) => {
             expect(xhr.response).to.have.property('statusCode', 200)
