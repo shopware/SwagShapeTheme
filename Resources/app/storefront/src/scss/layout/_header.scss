@@ -48,6 +48,11 @@
             }
         }
 
+        .btn.header-close-btn {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+
         &-col {
             .collapse {
                 display: block;
@@ -92,6 +97,9 @@
             background-color: rgba($sw-background-color, 1);
         }
     }
+}
+.header-search-form:has(.search-suggest) .header-search-btn {
+    display: none;
 }
 
 .curtain-area {

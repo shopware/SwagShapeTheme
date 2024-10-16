@@ -1,3 +1,7 @@
+# 3.2.0
+- TSP-385 - Fixed navigation menu on mobile not opening
+- TSP-389 - Fixed an issue with some JavaScript code not loading properly due to filename conflict
+
 # 3.1.0
 - TSP-370 - Fixed styles of address components
 - TSP-374 - Fixed account menu hidden by product page

@@ -1,3 +1,7 @@
+# 3.2.0
+- TSP-385 - Fehler behoben, durch den das Navigationsmenü auf Mobilgeräten nicht geöffnet werden konnte
+- TSP-389 - Fehler behoben, durch den manche JavaScript-Dateien aufgrund eines Dateikonflikts nicht geladen wurden 
+
 # 3.1.0
 - TSP-370 - Fehler bei Styles von Adress-Komponenten wurden behoben
 - TSP-374 - Fehler behoben, durch den das Account-Menü von der Produktseite verdeckt wurde
