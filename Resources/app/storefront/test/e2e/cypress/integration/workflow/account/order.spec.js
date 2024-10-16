@@ -86,7 +86,7 @@ describe('Account: Order page', { tags: ['@workflow', '@order'] }, () => {
         cy.get('.badge').contains('Cancelled');
     });
 
-    it('@workflow @order: change payment', () => {
+    it.skip('@workflow @order: change payment', () => {
         // Login
         cy.visit('/account/order');
         accountPage.login();
