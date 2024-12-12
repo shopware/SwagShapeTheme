@@ -10,11 +10,9 @@ export default class ShapeGallerySliderPlugin extends GallerySliderPlugin {
         super._setActiveDot();
 
         const currentIndex = this.getCurrentSliderIndex();
-
         let currentDot = this._dots[currentIndex];
 
-        if (currentDot)
-        {
+        if (currentDot) {
             currentDot.closest(".base-slider").querySelector(".js-dots-text-current").innerHTML = currentIndex + 1;
         }
     }
