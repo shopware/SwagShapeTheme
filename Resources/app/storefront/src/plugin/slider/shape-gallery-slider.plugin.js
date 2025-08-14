@@ -1,3 +1,5 @@
+// SwagShapeTheme Copyright (C) 2025 shopware AG
+
 import GallerySliderPlugin from 'src/plugin/slider/gallery-slider.plugin';
 
 export default class ShapeGallerySliderPlugin extends GallerySliderPlugin {

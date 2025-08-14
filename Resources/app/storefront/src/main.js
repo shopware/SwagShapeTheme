@@ -1,3 +1,5 @@
+// SwagShapeTheme Copyright (C) 2025 shopware AG
+
 const PluginManager = window.PluginManager;
 
 PluginManager.register('ShapeNavigationMenu', () => import('./plugin/main-menu/navigation-menu.plugin'), '[data-navigation-menu]');

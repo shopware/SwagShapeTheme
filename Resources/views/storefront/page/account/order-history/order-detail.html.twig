@@ -1,3 +1,5 @@
+{# SwagShapeTheme Copyright (C) 2025 shopware AG #}
+
 {% sw_extends '@Storefront/storefront/page/account/order-history/order-detail.html.twig' %}
 
 {% set orderHasLineItemStatus = order.lineItems|filter(lineItem => lineItem.extensions.state is not null)|length %}

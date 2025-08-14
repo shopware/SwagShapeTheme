@@ -1,3 +1,5 @@
+// SwagShapeTheme Copyright (C) 2025 shopware AG
+
 import DomAccess from 'src/helper/dom-access.helper';
 import deepmerge from 'deepmerge';
 

@@ -1,3 +1,5 @@
+// SwagShapeTheme Copyright (C) 2025 shopware AG
+
 import ListingPlugin from 'src/plugin/listing/listing.plugin';
 
 export default class ShapeListingPlugin extends ListingPlugin {
