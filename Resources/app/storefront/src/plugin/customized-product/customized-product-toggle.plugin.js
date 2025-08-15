@@ -1,3 +1,5 @@
+// SwagShapeTheme Copyright (C) 2025 shopware AG
+
 import Plugin from 'src/plugin-system/plugin.class';
 
 export default class CustomizedProductTogglePlugin extends Plugin {
